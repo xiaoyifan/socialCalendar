@@ -6,102 +6,1179 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0083F539B368E2CB2CED6B05 /* JSQPhotoMediaItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 631FC5DBAC92ADC74D2B3206 /* JSQPhotoMediaItem.h */; };
+		009AB63BC94200800D03237E /* CAAnimation+YALTabBarViewAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = DED4081E5FEAA99379D07036 /* CAAnimation+YALTabBarViewAnimations.m */; };
+		02E9EE773023AA71F76A06BE /* JSQVideoMediaItem.h in Headers */ = {isa = PBXBuildFile; fileRef = E1D5DD08FAC2727F4F156740 /* JSQVideoMediaItem.h */; };
+		03F856F77AD1479024F28FE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82B8C4B909317A4551665C7 /* Foundation.framework */; };
+		057658F57E9B8691B618F162 /* JSQMessagesComposerTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE62A12E024A4596221AE395 /* JSQMessagesComposerTextView.m */; };
+		09A8D29DB785E1274EDECC28 /* JSQPhotoMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 21226C26FEA5BD66020FE898 /* JSQPhotoMediaItem.m */; };
+		0BD5FC91C31C26E61F299587 /* YALFoldingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD083B8C283ABA011E5A759 /* YALFoldingTabBarController.m */; };
+		0BE4E6D7B6E67024F3D2933D /* JSQMessagesCollectionViewCellOutgoing.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F9D165F2EF7253113E8C06 /* JSQMessagesCollectionViewCellOutgoing.m */; };
+		0D8871AD45D76318F9B3CD4C /* JSQMessagesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B10169D95A200BEA303B04CB /* JSQMessagesCollectionViewCell.m */; };
+		0FD0CA002213094D690D50AE /* JSQMessagesBubbleImageFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = B8DAD954BE59938F33AB887D /* JSQMessagesBubbleImageFactory.h */; };
+		13BFDA60AD9976BB5F995C4F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D49AF897DC2F5163D5BE32 /* CoreLocation.framework */; };
+		157B9B0CAAD56FA63BF3BF89 /* JSQMessagesMediaPlaceholderView.h in Headers */ = {isa = PBXBuildFile; fileRef = E96718EE31E6136B53C931D6 /* JSQMessagesMediaPlaceholderView.h */; };
+		1A59002F61BD8C0B6460CD11 /* JSQMessagesInputToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = E772EAEEF32472361B90BF28 /* JSQMessagesInputToolbar.m */; };
+		20F17265266332C066B66120 /* JSQMessagesAvatarImageFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ED97A639D614BEF2999E701 /* JSQMessagesAvatarImageFactory.h */; };
+		2270A7BC88A3461333862FC3 /* Pods-socialCalendar-JSQMessagesViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C55F0F99CFF6BA2A3C965 /* Pods-socialCalendar-JSQMessagesViewController-dummy.m */; };
+		22FAAB1243288F2ACB559BF7 /* JSQMessagesMediaViewBubbleImageMasker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEBA1CFC6439FE3D9D2D15C /* JSQMessagesMediaViewBubbleImageMasker.h */; };
+		253199892C8058549FC7A7B7 /* JSQLocationMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2039C434D742E24AB1D6B /* JSQLocationMediaItem.m */; };
+		28179C5483B6746E32E1B4D6 /* JSQMessagesLoadEarlierHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = F9CD58CECC912CEBEA1FCFBC /* JSQMessagesLoadEarlierHeaderView.h */; };
+		2A4E06197014790E023071A8 /* JSQMessagesBubbleImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 52BA31BD33BE9C15E975959E /* JSQMessagesBubbleImage.h */; };
+		2BDA4D204627D5E6669A8259 /* UIView+JSQMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 9903BE3C2A0B3D3670AD427D /* UIView+JSQMessages.m */; };
+		2C9B81E512D572F5DCCEC48A /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEC740A2CDA1CB0872D6B9D /* JSQSystemSoundPlayer.m */; };
+		2CDA26D564D33EF57EE0B940 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5225EF179C3697B4560FE452 /* UIKit.framework */; };
+		2DA7BFE5F9A603A7CCBFF81C /* Pods-socialCalendar-CupertinoYankee-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 050A6223F9C0ACACC78108C9 /* Pods-socialCalendar-CupertinoYankee-dummy.m */; };
+		2F2A63F92C948D746586411A /* NSString+JSQMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8A5A0063FDAB9417C37EB3 /* NSString+JSQMessages.m */; };
+		2F37F46EDFDD11743F4C2C2D /* UIDevice+JSQMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A53380BA5DD88B0114FECF /* UIDevice+JSQMessages.m */; };
+		30E21375E4C196774FD35A0B /* JSQMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = 82F558BD0C7CBC9862FF284B /* JSQMessages.h */; };
+		32E7C20ADF9D33DA49EC2A4B /* UIImage+JSQMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = E830BEA6094B2BA30BCE4C4D /* UIImage+JSQMessages.h */; };
+		374FE56D314B586D8A999791 /* NSDate+CupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCFFC5A6CD44A1C97436E4F /* NSDate+CupertinoYankee.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		391EBBAE5792C9D55648BB76 /* JSQMessagesTimestampFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E2F2B9E3BD766B79979D0 /* JSQMessagesTimestampFormatter.m */; };
+		39CE888627D494CA6E4F04B7 /* JSQMessagesInputToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = BE25A01F5E84DEE51519F9CF /* JSQMessagesInputToolbar.h */; };
+		3A89F28C3F01B1D7B7FB0104 /* JSQMessagesAvatarImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1FE5AF1D1E077D52CD81BF /* JSQMessagesAvatarImage.m */; };
+		3F3B8802751CF7529BC7243C /* YALTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 619C64962E2BC524E81EBA33 /* YALTabBarItem.m */; };
+		41410EE5091404C0D5A9B8E0 /* JSQSystemSoundPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 572CF86F82C8D6DEDD8F6B73 /* JSQSystemSoundPlayer.h */; };
+		455530D322CC22648837D6C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F15E0FD86B4FE5C077B563 /* CoreGraphics.framework */; };
+		45B3E4F941494CD1130879CF /* JSQMessagesTypingIndicatorFooterView.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0A26BAF233ACB8295E81DB /* JSQMessagesTypingIndicatorFooterView.h */; };
+		45C93DAD7A8265FA5A15D767 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82B8C4B909317A4551665C7 /* Foundation.framework */; };
+		47E4C164F4C902782ADE1ABC /* JSQMessagesLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 978C7A8C0CFA5156B2A51E4D /* JSQMessagesLabel.h */; };
+		4A319F05D9C0199BDAC852A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82B8C4B909317A4551665C7 /* Foundation.framework */; };
+		4EE89772FA41283D6A939D9F /* JSQMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FCAB2BA36FFC17C5453511A /* JSQMessage.h */; };
+		4F4D1534621C55438B359248 /* JSQMessagesCellTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 88F8E16E96F7356D0B2AF1F2 /* JSQMessagesCellTextView.h */; };
+		50376CBF7C48EDCB510E47C2 /* JSQSystemSoundPlayer+JSQMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE3DD55B405D1A49B32E47 /* JSQSystemSoundPlayer+JSQMessages.m */; };
+		5139B210FC46FAF1FED5F8BD /* CATransaction+TransactionWithAnimationsAndCompletion.m in Sources */ = {isa = PBXBuildFile; fileRef = 94827EC3EA9F425522562B62 /* CATransaction+TransactionWithAnimationsAndCompletion.m */; };
+		51B5DC648B02E1F2C5C17F54 /* UIImage+JSQMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 0721E105B6B819A2ABA1D913 /* UIImage+JSQMessages.m */; };
+		52212DAF15859C4D94869B5D /* JSQMessagesMediaPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5629D8623FB93A56B9724B17 /* JSQMessagesMediaPlaceholderView.m */; };
+		559E13BD7D22E0F72ED67E15 /* YALSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D29651B1C3A3A53E1A4D35 /* YALSpringAnimation.m */; };
+		5A4898FDD20D956BB817134F /* JSQLocationMediaItem.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC47B0AF1A2D15B034DDE5D /* JSQLocationMediaItem.h */; };
+		5ADA99A64C6DF3C188BA2BB8 /* JSQMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 529C076924BF061717012C27 /* JSQMessagesViewController.m */; };
+		5B95903F87C0F6898F8F4E25 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68355DA158BE92972B67E9FF /* QuartzCore.framework */; };
+		5D760F996C837837A1A7EF2D /* JSQMessageData.h in Headers */ = {isa = PBXBuildFile; fileRef = A4BE8796700A0A3A452CF9E4 /* JSQMessageData.h */; };
+		5D9C48621CD2A221025784EA /* JSQMessagesCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EC26E54F9421ED1EE998BD /* JSQMessagesCollectionView.m */; };
+		5DEFD2200B3F149B17274CE7 /* JSQMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B57C81383735644F82F1FC62 /* JSQMediaItem.m */; };
+		5FA4006E79B13F9E92EE0981 /* JSQMessagesToolbarContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6ED19BE41FC6882F37541C /* JSQMessagesToolbarContentView.m */; };
+		60D684FA987ABE43DA185E81 /* JSQMessagesCollectionViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = BF9F49DB3D2ADE4241156995 /* JSQMessagesCollectionViewDataSource.h */; };
+		62163351C4BF0D04F0D21FC3 /* YALFoldingTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 579B489E243E1A0550DD144A /* YALFoldingTabBar.h */; };
+		62839106412BEB738ECBD7DD /* Pods-socialCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FC53799A3B58283B3F76D0 /* Pods-socialCalendar-dummy.m */; };
+		6558D6361239822986B6C597 /* MSCollectionViewCalendarLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ED814053FD4F78A4136D286B /* MSCollectionViewCalendarLayout.m */; };
+		662DAC9E60AA3A3FB32D8FBB /* JSQMessagesCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E5E06C225FDC8595E63DF6 /* JSQMessagesCollectionViewCell.h */; };
+		689E9ECF8CDEF01B0546FFCD /* UIColor+JSQMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = BCE6B22B68C6FD5316B4F736 /* UIColor+JSQMessages.h */; };
+		6DB1A4A423E06A7771EAD438 /* YALTabBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E99AF90A4B0D56B3EC6F38 /* YALTabBarItem.h */; };
+		70F46DBF98C59BFB95AD0EE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82B8C4B909317A4551665C7 /* Foundation.framework */; };
+		719C9D2C961E1F186E587925 /* JSQSystemSoundPlayer+JSQMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = 30BC1ADD5E4CDA738D5C6BC7 /* JSQSystemSoundPlayer+JSQMessages.h */; };
+		72A5689D091D8D0925E01DA8 /* JSQMessagesCollectionViewDelegateFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 84E500EC6CF29959655311E7 /* JSQMessagesCollectionViewDelegateFlowLayout.h */; };
+		74B0CBCAE9F780E65B57B33D /* JSQMessagesCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6CC5110D9FAF7C6FC10B81 /* JSQMessagesCollectionViewFlowLayout.h */; };
+		7A72C0E73842FD5B9366D045 /* JSQMessagesCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F046FBA5D72688840F933E /* JSQMessagesCollectionViewFlowLayout.m */; };
+		7BBECBC6408EEF32BB955AA1 /* JSQMessagesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC601E75E24FAF7964D9F52 /* JSQMessagesViewController.h */; };
+		7C2C0BF3A29A53A8636A31BC /* JSQMessagesKeyboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FEB5CDDF4938A1525B9A79 /* JSQMessagesKeyboardController.m */; };
+		7C46D402D5C040EBA60A5D6C /* JSQMediaItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 200A6DC1234426D9CB80E4A2 /* JSQMediaItem.h */; };
+		7C4AFEBDF7C54E7EF9EC9341 /* YALTabBarInteracting.h in Headers */ = {isa = PBXBuildFile; fileRef = D8A1016617B6D0772A521985 /* YALTabBarInteracting.h */; };
+		820CA53DCA76F8A68DDD6937 /* YALFoldingTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 81281A84D1CABFBA81D46022 /* YALFoldingTabBar.m */; };
+		859F941C9D0C6C929DF249A6 /* UIDevice+JSQMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = D5CCE835915944E49286893D /* UIDevice+JSQMessages.h */; };
+		89C6C7080E199E81CB249B85 /* JSQMessagesToolbarContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 242260132B5434B333F01AB0 /* JSQMessagesToolbarContentView.h */; };
+		8BC7B37C982027FEF5045B5A /* YALAnimatingTabBarConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F463C0D3647EE2C12B2C6A7 /* YALAnimatingTabBarConstants.h */; };
+		8BE48C793341726989FD949A /* YALFoldingTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 193A70A05845C631AAE6DA1D /* YALFoldingTabBarController.h */; };
+		8BE74C7017EB7396C7D0D4BD /* NSBundle+JSQMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C836B06FABF09E7D2FF0B4A /* NSBundle+JSQMessages.h */; };
+		90B7F3A40409969AB5442618 /* JSQMessagesKeyboardController.h in Headers */ = {isa = PBXBuildFile; fileRef = B825ABEA0DE6364B9CA7F0B0 /* JSQMessagesKeyboardController.h */; };
+		91167DDDCBF73899F6A5677A /* JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F67E68B991462ED5ABCB2894 /* JSQMessage.m */; };
+		9261C1822FB15BBC304178B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5225EF179C3697B4560FE452 /* UIKit.framework */; };
+		977D528C857152CB7580F181 /* YALAnimatingTabBarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E258C8F6A9AD3166FBC905FE /* YALAnimatingTabBarConstants.m */; };
+		9B4A898B391E8C83C97A89EC /* NSString+JSQMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0C5440A294EB3FD58ADCEF /* NSString+JSQMessages.h */; };
+		9C051C7105E8FC2C916FBD4D /* NSDate+CupertinoYankee.h in Headers */ = {isa = PBXBuildFile; fileRef = FE0DCE100C4E6559B68686C4 /* NSDate+CupertinoYankee.h */; };
+		A50929FE6BADF2F234E88569 /* JSQMessagesToolbarButtonFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A226AC2828C01E7C5D7A4FB /* JSQMessagesToolbarButtonFactory.h */; };
+		AF09C53A2835E537F02B35CA /* JSQMessageMediaData.h in Headers */ = {isa = PBXBuildFile; fileRef = E31F8E17972E206E0F28D63E /* JSQMessageMediaData.h */; };
+		AF90DEB2EF437F7BF5A97060 /* JSQMessagesToolbarButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 74329B4CB3AF2EB7CDF599D4 /* JSQMessagesToolbarButtonFactory.m */; };
+		B28D8B41A2DE2952E3F91AB1 /* JSQMessagesTypingIndicatorFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 262398E4160889876130207A /* JSQMessagesTypingIndicatorFooterView.m */; };
+		B4F31F4E13D3159EC01F61F9 /* JSQMessageAvatarImageDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C3D081EA3AD85DF4472CA45 /* JSQMessageAvatarImageDataSource.h */; };
+		B86DB9DB45B2ED253789C720 /* JSQMessagesCollectionViewCellIncoming.h in Headers */ = {isa = PBXBuildFile; fileRef = 7108E1649D3A60C5C760C240 /* JSQMessagesCollectionViewCellIncoming.h */; };
+		BCF76F8557065C1F5B816875 /* NSBundle+JSQMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 5895B87E596D2E3F8A43F247 /* NSBundle+JSQMessages.m */; };
+		BDB892AA5B13F46002A0238E /* JSQMessagesLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 19932B44E06172221EE61DD1 /* JSQMessagesLabel.m */; };
+		C0374ADB7B173C4C8177F3AD /* JSQMessagesBubbleImageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A237DC021AFF0FBDDB895B /* JSQMessagesBubbleImageFactory.m */; };
+		C1359A2756A0DEC78878660C /* Pods-socialCalendar-JSQSystemSoundPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6938C2AF8B2B4A6405376C0 /* Pods-socialCalendar-JSQSystemSoundPlayer-dummy.m */; };
+		C3F8BE80821FCB8E253A1D2E /* JSQMessagesCollectionViewCellIncoming.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAA47E50D63FF3A1076D553 /* JSQMessagesCollectionViewCellIncoming.m */; };
+		C52E1BC08A634332FD51EA52 /* Pods-socialCalendar-FoldingTabBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E92BF31CF86D798314BB6D2 /* Pods-socialCalendar-FoldingTabBar-dummy.m */; };
+		C6904FF5A5782CD12699A765 /* CATransaction+TransactionWithAnimationsAndCompletion.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B60AE6C3008FE5F805E645F /* CATransaction+TransactionWithAnimationsAndCompletion.h */; };
+		C7AE226A80416A3DC8551DE2 /* JSQVideoMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A612DA74EDD8F2B88C6CF179 /* JSQVideoMediaItem.m */; };
+		C81ABD4836FA4EFF8B2F3523 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A322A74E53691604B4D6F7EB /* AudioToolbox.framework */; };
+		CF1ED0B87470B8418F7C7A1D /* JSQMessagesAvatarImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C653CF20653B9A07F281729C /* JSQMessagesAvatarImage.h */; };
+		D60C6E2B4A5D2F2A09E00F01 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401390B07FD09F89DF353D0 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m */; };
+		D640B4AB554DBD05D64ECDF5 /* JSQMessagesCollectionViewLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = C46D9E21CF3CCF425DDE85CB /* JSQMessagesCollectionViewLayoutAttributes.m */; };
+		D72119D14868942D3FB9F84C /* UIColor+JSQMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 823CC43963A8C638AF2FB773 /* UIColor+JSQMessages.m */; };
+		D7DAF76755264F858AA03A22 /* JSQMessagesAvatarImageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A120DE8B403AAE0BE59EAF23 /* JSQMessagesAvatarImageFactory.m */; };
+		DB13ACEA7FAAE50D89D266EA /* JSQMessageBubbleImageDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 243B38A6B973AE31CF34915D /* JSQMessageBubbleImageDataSource.h */; };
+		DE239429FC402DEA2FCADA4B /* UIView+JSQMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D369957E51A0D259D67BB3 /* UIView+JSQMessages.h */; };
+		DE2BBA28CA24DBE0F3292E61 /* JSQMessagesCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = E0BCCC60E8D892AF5692F541 /* JSQMessagesCollectionView.h */; };
+		E19B48E3C850CC78123851AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82B8C4B909317A4551665C7 /* Foundation.framework */; };
+		E217BA79E720B732E3CB81F8 /* YALSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6150273A94BB61E1134224D5 /* YALSpringAnimation.h */; };
+		E275DDAC916CE4E7E434F501 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68355DA158BE92972B67E9FF /* QuartzCore.framework */; };
+		E88880DDDE03153EF26F9CD9 /* JSQMessagesCollectionViewCellOutgoing.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B444490A850CE1C42E6CFC3 /* JSQMessagesCollectionViewCellOutgoing.h */; };
+		EA474E350AE17B624A149785 /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFEC98CBF64605097ED90CF /* JSQMessagesMediaViewBubbleImageMasker.m */; };
+		EB461CFF288AAA7EFC7D8173 /* JSQMessagesCellTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 397FFE8FBDB7ED662E4FD7D0 /* JSQMessagesCellTextView.m */; };
+		EB5D669382307295EF2FD0D3 /* MSCollectionViewCalendarLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A5827CF0B05DDE5EC08CE34 /* MSCollectionViewCalendarLayout.h */; };
+		EDCD6B850419AC8F55FC4CF8 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 584C98C32E3084D0960E1571 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.h */; };
+		EF3642E687E9F7775163AEC6 /* JSQMessagesLoadEarlierHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC673522B0EE6767DBF1043 /* JSQMessagesLoadEarlierHeaderView.m */; };
+		F38C5DCFB590BE68C854981A /* JSQMessagesBubbleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D69CDB52AC7F1BE335C3504 /* JSQMessagesBubbleImage.m */; };
+		F52CDA62909A7ADA001D03AA /* JSQMessagesTimestampFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 33AE1C16131102E8AA66DD6C /* JSQMessagesTimestampFormatter.h */; };
+		F5F5BC2B4A41C09739920163 /* JSQMessagesComposerTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = D35756A6425AA98C432AA6B2 /* JSQMessagesComposerTextView.h */; };
+		F993466C3A9376A5F560449E /* CAAnimation+YALTabBarViewAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B45B6C06695322E6193F84A /* CAAnimation+YALTabBarViewAnimations.h */; };
+		F9E3F1EA8F5563FE9B9C64E7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E57F1FC04091D22F97D7A0D /* MapKit.framework */; };
+		FABB6B2A6B3EB40AF7ABF7DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5225EF179C3697B4560FE452 /* UIKit.framework */; };
+		FC5B8C7957617AB0AC699A60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82B8C4B909317A4551665C7 /* Foundation.framework */; };
+		FDBA1A89A65B295C4E5B9D6B /* JSQMessagesCollectionViewLayoutAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FA02BCC91F2EA244D8D916 /* JSQMessagesCollectionViewLayoutAttributes.h */; };
+		FE5E5F296CE33727C3D8864E /* Pods-socialCalendar-MSCollectionViewCalendarLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A1FAA1D05D71B7C565FF9 /* Pods-socialCalendar-MSCollectionViewCalendarLayout-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A5489C1C027AAA662E94E33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC6EB24844E1D397E102E83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 527A38AE040A7346588F36A6;
+			remoteInfo = "Pods-socialCalendar-JSQSystemSoundPlayer";
+		};
+		3825CB7FDF2263C2C65507BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC6EB24844E1D397E102E83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 527A38AE040A7346588F36A6;
+			remoteInfo = "Pods-socialCalendar-JSQSystemSoundPlayer";
+		};
+		4D06BB172927F358AB9C911B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC6EB24844E1D397E102E83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7057452C6E7792CACDBD1DF;
+			remoteInfo = "Pods-socialCalendar-CupertinoYankee";
+		};
+		64CBE1F28036A382CD22D8AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC6EB24844E1D397E102E83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7057452C6E7792CACDBD1DF;
+			remoteInfo = "Pods-socialCalendar-CupertinoYankee";
+		};
+		8438076D6CE8452E27E1768D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC6EB24844E1D397E102E83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9583BAEEE2F2B8AC0321F3B9;
+			remoteInfo = "Pods-socialCalendar-JSQMessagesViewController";
+		};
+		971E1BE84EEC3A3AE0AE6094 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC6EB24844E1D397E102E83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 344C1575EF5AA8B009393B28;
+			remoteInfo = "Pods-socialCalendar-MSCollectionViewCalendarLayout";
+		};
+		F501746181D3512135BCE4F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC6EB24844E1D397E102E83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92025437774AFF2850E46767;
+			remoteInfo = "Pods-socialCalendar-FoldingTabBar";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		B8CB6C8BE5BB16FA895AFC30 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		04E5E06C225FDC8595E63DF6 /* JSQMessagesCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesCollectionViewCell.h; path = JSQMessagesViewController/Views/JSQMessagesCollectionViewCell.h; sourceTree = "<group>"; };
+		050A6223F9C0ACACC78108C9 /* Pods-socialCalendar-CupertinoYankee-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-socialCalendar-CupertinoYankee-dummy.m"; sourceTree = "<group>"; };
+		0721E105B6B819A2ABA1D913 /* UIImage+JSQMessages.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+JSQMessages.m"; path = "JSQMessagesViewController/Categories/UIImage+JSQMessages.m"; sourceTree = "<group>"; };
+		07E73C48BDBEE26BBE2464AA /* Pods-socialCalendar-MSCollectionViewCalendarLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socialCalendar-MSCollectionViewCalendarLayout.xcconfig"; sourceTree = "<group>"; };
+		08D49AF897DC2F5163D5BE32 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		0A50CB8D5768F1FE04E7F3B3 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0B444490A850CE1C42E6CFC3 /* JSQMessagesCollectionViewCellOutgoing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesCollectionViewCellOutgoing.h; path = JSQMessagesViewController/Views/JSQMessagesCollectionViewCellOutgoing.h; sourceTree = "<group>"; };
+		0CAF279B22EF43DF8AA7BD9F /* Pods-socialCalendar-FoldingTabBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-socialCalendar-FoldingTabBar-prefix.pch"; sourceTree = "<group>"; };
+		0F463C0D3647EE2C12B2C6A7 /* YALAnimatingTabBarConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YALAnimatingTabBarConstants.h; path = FoldingTabBar/Constants/YALAnimatingTabBarConstants.h; sourceTree = "<group>"; };
+		14E262E45781855A60EB49A2 /* JSQMessagesAssets.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = JSQMessagesAssets.bundle; path = JSQMessagesViewController/Assets/JSQMessagesAssets.bundle; sourceTree = "<group>"; };
+		15D369957E51A0D259D67BB3 /* UIView+JSQMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+JSQMessages.h"; path = "JSQMessagesViewController/Categories/UIView+JSQMessages.h"; sourceTree = "<group>"; };
+		193A70A05845C631AAE6DA1D /* YALFoldingTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YALFoldingTabBarController.h; path = FoldingTabBar/Controller/FoldingTabBarController/YALFoldingTabBarController.h; sourceTree = "<group>"; };
+		19932B44E06172221EE61DD1 /* JSQMessagesLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesLabel.m; path = JSQMessagesViewController/Views/JSQMessagesLabel.m; sourceTree = "<group>"; };
+		19D47ADB1A1BCF5776808EFE /* Pods-socialCalendar-CupertinoYankee.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socialCalendar-CupertinoYankee.xcconfig"; sourceTree = "<group>"; };
+		1A34A5829BF627FDAC176574 /* Pods-socialCalendar-FoldingTabBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socialCalendar-FoldingTabBar.xcconfig"; sourceTree = "<group>"; };
+		1A6CC5110D9FAF7C6FC10B81 /* JSQMessagesCollectionViewFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesCollectionViewFlowLayout.h; path = JSQMessagesViewController/Layout/JSQMessagesCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		200A6DC1234426D9CB80E4A2 /* JSQMediaItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMediaItem.h; path = JSQMessagesViewController/Model/JSQMediaItem.h; sourceTree = "<group>"; };
+		21226C26FEA5BD66020FE898 /* JSQPhotoMediaItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQPhotoMediaItem.m; path = JSQMessagesViewController/Model/JSQPhotoMediaItem.m; sourceTree = "<group>"; };
+		215BEE4D45ABE29EEF5CD80B /* JSQMessagesCollectionViewCellOutgoing.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = JSQMessagesCollectionViewCellOutgoing.xib; path = JSQMessagesViewController/Views/JSQMessagesCollectionViewCellOutgoing.xib; sourceTree = "<group>"; };
+		242260132B5434B333F01AB0 /* JSQMessagesToolbarContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesToolbarContentView.h; path = JSQMessagesViewController/Views/JSQMessagesToolbarContentView.h; sourceTree = "<group>"; };
+		243B38A6B973AE31CF34915D /* JSQMessageBubbleImageDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessageBubbleImageDataSource.h; path = JSQMessagesViewController/Model/JSQMessageBubbleImageDataSource.h; sourceTree = "<group>"; };
+		262398E4160889876130207A /* JSQMessagesTypingIndicatorFooterView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesTypingIndicatorFooterView.m; path = JSQMessagesViewController/Views/JSQMessagesTypingIndicatorFooterView.m; sourceTree = "<group>"; };
+		2C836B06FABF09E7D2FF0B4A /* NSBundle+JSQMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+JSQMessages.h"; path = "JSQMessagesViewController/Categories/NSBundle+JSQMessages.h"; sourceTree = "<group>"; };
+		2C9E2145E964BABF246EC3D8 /* Pods-socialCalendar-MSCollectionViewCalendarLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socialCalendar-MSCollectionViewCalendarLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		2F3E3720E2E31B57983F26A0 /* Pods-socialCalendar-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-socialCalendar-resources.sh"; sourceTree = "<group>"; };
+		2F670314FF7D2D9008A1D943 /* Pods-socialCalendar-JSQSystemSoundPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socialCalendar-JSQSystemSoundPlayer.xcconfig"; sourceTree = "<group>"; };
+		30BC1ADD5E4CDA738D5C6BC7 /* JSQSystemSoundPlayer+JSQMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JSQSystemSoundPlayer+JSQMessages.h"; path = "JSQMessagesViewController/Categories/JSQSystemSoundPlayer+JSQMessages.h"; sourceTree = "<group>"; };
+		33AE1C16131102E8AA66DD6C /* JSQMessagesTimestampFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesTimestampFormatter.h; path = JSQMessagesViewController/Factories/JSQMessagesTimestampFormatter.h; sourceTree = "<group>"; };
+		397FFE8FBDB7ED662E4FD7D0 /* JSQMessagesCellTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesCellTextView.m; path = JSQMessagesViewController/Views/JSQMessagesCellTextView.m; sourceTree = "<group>"; };
+		3AA17ED7458557ECFAD54D64 /* libPods-socialCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socialCalendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BFEC98CBF64605097ED90CF /* JSQMessagesMediaViewBubbleImageMasker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesMediaViewBubbleImageMasker.m; path = JSQMessagesViewController/Factories/JSQMessagesMediaViewBubbleImageMasker.m; sourceTree = "<group>"; };
+		3D69CDB52AC7F1BE335C3504 /* JSQMessagesBubbleImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesBubbleImage.m; path = JSQMessagesViewController/Model/JSQMessagesBubbleImage.m; sourceTree = "<group>"; };
+		3E3E2F2B9E3BD766B79979D0 /* JSQMessagesTimestampFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesTimestampFormatter.m; path = JSQMessagesViewController/Factories/JSQMessagesTimestampFormatter.m; sourceTree = "<group>"; };
+		3E92BF31CF86D798314BB6D2 /* Pods-socialCalendar-FoldingTabBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-socialCalendar-FoldingTabBar-dummy.m"; sourceTree = "<group>"; };
+		3EF00D00CD72FE5FA595994E /* libPods-socialCalendar-JSQSystemSoundPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socialCalendar-JSQSystemSoundPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FF1B537F9F6FD333C4FC18E /* libPods-socialCalendar-MSCollectionViewCalendarLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socialCalendar-MSCollectionViewCalendarLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43A53380BA5DD88B0114FECF /* UIDevice+JSQMessages.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+JSQMessages.m"; path = "JSQMessagesViewController/Categories/UIDevice+JSQMessages.m"; sourceTree = "<group>"; };
+		43F15E0FD86B4FE5C077B563 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		45265B1F4B060A89B82E0B9B /* Pods-socialCalendar-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-socialCalendar-environment.h"; sourceTree = "<group>"; };
+		463A41178E6F773183E03D8F /* Pods-socialCalendar-JSQMessagesViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-socialCalendar-JSQMessagesViewController-prefix.pch"; sourceTree = "<group>"; };
+		4A3F470CBDF1E86C90566C74 /* Pods-socialCalendar-JSQSystemSoundPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-socialCalendar-JSQSystemSoundPlayer-prefix.pch"; sourceTree = "<group>"; };
+		4AEBA1CFC6439FE3D9D2D15C /* JSQMessagesMediaViewBubbleImageMasker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesMediaViewBubbleImageMasker.h; path = JSQMessagesViewController/Factories/JSQMessagesMediaViewBubbleImageMasker.h; sourceTree = "<group>"; };
+		4BAE3DD55B405D1A49B32E47 /* JSQSystemSoundPlayer+JSQMessages.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "JSQSystemSoundPlayer+JSQMessages.m"; path = "JSQMessagesViewController/Categories/JSQSystemSoundPlayer+JSQMessages.m"; sourceTree = "<group>"; };
+		4F8C44AEE783D3ED3606B80A /* Pods-socialCalendar-MSCollectionViewCalendarLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-socialCalendar-MSCollectionViewCalendarLayout-prefix.pch"; sourceTree = "<group>"; };
+		4FCAB2BA36FFC17C5453511A /* JSQMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessage.h; path = JSQMessagesViewController/Model/JSQMessage.h; sourceTree = "<group>"; };
+		4FCFFC5A6CD44A1C97436E4F /* NSDate+CupertinoYankee.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+CupertinoYankee.m"; path = "CupertinoYankee/NSDate+CupertinoYankee.m"; sourceTree = "<group>"; };
+		5225EF179C3697B4560FE452 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		529C076924BF061717012C27 /* JSQMessagesViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesViewController.m; path = JSQMessagesViewController/Controllers/JSQMessagesViewController.m; sourceTree = "<group>"; };
+		52BA31BD33BE9C15E975959E /* JSQMessagesBubbleImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesBubbleImage.h; path = JSQMessagesViewController/Model/JSQMessagesBubbleImage.h; sourceTree = "<group>"; };
+		54CDA6027E63118296A97C4C /* Pods-socialCalendar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-socialCalendar-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5629D8623FB93A56B9724B17 /* JSQMessagesMediaPlaceholderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesMediaPlaceholderView.m; path = JSQMessagesViewController/Views/JSQMessagesMediaPlaceholderView.m; sourceTree = "<group>"; };
+		572CF86F82C8D6DEDD8F6B73 /* JSQSystemSoundPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQSystemSoundPlayer.h; path = JSQSystemSoundPlayer/Classes/JSQSystemSoundPlayer.h; sourceTree = "<group>"; };
+		579B489E243E1A0550DD144A /* YALFoldingTabBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YALFoldingTabBar.h; path = FoldingTabBar/View/FoldingTabBar/YALFoldingTabBar.h; sourceTree = "<group>"; };
+		584C98C32E3084D0960E1571 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesCollectionViewFlowLayoutInvalidationContext.h; path = JSQMessagesViewController/Layout/JSQMessagesCollectionViewFlowLayoutInvalidationContext.h; sourceTree = "<group>"; };
+		5895B87E596D2E3F8A43F247 /* NSBundle+JSQMessages.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+JSQMessages.m"; path = "JSQMessagesViewController/Categories/NSBundle+JSQMessages.m"; sourceTree = "<group>"; };
+		5A0C5440A294EB3FD58ADCEF /* NSString+JSQMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+JSQMessages.h"; path = "JSQMessagesViewController/Categories/NSString+JSQMessages.h"; sourceTree = "<group>"; };
+		5AAA47E50D63FF3A1076D553 /* JSQMessagesCollectionViewCellIncoming.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesCollectionViewCellIncoming.m; path = JSQMessagesViewController/Views/JSQMessagesCollectionViewCellIncoming.m; sourceTree = "<group>"; };
+		5C34C3FD4EB2A970AA77BD00 /* JSQMessagesCollectionViewCellIncoming.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = JSQMessagesCollectionViewCellIncoming.xib; path = JSQMessagesViewController/Views/JSQMessagesCollectionViewCellIncoming.xib; sourceTree = "<group>"; };
+		5C3D081EA3AD85DF4472CA45 /* JSQMessageAvatarImageDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessageAvatarImageDataSource.h; path = JSQMessagesViewController/Model/JSQMessageAvatarImageDataSource.h; sourceTree = "<group>"; };
+		5E57F1FC04091D22F97D7A0D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		6150273A94BB61E1134224D5 /* YALSpringAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YALSpringAnimation.h; path = FoldingTabBar/Animation/YALSpringAnimation/YALSpringAnimation.h; sourceTree = "<group>"; };
+		619C64962E2BC524E81EBA33 /* YALTabBarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YALTabBarItem.m; path = FoldingTabBar/Model/TabBarItem/YALTabBarItem.m; sourceTree = "<group>"; };
+		631FC5DBAC92ADC74D2B3206 /* JSQPhotoMediaItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQPhotoMediaItem.h; path = JSQMessagesViewController/Model/JSQPhotoMediaItem.h; sourceTree = "<group>"; };
+		68355DA158BE92972B67E9FF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		6A5827CF0B05DDE5EC08CE34 /* MSCollectionViewCalendarLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSCollectionViewCalendarLayout.h; path = MSCollectionViewCalendarLayout/MSCollectionViewCalendarLayout.h; sourceTree = "<group>"; };
+		6B60AE6C3008FE5F805E645F /* CATransaction+TransactionWithAnimationsAndCompletion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CATransaction+TransactionWithAnimationsAndCompletion.h"; path = "FoldingTabBar/Category/CATransaction/CATransaction+TransactionWithAnimationsAndCompletion/CATransaction+TransactionWithAnimationsAndCompletion.h"; sourceTree = "<group>"; };
+		6CDBACE74DB616FC20C7630F /* libPods-socialCalendar-JSQMessagesViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socialCalendar-JSQMessagesViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DD083B8C283ABA011E5A759 /* YALFoldingTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YALFoldingTabBarController.m; path = FoldingTabBar/Controller/FoldingTabBarController/YALFoldingTabBarController.m; sourceTree = "<group>"; };
+		7108E1649D3A60C5C760C240 /* JSQMessagesCollectionViewCellIncoming.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesCollectionViewCellIncoming.h; path = JSQMessagesViewController/Views/JSQMessagesCollectionViewCellIncoming.h; sourceTree = "<group>"; };
+		731FF1C84377797B034A9670 /* Pods-socialCalendar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-socialCalendar-acknowledgements.plist"; sourceTree = "<group>"; };
+		74329B4CB3AF2EB7CDF599D4 /* JSQMessagesToolbarButtonFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesToolbarButtonFactory.m; path = JSQMessagesViewController/Factories/JSQMessagesToolbarButtonFactory.m; sourceTree = "<group>"; };
+		75536F2E567BE43ED0923D69 /* Pods-socialCalendar-JSQMessagesViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socialCalendar-JSQMessagesViewController-Private.xcconfig"; sourceTree = "<group>"; };
+		7ED0160A452EFF7AFE7EEF76 /* Pods-socialCalendar-FoldingTabBar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socialCalendar-FoldingTabBar-Private.xcconfig"; sourceTree = "<group>"; };
+		7ED97A639D614BEF2999E701 /* JSQMessagesAvatarImageFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesAvatarImageFactory.h; path = JSQMessagesViewController/Factories/JSQMessagesAvatarImageFactory.h; sourceTree = "<group>"; };
+		81281A84D1CABFBA81D46022 /* YALFoldingTabBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YALFoldingTabBar.m; path = FoldingTabBar/View/FoldingTabBar/YALFoldingTabBar.m; sourceTree = "<group>"; };
+		823CC43963A8C638AF2FB773 /* UIColor+JSQMessages.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+JSQMessages.m"; path = "JSQMessagesViewController/Categories/UIColor+JSQMessages.m"; sourceTree = "<group>"; };
+		82E7A179EE8E88DAE245F887 /* Pods-socialCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socialCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		82F558BD0C7CBC9862FF284B /* JSQMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessages.h; path = JSQMessagesViewController/JSQMessages.h; sourceTree = "<group>"; };
+		8401390B07FD09F89DF353D0 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesCollectionViewFlowLayoutInvalidationContext.m; path = JSQMessagesViewController/Layout/JSQMessagesCollectionViewFlowLayoutInvalidationContext.m; sourceTree = "<group>"; };
+		84E500EC6CF29959655311E7 /* JSQMessagesCollectionViewDelegateFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesCollectionViewDelegateFlowLayout.h; path = JSQMessagesViewController/Model/JSQMessagesCollectionViewDelegateFlowLayout.h; sourceTree = "<group>"; };
+		88F8E16E96F7356D0B2AF1F2 /* JSQMessagesCellTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesCellTextView.h; path = JSQMessagesViewController/Views/JSQMessagesCellTextView.h; sourceTree = "<group>"; };
+		8AB2039C434D742E24AB1D6B /* JSQLocationMediaItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQLocationMediaItem.m; path = JSQMessagesViewController/Model/JSQLocationMediaItem.m; sourceTree = "<group>"; };
+		94827EC3EA9F425522562B62 /* CATransaction+TransactionWithAnimationsAndCompletion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CATransaction+TransactionWithAnimationsAndCompletion.m"; path = "FoldingTabBar/Category/CATransaction/CATransaction+TransactionWithAnimationsAndCompletion/CATransaction+TransactionWithAnimationsAndCompletion.m"; sourceTree = "<group>"; };
+		978C7A8C0CFA5156B2A51E4D /* JSQMessagesLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesLabel.h; path = JSQMessagesViewController/Views/JSQMessagesLabel.h; sourceTree = "<group>"; };
+		9903BE3C2A0B3D3670AD427D /* UIView+JSQMessages.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+JSQMessages.m"; path = "JSQMessagesViewController/Categories/UIView+JSQMessages.m"; sourceTree = "<group>"; };
+		99F9D165F2EF7253113E8C06 /* JSQMessagesCollectionViewCellOutgoing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesCollectionViewCellOutgoing.m; path = JSQMessagesViewController/Views/JSQMessagesCollectionViewCellOutgoing.m; sourceTree = "<group>"; };
+		9A226AC2828C01E7C5D7A4FB /* JSQMessagesToolbarButtonFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesToolbarButtonFactory.h; path = JSQMessagesViewController/Factories/JSQMessagesToolbarButtonFactory.h; sourceTree = "<group>"; };
+		9A6ED19BE41FC6882F37541C /* JSQMessagesToolbarContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesToolbarContentView.m; path = JSQMessagesViewController/Views/JSQMessagesToolbarContentView.m; sourceTree = "<group>"; };
+		9B45B6C06695322E6193F84A /* CAAnimation+YALTabBarViewAnimations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CAAnimation+YALTabBarViewAnimations.h"; path = "FoldingTabBar/Category/CAAnimation/CAAnimation+YALTabBarViewAnimations/CAAnimation+YALTabBarViewAnimations.h"; sourceTree = "<group>"; };
+		9E6A1FAA1D05D71B7C565FF9 /* Pods-socialCalendar-MSCollectionViewCalendarLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-socialCalendar-MSCollectionViewCalendarLayout-dummy.m"; sourceTree = "<group>"; };
+		A120DE8B403AAE0BE59EAF23 /* JSQMessagesAvatarImageFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesAvatarImageFactory.m; path = JSQMessagesViewController/Factories/JSQMessagesAvatarImageFactory.m; sourceTree = "<group>"; };
+		A2F046FBA5D72688840F933E /* JSQMessagesCollectionViewFlowLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesCollectionViewFlowLayout.m; path = JSQMessagesViewController/Layout/JSQMessagesCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		A322A74E53691604B4D6F7EB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		A4BE8796700A0A3A452CF9E4 /* JSQMessageData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessageData.h; path = JSQMessagesViewController/Model/JSQMessageData.h; sourceTree = "<group>"; };
+		A612DA74EDD8F2B88C6CF179 /* JSQVideoMediaItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQVideoMediaItem.m; path = JSQMessagesViewController/Model/JSQVideoMediaItem.m; sourceTree = "<group>"; };
+		AA0A26BAF233ACB8295E81DB /* JSQMessagesTypingIndicatorFooterView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesTypingIndicatorFooterView.h; path = JSQMessagesViewController/Views/JSQMessagesTypingIndicatorFooterView.h; sourceTree = "<group>"; };
+		B10169D95A200BEA303B04CB /* JSQMessagesCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesCollectionViewCell.m; path = JSQMessagesViewController/Views/JSQMessagesCollectionViewCell.m; sourceTree = "<group>"; };
+		B2FA02BCC91F2EA244D8D916 /* JSQMessagesCollectionViewLayoutAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesCollectionViewLayoutAttributes.h; path = JSQMessagesViewController/Layout/JSQMessagesCollectionViewLayoutAttributes.h; sourceTree = "<group>"; };
+		B57C81383735644F82F1FC62 /* JSQMediaItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMediaItem.m; path = JSQMessagesViewController/Model/JSQMediaItem.m; sourceTree = "<group>"; };
+		B7D9F1CDA2D23D35329B68E7 /* JSQMessagesLoadEarlierHeaderView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = JSQMessagesLoadEarlierHeaderView.xib; path = JSQMessagesViewController/Views/JSQMessagesLoadEarlierHeaderView.xib; sourceTree = "<group>"; };
+		B825ABEA0DE6364B9CA7F0B0 /* JSQMessagesKeyboardController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesKeyboardController.h; path = JSQMessagesViewController/Controllers/JSQMessagesKeyboardController.h; sourceTree = "<group>"; };
+		B8DAD954BE59938F33AB887D /* JSQMessagesBubbleImageFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesBubbleImageFactory.h; path = JSQMessagesViewController/Factories/JSQMessagesBubbleImageFactory.h; sourceTree = "<group>"; };
+		B8EC26E54F9421ED1EE998BD /* JSQMessagesCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesCollectionView.m; path = JSQMessagesViewController/Views/JSQMessagesCollectionView.m; sourceTree = "<group>"; };
+		B9A516F54575627E58F0CE49 /* libPods-socialCalendar-CupertinoYankee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socialCalendar-CupertinoYankee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9E99AF90A4B0D56B3EC6F38 /* YALTabBarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YALTabBarItem.h; path = FoldingTabBar/Model/TabBarItem/YALTabBarItem.h; sourceTree = "<group>"; };
+		BCE6B22B68C6FD5316B4F736 /* UIColor+JSQMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+JSQMessages.h"; path = "JSQMessagesViewController/Categories/UIColor+JSQMessages.h"; sourceTree = "<group>"; };
+		BDEC740A2CDA1CB0872D6B9D /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQSystemSoundPlayer.m; path = JSQSystemSoundPlayer/Classes/JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
+		BE25A01F5E84DEE51519F9CF /* JSQMessagesInputToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesInputToolbar.h; path = JSQMessagesViewController/Views/JSQMessagesInputToolbar.h; sourceTree = "<group>"; };
+		BF9F49DB3D2ADE4241156995 /* JSQMessagesCollectionViewDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesCollectionViewDataSource.h; path = JSQMessagesViewController/Model/JSQMessagesCollectionViewDataSource.h; sourceTree = "<group>"; };
+		C332B159CAC034E07634547F /* Pods-socialCalendar-CupertinoYankee-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socialCalendar-CupertinoYankee-Private.xcconfig"; sourceTree = "<group>"; };
+		C46D9E21CF3CCF425DDE85CB /* JSQMessagesCollectionViewLayoutAttributes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesCollectionViewLayoutAttributes.m; path = JSQMessagesViewController/Layout/JSQMessagesCollectionViewLayoutAttributes.m; sourceTree = "<group>"; };
+		C653CF20653B9A07F281729C /* JSQMessagesAvatarImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesAvatarImage.h; path = JSQMessagesViewController/Model/JSQMessagesAvatarImage.h; sourceTree = "<group>"; };
+		D35756A6425AA98C432AA6B2 /* JSQMessagesComposerTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesComposerTextView.h; path = JSQMessagesViewController/Views/JSQMessagesComposerTextView.h; sourceTree = "<group>"; };
+		D5CCE835915944E49286893D /* UIDevice+JSQMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+JSQMessages.h"; path = "JSQMessagesViewController/Categories/UIDevice+JSQMessages.h"; sourceTree = "<group>"; };
+		D8A1016617B6D0772A521985 /* YALTabBarInteracting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YALTabBarInteracting.h; path = FoldingTabBar/Protocol/TabBarInteracting/YALTabBarInteracting.h; sourceTree = "<group>"; };
+		D9FC53799A3B58283B3F76D0 /* Pods-socialCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-socialCalendar-dummy.m"; sourceTree = "<group>"; };
+		DB073042F268B6F98637C5E4 /* Pods-socialCalendar-JSQSystemSoundPlayer-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socialCalendar-JSQSystemSoundPlayer-Private.xcconfig"; sourceTree = "<group>"; };
+		DEC601E75E24FAF7964D9F52 /* JSQMessagesViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesViewController.h; path = JSQMessagesViewController/Controllers/JSQMessagesViewController.h; sourceTree = "<group>"; };
+		DED4081E5FEAA99379D07036 /* CAAnimation+YALTabBarViewAnimations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CAAnimation+YALTabBarViewAnimations.m"; path = "FoldingTabBar/Category/CAAnimation/CAAnimation+YALTabBarViewAnimations/CAAnimation+YALTabBarViewAnimations.m"; sourceTree = "<group>"; };
+		DFAB2AE934B3EEE689D3D160 /* Pods-socialCalendar-JSQMessagesViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socialCalendar-JSQMessagesViewController.xcconfig"; sourceTree = "<group>"; };
+		E063E78E2D08A2FC7A9A39DC /* Pods-socialCalendar-CupertinoYankee-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-socialCalendar-CupertinoYankee-prefix.pch"; sourceTree = "<group>"; };
+		E0BCCC60E8D892AF5692F541 /* JSQMessagesCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesCollectionView.h; path = JSQMessagesViewController/Views/JSQMessagesCollectionView.h; sourceTree = "<group>"; };
+		E0FEB5CDDF4938A1525B9A79 /* JSQMessagesKeyboardController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesKeyboardController.m; path = JSQMessagesViewController/Controllers/JSQMessagesKeyboardController.m; sourceTree = "<group>"; };
+		E1D5DD08FAC2727F4F156740 /* JSQVideoMediaItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQVideoMediaItem.h; path = JSQMessagesViewController/Model/JSQVideoMediaItem.h; sourceTree = "<group>"; };
+		E258C8F6A9AD3166FBC905FE /* YALAnimatingTabBarConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YALAnimatingTabBarConstants.m; path = FoldingTabBar/Constants/YALAnimatingTabBarConstants.m; sourceTree = "<group>"; };
+		E31F8E17972E206E0F28D63E /* JSQMessageMediaData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessageMediaData.h; path = JSQMessagesViewController/Model/JSQMessageMediaData.h; sourceTree = "<group>"; };
+		E5D29651B1C3A3A53E1A4D35 /* YALSpringAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YALSpringAnimation.m; path = FoldingTabBar/Animation/YALSpringAnimation/YALSpringAnimation.m; sourceTree = "<group>"; };
+		E6938C2AF8B2B4A6405376C0 /* Pods-socialCalendar-JSQSystemSoundPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-socialCalendar-JSQSystemSoundPlayer-dummy.m"; sourceTree = "<group>"; };
+		E772EAEEF32472361B90BF28 /* JSQMessagesInputToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesInputToolbar.m; path = JSQMessagesViewController/Views/JSQMessagesInputToolbar.m; sourceTree = "<group>"; };
+		E7C5935F1515E3940FB9E969 /* Pods-socialCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-socialCalendar.release.xcconfig"; sourceTree = "<group>"; };
+		E82B8C4B909317A4551665C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E830BEA6094B2BA30BCE4C4D /* UIImage+JSQMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+JSQMessages.h"; path = "JSQMessagesViewController/Categories/UIImage+JSQMessages.h"; sourceTree = "<group>"; };
+		E96718EE31E6136B53C931D6 /* JSQMessagesMediaPlaceholderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesMediaPlaceholderView.h; path = JSQMessagesViewController/Views/JSQMessagesMediaPlaceholderView.h; sourceTree = "<group>"; };
+		ED814053FD4F78A4136D286B /* MSCollectionViewCalendarLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSCollectionViewCalendarLayout.m; path = MSCollectionViewCalendarLayout/MSCollectionViewCalendarLayout.m; sourceTree = "<group>"; };
+		EDB079424C16775EE3647F46 /* libPods-socialCalendar-FoldingTabBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socialCalendar-FoldingTabBar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE2AEBCCB63715F87605112B /* JSQMessagesViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = JSQMessagesViewController.xib; path = JSQMessagesViewController/Controllers/JSQMessagesViewController.xib; sourceTree = "<group>"; };
+		EEC47B0AF1A2D15B034DDE5D /* JSQLocationMediaItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQLocationMediaItem.h; path = JSQMessagesViewController/Model/JSQLocationMediaItem.h; sourceTree = "<group>"; };
+		EF1FE5AF1D1E077D52CD81BF /* JSQMessagesAvatarImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesAvatarImage.m; path = JSQMessagesViewController/Model/JSQMessagesAvatarImage.m; sourceTree = "<group>"; };
+		EF264EDC5CE51D84D0AE9463 /* JSQMessagesTypingIndicatorFooterView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = JSQMessagesTypingIndicatorFooterView.xib; path = JSQMessagesViewController/Views/JSQMessagesTypingIndicatorFooterView.xib; sourceTree = "<group>"; };
+		F0A237DC021AFF0FBDDB895B /* JSQMessagesBubbleImageFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesBubbleImageFactory.m; path = JSQMessagesViewController/Factories/JSQMessagesBubbleImageFactory.m; sourceTree = "<group>"; };
+		F204902293DC2B381C2C2D1D /* JSQMessagesToolbarContentView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = JSQMessagesToolbarContentView.xib; path = JSQMessagesViewController/Views/JSQMessagesToolbarContentView.xib; sourceTree = "<group>"; };
+		F67E68B991462ED5ABCB2894 /* JSQMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessage.m; path = JSQMessagesViewController/Model/JSQMessage.m; sourceTree = "<group>"; };
+		F9CD58CECC912CEBEA1FCFBC /* JSQMessagesLoadEarlierHeaderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSQMessagesLoadEarlierHeaderView.h; path = JSQMessagesViewController/Views/JSQMessagesLoadEarlierHeaderView.h; sourceTree = "<group>"; };
+		FAC673522B0EE6767DBF1043 /* JSQMessagesLoadEarlierHeaderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesLoadEarlierHeaderView.m; path = JSQMessagesViewController/Views/JSQMessagesLoadEarlierHeaderView.m; sourceTree = "<group>"; };
+		FB8A5A0063FDAB9417C37EB3 /* NSString+JSQMessages.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+JSQMessages.m"; path = "JSQMessagesViewController/Categories/NSString+JSQMessages.m"; sourceTree = "<group>"; };
+		FE0DCE100C4E6559B68686C4 /* NSDate+CupertinoYankee.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+CupertinoYankee.h"; path = "CupertinoYankee/NSDate+CupertinoYankee.h"; sourceTree = "<group>"; };
+		FE62A12E024A4596221AE395 /* JSQMessagesComposerTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSQMessagesComposerTextView.m; path = JSQMessagesViewController/Views/JSQMessagesComposerTextView.m; sourceTree = "<group>"; };
+		FF0C55F0F99CFF6BA2A3C965 /* Pods-socialCalendar-JSQMessagesViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-socialCalendar-JSQMessagesViewController-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		1242EDC5C290803DBC55CBBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455530D322CC22648837D6C4 /* CoreGraphics.framework in Frameworks */,
+				13BFDA60AD9976BB5F995C4F /* CoreLocation.framework in Frameworks */,
+				70F46DBF98C59BFB95AD0EE6 /* Foundation.framework in Frameworks */,
+				F9E3F1EA8F5563FE9B9C64E7 /* MapKit.framework in Frameworks */,
+				5B95903F87C0F6898F8F4E25 /* QuartzCore.framework in Frameworks */,
+				2CDA26D564D33EF57EE0B940 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		382FC8AADB79B10338908C1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A319F05D9C0199BDAC852A7 /* Foundation.framework in Frameworks */,
+				E275DDAC916CE4E7E434F501 /* QuartzCore.framework in Frameworks */,
+				FABB6B2A6B3EB40AF7ABF7DC /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		863446EA457F36F347B4C26F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F856F77AD1479024F28FE7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB34FD3D1312FD6621C5826E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C81ABD4836FA4EFF8B2F3523 /* AudioToolbox.framework in Frameworks */,
+				FC5B8C7957617AB0AC699A60 /* Foundation.framework in Frameworks */,
+				9261C1822FB15BBC304178B9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D94456EBC5E2FD59A2C16DD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E19B48E3C850CC78123851AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBD3E32CEC826C834240A744 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C93DAD7A8265FA5A15D767 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
-		235538BA93C5BF5BD19900AC /* Frameworks */ = {
+		14AE4470E02A9B673B151953 /* Pods-socialCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				54CDA6027E63118296A97C4C /* Pods-socialCalendar-acknowledgements.markdown */,
+				731FF1C84377797B034A9670 /* Pods-socialCalendar-acknowledgements.plist */,
+				D9FC53799A3B58283B3F76D0 /* Pods-socialCalendar-dummy.m */,
+				45265B1F4B060A89B82E0B9B /* Pods-socialCalendar-environment.h */,
+				2F3E3720E2E31B57983F26A0 /* Pods-socialCalendar-resources.sh */,
+				82E7A179EE8E88DAE245F887 /* Pods-socialCalendar.debug.xcconfig */,
+				E7C5935F1515E3940FB9E969 /* Pods-socialCalendar.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Pods-socialCalendar";
+			path = "Target Support Files/Pods-socialCalendar";
 			sourceTree = "<group>";
 		};
-		6BD0ED8C49CEFC6033BDE128 /* Targets Support Files */ = {
+		1D293D143EE822B3B5D7FDFB /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A322A74E53691604B4D6F7EB /* AudioToolbox.framework */,
+				43F15E0FD86B4FE5C077B563 /* CoreGraphics.framework */,
+				08D49AF897DC2F5163D5BE32 /* CoreLocation.framework */,
+				E82B8C4B909317A4551665C7 /* Foundation.framework */,
+				5E57F1FC04091D22F97D7A0D /* MapKit.framework */,
+				68355DA158BE92972B67E9FF /* QuartzCore.framework */,
+				5225EF179C3697B4560FE452 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		39738060CA2A5CD4D54B0203 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				14AE4470E02A9B673B151953 /* Pods-socialCalendar */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		6CA7B7806800BA110AFD4D28 = {
+		47254922FC6C7FB50A1BAE24 /* CupertinoYankee */ = {
 			isa = PBXGroup;
 			children = (
-				B8CB6C8BE5BB16FA895AFC30 /* Podfile */,
-				235538BA93C5BF5BD19900AC /* Frameworks */,
-				B623FDE3F52806429B97844D /* Products */,
-				6BD0ED8C49CEFC6033BDE128 /* Targets Support Files */,
+				FE0DCE100C4E6559B68686C4 /* NSDate+CupertinoYankee.h */,
+				4FCFFC5A6CD44A1C97436E4F /* NSDate+CupertinoYankee.m */,
+				E029EDA92D034B2D9569B7A7 /* Support Files */,
+			);
+			path = CupertinoYankee;
+			sourceTree = "<group>";
+		};
+		4AA8617C2097E920A2F31EB7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				07E73C48BDBEE26BBE2464AA /* Pods-socialCalendar-MSCollectionViewCalendarLayout.xcconfig */,
+				2C9E2145E964BABF246EC3D8 /* Pods-socialCalendar-MSCollectionViewCalendarLayout-Private.xcconfig */,
+				9E6A1FAA1D05D71B7C565FF9 /* Pods-socialCalendar-MSCollectionViewCalendarLayout-dummy.m */,
+				4F8C44AEE783D3ED3606B80A /* Pods-socialCalendar-MSCollectionViewCalendarLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-socialCalendar-MSCollectionViewCalendarLayout";
+			sourceTree = "<group>";
+		};
+		5669DE4B8BFCB298D9370246 = {
+			isa = PBXGroup;
+			children = (
+				0A50CB8D5768F1FE04E7F3B3 /* Podfile */,
+				DD0396EBA5CF53A6B4BAC07B /* Frameworks */,
+				F4D09568E6CBC1E4997085DF /* Pods */,
+				836B7EC2DA83B5400F981DBB /* Products */,
+				39738060CA2A5CD4D54B0203 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		B623FDE3F52806429B97844D /* Products */ = {
+		5B236D115159669421B04A54 /* JSQMessagesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				EEC47B0AF1A2D15B034DDE5D /* JSQLocationMediaItem.h */,
+				8AB2039C434D742E24AB1D6B /* JSQLocationMediaItem.m */,
+				200A6DC1234426D9CB80E4A2 /* JSQMediaItem.h */,
+				B57C81383735644F82F1FC62 /* JSQMediaItem.m */,
+				4FCAB2BA36FFC17C5453511A /* JSQMessage.h */,
+				F67E68B991462ED5ABCB2894 /* JSQMessage.m */,
+				5C3D081EA3AD85DF4472CA45 /* JSQMessageAvatarImageDataSource.h */,
+				243B38A6B973AE31CF34915D /* JSQMessageBubbleImageDataSource.h */,
+				A4BE8796700A0A3A452CF9E4 /* JSQMessageData.h */,
+				E31F8E17972E206E0F28D63E /* JSQMessageMediaData.h */,
+				82F558BD0C7CBC9862FF284B /* JSQMessages.h */,
+				C653CF20653B9A07F281729C /* JSQMessagesAvatarImage.h */,
+				EF1FE5AF1D1E077D52CD81BF /* JSQMessagesAvatarImage.m */,
+				7ED97A639D614BEF2999E701 /* JSQMessagesAvatarImageFactory.h */,
+				A120DE8B403AAE0BE59EAF23 /* JSQMessagesAvatarImageFactory.m */,
+				52BA31BD33BE9C15E975959E /* JSQMessagesBubbleImage.h */,
+				3D69CDB52AC7F1BE335C3504 /* JSQMessagesBubbleImage.m */,
+				B8DAD954BE59938F33AB887D /* JSQMessagesBubbleImageFactory.h */,
+				F0A237DC021AFF0FBDDB895B /* JSQMessagesBubbleImageFactory.m */,
+				88F8E16E96F7356D0B2AF1F2 /* JSQMessagesCellTextView.h */,
+				397FFE8FBDB7ED662E4FD7D0 /* JSQMessagesCellTextView.m */,
+				E0BCCC60E8D892AF5692F541 /* JSQMessagesCollectionView.h */,
+				B8EC26E54F9421ED1EE998BD /* JSQMessagesCollectionView.m */,
+				04E5E06C225FDC8595E63DF6 /* JSQMessagesCollectionViewCell.h */,
+				B10169D95A200BEA303B04CB /* JSQMessagesCollectionViewCell.m */,
+				7108E1649D3A60C5C760C240 /* JSQMessagesCollectionViewCellIncoming.h */,
+				5AAA47E50D63FF3A1076D553 /* JSQMessagesCollectionViewCellIncoming.m */,
+				0B444490A850CE1C42E6CFC3 /* JSQMessagesCollectionViewCellOutgoing.h */,
+				99F9D165F2EF7253113E8C06 /* JSQMessagesCollectionViewCellOutgoing.m */,
+				BF9F49DB3D2ADE4241156995 /* JSQMessagesCollectionViewDataSource.h */,
+				84E500EC6CF29959655311E7 /* JSQMessagesCollectionViewDelegateFlowLayout.h */,
+				1A6CC5110D9FAF7C6FC10B81 /* JSQMessagesCollectionViewFlowLayout.h */,
+				A2F046FBA5D72688840F933E /* JSQMessagesCollectionViewFlowLayout.m */,
+				584C98C32E3084D0960E1571 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.h */,
+				8401390B07FD09F89DF353D0 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m */,
+				B2FA02BCC91F2EA244D8D916 /* JSQMessagesCollectionViewLayoutAttributes.h */,
+				C46D9E21CF3CCF425DDE85CB /* JSQMessagesCollectionViewLayoutAttributes.m */,
+				D35756A6425AA98C432AA6B2 /* JSQMessagesComposerTextView.h */,
+				FE62A12E024A4596221AE395 /* JSQMessagesComposerTextView.m */,
+				BE25A01F5E84DEE51519F9CF /* JSQMessagesInputToolbar.h */,
+				E772EAEEF32472361B90BF28 /* JSQMessagesInputToolbar.m */,
+				B825ABEA0DE6364B9CA7F0B0 /* JSQMessagesKeyboardController.h */,
+				E0FEB5CDDF4938A1525B9A79 /* JSQMessagesKeyboardController.m */,
+				978C7A8C0CFA5156B2A51E4D /* JSQMessagesLabel.h */,
+				19932B44E06172221EE61DD1 /* JSQMessagesLabel.m */,
+				F9CD58CECC912CEBEA1FCFBC /* JSQMessagesLoadEarlierHeaderView.h */,
+				FAC673522B0EE6767DBF1043 /* JSQMessagesLoadEarlierHeaderView.m */,
+				E96718EE31E6136B53C931D6 /* JSQMessagesMediaPlaceholderView.h */,
+				5629D8623FB93A56B9724B17 /* JSQMessagesMediaPlaceholderView.m */,
+				4AEBA1CFC6439FE3D9D2D15C /* JSQMessagesMediaViewBubbleImageMasker.h */,
+				3BFEC98CBF64605097ED90CF /* JSQMessagesMediaViewBubbleImageMasker.m */,
+				33AE1C16131102E8AA66DD6C /* JSQMessagesTimestampFormatter.h */,
+				3E3E2F2B9E3BD766B79979D0 /* JSQMessagesTimestampFormatter.m */,
+				9A226AC2828C01E7C5D7A4FB /* JSQMessagesToolbarButtonFactory.h */,
+				74329B4CB3AF2EB7CDF599D4 /* JSQMessagesToolbarButtonFactory.m */,
+				242260132B5434B333F01AB0 /* JSQMessagesToolbarContentView.h */,
+				9A6ED19BE41FC6882F37541C /* JSQMessagesToolbarContentView.m */,
+				AA0A26BAF233ACB8295E81DB /* JSQMessagesTypingIndicatorFooterView.h */,
+				262398E4160889876130207A /* JSQMessagesTypingIndicatorFooterView.m */,
+				DEC601E75E24FAF7964D9F52 /* JSQMessagesViewController.h */,
+				529C076924BF061717012C27 /* JSQMessagesViewController.m */,
+				631FC5DBAC92ADC74D2B3206 /* JSQPhotoMediaItem.h */,
+				21226C26FEA5BD66020FE898 /* JSQPhotoMediaItem.m */,
+				30BC1ADD5E4CDA738D5C6BC7 /* JSQSystemSoundPlayer+JSQMessages.h */,
+				4BAE3DD55B405D1A49B32E47 /* JSQSystemSoundPlayer+JSQMessages.m */,
+				E1D5DD08FAC2727F4F156740 /* JSQVideoMediaItem.h */,
+				A612DA74EDD8F2B88C6CF179 /* JSQVideoMediaItem.m */,
+				2C836B06FABF09E7D2FF0B4A /* NSBundle+JSQMessages.h */,
+				5895B87E596D2E3F8A43F247 /* NSBundle+JSQMessages.m */,
+				5A0C5440A294EB3FD58ADCEF /* NSString+JSQMessages.h */,
+				FB8A5A0063FDAB9417C37EB3 /* NSString+JSQMessages.m */,
+				BCE6B22B68C6FD5316B4F736 /* UIColor+JSQMessages.h */,
+				823CC43963A8C638AF2FB773 /* UIColor+JSQMessages.m */,
+				D5CCE835915944E49286893D /* UIDevice+JSQMessages.h */,
+				43A53380BA5DD88B0114FECF /* UIDevice+JSQMessages.m */,
+				E830BEA6094B2BA30BCE4C4D /* UIImage+JSQMessages.h */,
+				0721E105B6B819A2ABA1D913 /* UIImage+JSQMessages.m */,
+				15D369957E51A0D259D67BB3 /* UIView+JSQMessages.h */,
+				9903BE3C2A0B3D3670AD427D /* UIView+JSQMessages.m */,
+				E2666D577C3FF145AA6FC3F3 /* Resources */,
+				EF3559ABFE68F1CD44F84AAA /* Support Files */,
+			);
+			path = JSQMessagesViewController;
+			sourceTree = "<group>";
+		};
+		733301F6C7C81D47B574350F /* MSCollectionViewCalendarLayout */ = {
+			isa = PBXGroup;
+			children = (
+				6A5827CF0B05DDE5EC08CE34 /* MSCollectionViewCalendarLayout.h */,
+				ED814053FD4F78A4136D286B /* MSCollectionViewCalendarLayout.m */,
+				4AA8617C2097E920A2F31EB7 /* Support Files */,
+			);
+			path = MSCollectionViewCalendarLayout;
+			sourceTree = "<group>";
+		};
+		7D756B2D5F77C4234EF43FD4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F670314FF7D2D9008A1D943 /* Pods-socialCalendar-JSQSystemSoundPlayer.xcconfig */,
+				DB073042F268B6F98637C5E4 /* Pods-socialCalendar-JSQSystemSoundPlayer-Private.xcconfig */,
+				E6938C2AF8B2B4A6405376C0 /* Pods-socialCalendar-JSQSystemSoundPlayer-dummy.m */,
+				4A3F470CBDF1E86C90566C74 /* Pods-socialCalendar-JSQSystemSoundPlayer-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-socialCalendar-JSQSystemSoundPlayer";
+			sourceTree = "<group>";
+		};
+		836B7EC2DA83B5400F981DBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AA17ED7458557ECFAD54D64 /* libPods-socialCalendar.a */,
+				B9A516F54575627E58F0CE49 /* libPods-socialCalendar-CupertinoYankee.a */,
+				EDB079424C16775EE3647F46 /* libPods-socialCalendar-FoldingTabBar.a */,
+				6CDBACE74DB616FC20C7630F /* libPods-socialCalendar-JSQMessagesViewController.a */,
+				3EF00D00CD72FE5FA595994E /* libPods-socialCalendar-JSQSystemSoundPlayer.a */,
+				3FF1B537F9F6FD333C4FC18E /* libPods-socialCalendar-MSCollectionViewCalendarLayout.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D6276320E651AC46C8D62FA0 /* FoldingTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				9B45B6C06695322E6193F84A /* CAAnimation+YALTabBarViewAnimations.h */,
+				DED4081E5FEAA99379D07036 /* CAAnimation+YALTabBarViewAnimations.m */,
+				6B60AE6C3008FE5F805E645F /* CATransaction+TransactionWithAnimationsAndCompletion.h */,
+				94827EC3EA9F425522562B62 /* CATransaction+TransactionWithAnimationsAndCompletion.m */,
+				0F463C0D3647EE2C12B2C6A7 /* YALAnimatingTabBarConstants.h */,
+				E258C8F6A9AD3166FBC905FE /* YALAnimatingTabBarConstants.m */,
+				579B489E243E1A0550DD144A /* YALFoldingTabBar.h */,
+				81281A84D1CABFBA81D46022 /* YALFoldingTabBar.m */,
+				193A70A05845C631AAE6DA1D /* YALFoldingTabBarController.h */,
+				6DD083B8C283ABA011E5A759 /* YALFoldingTabBarController.m */,
+				6150273A94BB61E1134224D5 /* YALSpringAnimation.h */,
+				E5D29651B1C3A3A53E1A4D35 /* YALSpringAnimation.m */,
+				D8A1016617B6D0772A521985 /* YALTabBarInteracting.h */,
+				B9E99AF90A4B0D56B3EC6F38 /* YALTabBarItem.h */,
+				619C64962E2BC524E81EBA33 /* YALTabBarItem.m */,
+				DF721FFB7D94BAB010750A0B /* Support Files */,
+			);
+			path = FoldingTabBar;
+			sourceTree = "<group>";
+		};
+		DD0396EBA5CF53A6B4BAC07B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D293D143EE822B3B5D7FDFB /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF721FFB7D94BAB010750A0B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A34A5829BF627FDAC176574 /* Pods-socialCalendar-FoldingTabBar.xcconfig */,
+				7ED0160A452EFF7AFE7EEF76 /* Pods-socialCalendar-FoldingTabBar-Private.xcconfig */,
+				3E92BF31CF86D798314BB6D2 /* Pods-socialCalendar-FoldingTabBar-dummy.m */,
+				0CAF279B22EF43DF8AA7BD9F /* Pods-socialCalendar-FoldingTabBar-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-socialCalendar-FoldingTabBar";
+			sourceTree = "<group>";
+		};
+		E029EDA92D034B2D9569B7A7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				19D47ADB1A1BCF5776808EFE /* Pods-socialCalendar-CupertinoYankee.xcconfig */,
+				C332B159CAC034E07634547F /* Pods-socialCalendar-CupertinoYankee-Private.xcconfig */,
+				050A6223F9C0ACACC78108C9 /* Pods-socialCalendar-CupertinoYankee-dummy.m */,
+				E063E78E2D08A2FC7A9A39DC /* Pods-socialCalendar-CupertinoYankee-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-socialCalendar-CupertinoYankee";
+			sourceTree = "<group>";
+		};
+		E2666D577C3FF145AA6FC3F3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14E262E45781855A60EB49A2 /* JSQMessagesAssets.bundle */,
+				5C34C3FD4EB2A970AA77BD00 /* JSQMessagesCollectionViewCellIncoming.xib */,
+				215BEE4D45ABE29EEF5CD80B /* JSQMessagesCollectionViewCellOutgoing.xib */,
+				B7D9F1CDA2D23D35329B68E7 /* JSQMessagesLoadEarlierHeaderView.xib */,
+				F204902293DC2B381C2C2D1D /* JSQMessagesToolbarContentView.xib */,
+				EF264EDC5CE51D84D0AE9463 /* JSQMessagesTypingIndicatorFooterView.xib */,
+				EE2AEBCCB63715F87605112B /* JSQMessagesViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EADDFEFFDD176AF873FD2C0B /* JSQSystemSoundPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				572CF86F82C8D6DEDD8F6B73 /* JSQSystemSoundPlayer.h */,
+				BDEC740A2CDA1CB0872D6B9D /* JSQSystemSoundPlayer.m */,
+				7D756B2D5F77C4234EF43FD4 /* Support Files */,
+			);
+			path = JSQSystemSoundPlayer;
+			sourceTree = "<group>";
+		};
+		EF3559ABFE68F1CD44F84AAA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFAB2AE934B3EEE689D3D160 /* Pods-socialCalendar-JSQMessagesViewController.xcconfig */,
+				75536F2E567BE43ED0923D69 /* Pods-socialCalendar-JSQMessagesViewController-Private.xcconfig */,
+				FF0C55F0F99CFF6BA2A3C965 /* Pods-socialCalendar-JSQMessagesViewController-dummy.m */,
+				463A41178E6F773183E03D8F /* Pods-socialCalendar-JSQMessagesViewController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-socialCalendar-JSQMessagesViewController";
+			sourceTree = "<group>";
+		};
+		F4D09568E6CBC1E4997085DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47254922FC6C7FB50A1BAE24 /* CupertinoYankee */,
+				D6276320E651AC46C8D62FA0 /* FoldingTabBar */,
+				5B236D115159669421B04A54 /* JSQMessagesViewController */,
+				EADDFEFFDD176AF873FD2C0B /* JSQSystemSoundPlayer */,
+				733301F6C7C81D47B574350F /* MSCollectionViewCalendarLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		37DD93AF35FC1681364A8336 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41410EE5091404C0D5A9B8E0 /* JSQSystemSoundPlayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F7EBD4C421FC390215F2AD8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F993466C3A9376A5F560449E /* CAAnimation+YALTabBarViewAnimations.h in Headers */,
+				C6904FF5A5782CD12699A765 /* CATransaction+TransactionWithAnimationsAndCompletion.h in Headers */,
+				8BC7B37C982027FEF5045B5A /* YALAnimatingTabBarConstants.h in Headers */,
+				62163351C4BF0D04F0D21FC3 /* YALFoldingTabBar.h in Headers */,
+				8BE48C793341726989FD949A /* YALFoldingTabBarController.h in Headers */,
+				E217BA79E720B732E3CB81F8 /* YALSpringAnimation.h in Headers */,
+				7C4AFEBDF7C54E7EF9EC9341 /* YALTabBarInteracting.h in Headers */,
+				6DB1A4A423E06A7771EAD438 /* YALTabBarItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FD4C2F9AADB3D0E6F799F55 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB5D669382307295EF2FD0D3 /* MSCollectionViewCalendarLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C60B3E0A831084161A247BAD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A4898FDD20D956BB817134F /* JSQLocationMediaItem.h in Headers */,
+				7C46D402D5C040EBA60A5D6C /* JSQMediaItem.h in Headers */,
+				4EE89772FA41283D6A939D9F /* JSQMessage.h in Headers */,
+				B4F31F4E13D3159EC01F61F9 /* JSQMessageAvatarImageDataSource.h in Headers */,
+				DB13ACEA7FAAE50D89D266EA /* JSQMessageBubbleImageDataSource.h in Headers */,
+				5D760F996C837837A1A7EF2D /* JSQMessageData.h in Headers */,
+				AF09C53A2835E537F02B35CA /* JSQMessageMediaData.h in Headers */,
+				30E21375E4C196774FD35A0B /* JSQMessages.h in Headers */,
+				CF1ED0B87470B8418F7C7A1D /* JSQMessagesAvatarImage.h in Headers */,
+				20F17265266332C066B66120 /* JSQMessagesAvatarImageFactory.h in Headers */,
+				2A4E06197014790E023071A8 /* JSQMessagesBubbleImage.h in Headers */,
+				0FD0CA002213094D690D50AE /* JSQMessagesBubbleImageFactory.h in Headers */,
+				4F4D1534621C55438B359248 /* JSQMessagesCellTextView.h in Headers */,
+				DE2BBA28CA24DBE0F3292E61 /* JSQMessagesCollectionView.h in Headers */,
+				662DAC9E60AA3A3FB32D8FBB /* JSQMessagesCollectionViewCell.h in Headers */,
+				B86DB9DB45B2ED253789C720 /* JSQMessagesCollectionViewCellIncoming.h in Headers */,
+				E88880DDDE03153EF26F9CD9 /* JSQMessagesCollectionViewCellOutgoing.h in Headers */,
+				60D684FA987ABE43DA185E81 /* JSQMessagesCollectionViewDataSource.h in Headers */,
+				72A5689D091D8D0925E01DA8 /* JSQMessagesCollectionViewDelegateFlowLayout.h in Headers */,
+				74B0CBCAE9F780E65B57B33D /* JSQMessagesCollectionViewFlowLayout.h in Headers */,
+				EDCD6B850419AC8F55FC4CF8 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.h in Headers */,
+				FDBA1A89A65B295C4E5B9D6B /* JSQMessagesCollectionViewLayoutAttributes.h in Headers */,
+				F5F5BC2B4A41C09739920163 /* JSQMessagesComposerTextView.h in Headers */,
+				39CE888627D494CA6E4F04B7 /* JSQMessagesInputToolbar.h in Headers */,
+				90B7F3A40409969AB5442618 /* JSQMessagesKeyboardController.h in Headers */,
+				47E4C164F4C902782ADE1ABC /* JSQMessagesLabel.h in Headers */,
+				28179C5483B6746E32E1B4D6 /* JSQMessagesLoadEarlierHeaderView.h in Headers */,
+				157B9B0CAAD56FA63BF3BF89 /* JSQMessagesMediaPlaceholderView.h in Headers */,
+				22FAAB1243288F2ACB559BF7 /* JSQMessagesMediaViewBubbleImageMasker.h in Headers */,
+				F52CDA62909A7ADA001D03AA /* JSQMessagesTimestampFormatter.h in Headers */,
+				A50929FE6BADF2F234E88569 /* JSQMessagesToolbarButtonFactory.h in Headers */,
+				89C6C7080E199E81CB249B85 /* JSQMessagesToolbarContentView.h in Headers */,
+				45B3E4F941494CD1130879CF /* JSQMessagesTypingIndicatorFooterView.h in Headers */,
+				7BBECBC6408EEF32BB955AA1 /* JSQMessagesViewController.h in Headers */,
+				0083F539B368E2CB2CED6B05 /* JSQPhotoMediaItem.h in Headers */,
+				719C9D2C961E1F186E587925 /* JSQSystemSoundPlayer+JSQMessages.h in Headers */,
+				02E9EE773023AA71F76A06BE /* JSQVideoMediaItem.h in Headers */,
+				8BE74C7017EB7396C7D0D4BD /* NSBundle+JSQMessages.h in Headers */,
+				9B4A898B391E8C83C97A89EC /* NSString+JSQMessages.h in Headers */,
+				689E9ECF8CDEF01B0546FFCD /* UIColor+JSQMessages.h in Headers */,
+				859F941C9D0C6C929DF249A6 /* UIDevice+JSQMessages.h in Headers */,
+				32E7C20ADF9D33DA49EC2A4B /* UIImage+JSQMessages.h in Headers */,
+				DE239429FC402DEA2FCADA4B /* UIView+JSQMessages.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA931BC19868F55DA5697D3A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C051C7105E8FC2C916FBD4D /* NSDate+CupertinoYankee.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		344C1575EF5AA8B009393B28 /* Pods-socialCalendar-MSCollectionViewCalendarLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E54826F0BE0ED33092576C9 /* Build configuration list for PBXNativeTarget "Pods-socialCalendar-MSCollectionViewCalendarLayout" */;
+			buildPhases = (
+				15EEDDF296654B7BC7C7321B /* Sources */,
+				FBD3E32CEC826C834240A744 /* Frameworks */,
+				9FD4C2F9AADB3D0E6F799F55 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B02CC8AA042B70E38BB3352 /* PBXTargetDependency */,
+			);
+			name = "Pods-socialCalendar-MSCollectionViewCalendarLayout";
+			productName = "Pods-socialCalendar-MSCollectionViewCalendarLayout";
+			productReference = 3FF1B537F9F6FD333C4FC18E /* libPods-socialCalendar-MSCollectionViewCalendarLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		527A38AE040A7346588F36A6 /* Pods-socialCalendar-JSQSystemSoundPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81033AF415F6B0F8B45E3B9C /* Build configuration list for PBXNativeTarget "Pods-socialCalendar-JSQSystemSoundPlayer" */;
+			buildPhases = (
+				1B5E29D9661107AD8B3F96FB /* Sources */,
+				CB34FD3D1312FD6621C5826E /* Frameworks */,
+				37DD93AF35FC1681364A8336 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-socialCalendar-JSQSystemSoundPlayer";
+			productName = "Pods-socialCalendar-JSQSystemSoundPlayer";
+			productReference = 3EF00D00CD72FE5FA595994E /* libPods-socialCalendar-JSQSystemSoundPlayer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		92025437774AFF2850E46767 /* Pods-socialCalendar-FoldingTabBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A656F029EC2635937ADD5E1 /* Build configuration list for PBXNativeTarget "Pods-socialCalendar-FoldingTabBar" */;
+			buildPhases = (
+				7AD95BEA5821E14C0F3328E7 /* Sources */,
+				382FC8AADB79B10338908C1A /* Frameworks */,
+				6F7EBD4C421FC390215F2AD8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-socialCalendar-FoldingTabBar";
+			productName = "Pods-socialCalendar-FoldingTabBar";
+			productReference = EDB079424C16775EE3647F46 /* libPods-socialCalendar-FoldingTabBar.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9583BAEEE2F2B8AC0321F3B9 /* Pods-socialCalendar-JSQMessagesViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 758FCC8D2873E362987F64A7 /* Build configuration list for PBXNativeTarget "Pods-socialCalendar-JSQMessagesViewController" */;
+			buildPhases = (
+				4A1E03D7057D64C9A626BD00 /* Sources */,
+				1242EDC5C290803DBC55CBBD /* Frameworks */,
+				C60B3E0A831084161A247BAD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A89FC2C2B0E3F68AED9103E /* PBXTargetDependency */,
+			);
+			name = "Pods-socialCalendar-JSQMessagesViewController";
+			productName = "Pods-socialCalendar-JSQMessagesViewController";
+			productReference = 6CDBACE74DB616FC20C7630F /* libPods-socialCalendar-JSQMessagesViewController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A7057452C6E7792CACDBD1DF /* Pods-socialCalendar-CupertinoYankee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91CBDAFBAEAFBE9A7326526E /* Build configuration list for PBXNativeTarget "Pods-socialCalendar-CupertinoYankee" */;
+			buildPhases = (
+				B9B7D0524095348338245632 /* Sources */,
+				D94456EBC5E2FD59A2C16DD7 /* Frameworks */,
+				EA931BC19868F55DA5697D3A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-socialCalendar-CupertinoYankee";
+			productName = "Pods-socialCalendar-CupertinoYankee";
+			productReference = B9A516F54575627E58F0CE49 /* libPods-socialCalendar-CupertinoYankee.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E6AF1E827E4C712612C1AF01 /* Pods-socialCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69197618F9743C8461C09214 /* Build configuration list for PBXNativeTarget "Pods-socialCalendar" */;
+			buildPhases = (
+				D499869EE71E0FADBBCB2998 /* Sources */,
+				863446EA457F36F347B4C26F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79E11EB63F132285600586A5 /* PBXTargetDependency */,
+				E4E0500891D0E628203EDE77 /* PBXTargetDependency */,
+				34C73C2210E1A1890CA4A5F6 /* PBXTargetDependency */,
+				406C57F346699028ACF932E4 /* PBXTargetDependency */,
+				9E21CB27EA09D49767E53BCB /* PBXTargetDependency */,
+			);
+			name = "Pods-socialCalendar";
+			productName = "Pods-socialCalendar";
+			productReference = 3AA17ED7458557ECFAD54D64 /* libPods-socialCalendar.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
-		FBA8B847E22252FB45D235C4 /* Project object */ = {
+		0FC6EB24844E1D397E102E83 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = D252CCD0AFBC15C73121ECC9 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = E07D198D552D28875B2C7102 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 6CA7B7806800BA110AFD4D28;
-			productRefGroup = B623FDE3F52806429B97844D /* Products */;
+			mainGroup = 5669DE4B8BFCB298D9370246;
+			productRefGroup = 836B7EC2DA83B5400F981DBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				E6AF1E827E4C712612C1AF01 /* Pods-socialCalendar */,
+				A7057452C6E7792CACDBD1DF /* Pods-socialCalendar-CupertinoYankee */,
+				92025437774AFF2850E46767 /* Pods-socialCalendar-FoldingTabBar */,
+				9583BAEEE2F2B8AC0321F3B9 /* Pods-socialCalendar-JSQMessagesViewController */,
+				527A38AE040A7346588F36A6 /* Pods-socialCalendar-JSQSystemSoundPlayer */,
+				344C1575EF5AA8B009393B28 /* Pods-socialCalendar-MSCollectionViewCalendarLayout */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXSourcesBuildPhase section */
+		15EEDDF296654B7BC7C7321B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6558D6361239822986B6C597 /* MSCollectionViewCalendarLayout.m in Sources */,
+				FE5E5F296CE33727C3D8864E /* Pods-socialCalendar-MSCollectionViewCalendarLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B5E29D9661107AD8B3F96FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C9B81E512D572F5DCCEC48A /* JSQSystemSoundPlayer.m in Sources */,
+				C1359A2756A0DEC78878660C /* Pods-socialCalendar-JSQSystemSoundPlayer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A1E03D7057D64C9A626BD00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253199892C8058549FC7A7B7 /* JSQLocationMediaItem.m in Sources */,
+				5DEFD2200B3F149B17274CE7 /* JSQMediaItem.m in Sources */,
+				91167DDDCBF73899F6A5677A /* JSQMessage.m in Sources */,
+				3A89F28C3F01B1D7B7FB0104 /* JSQMessagesAvatarImage.m in Sources */,
+				D7DAF76755264F858AA03A22 /* JSQMessagesAvatarImageFactory.m in Sources */,
+				F38C5DCFB590BE68C854981A /* JSQMessagesBubbleImage.m in Sources */,
+				C0374ADB7B173C4C8177F3AD /* JSQMessagesBubbleImageFactory.m in Sources */,
+				EB461CFF288AAA7EFC7D8173 /* JSQMessagesCellTextView.m in Sources */,
+				5D9C48621CD2A221025784EA /* JSQMessagesCollectionView.m in Sources */,
+				0D8871AD45D76318F9B3CD4C /* JSQMessagesCollectionViewCell.m in Sources */,
+				C3F8BE80821FCB8E253A1D2E /* JSQMessagesCollectionViewCellIncoming.m in Sources */,
+				0BE4E6D7B6E67024F3D2933D /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
+				7A72C0E73842FD5B9366D045 /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
+				D60C6E2B4A5D2F2A09E00F01 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */,
+				D640B4AB554DBD05D64ECDF5 /* JSQMessagesCollectionViewLayoutAttributes.m in Sources */,
+				057658F57E9B8691B618F162 /* JSQMessagesComposerTextView.m in Sources */,
+				1A59002F61BD8C0B6460CD11 /* JSQMessagesInputToolbar.m in Sources */,
+				7C2C0BF3A29A53A8636A31BC /* JSQMessagesKeyboardController.m in Sources */,
+				BDB892AA5B13F46002A0238E /* JSQMessagesLabel.m in Sources */,
+				EF3642E687E9F7775163AEC6 /* JSQMessagesLoadEarlierHeaderView.m in Sources */,
+				52212DAF15859C4D94869B5D /* JSQMessagesMediaPlaceholderView.m in Sources */,
+				EA474E350AE17B624A149785 /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
+				391EBBAE5792C9D55648BB76 /* JSQMessagesTimestampFormatter.m in Sources */,
+				AF90DEB2EF437F7BF5A97060 /* JSQMessagesToolbarButtonFactory.m in Sources */,
+				5FA4006E79B13F9E92EE0981 /* JSQMessagesToolbarContentView.m in Sources */,
+				B28D8B41A2DE2952E3F91AB1 /* JSQMessagesTypingIndicatorFooterView.m in Sources */,
+				5ADA99A64C6DF3C188BA2BB8 /* JSQMessagesViewController.m in Sources */,
+				09A8D29DB785E1274EDECC28 /* JSQPhotoMediaItem.m in Sources */,
+				50376CBF7C48EDCB510E47C2 /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
+				C7AE226A80416A3DC8551DE2 /* JSQVideoMediaItem.m in Sources */,
+				BCF76F8557065C1F5B816875 /* NSBundle+JSQMessages.m in Sources */,
+				2F2A63F92C948D746586411A /* NSString+JSQMessages.m in Sources */,
+				2270A7BC88A3461333862FC3 /* Pods-socialCalendar-JSQMessagesViewController-dummy.m in Sources */,
+				D72119D14868942D3FB9F84C /* UIColor+JSQMessages.m in Sources */,
+				2F37F46EDFDD11743F4C2C2D /* UIDevice+JSQMessages.m in Sources */,
+				51B5DC648B02E1F2C5C17F54 /* UIImage+JSQMessages.m in Sources */,
+				2BDA4D204627D5E6669A8259 /* UIView+JSQMessages.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AD95BEA5821E14C0F3328E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				009AB63BC94200800D03237E /* CAAnimation+YALTabBarViewAnimations.m in Sources */,
+				5139B210FC46FAF1FED5F8BD /* CATransaction+TransactionWithAnimationsAndCompletion.m in Sources */,
+				C52E1BC08A634332FD51EA52 /* Pods-socialCalendar-FoldingTabBar-dummy.m in Sources */,
+				977D528C857152CB7580F181 /* YALAnimatingTabBarConstants.m in Sources */,
+				820CA53DCA76F8A68DDD6937 /* YALFoldingTabBar.m in Sources */,
+				0BD5FC91C31C26E61F299587 /* YALFoldingTabBarController.m in Sources */,
+				559E13BD7D22E0F72ED67E15 /* YALSpringAnimation.m in Sources */,
+				3F3B8802751CF7529BC7243C /* YALTabBarItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B7D0524095348338245632 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				374FE56D314B586D8A999791 /* NSDate+CupertinoYankee.m in Sources */,
+				2DA7BFE5F9A603A7CCBFF81C /* Pods-socialCalendar-CupertinoYankee-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D499869EE71E0FADBBCB2998 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62839106412BEB738ECBD7DD /* Pods-socialCalendar-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A89FC2C2B0E3F68AED9103E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-socialCalendar-JSQSystemSoundPlayer";
+			target = 527A38AE040A7346588F36A6 /* Pods-socialCalendar-JSQSystemSoundPlayer */;
+			targetProxy = 3825CB7FDF2263C2C65507BB /* PBXContainerItemProxy */;
+		};
+		0B02CC8AA042B70E38BB3352 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-socialCalendar-CupertinoYankee";
+			target = A7057452C6E7792CACDBD1DF /* Pods-socialCalendar-CupertinoYankee */;
+			targetProxy = 4D06BB172927F358AB9C911B /* PBXContainerItemProxy */;
+		};
+		34C73C2210E1A1890CA4A5F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-socialCalendar-JSQMessagesViewController";
+			target = 9583BAEEE2F2B8AC0321F3B9 /* Pods-socialCalendar-JSQMessagesViewController */;
+			targetProxy = 8438076D6CE8452E27E1768D /* PBXContainerItemProxy */;
+		};
+		406C57F346699028ACF932E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-socialCalendar-JSQSystemSoundPlayer";
+			target = 527A38AE040A7346588F36A6 /* Pods-socialCalendar-JSQSystemSoundPlayer */;
+			targetProxy = 1A5489C1C027AAA662E94E33 /* PBXContainerItemProxy */;
+		};
+		79E11EB63F132285600586A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-socialCalendar-CupertinoYankee";
+			target = A7057452C6E7792CACDBD1DF /* Pods-socialCalendar-CupertinoYankee */;
+			targetProxy = 64CBE1F28036A382CD22D8AE /* PBXContainerItemProxy */;
+		};
+		9E21CB27EA09D49767E53BCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-socialCalendar-MSCollectionViewCalendarLayout";
+			target = 344C1575EF5AA8B009393B28 /* Pods-socialCalendar-MSCollectionViewCalendarLayout */;
+			targetProxy = 971E1BE84EEC3A3AE0AE6094 /* PBXContainerItemProxy */;
+		};
+		E4E0500891D0E628203EDE77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-socialCalendar-FoldingTabBar";
+			target = 92025437774AFF2850E46767 /* Pods-socialCalendar-FoldingTabBar */;
+			targetProxy = F501746181D3512135BCE4F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		F68EBAD20D3D9659FFF811AE /* Release */ = {
+		15EF5F5F1FDD45F6F0073627 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75536F2E567BE43ED0923D69 /* Pods-socialCalendar-JSQMessagesViewController-Private.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-socialCalendar-JSQMessagesViewController/Pods-socialCalendar-JSQMessagesViewController-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		192954EE8394DB1716510605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75536F2E567BE43ED0923D69 /* Pods-socialCalendar-JSQMessagesViewController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-socialCalendar-JSQMessagesViewController/Pods-socialCalendar-JSQMessagesViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		FEA0C684E17D4B0EB5ED5F22 /* Debug */ = {
+		20072CE65C1E8680DF3E30D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ED0160A452EFF7AFE7EEF76 /* Pods-socialCalendar-FoldingTabBar-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-socialCalendar-FoldingTabBar/Pods-socialCalendar-FoldingTabBar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2DE359E61FC0C2BB076F5FF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C332B159CAC034E07634547F /* Pods-socialCalendar-CupertinoYankee-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-socialCalendar-CupertinoYankee/Pods-socialCalendar-CupertinoYankee-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		413E3EFB95611152792C5BAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C9E2145E964BABF246EC3D8 /* Pods-socialCalendar-MSCollectionViewCalendarLayout-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-socialCalendar-MSCollectionViewCalendarLayout/Pods-socialCalendar-MSCollectionViewCalendarLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		75E242AAB04C7069C1AFBD93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB073042F268B6F98637C5E4 /* Pods-socialCalendar-JSQSystemSoundPlayer-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-socialCalendar-JSQSystemSoundPlayer/Pods-socialCalendar-JSQSystemSoundPlayer-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		849951BCE9E4DA3999F65A8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB073042F268B6F98637C5E4 /* Pods-socialCalendar-JSQSystemSoundPlayer-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-socialCalendar-JSQSystemSoundPlayer/Pods-socialCalendar-JSQSystemSoundPlayer-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A7A1DE0FF3F86B1F0F56EC35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -140,19 +1217,187 @@
 			};
 			name = Debug;
 		};
+		A8AAB14233AA84D9061FE4DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C332B159CAC034E07634547F /* Pods-socialCalendar-CupertinoYankee-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-socialCalendar-CupertinoYankee/Pods-socialCalendar-CupertinoYankee-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AEDC68C72B10C5D9F6FE7DC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7C5935F1515E3940FB9E969 /* Pods-socialCalendar.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CCCBE66D0D5BF937C21000D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ED0160A452EFF7AFE7EEF76 /* Pods-socialCalendar-FoldingTabBar-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-socialCalendar-FoldingTabBar/Pods-socialCalendar-FoldingTabBar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D8568445B58F16C6B7695E50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C9E2145E964BABF246EC3D8 /* Pods-socialCalendar-MSCollectionViewCalendarLayout-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-socialCalendar-MSCollectionViewCalendarLayout/Pods-socialCalendar-MSCollectionViewCalendarLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E7534F7E913F579F411225A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82E7A179EE8E88DAE245F887 /* Pods-socialCalendar.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FAAC551CB6144CD2C521D3B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D252CCD0AFBC15C73121ECC9 /* Build configuration list for PBXProject "Pods" */ = {
+		0E54826F0BE0ED33092576C9 /* Build configuration list for PBXNativeTarget "Pods-socialCalendar-MSCollectionViewCalendarLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FEA0C684E17D4B0EB5ED5F22 /* Debug */,
-				F68EBAD20D3D9659FFF811AE /* Release */,
+				413E3EFB95611152792C5BAE /* Debug */,
+				D8568445B58F16C6B7695E50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A656F029EC2635937ADD5E1 /* Build configuration list for PBXNativeTarget "Pods-socialCalendar-FoldingTabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20072CE65C1E8680DF3E30D5 /* Debug */,
+				CCCBE66D0D5BF937C21000D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69197618F9743C8461C09214 /* Build configuration list for PBXNativeTarget "Pods-socialCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7534F7E913F579F411225A4 /* Debug */,
+				AEDC68C72B10C5D9F6FE7DC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		758FCC8D2873E362987F64A7 /* Build configuration list for PBXNativeTarget "Pods-socialCalendar-JSQMessagesViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15EF5F5F1FDD45F6F0073627 /* Debug */,
+				192954EE8394DB1716510605 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81033AF415F6B0F8B45E3B9C /* Build configuration list for PBXNativeTarget "Pods-socialCalendar-JSQSystemSoundPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849951BCE9E4DA3999F65A8E /* Debug */,
+				75E242AAB04C7069C1AFBD93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91CBDAFBAEAFBE9A7326526E /* Build configuration list for PBXNativeTarget "Pods-socialCalendar-CupertinoYankee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8AAB14233AA84D9061FE4DE /* Debug */,
+				2DE359E61FC0C2BB076F5FF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E07D198D552D28875B2C7102 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7A1DE0FF3F86B1F0F56EC35 /* Debug */,
+				FAAC551CB6144CD2C521D3B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FBA8B847E22252FB45D235C4 /* Project object */;
+	rootObject = 0FC6EB24844E1D397E102E83 /* Project object */;
 }

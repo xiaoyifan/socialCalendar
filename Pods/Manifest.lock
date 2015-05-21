@@ -1,1 +1,22 @@
+PODS:
+  - CupertinoYankee (0.1.1)
+  - FoldingTabBar (1.0.0)
+  - JSQMessagesViewController (7.0.2):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
+  - MSCollectionViewCalendarLayout (0.1.3):
+    - CupertinoYankee (~> 0.1)
+
+DEPENDENCIES:
+  - FoldingTabBar (~> 1.0.0)
+  - JSQMessagesViewController
+  - MSCollectionViewCalendarLayout
+
+SPEC CHECKSUMS:
+  CupertinoYankee: 742ab22e47518167d0c78d2eaa5aed5b6e26af3b
+  FoldingTabBar: 463d247453a2ba826ae79f5be1e6b8b93b6aa0ce
+  JSQMessagesViewController: bb6649691182b1899dc52b42266ad69efc473510
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  MSCollectionViewCalendarLayout: fba6fefdb3a340cb3e4f10725c6b3a530e6f6817
+
 COCOAPODS: 0.37.1
