@@ -6,12 +6,6 @@
 // project.
 
 
-// CupertinoYankee
-#define COCOAPODS_POD_AVAILABLE_CupertinoYankee
-#define COCOAPODS_VERSION_MAJOR_CupertinoYankee 0
-#define COCOAPODS_VERSION_MINOR_CupertinoYankee 1
-#define COCOAPODS_VERSION_PATCH_CupertinoYankee 1
-
 // FoldingTabBar
 #define COCOAPODS_POD_AVAILABLE_FoldingTabBar
 #define COCOAPODS_VERSION_MAJOR_FoldingTabBar 1
@@ -30,9 +24,9 @@
 #define COCOAPODS_VERSION_MINOR_JSQSystemSoundPlayer 0
 #define COCOAPODS_VERSION_PATCH_JSQSystemSoundPlayer 1
 
-// MSCollectionViewCalendarLayout
-#define COCOAPODS_POD_AVAILABLE_MSCollectionViewCalendarLayout
-#define COCOAPODS_VERSION_MAJOR_MSCollectionViewCalendarLayout 0
-#define COCOAPODS_VERSION_MINOR_MSCollectionViewCalendarLayout 1
-#define COCOAPODS_VERSION_PATCH_MSCollectionViewCalendarLayout 3
+// JTCalendar
+#define COCOAPODS_POD_AVAILABLE_JTCalendar
+#define COCOAPODS_VERSION_MAJOR_JTCalendar 1
+#define COCOAPODS_VERSION_MINOR_JTCalendar 2
+#define COCOAPODS_VERSION_PATCH_JTCalendar 3
 

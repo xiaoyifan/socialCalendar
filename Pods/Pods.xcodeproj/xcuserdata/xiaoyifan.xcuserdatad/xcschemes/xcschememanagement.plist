@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-socialCalendar-CupertinoYankee.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-socialCalendar-FoldingTabBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,7 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-MSCollectionViewCalendarLayout.xcscheme</key>
+		<key>Pods-socialCalendar-JTCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>344C1575EF5AA8B009393B28</key>
+		<key>1F1F2782ACEFACA7E5C88BD1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>527A38AE040A7346588F36A6</key>
+		<key>3BB7EF9B7C460B40BED70674</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>92025437774AFF2850E46767</key>
+		<key>53C6AB9C5B1F7EF1A8AD4B29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9583BAEEE2F2B8AC0321F3B9</key>
+		<key>88C476407A5807315DE165D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7057452C6E7792CACDBD1DF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E6AF1E827E4C712612C1AF01</key>
+		<key>90753AEDA9B5A63ED215F739</key>
 		<dict>
 			<key>primary</key>
 			<true/>

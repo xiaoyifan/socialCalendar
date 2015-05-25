@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0J4-2c-N42">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--events-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,9 +18,102 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="events" id="1Eb-zW-aEG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="961" y="56"/>
+        </scene>
+        <!--calendar-->
+        <scene sceneID="uuz-NA-H1U">
+            <objects>
+                <viewController id="Cob-De-PYN" customClass="calendarController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yjy-ur-C7p"/>
+                        <viewControllerLayoutGuide type="bottom" id="lgF-Jq-CM7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XGj-oX-pOh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIL-im-Lk1" customClass="JTCalendarMenuView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Q45-Qc-4kR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UmZ-KQ-VUe" customClass="JTCalendarContentView">
+                                <rect key="frame" x="0.0" y="75" width="600" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="5eh-Uc-i5X"/>
+                                    <constraint firstAttribute="height" constant="55" id="yGN-WF-8AP"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yGN-WF-8AP"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="biM-ZU-4at">
+                                <rect key="frame" x="0.0" y="375" width="600" height="176"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="55" id="Brz-Xb-vLV">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Brz-Xb-vLV" id="tSR-lH-NRF">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UmZ-KQ-VUe" firstAttribute="top" secondItem="gIL-im-Lk1" secondAttribute="bottom" id="0e1-eT-S9p"/>
+                            <constraint firstItem="lgF-Jq-CM7" firstAttribute="top" secondItem="biM-ZU-4at" secondAttribute="bottom" id="0kp-fO-zL4"/>
+                            <constraint firstItem="biM-ZU-4at" firstAttribute="top" secondItem="UmZ-KQ-VUe" secondAttribute="bottom" id="Bn4-Ft-bWd"/>
+                            <constraint firstItem="gIL-im-Lk1" firstAttribute="top" secondItem="Yjy-ur-C7p" secondAttribute="bottom" id="IOS-us-IlC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gIL-im-Lk1" secondAttribute="trailing" constant="-16" id="QHH-i1-ewK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="biM-ZU-4at" secondAttribute="trailing" constant="-16" id="VW2-EQ-vlI"/>
+                            <constraint firstItem="UmZ-KQ-VUe" firstAttribute="leading" secondItem="XGj-oX-pOh" secondAttribute="leadingMargin" constant="-16" id="bH6-RN-pIx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UmZ-KQ-VUe" secondAttribute="trailing" constant="-16" id="fw7-Vq-27h"/>
+                            <constraint firstItem="biM-ZU-4at" firstAttribute="leading" secondItem="XGj-oX-pOh" secondAttribute="leadingMargin" constant="-16" id="pAq-A5-TKb"/>
+                            <constraint firstItem="gIL-im-Lk1" firstAttribute="leading" secondItem="XGj-oX-pOh" secondAttribute="leadingMargin" constant="-16" id="pNJ-wx-qEV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="calendar" id="Mmb-4u-oYz"/>
+                    <connections>
+                        <outlet property="calendarContentView" destination="UmZ-KQ-VUe" id="x2S-v9-rTV"/>
+                        <outlet property="calendarContentViewHeight" destination="5eh-Uc-i5X" id="ref-gz-qAX"/>
+                        <outlet property="calendarMenuView" destination="gIL-im-Lk1" id="9Fp-VD-haj"/>
+                        <outlet property="eventTableView" destination="biM-ZU-4at" id="6Fk-iQ-oXf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOr-V1-X3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="809"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BCK-HQ-TeT">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0J4-2c-N42" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="wmn-qV-7No">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="0er-np-45t"/>
+                        <segue destination="Cob-De-PYN" kind="relationship" relationship="viewControllers" id="kNM-AO-c6H"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UkK-Dv-pkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="306"/>
         </scene>
     </scenes>
 </document>

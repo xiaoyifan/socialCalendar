@@ -5,7 +5,7 @@ target 'socialCalendar' do
     
 pod 'FoldingTabBar', '~> 1.0.0'
 pod 'JSQMessagesViewController'
-pod 'MSCollectionViewCalendarLayout'
+pod 'JTCalendar'
 
 
 end

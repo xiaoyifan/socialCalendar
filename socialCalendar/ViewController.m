@@ -45,9 +45,7 @@
         // Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
     }
-    else{
-        [PFUser logOut];
-    }
+    
     
 }
 
@@ -70,6 +68,7 @@
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
