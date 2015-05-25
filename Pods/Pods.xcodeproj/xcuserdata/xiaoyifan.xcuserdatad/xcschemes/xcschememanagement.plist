@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-socialCalendar-DCModalSegue.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-socialCalendar-FoldingTabBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1F1F2782ACEFACA7E5C88BD1</key>
+		<key>047259B1E13071BC8864D8C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3BB7EF9B7C460B40BED70674</key>
+		<key>1E8B0D4AA7906961558E59DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53C6AB9C5B1F7EF1A8AD4B29</key>
+		<key>3A14F002CDF6DB85F6A50E57</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88C476407A5807315DE165D5</key>
+		<key>4827715AA8778B21B2B01135</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>90753AEDA9B5A63ED215F739</key>
+		<key>825482C8D4241635A776C733</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>867AD8026082241471D45B24</key>
 		<dict>
 			<key>primary</key>
 			<true/>

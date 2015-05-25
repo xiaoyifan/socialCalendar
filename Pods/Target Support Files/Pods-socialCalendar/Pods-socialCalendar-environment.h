@@ -6,6 +6,12 @@
 // project.
 
 
+// DCModalSegue
+#define COCOAPODS_POD_AVAILABLE_DCModalSegue
+#define COCOAPODS_VERSION_MAJOR_DCModalSegue 0
+#define COCOAPODS_VERSION_MINOR_DCModalSegue 0
+#define COCOAPODS_VERSION_PATCH_DCModalSegue 2
+
 // FoldingTabBar
 #define COCOAPODS_POD_AVAILABLE_FoldingTabBar
 #define COCOAPODS_VERSION_MAJOR_FoldingTabBar 1

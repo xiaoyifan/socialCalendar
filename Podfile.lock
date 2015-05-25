@@ -1,4 +1,5 @@
 PODS:
+  - DCModalSegue (0.0.2)
   - FoldingTabBar (1.0.0)
   - JSQMessagesViewController (7.0.2):
     - JSQSystemSoundPlayer (~> 2.0.1)
@@ -6,11 +7,13 @@ PODS:
   - JTCalendar (1.2.3)
 
 DEPENDENCIES:
+  - DCModalSegue
   - FoldingTabBar (~> 1.0.0)
   - JSQMessagesViewController
   - JTCalendar
 
 SPEC CHECKSUMS:
+  DCModalSegue: 68c79b992a87c72ca6ded9ae61722b073f5fcdd3
   FoldingTabBar: 463d247453a2ba826ae79f5be1e6b8b93b6aa0ce
   JSQMessagesViewController: bb6649691182b1899dc52b42266ad69efc473510
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d

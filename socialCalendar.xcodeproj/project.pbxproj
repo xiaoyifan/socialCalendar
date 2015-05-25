@@ -12,6 +12,7 @@
 		CCC680E01B129E320007DD85 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680DA1B129E320007DD85 /* Parse.framework */; };
 		CCC680E61B129FE70007DD85 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680E51B129FE70007DD85 /* ParseUI.framework */; };
 		CCC680E91B12CA430007DD85 /* eventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC680E81B12CA430007DD85 /* eventsViewController.m */; };
+		CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDB3B611B12FC3200A68DCB /* eventViewCell.m */; };
 		CCF0A44F1B0BEEB8002F619B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF0A44E1B0BEEB8002F619B /* main.m */; };
 		CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF0A4511B0BEEB8002F619B /* AppDelegate.m */; };
 		CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF0A4561B0BEEB8002F619B /* Main.storyboard */; };
@@ -54,6 +55,8 @@
 		CCC680E51B129FE70007DD85 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		CCC680E71B12CA430007DD85 /* eventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventsViewController.h; sourceTree = "<group>"; };
 		CCC680E81B12CA430007DD85 /* eventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventsViewController.m; sourceTree = "<group>"; };
+		CCDB3B601B12FC3200A68DCB /* eventViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewCell.h; sourceTree = "<group>"; };
+		CCDB3B611B12FC3200A68DCB /* eventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewCell.m; sourceTree = "<group>"; };
 		CCF0A4491B0BEEB8002F619B /* socialCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF0A44D1B0BEEB8002F619B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCF0A44E1B0BEEB8002F619B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,6 +129,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CCDB3B5F1B12FBD200A68DCB /* myEvents */ = {
+			isa = PBXGroup;
+			children = (
+				CCC680E71B12CA430007DD85 /* eventsViewController.h */,
+				CCC680E81B12CA430007DD85 /* eventsViewController.m */,
+				CCDB3B601B12FC3200A68DCB /* eventViewCell.h */,
+				CCDB3B611B12FC3200A68DCB /* eventViewCell.m */,
+			);
+			name = myEvents;
+			sourceTree = "<group>";
+		};
 		CCF0A4401B0BEEB8002F619B = {
 			isa = PBXGroup;
 			children = (
@@ -150,12 +164,11 @@
 		CCF0A44B1B0BEEB8002F619B /* socialCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				CCDB3B5F1B12FBD200A68DCB /* myEvents */,
 				CCF0A4501B0BEEB8002F619B /* AppDelegate.h */,
 				CCF0A4511B0BEEB8002F619B /* AppDelegate.m */,
 				CCC680D01B129A620007DD85 /* calendarController.h */,
 				CCC680D11B129A620007DD85 /* calendarController.m */,
-				CCC680E71B12CA430007DD85 /* eventsViewController.h */,
-				CCC680E81B12CA430007DD85 /* eventsViewController.m */,
 				CCF0A4561B0BEEB8002F619B /* Main.storyboard */,
 				CCF0A4591B0BEEB8002F619B /* Images.xcassets */,
 				CCF0A45B1B0BEEB8002F619B /* LaunchScreen.xib */,
@@ -358,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
 				CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */,
 				CCF0A44F1B0BEEB8002F619B /* main.m in Sources */,

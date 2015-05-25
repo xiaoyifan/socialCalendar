@@ -6,6 +6,7 @@ target 'socialCalendar' do
 pod 'FoldingTabBar', '~> 1.0.0'
 pod 'JSQMessagesViewController'
 pod 'JTCalendar'
+pod 'DCModalSegue'
 
 
 end
