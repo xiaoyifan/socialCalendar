@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81CD0C1B1448A00039EA60 /* mapViewController.m */; };
+		CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81CD0F1B1448FD0039EA60 /* MyLocation.m */; };
+		CC81CD121B14F43B0039EA60 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC81CD111B14F43B0039EA60 /* MapKit.framework */; };
 		CCC680D21B129A620007DD85 /* calendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC680D11B129A620007DD85 /* calendarController.m */; };
 		CCC680DF1B129E320007DD85 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680D91B129E320007DD85 /* Bolts.framework */; };
 		CCC680E01B129E320007DD85 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680DA1B129E320007DD85 /* Parse.framework */; };
 		CCC680E61B129FE70007DD85 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680E51B129FE70007DD85 /* ParseUI.framework */; };
 		CCC680E91B12CA430007DD85 /* eventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC680E81B12CA430007DD85 /* eventsViewController.m */; };
 		CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDB3B611B12FC3200A68DCB /* eventViewCell.m */; };
+		CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDB3B6D1B13FFCC00A68DCB /* addEventTableViewController.m */; };
 		CCF0A44F1B0BEEB8002F619B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF0A44E1B0BEEB8002F619B /* main.m */; };
 		CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF0A4511B0BEEB8002F619B /* AppDelegate.m */; };
 		CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF0A4561B0BEEB8002F619B /* Main.storyboard */; };
@@ -28,7 +32,6 @@
 		CCF0A48C1B0BF1E9002F619B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A48B1B0BF1E9002F619B /* QuartzCore.framework */; };
 		CCF0A48E1B0BF1F2002F619B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A48D1B0BF1F2002F619B /* Security.framework */; };
 		CCF0A4901B0BF1FD002F619B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A48F1B0BF1FD002F619B /* Social.framework */; };
-		CCF0A4921B0BF202002F619B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A4911B0BF202002F619B /* StoreKit.framework */; };
 		CCF0A4941B0BF20C002F619B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A4931B0BF20C002F619B /* SystemConfiguration.framework */; };
 		CCF0A4961B0BF217002F619B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A4951B0BF217002F619B /* libz.dylib */; };
 		CCF0A4981B0BF21F002F619B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A4971B0BF21F002F619B /* libsqlite3.dylib */; };
@@ -48,6 +51,11 @@
 /* Begin PBXFileReference section */
 		008107CB8CF00338DC111110 /* Pods-socialCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-socialCalendar/Pods-socialCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		30F1B6E1F8520A242EE2DB5A /* Pods-socialCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-socialCalendar/Pods-socialCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		CC81CD0B1B1448A00039EA60 /* mapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapViewController.h; sourceTree = "<group>"; };
+		CC81CD0C1B1448A00039EA60 /* mapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapViewController.m; sourceTree = "<group>"; };
+		CC81CD0E1B1448FD0039EA60 /* MyLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocation.h; sourceTree = "<group>"; };
+		CC81CD0F1B1448FD0039EA60 /* MyLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocation.m; sourceTree = "<group>"; };
+		CC81CD111B14F43B0039EA60 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CCC680D01B129A620007DD85 /* calendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarController.h; sourceTree = "<group>"; };
 		CCC680D11B129A620007DD85 /* calendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarController.m; sourceTree = "<group>"; };
 		CCC680D91B129E320007DD85 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -57,6 +65,8 @@
 		CCC680E81B12CA430007DD85 /* eventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventsViewController.m; sourceTree = "<group>"; };
 		CCDB3B601B12FC3200A68DCB /* eventViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewCell.h; sourceTree = "<group>"; };
 		CCDB3B611B12FC3200A68DCB /* eventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewCell.m; sourceTree = "<group>"; };
+		CCDB3B6C1B13FFCC00A68DCB /* addEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addEventTableViewController.h; sourceTree = "<group>"; };
+		CCDB3B6D1B13FFCC00A68DCB /* addEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addEventTableViewController.m; sourceTree = "<group>"; };
 		CCF0A4491B0BEEB8002F619B /* socialCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF0A44D1B0BEEB8002F619B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCF0A44E1B0BEEB8002F619B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,7 +87,6 @@
 		CCF0A48B1B0BF1E9002F619B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CCF0A48D1B0BF1F2002F619B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CCF0A48F1B0BF1FD002F619B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		CCF0A4911B0BF202002F619B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CCF0A4931B0BF20C002F619B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CCF0A4951B0BF217002F619B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CCF0A4971B0BF21F002F619B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -94,6 +103,7 @@
 				CCF0A4901B0BF1FD002F619B /* Social.framework in Frameworks */,
 				CCF0A4801B0BF176002F619B /* AudioToolbox.framework in Frameworks */,
 				CCF0A4841B0BF1CD002F619B /* CFNetwork.framework in Frameworks */,
+				CC81CD121B14F43B0039EA60 /* MapKit.framework in Frameworks */,
 				CCF0A4861B0BF1D5002F619B /* CoreGraphics.framework in Frameworks */,
 				CCF0A4881B0BF1DB002F619B /* CoreLocation.framework in Frameworks */,
 				CCC680E01B129E320007DD85 /* Parse.framework in Frameworks */,
@@ -101,7 +111,6 @@
 				CCF0A48C1B0BF1E9002F619B /* QuartzCore.framework in Frameworks */,
 				CCC680E61B129FE70007DD85 /* ParseUI.framework in Frameworks */,
 				CCF0A48E1B0BF1F2002F619B /* Security.framework in Frameworks */,
-				CCF0A4921B0BF202002F619B /* StoreKit.framework in Frameworks */,
 				CCF0A4941B0BF20C002F619B /* SystemConfiguration.framework in Frameworks */,
 				CCF0A4961B0BF217002F619B /* libz.dylib in Frameworks */,
 				CCF0A4981B0BF21F002F619B /* libsqlite3.dylib in Frameworks */,
@@ -140,6 +149,19 @@
 			name = myEvents;
 			sourceTree = "<group>";
 		};
+		CCDB3B631B13F93C00A68DCB /* addEvent */ = {
+			isa = PBXGroup;
+			children = (
+				CCDB3B6C1B13FFCC00A68DCB /* addEventTableViewController.h */,
+				CCDB3B6D1B13FFCC00A68DCB /* addEventTableViewController.m */,
+				CC81CD0B1B1448A00039EA60 /* mapViewController.h */,
+				CC81CD0C1B1448A00039EA60 /* mapViewController.m */,
+				CC81CD0E1B1448FD0039EA60 /* MyLocation.h */,
+				CC81CD0F1B1448FD0039EA60 /* MyLocation.m */,
+			);
+			name = addEvent;
+			sourceTree = "<group>";
+		};
 		CCF0A4401B0BEEB8002F619B = {
 			isa = PBXGroup;
 			children = (
@@ -165,15 +187,13 @@
 			isa = PBXGroup;
 			children = (
 				CCDB3B5F1B12FBD200A68DCB /* myEvents */,
-				CCF0A4501B0BEEB8002F619B /* AppDelegate.h */,
-				CCF0A4511B0BEEB8002F619B /* AppDelegate.m */,
+				CCDB3B631B13F93C00A68DCB /* addEvent */,
 				CCC680D01B129A620007DD85 /* calendarController.h */,
-				CCC680D11B129A620007DD85 /* calendarController.m */,
 				CCF0A4561B0BEEB8002F619B /* Main.storyboard */,
+				CCC680D11B129A620007DD85 /* calendarController.m */,
 				CCF0A4591B0BEEB8002F619B /* Images.xcassets */,
 				CCF0A45B1B0BEEB8002F619B /* LaunchScreen.xib */,
 				CCF0A44C1B0BEEB8002F619B /* Supporting Files */,
-				CCF0A4991B0BF3F8002F619B /* PrefixHeader.pch */,
 			);
 			path = socialCalendar;
 			sourceTree = "<group>";
@@ -181,6 +201,9 @@
 		CCF0A44C1B0BEEB8002F619B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CCF0A4501B0BEEB8002F619B /* AppDelegate.h */,
+				CCF0A4511B0BEEB8002F619B /* AppDelegate.m */,
+				CCF0A4991B0BF3F8002F619B /* PrefixHeader.pch */,
 				CCF0A44D1B0BEEB8002F619B /* Info.plist */,
 				CCF0A44E1B0BEEB8002F619B /* main.m */,
 			);
@@ -211,7 +234,6 @@
 				CCF0A4951B0BF217002F619B /* libz.dylib */,
 				CCC680E51B129FE70007DD85 /* ParseUI.framework */,
 				CCF0A4931B0BF20C002F619B /* SystemConfiguration.framework */,
-				CCF0A4911B0BF202002F619B /* StoreKit.framework */,
 				CCF0A48F1B0BF1FD002F619B /* Social.framework */,
 				CCF0A48D1B0BF1F2002F619B /* Security.framework */,
 				CCF0A48B1B0BF1E9002F619B /* QuartzCore.framework */,
@@ -230,6 +252,7 @@
 		D039DA7C97DEC38A4668DA3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC81CD111B14F43B0039EA60 /* MapKit.framework */,
 				E0EDD79DA0424417BCB1D051 /* libPods-socialCalendar.a */,
 			);
 			name = Frameworks;
@@ -287,6 +310,17 @@
 					CCF0A4481B0BEEB8002F619B = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = 4NPA9YHQ69;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					CCF0A4611B0BEEB8002F619B = {
 						CreatedOnToolsVersion = 6.3;
@@ -373,8 +407,11 @@
 			files = (
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
+				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
 				CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */,
+				CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */,
 				CCF0A44F1B0BEEB8002F619B /* main.m in Sources */,
+				CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */,
 				CCC680E91B12CA430007DD85 /* eventsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

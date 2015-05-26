@@ -7,6 +7,7 @@ pod 'FoldingTabBar', '~> 1.0.0'
 pod 'JSQMessagesViewController'
 pod 'JTCalendar'
 pod 'DCModalSegue'
+pod 'HSDatePickerViewController'
 
 
 end

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4827715AA8778B21B2B01135"
+               BlueprintIdentifier = "0E9253A93E0A9BF788228A49"
                BuildableName = "libPods-socialCalendar-JSQMessagesViewController.a"
                BlueprintName = "Pods-socialCalendar-JSQMessagesViewController"
                ReferencedContainer = "container:Pods.xcodeproj">

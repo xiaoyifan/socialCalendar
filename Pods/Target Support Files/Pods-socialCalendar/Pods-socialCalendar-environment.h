@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_FoldingTabBar 0
 #define COCOAPODS_VERSION_PATCH_FoldingTabBar 0
 
+// HSDatePickerViewController
+#define COCOAPODS_POD_AVAILABLE_HSDatePickerViewController
+#define COCOAPODS_VERSION_MAJOR_HSDatePickerViewController 1
+#define COCOAPODS_VERSION_MINOR_HSDatePickerViewController 0
+#define COCOAPODS_VERSION_PATCH_HSDatePickerViewController 1
+
 // JSQMessagesViewController
 #define COCOAPODS_POD_AVAILABLE_JSQMessagesViewController
 #define COCOAPODS_VERSION_MAJOR_JSQMessagesViewController 7
