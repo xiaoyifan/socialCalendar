@@ -265,19 +265,44 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Gy-Mb-ji1" id="CX7-mU-uaH">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="reminder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaJ-G3-POo">
-                                                    <rect key="frame" x="8" y="11" width="68" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="reminder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaJ-G3-POo">
+                                                    <rect key="frame" x="8" y="13" width="57" height="18"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 min ahead" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKp-Hq-G6Q">
-                                                    <rect key="frame" x="461" y="11" width="98" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 min ahead" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKp-Hq-G6Q">
+                                                    <rect key="frame" x="470" y="13" width="89" height="18"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAh-ub-gRV">
+                                                    <rect key="frame" x="8" y="8" width="551" height="27"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="addReminder:" destination="NEq-5o-PMP" eventType="touchUpInside" id="wt0-uD-xqo"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="IKp-Hq-G6Q" secondAttribute="centerY" id="3oR-Xy-Avw"/>
+                                                <constraint firstItem="TAh-ub-gRV" firstAttribute="top" secondItem="CX7-mU-uaH" secondAttribute="topMargin" id="3oi-Gj-3Pp"/>
+                                                <constraint firstItem="TAh-ub-gRV" firstAttribute="bottom" secondItem="CX7-mU-uaH" secondAttribute="bottomMargin" id="Q1K-aO-mKV"/>
+                                                <constraint firstItem="EaJ-G3-POo" firstAttribute="leading" secondItem="CX7-mU-uaH" secondAttribute="leading" constant="8" id="URP-C6-YRD"/>
+                                                <constraint firstItem="EaJ-G3-POo" firstAttribute="leading" secondItem="CX7-mU-uaH" secondAttribute="leading" id="apT-Pk-Bkc"/>
+                                                <constraint firstItem="TAh-ub-gRV" firstAttribute="trailing" secondItem="CX7-mU-uaH" secondAttribute="trailingMargin" id="iZE-V3-W2b"/>
+                                                <constraint firstAttribute="centerY" secondItem="EaJ-G3-POo" secondAttribute="centerY" id="ozJ-x7-dZQ"/>
+                                                <constraint firstItem="IKp-Hq-G6Q" firstAttribute="trailing" secondItem="CX7-mU-uaH" secondAttribute="trailingMargin" id="rVK-2h-UFX"/>
+                                                <constraint firstItem="TAh-ub-gRV" firstAttribute="leading" secondItem="CX7-mU-uaH" secondAttribute="leadingMargin" id="zgw-9e-9qu"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="apT-Pk-Bkc"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -359,6 +384,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="locationLabel" destination="ngw-AD-5Nf" id="PQ9-pT-xIv"/>
+                        <outlet property="reminderLabel" destination="IKp-Hq-G6Q" id="EJc-IV-PZu"/>
                         <outlet property="timeLabel" destination="Uww-pO-1vV" id="1zb-TW-JW2"/>
                     </connections>
                 </tableViewController>

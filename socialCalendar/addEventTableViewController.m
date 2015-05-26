@@ -9,14 +9,20 @@
 #import "addEventTableViewController.h"
 #import "HSDatePickerViewController.h"
 #import "mapViewController.h"
+#import "KLCPopup.h"
 
-@interface addEventTableViewController ()<HSDatePickerViewControllerDelegate>
+@interface addEventTableViewController ()<HSDatePickerViewControllerDelegate, UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *reminderLabel;
 
+
+@property (nonatomic, strong) KLCPopup *reminderPopup;
+
+@property (nonatomic, strong) NSArray *pickerData;
 
 @end
 
@@ -24,6 +30,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.pickerData = @[@"10 mins head", @"15 mins head", @"30 mins head", @"1 hour head", @"5 hour head", @"1 day head"];
+
 }
 
 
@@ -44,6 +53,59 @@
    self.timeLabel.text = [dateFormater stringFromDate:date];
     
 }
+
+- (IBAction)addReminder:(UIButton *)sender {
+    UIPickerView *myPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 200, 320, 200)];
+    myPickerView.delegate = self;
+    myPickerView.layer.cornerRadius = 15.0;
+    myPickerView.showsSelectionIndicator = YES;
+    myPickerView.backgroundColor = [UIColor colorWithRed:(184.0/255.0) green:(233.0/255.0) blue:(122.0/255.0) alpha:1.0];
+    
+    self.reminderPopup = [KLCPopup popupWithContentView:myPickerView
+                                               showType: KLCPopupShowTypeSlideInFromLeft
+                                            dismissType: KLCPopupDismissTypeSlideOutToRight
+                                               maskType: KLCPopupMaskTypeDimmed
+                               dismissOnBackgroundTouch:YES
+                                  dismissOnContentTouch:NO];
+    
+
+//    self.reminderPopup.willStartDismissingCompletion = ^{
+//        //get the reminder data and dismiss
+//    };
+    
+    
+    
+    [self.reminderPopup show];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
+    self.reminderLabel.text = self.pickerData[row];
+}
+
+// tell the picker how many rows are available for a given component
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    
+    return self.pickerData.count;
+}
+
+// tell the picker how many components it will have
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+// tell the picker the title for a given component
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+    return self.pickerData[row];
+}
+
+// tell the picker the width of each row for a given component
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+    int sectionWidth = 300;
+    
+    return sectionWidth;
+}
+
 
 
 //unwind segue
