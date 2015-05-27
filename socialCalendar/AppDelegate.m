@@ -23,6 +23,9 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    [[UINavigationBar appearance] setTintColor:[UIColor darkGrayColor]];
+    [[UITabBar appearance]setTintColor:[UIColor darkGrayColor]];
+    
     return YES;
 }
 

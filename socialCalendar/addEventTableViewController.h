@@ -16,4 +16,6 @@
 
 @property (strong, nonatomic) NSDate *remindDate;
 
+@property eventObject *object;
+
 @end

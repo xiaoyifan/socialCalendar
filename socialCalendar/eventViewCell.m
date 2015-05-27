@@ -24,7 +24,7 @@
 
 - (IBAction)triggeredAction:(UIButton *)sender {
     
-    
+    NSLog(@"cell share action is triggered");
 }
 
 

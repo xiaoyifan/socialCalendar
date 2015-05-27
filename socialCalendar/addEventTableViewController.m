@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *noteField;
 
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 
 
@@ -143,22 +144,6 @@
 }
 
 
-- (IBAction)saveButtonPressed:(UIBarButtonItem *)sender {
-    
-    eventObject *newObj = [[eventObject alloc] init];
-    newObj.title = self.titleField.text;
-    newObj.time = self.eventDate;
-    
-    newObj.reminderDate = [self getDateFromText:self.reminderLabel.text];
-    
-    newObj.location = self.itemLocation;
-    newObj.locationDescription = self.locationLabel.text;
-    newObj.eventNote = self.noteField.text;
-    
-    //save object to cloud and back to main event tableview controller
-    
-}
-
 -(NSDate *)getDateFromText:(NSString *)string{
     
     //@[@"10 mins head", @"15 mins head", @"30 mins head", @"1 hour head", @"5 hours head", @"1 day head"];
@@ -239,14 +224,27 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    
+    if (sender != self.saveButton) {
+        return;
+    }
+    
+    self.object= [[eventObject alloc] init];
+    self.object.title = self.titleField.text;
+    self.object.time = self.eventDate;
+    
+    self.object.reminderDate = [self getDateFromText:self.reminderLabel.text];
+    
+    self.object.location = self.itemLocation;
+    self.object.locationDescription = self.locationLabel.text;
+    self.object.eventNote = self.noteField.text;
 }
-*/
+
 
 @end

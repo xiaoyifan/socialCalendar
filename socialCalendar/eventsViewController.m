@@ -8,8 +8,11 @@
 
 #import "eventsViewController.h"
 #import "eventViewCell.h"
+#import "addEventTableViewController.h"
 
 @interface eventsViewController ()
+
+@property NSMutableArray *events;
 
 @end
 
@@ -17,7 +20,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.events = [[NSMutableArray alloc] init];
+    
+    [self initData];
+    [self.tableView reloadData];
 
+}
+
+-(void)initData{
+
+    eventObject *newObj = [[eventObject alloc] init];
+    newObj.title = @"first Event in the app";
+    newObj.time = [NSDate date];
+    newObj.reminderDate = [NSDate date];
+    newObj.locationDescription = @"Time Square, New York City, NY, USA";
+    [self.events addObject:newObj];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,7 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 5;
+    return self.events.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -79,6 +97,21 @@
     cell.backgroundCardView.layer.shadowPath = shadowPath.CGPath;
     
     cell.topBar.backgroundColor = [self randomColor];
+    
+    eventObject *singleEvent = [self.events objectAtIndex:indexPath.row];
+    cell.eventName.text = singleEvent.title;
+    
+    NSDate *eventDate = singleEvent.time;
+    NSDateFormatter *dateFormater = [NSDateFormatter new];
+    
+    dateFormater.dateFormat = @"MM.dd.yyyy";
+    cell.dateLabel.text = [dateFormater stringFromDate:eventDate];
+
+    dateFormater.dateFormat = @"HH:mm";
+    cell.timeLabel.text =[dateFormater stringFromDate:eventDate];
+    
+    cell.addressLabel.text = singleEvent.locationDescription;
+    
     
     return cell;
 }
@@ -224,6 +257,19 @@
 // Sent to the delegate when the sign up screen is dismissed.
 - (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
     NSLog(@"User dismissed the signUpViewController");
+}
+
+- (IBAction)unwindToMainTable:(UIStoryboardSegue *)segue {
+    
+    addEventTableViewController *source = [segue sourceViewController];
+    eventObject *item = source.object;
+    if (item != nil) {
+       [self.events addObject:item];
+        
+        NSLog(@"%@",item.title);
+        
+        [self.tableView reloadData];
+    }
 }
 
 @end

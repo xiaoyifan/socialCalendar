@@ -14,7 +14,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" red="0.84741950759999995" green="0.84741950759999995" blue="0.84741950759999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="eventCell" id="XOg-Iy-Iez" customClass="eventViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -72,8 +72,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIu-ER-lob">
-                                                    <rect key="frame" x="20" y="155" width="540" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="20" y="155" width="540" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -110,7 +110,7 @@
                                             </variation>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.88204308710000001" green="0.88204308710000001" blue="0.88204308710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="sfp-YL-z2w" firstAttribute="top" secondItem="MUA-dd-b8p" secondAttribute="top" constant="5" id="4oI-XH-rFz"/>
                                         <constraint firstAttribute="bottom" secondItem="sfp-YL-z2w" secondAttribute="bottom" constant="5" id="6Ez-hj-Pqa"/>
@@ -118,7 +118,7 @@
                                         <constraint firstAttribute="trailing" secondItem="sfp-YL-z2w" secondAttribute="trailing" constant="10" id="utQ-Tf-RB6"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.84741950759999995" green="0.84741950759999995" blue="0.84741950759999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="addressLabel" destination="PIu-ER-lob" id="Qkx-ti-6v8"/>
                                     <outlet property="backgroundCardView" destination="sfp-YL-z2w" id="pRy-Au-QNQ"/>
@@ -380,7 +380,7 @@
                         <barButtonItem key="rightBarButtonItem" title="save" id="FUW-bN-nuP">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="saveButtonPressed:" destination="NEq-5o-PMP" id="leF-gg-x5n"/>
+                                <segue destination="PA9-6a-TFg" kind="unwind" unwindAction="unwindToMainTable:" id="pu5-7A-gYK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -389,11 +389,13 @@
                         <outlet property="locationLabel" destination="ngw-AD-5Nf" id="PQ9-pT-xIv"/>
                         <outlet property="noteField" destination="XQm-g4-omz" id="XmO-9t-hbW"/>
                         <outlet property="reminderLabel" destination="IKp-Hq-G6Q" id="EJc-IV-PZu"/>
+                        <outlet property="saveButton" destination="FUW-bN-nuP" id="Saw-Q2-Ela"/>
                         <outlet property="timeLabel" destination="Uww-pO-1vV" id="1zb-TW-JW2"/>
                         <outlet property="titleField" destination="nlF-GI-e45" id="WYZ-Uf-G2I"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUP-uB-wmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PA9-6a-TFg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2404" y="-561"/>
         </scene>
@@ -425,16 +427,16 @@
                             <constraint firstItem="RUR-mw-EEW" firstAttribute="top" secondItem="DnE-LY-WOu" secondAttribute="top" id="nZc-7l-Gql"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="uqq-V3-tEF"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="f0o-fO-1Ia">
                         <barButtonItem key="leftBarButtonItem" title="done" id="glQ-nA-s15">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="elZ-27-gy3" kind="unwind" unwindAction="unwindToTable:" id="cmo-FX-73m"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="my location" id="Y2l-3g-Mrm">
+                        <barButtonItem key="rightBarButtonItem" image="location" id="Y2l-3g-Mrm">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="myLocation:" destination="0ac-xm-zlI" id="ESg-ne-sqR"/>
                             </connections>
@@ -514,7 +516,7 @@
                             <constraint firstItem="gIL-im-Lk1" firstAttribute="leading" secondItem="XGj-oX-pOh" secondAttribute="leadingMargin" constant="-16" id="pNJ-wx-qEV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="calendar" id="Mmb-4u-oYz"/>
+                    <tabBarItem key="tabBarItem" title="calendar" image="calendar" id="Mmb-4u-oYz"/>
                     <connections>
                         <outlet property="calendarContentView" destination="UmZ-KQ-VUe" id="x2S-v9-rTV"/>
                         <outlet property="calendarContentViewHeight" destination="5eh-Uc-i5X" id="ref-gz-qAX"/>
@@ -549,7 +551,7 @@
         <scene sceneID="3rP-K0-4o6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z9d-gb-6i6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="event" id="khh-36-OIJ"/>
+                    <tabBarItem key="tabBarItem" title="event" image="pin" id="khh-36-OIJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MAa-o2-Cjc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -602,6 +604,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" width="25" height="25"/>
+        <image name="location" width="25" height="25"/>
+        <image name="pin" width="25" height="25"/>
         <image name="share" width="25" height="25"/>
     </resources>
 </document>
