@@ -58,6 +58,7 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle"
   install_resource "HSDatePickerViewController/HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.xib"
   install_resource "JSQMessagesViewController/JSQMessagesViewController/Assets/JSQMessagesAssets.bundle"
   install_resource "JSQMessagesViewController/JSQMessagesViewController/Controllers/JSQMessagesViewController.xib"
@@ -68,6 +69,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesTypingIndicatorFooterView.xib"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle"
   install_resource "HSDatePickerViewController/HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.xib"
   install_resource "JSQMessagesViewController/JSQMessagesViewController/Assets/JSQMessagesAssets.bundle"
   install_resource "JSQMessagesViewController/JSQMessagesViewController/Controllers/JSQMessagesViewController.xib"

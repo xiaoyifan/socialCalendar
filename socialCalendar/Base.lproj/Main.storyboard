@@ -42,9 +42,6 @@
                                                             </constraints>
                                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <state key="normal" image="share"/>
-                                                            <connections>
-                                                                <action selector="triggeredAction:" destination="XOg-Iy-Iez" eventType="touchUpInside" id="f55-XG-W5g"/>
-                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uao-ou-CMF">
                                                             <rect key="frame" x="20" y="14" width="42" height="21"/>
@@ -124,6 +121,7 @@
                                     <outlet property="backgroundCardView" destination="sfp-YL-z2w" id="pRy-Au-QNQ"/>
                                     <outlet property="dateLabel" destination="uao-ou-CMF" id="Nz5-U8-HTc"/>
                                     <outlet property="eventName" destination="Exu-UM-PtJ" id="bHu-ed-Ygd"/>
+                                    <outlet property="shareButton" destination="nPd-kz-mDV" id="joB-mm-erq"/>
                                     <outlet property="timeLabel" destination="6aD-Qs-K3H" id="3MO-kY-5pl"/>
                                     <outlet property="topBar" destination="vVe-pN-xtp" id="M9v-kh-koF"/>
                                     <segue destination="tEN-9t-Ups" kind="custom" customClass="DCModalSegue" id="AEd-hR-1b8"/>

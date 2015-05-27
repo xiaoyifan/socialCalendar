@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6373C28AFFEB023C9ABEFDDE"
+               BlueprintIdentifier = "C959F3AB51FB08A14069268F"
                BuildableName = "libPods-socialCalendar-HexColors.a"
                BlueprintName = "Pods-socialCalendar-HexColors"
                ReferencedContainer = "container:Pods.xcodeproj">

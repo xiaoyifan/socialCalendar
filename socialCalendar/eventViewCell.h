@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
 
 @end

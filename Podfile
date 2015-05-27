@@ -9,7 +9,7 @@ pod 'JTCalendar'
 pod 'DCModalSegue'
 pod 'HSDatePickerViewController'
 pod 'HexColors'
-
+pod 'AAShareBubbles'
 
 end
 

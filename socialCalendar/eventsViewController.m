@@ -9,8 +9,9 @@
 #import "eventsViewController.h"
 #import "eventViewCell.h"
 #import "addEventTableViewController.h"
+#import "AAShareBubbles.h"
 
-@interface eventsViewController ()
+@interface eventsViewController ()<AAShareBubblesDelegate>
 
 @property NSMutableArray *events;
 
@@ -36,6 +37,13 @@
     newObj.reminderDate = [NSDate date];
     newObj.locationDescription = @"Time Square, New York City, NY, USA";
     [self.events addObject:newObj];
+    
+    eventObject *newObj2 = [[eventObject alloc] init];
+    newObj2.title = @"second Event in the app";
+    newObj2.time = [NSDate date];
+    newObj2.reminderDate = [NSDate date];
+    newObj2.locationDescription = @"UCLA, Los Angeles, USA";
+    [self.events addObject:newObj2];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -112,8 +120,28 @@
     
     cell.addressLabel.text = singleEvent.locationDescription;
     
+    cell.shareButton.tag = indexPath.row;
     
+    [cell.shareButton addTarget:self action:@selector(shareButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+
+-(void)shareButtonClicked:(UIButton*)sender
+{
+    NSLog(@"share button %ld clicked", (long)sender.tag);
+    
+    
+    AAShareBubbles *shareBubbles = [[AAShareBubbles alloc] initCenteredInWindowWithRadius:150];
+    shareBubbles.delegate = self;
+    shareBubbles.bubbleRadius = 45; // Default is 40
+    shareBubbles.showFacebookBubble = YES;
+    shareBubbles.showTwitterBubble = YES;
+    shareBubbles.showMailBubble = YES;
+    shareBubbles.showGooglePlusBubble = YES;
+    shareBubbles.showLinkedInBubble = YES;
+    shareBubbles.showWhatsappBubble = YES;
+    
+    [shareBubbles show];
 }
 
 -(UIColor *)randomColor{
@@ -272,4 +300,36 @@
     }
 }
 
+
+#pragma mark - share button pressed delegate
+
+-(void)aaShareBubbles:(AAShareBubbles *)shareBubbles tappedBubbleWithType:(int)bubbleType
+{
+    switch (bubbleType) {
+        case AAShareBubbleTypeFacebook:
+            NSLog(@"Facebook");
+            break;
+        case AAShareBubbleTypeTwitter:
+            NSLog(@"Twitter");
+            break;
+        case AAShareBubbleTypeGooglePlus:
+            NSLog(@"Google+");
+            break;
+        case AAShareBubbleTypeLinkedIn:
+            NSLog(@"LinkedIn");
+            break;
+        case AAShareBubbleTypeWhatsapp:
+            NSLog(@"Whatsapp");
+            break;
+        case AAShareBubbleTypeMail:
+            NSLog(@"mail");
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)aaShareBubblesDidHide:(AAShareBubbles *)bubbles {
+    NSLog(@"All Bubbles hidden");
+}
 @end

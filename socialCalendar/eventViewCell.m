@@ -22,11 +22,6 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)triggeredAction:(UIButton *)sender {
-    
-    NSLog(@"cell share action is triggered");
-}
-
 
 
 @end

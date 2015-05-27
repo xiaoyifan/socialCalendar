@@ -6,6 +6,12 @@
 // project.
 
 
+// AAShareBubbles
+#define COCOAPODS_POD_AVAILABLE_AAShareBubbles
+#define COCOAPODS_VERSION_MAJOR_AAShareBubbles 1
+#define COCOAPODS_VERSION_MINOR_AAShareBubbles 1
+#define COCOAPODS_VERSION_PATCH_AAShareBubbles 0
+
 // DCModalSegue
 #define COCOAPODS_POD_AVAILABLE_DCModalSegue
 #define COCOAPODS_VERSION_MAJOR_DCModalSegue 0

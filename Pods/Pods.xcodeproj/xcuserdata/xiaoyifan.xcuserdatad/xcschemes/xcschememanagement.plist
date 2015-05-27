@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-socialCalendar-AAShareBubbles.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-socialCalendar-DCModalSegue.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6373C28AFFEB023C9ABEFDDE</key>
+		<key>04A97FDCE25C88023CA6CE9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6CB317BFCC7F8BDDE83F0F63</key>
+		<key>191F8063FB5433D51675428A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>823C64AEAECCE0DFC113A06C</key>
+		<key>2BD638AFD6B2A4112F61FB29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>99BB52E6360381F86ADABC7C</key>
+		<key>3DB5FD85F9A2149E1D5F8B73</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9A2DFC8CB89AEB0E4390FD0</key>
+		<key>45E9145A25DAE30F4FEE6023</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E1584032253D363BD8DE36DD</key>
+		<key>62CAF23FD389D86020D04BD9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E3B925BB8E45AB7F694365EF</key>
+		<key>C6C3A6B6F1A62053E15DA4F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FD0384F648764E2B8396F788</key>
+		<key>C959F3AB51FB08A14069268F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E28921935E686E9D45BD130F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
