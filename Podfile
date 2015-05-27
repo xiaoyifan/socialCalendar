@@ -8,7 +8,7 @@ pod 'JSQMessagesViewController'
 pod 'JTCalendar'
 pod 'DCModalSegue'
 pod 'HSDatePickerViewController'
-pod 'LKCPopup'
+pod 'HexColors'
 
 
 end

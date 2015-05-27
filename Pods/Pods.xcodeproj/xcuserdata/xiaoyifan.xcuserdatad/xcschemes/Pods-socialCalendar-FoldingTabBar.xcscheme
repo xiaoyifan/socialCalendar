@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9E28233FD57581F82988D147"
+               BlueprintIdentifier = "A9A2DFC8CB89AEB0E4390FD0"
                BuildableName = "libPods-socialCalendar-FoldingTabBar.a"
                BlueprintName = "Pods-socialCalendar-FoldingTabBar"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -11,6 +11,7 @@
 		CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81CD0F1B1448FD0039EA60 /* MyLocation.m */; };
 		CC81CD121B14F43B0039EA60 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC81CD111B14F43B0039EA60 /* MapKit.framework */; };
 		CC81CD151B1535330039EA60 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81CD141B1535330039EA60 /* KLCPopup.m */; };
+		CC81CD191B1541E00039EA60 /* eventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81CD181B1541E00039EA60 /* eventObject.m */; };
 		CCC680D21B129A620007DD85 /* calendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC680D11B129A620007DD85 /* calendarController.m */; };
 		CCC680DF1B129E320007DD85 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680D91B129E320007DD85 /* Bolts.framework */; };
 		CCC680E01B129E320007DD85 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680DA1B129E320007DD85 /* Parse.framework */; };
@@ -59,6 +60,8 @@
 		CC81CD111B14F43B0039EA60 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CC81CD131B1535330039EA60 /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
 		CC81CD141B1535330039EA60 /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
+		CC81CD171B1541E00039EA60 /* eventObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventObject.h; sourceTree = "<group>"; };
+		CC81CD181B1541E00039EA60 /* eventObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventObject.m; sourceTree = "<group>"; };
 		CCC680D01B129A620007DD85 /* calendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarController.h; sourceTree = "<group>"; };
 		CCC680D11B129A620007DD85 /* calendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarController.m; sourceTree = "<group>"; };
 		CCC680D91B129E320007DD85 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -141,7 +144,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CCDB3B5F1B12FBD200A68DCB /* myEvents */ = {
+		CC81CD161B1541B80039EA60 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CC81CD171B1541E00039EA60 /* eventObject.h */,
+				CC81CD181B1541E00039EA60 /* eventObject.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		CCDB3B5F1B12FBD200A68DCB /* myEventsScene */ = {
 			isa = PBXGroup;
 			children = (
 				CCC680E71B12CA430007DD85 /* eventsViewController.h */,
@@ -149,10 +161,10 @@
 				CCDB3B601B12FC3200A68DCB /* eventViewCell.h */,
 				CCDB3B611B12FC3200A68DCB /* eventViewCell.m */,
 			);
-			name = myEvents;
+			name = myEventsScene;
 			sourceTree = "<group>";
 		};
-		CCDB3B631B13F93C00A68DCB /* addEvent */ = {
+		CCDB3B631B13F93C00A68DCB /* addEventScene */ = {
 			isa = PBXGroup;
 			children = (
 				CCDB3B6C1B13FFCC00A68DCB /* addEventTableViewController.h */,
@@ -164,7 +176,7 @@
 				CC81CD131B1535330039EA60 /* KLCPopup.h */,
 				CC81CD141B1535330039EA60 /* KLCPopup.m */,
 			);
-			name = addEvent;
+			name = addEventScene;
 			sourceTree = "<group>";
 		};
 		CCF0A4401B0BEEB8002F619B = {
@@ -191,8 +203,9 @@
 		CCF0A44B1B0BEEB8002F619B /* socialCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				CCDB3B5F1B12FBD200A68DCB /* myEvents */,
-				CCDB3B631B13F93C00A68DCB /* addEvent */,
+				CC81CD161B1541B80039EA60 /* model */,
+				CCDB3B5F1B12FBD200A68DCB /* myEventsScene */,
+				CCDB3B631B13F93C00A68DCB /* addEventScene */,
 				CCC680D01B129A620007DD85 /* calendarController.h */,
 				CCF0A4561B0BEEB8002F619B /* Main.storyboard */,
 				CCC680D11B129A620007DD85 /* calendarController.m */,
@@ -415,6 +428,7 @@
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
 				CC81CD151B1535330039EA60 /* KLCPopup.m in Sources */,
 				CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */,
+				CC81CD191B1541E00039EA60 /* eventObject.m in Sources */,
 				CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */,
 				CCF0A44F1B0BEEB8002F619B /* main.m in Sources */,
 				CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */,

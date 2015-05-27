@@ -24,6 +24,16 @@
 
 @property (nonatomic, strong) NSArray *pickerData;
 
+
+@property (weak, nonatomic) IBOutlet UITextField *titleField;
+
+@property (weak, nonatomic) IBOutlet UITextView *noteField;
+
+
+
+
+
+
 @end
 
 @implementation addEventTableViewController
@@ -31,7 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.pickerData = @[@"10 mins head", @"15 mins head", @"30 mins head", @"1 hour head", @"5 hour head", @"1 day head"];
+    self.pickerData = @[@"10 mins head", @"15 mins head", @"30 mins head", @"1 hour head", @"5 hours head", @"1 day head"];
 
 }
 
@@ -48,6 +58,7 @@
 #pragma mark - HSDatePickerViewControllerDelegate
 - (void)hsDatePickerPickedDate:(NSDate *)date {
     NSLog(@"Date picked %@", date);
+    self.eventDate = date;
     NSDateFormatter *dateFormater = [NSDateFormatter new];
     dateFormater.dateFormat = @"yyyy.MM.dd HH:mm:ss";
    self.timeLabel.text = [dateFormater stringFromDate:date];
@@ -80,6 +91,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
     self.reminderLabel.text = self.pickerData[row];
+    
 }
 
 // tell the picker how many rows are available for a given component
@@ -125,13 +137,61 @@
     
 }
 
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (IBAction)saveButtonPressed:(UIBarButtonItem *)sender {
+    
+    eventObject *newObj = [[eventObject alloc] init];
+    newObj.title = self.titleField.text;
+    newObj.time = self.eventDate;
+    
+    newObj.reminderDate = [self getDateFromText:self.reminderLabel.text];
+    
+    newObj.location = self.itemLocation;
+    newObj.locationDescription = self.locationLabel.text;
+    newObj.eventNote = self.noteField.text;
+    
+    //save object to cloud and back to main event tableview controller
+    
+}
+
+-(NSDate *)getDateFromText:(NSString *)string{
+    
+    //@[@"10 mins head", @"15 mins head", @"30 mins head", @"1 hour head", @"5 hours head", @"1 day head"];
+    
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
+    
+    
+    if ([string isEqualToString:@"10 mins head"]) {
+        [offsetComponents setMinute:-10]; // note that I'm setting it to -1
+    }
+    else if ([string isEqualToString:@"15 mins head"]) {
+        [offsetComponents setMinute:-15]; // note that I'm setting it to -1
+    }
+    else if ([string isEqualToString:@"30 mins head"]) {
+        [offsetComponents setMinute:-30]; // note that I'm setting it to -1
+    }
+    else if ([string isEqualToString:@"1 hour head"]) {
+        [offsetComponents setHour:-1]; // note that I'm setting it to -1
+    }
+    else if ([string isEqualToString:@"5 hours head"]) {
+        [offsetComponents setHour:-5]; // note that I'm setting it to -1
+    }
+    else if ([string isEqualToString:@"1 day head"]) {
+        [offsetComponents setDay:-1]; // note that I'm setting it to -1
+    }
+    
+    NSDate *remindDate = [gregorian dateByAddingComponents:offsetComponents toDate:self.eventDate options:0];
+    
+    return remindDate;
+}
+
+
 
 #pragma mark - Table view data source
 

@@ -12,4 +12,8 @@
 
 @property (strong, nonatomic) CLLocation *itemLocation;
 
+@property (strong, nonatomic) NSDate *eventDate;
+
+@property (strong, nonatomic) NSDate *remindDate;
+
 @end

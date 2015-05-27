@@ -379,13 +379,18 @@
                     <navigationItem key="navigationItem" title="new event" id="YyM-rd-FB8">
                         <barButtonItem key="rightBarButtonItem" title="save" id="FUW-bN-nuP">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="NEq-5o-PMP" id="leF-gg-x5n"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="locationLabel" destination="ngw-AD-5Nf" id="PQ9-pT-xIv"/>
+                        <outlet property="noteField" destination="XQm-g4-omz" id="XmO-9t-hbW"/>
                         <outlet property="reminderLabel" destination="IKp-Hq-G6Q" id="EJc-IV-PZu"/>
                         <outlet property="timeLabel" destination="Uww-pO-1vV" id="1zb-TW-JW2"/>
+                        <outlet property="titleField" destination="nlF-GI-e45" id="WYZ-Uf-G2I"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUP-uB-wmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
