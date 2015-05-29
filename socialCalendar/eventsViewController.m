@@ -10,6 +10,7 @@
 #import "eventViewCell.h"
 #import "addEventTableViewController.h"
 #import "AAShareBubbles.h"
+#import "detailViewController.h"
 
 @interface eventsViewController ()<AAShareBubblesDelegate>
 
@@ -190,16 +191,6 @@
 }
 */
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 
 #pragma mark - implementation of PFLogInViewControllerDelegate
 
@@ -332,4 +323,29 @@
 -(void)aaShareBubblesDidHide:(AAShareBubbles *)bubbles {
     NSLog(@"All Bubbles hidden");
 }
+
+
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ 
+     if ([segue.identifier  isEqual: @"detailSegue"]) {
+         
+         detailViewController *controller = (detailViewController *)[segue destinationViewController];
+         
+         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+         
+         eventViewCell *cell = (eventViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+         
+         eventObject * selectedObject = [self.events objectAtIndex:indexPath.row];
+         //get the item tapped in the tableView
+         controller.detailObject = selectedObject;
+         controller.cardBackgroundColor = cell.topBar.backgroundColor;
+         
+     }
+ }
+
+
+
 @end

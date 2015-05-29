@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC579CB11B18032700115705 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC579CB01B18032700115705 /* detailViewController.m */; };
 		CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81CD0C1B1448A00039EA60 /* mapViewController.m */; };
 		CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81CD0F1B1448FD0039EA60 /* MyLocation.m */; };
 		CC81CD121B14F43B0039EA60 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC81CD111B14F43B0039EA60 /* MapKit.framework */; };
@@ -53,6 +54,8 @@
 /* Begin PBXFileReference section */
 		008107CB8CF00338DC111110 /* Pods-socialCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-socialCalendar/Pods-socialCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		30F1B6E1F8520A242EE2DB5A /* Pods-socialCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-socialCalendar/Pods-socialCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		CC579CAF1B18032700115705 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
+		CC579CB01B18032700115705 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		CC81CD0B1B1448A00039EA60 /* mapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapViewController.h; sourceTree = "<group>"; };
 		CC81CD0C1B1448A00039EA60 /* mapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapViewController.m; sourceTree = "<group>"; };
 		CC81CD0E1B1448FD0039EA60 /* MyLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocation.h; sourceTree = "<group>"; };
@@ -144,6 +147,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CC579CAE1B18030200115705 /* eventDetailScene */ = {
+			isa = PBXGroup;
+			children = (
+				CC579CAF1B18032700115705 /* detailViewController.h */,
+				CC579CB01B18032700115705 /* detailViewController.m */,
+			);
+			name = eventDetailScene;
+			sourceTree = "<group>";
+		};
 		CC81CD161B1541B80039EA60 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +219,7 @@
 				CCDB3B5F1B12FBD200A68DCB /* myEventsScene */,
 				CCDB3B631B13F93C00A68DCB /* addEventScene */,
 				CCC680D01B129A620007DD85 /* calendarController.h */,
+				CC579CAE1B18030200115705 /* eventDetailScene */,
 				CCC680D11B129A620007DD85 /* calendarController.m */,
 				CCF0A4561B0BEEB8002F619B /* Main.storyboard */,
 				CCF0A4591B0BEEB8002F619B /* Images.xcassets */,
@@ -426,6 +439,7 @@
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
+				CC579CB11B18032700115705 /* detailViewController.m in Sources */,
 				CC81CD151B1535330039EA60 /* KLCPopup.m in Sources */,
 				CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */,
 				CC81CD191B1541E00039EA60 /* eventObject.m in Sources */,
