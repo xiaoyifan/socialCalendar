@@ -37,6 +37,7 @@
     newObj.time = [NSDate date];
     newObj.reminderDate = [NSDate date];
     newObj.locationDescription = @"Time Square, New York City, NY, USA";
+    newObj.eventNote = @"this is just a test on the note initialization. check the details of the event by open the note. ";
     [self.events addObject:newObj];
     
     eventObject *newObj2 = [[eventObject alloc] init];
