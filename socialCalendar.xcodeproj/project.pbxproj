@@ -20,6 +20,7 @@
 		CCC680E91B12CA430007DD85 /* eventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC680E81B12CA430007DD85 /* eventsViewController.m */; };
 		CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDB3B611B12FC3200A68DCB /* eventViewCell.m */; };
 		CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDB3B6D1B13FFCC00A68DCB /* addEventTableViewController.m */; };
+		CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDBB61C1B1924D4007C2E81 /* ParsingHandle.m */; };
 		CCF0A44F1B0BEEB8002F619B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF0A44E1B0BEEB8002F619B /* main.m */; };
 		CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF0A4511B0BEEB8002F619B /* AppDelegate.m */; };
 		CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF0A4561B0BEEB8002F619B /* Main.storyboard */; };
@@ -76,6 +77,8 @@
 		CCDB3B611B12FC3200A68DCB /* eventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewCell.m; sourceTree = "<group>"; };
 		CCDB3B6C1B13FFCC00A68DCB /* addEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addEventTableViewController.h; sourceTree = "<group>"; };
 		CCDB3B6D1B13FFCC00A68DCB /* addEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addEventTableViewController.m; sourceTree = "<group>"; };
+		CCDBB61B1B1924D4007C2E81 /* ParsingHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsingHandle.h; sourceTree = "<group>"; };
+		CCDBB61C1B1924D4007C2E81 /* ParsingHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsingHandle.m; sourceTree = "<group>"; };
 		CCF0A4491B0BEEB8002F619B /* socialCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF0A44D1B0BEEB8002F619B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCF0A44E1B0BEEB8002F619B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -191,6 +194,15 @@
 			name = addEventScene;
 			sourceTree = "<group>";
 		};
+		CCDBB61A1B192490007C2E81 /* parseHandling */ = {
+			isa = PBXGroup;
+			children = (
+				CCDBB61B1B1924D4007C2E81 /* ParsingHandle.h */,
+				CCDBB61C1B1924D4007C2E81 /* ParsingHandle.m */,
+			);
+			name = parseHandling;
+			sourceTree = "<group>";
+		};
 		CCF0A4401B0BEEB8002F619B = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +227,7 @@
 		CCF0A44B1B0BEEB8002F619B /* socialCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				CCDBB61A1B192490007C2E81 /* parseHandling */,
 				CC81CD161B1541B80039EA60 /* model */,
 				CCDB3B5F1B12FBD200A68DCB /* myEventsScene */,
 				CCDB3B631B13F93C00A68DCB /* addEventScene */,
@@ -438,6 +451,7 @@
 			files = (
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
+				CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */,
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
 				CC579CB11B18032700115705 /* detailViewController.m in Sources */,
 				CC81CD151B1535330039EA60 /* KLCPopup.m in Sources */,

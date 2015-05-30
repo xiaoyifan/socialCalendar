@@ -16,5 +16,6 @@
 #import <ParseUI/ParseUI.h>
 #import "eventObject.h"
 #import "MyLocation.h"
+#import "ParsingHandle.h"
 
 #endif

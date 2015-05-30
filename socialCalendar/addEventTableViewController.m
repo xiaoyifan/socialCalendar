@@ -11,7 +11,7 @@
 #import "mapViewController.h"
 #import "KLCPopup.h"
 
-@interface addEventTableViewController ()<HSDatePickerViewControllerDelegate, UIPickerViewDelegate>
+@interface addEventTableViewController ()<HSDatePickerViewControllerDelegate, UIPickerViewDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
@@ -235,6 +235,12 @@
         return;
     }
     
+    if(self.titleField.text.length == 0)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"the title can't be empty" message:@"please complete all the necessary information" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
     self.object= [[eventObject alloc] init];
     self.object.title = self.titleField.text;
     self.object.time = self.eventDate;
@@ -244,6 +250,8 @@
     self.object.location = self.itemLocation;
     self.object.locationDescription = self.locationLabel.text;
     self.object.eventNote = self.noteField.text;
+    
+    [[ParsingHandle sharedParsing] insertNewObjectToDatabase:self.object];
 }
 
 

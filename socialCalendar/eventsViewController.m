@@ -23,9 +23,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.events = [[NSMutableArray alloc] init];
+//    [self initData];
     
-    [self initData];
+    [[ParsingHandle sharedParsing] findObjectsOfCurrentUserToCompletion:^(NSArray *array){
+        
+        self.events = [[NSMutableArray alloc] init];
+        
+        for (PFObject *obj in array) {
+            eventObject *newObj = [[ParsingHandle sharedParsing] parseObjectToEventObject:obj];
+            [self.events addObject:newObj];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self.tableView reloadData];
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"tableViewdidLoad" object:self];
+        });
+    }];
+    
+    
     [self.tableView reloadData];
 
 }
@@ -109,6 +126,7 @@
     cell.topBar.backgroundColor = [self randomColor];
     
     eventObject *singleEvent = [self.events objectAtIndex:indexPath.row];
+    
     cell.eventName.text = singleEvent.title;
     
     NSDate *eventDate = singleEvent.time;
