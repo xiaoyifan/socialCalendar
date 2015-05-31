@@ -641,7 +641,7 @@
                                                         <constraint firstAttribute="width" constant="60" id="M9Y-PN-f7Q"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cZ-bh-YJa">
@@ -656,7 +656,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eel-U7-H2v">
                                                     <rect key="frame" x="123" y="8" width="464" height="51"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -678,6 +678,7 @@
                                             <outlet property="eventTime" destination="a5g-Fv-Ris" id="XM3-jX-zCd"/>
                                             <outlet property="eventTitle" destination="eel-U7-H2v" id="9H9-PA-3y7"/>
                                             <outlet property="separator" destination="9cZ-bh-YJa" id="w3K-nz-DVZ"/>
+                                            <segue destination="tEN-9t-Ups" kind="custom" identifier="detailSegue" customClass="DCModalSegue" id="TFM-Vn-6Ne"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -839,4 +840,7 @@
         <image name="share" width="25" height="25"/>
         <image name="user" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="TFM-Vn-6Ne"/>
+    </inferredMetricsTieBreakers>
 </document>

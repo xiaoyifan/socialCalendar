@@ -8,6 +8,7 @@
 
 #import "calendarController.h"
 #import "calendarTableViewCell.h"
+#import "detailViewController.h"
 
 @interface calendarController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -205,14 +206,28 @@
     
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+   
+    if ([segue.identifier  isEqual: @"detailSegue"]) {
+        
+        detailViewController *controller = (detailViewController *)[segue destinationViewController];
+        
+        NSIndexPath *indexPath = [self.eventTableView indexPathForSelectedRow];
+        
+        calendarTableViewCell *cell = (calendarTableViewCell *)[self.eventTableView cellForRowAtIndexPath:indexPath];
+        
+        eventObject * selectedObject = [self.eventsToday objectAtIndex:indexPath.row];
+        //get the item tapped in the tableView
+        controller.detailObject = selectedObject;
+        controller.cardBackgroundColor = cell.separator.backgroundColor;
+        
+    }
+
 }
-*/
+
 
 @end
