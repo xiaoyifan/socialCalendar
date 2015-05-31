@@ -21,6 +21,7 @@
 		CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDB3B611B12FC3200A68DCB /* eventViewCell.m */; };
 		CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDB3B6D1B13FFCC00A68DCB /* addEventTableViewController.m */; };
 		CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDBB61C1B1924D4007C2E81 /* ParsingHandle.m */; };
+		CCE344191B1BB02B001FB58F /* calendarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE344181B1BB02B001FB58F /* calendarTableViewCell.m */; };
 		CCF0A44F1B0BEEB8002F619B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF0A44E1B0BEEB8002F619B /* main.m */; };
 		CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF0A4511B0BEEB8002F619B /* AppDelegate.m */; };
 		CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF0A4561B0BEEB8002F619B /* Main.storyboard */; };
@@ -79,6 +80,8 @@
 		CCDB3B6D1B13FFCC00A68DCB /* addEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addEventTableViewController.m; sourceTree = "<group>"; };
 		CCDBB61B1B1924D4007C2E81 /* ParsingHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsingHandle.h; sourceTree = "<group>"; };
 		CCDBB61C1B1924D4007C2E81 /* ParsingHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsingHandle.m; sourceTree = "<group>"; };
+		CCE344171B1BB02B001FB58F /* calendarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarTableViewCell.h; sourceTree = "<group>"; };
+		CCE344181B1BB02B001FB58F /* calendarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarTableViewCell.m; sourceTree = "<group>"; };
 		CCF0A4491B0BEEB8002F619B /* socialCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF0A44D1B0BEEB8002F619B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCF0A44E1B0BEEB8002F619B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 			children = (
 				CCC680D01B129A620007DD85 /* calendarController.h */,
 				CCC680D11B129A620007DD85 /* calendarController.m */,
+				CCE344171B1BB02B001FB58F /* calendarTableViewCell.h */,
+				CCE344181B1BB02B001FB58F /* calendarTableViewCell.m */,
 			);
 			name = calendarScene;
 			sourceTree = "<group>";
@@ -459,6 +464,7 @@
 			files = (
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
+				CCE344191B1BB02B001FB58F /* calendarTableViewCell.m in Sources */,
 				CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */,
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
 				CC579CB11B18032700115705 /* detailViewController.m in Sources */,
