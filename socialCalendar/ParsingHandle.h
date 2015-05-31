@@ -17,6 +17,8 @@
 
 -(void)findObjectsOfUser:(PFUser *)user ToCompletion:(void(^)(NSArray *array))completion;
 
+-(void)findObjectsofDate:(NSDate *)date ToCompletion:(void (^)(NSArray *array))completion;
+
 -(void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user;
 
 -(void)insertNewObjectToDatabase:(eventObject *)newObj;

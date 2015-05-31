@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *eventTableView;
 
 
+@property NSMutableArray *eventsToday;
+
 @end
 
 @implementation calendarController
@@ -99,6 +101,25 @@
 - (void)calendarDidDateSelected:(JTCalendar *)calendar date:(NSDate *)date
 {
     NSLog(@"%@", date);
+    
+    [[ParsingHandle sharedParsing] findObjectsofDate:date ToCompletion:^(NSArray *array){
+        
+        self.eventsToday = [[NSMutableArray alloc] init];
+        NSLog(@"today contains %lu events", (unsigned long)array.count);
+        
+        for (PFObject *obj in array) {
+            eventObject *newObj = [[ParsingHandle sharedParsing] parseObjectToEventObject:obj];
+            [self.eventsToday addObject:newObj];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            //[self.eventTableView reloadData];
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"TodaytableViewdidLoad" object:self];
+        });
+        
+    }];
 }
 
 /*

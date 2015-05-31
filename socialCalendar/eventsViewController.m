@@ -42,8 +42,7 @@
         });
     }];
     
-    
-    [self.tableView reloadData];
+   
 
 }
 

@@ -47,6 +47,32 @@
 
 }
 
+-(void)findObjectsofDate:(NSDate *)date ToCompletion:(void (^)(NSArray *array))completion{
+    
+
+    NSCalendar *calendarCurrent = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendarCurrent components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
+    [components setHour:0];
+    [components setMinute:0];
+    [components setSecond:1];
+    NSDate *morningStart = [calendarCurrent dateFromComponents:components];
+    
+    [components setHour:23];
+    [components setMinute:59];
+    [components setSecond:59];
+    NSDate *tonightEnd = [calendarCurrent dateFromComponents:components];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Events"];
+    [query whereKey:@"time" greaterThan:morningStart];
+    [query whereKey:@"time" lessThan:tonightEnd];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            //Etc...
+            completion(objects);
+        }
+    }];
+}
+
 
 -(void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user{
     

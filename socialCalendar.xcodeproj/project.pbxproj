@@ -203,6 +203,15 @@
 			name = parseHandling;
 			sourceTree = "<group>";
 		};
+		CCE344161B1BA150001FB58F /* calendarScene */ = {
+			isa = PBXGroup;
+			children = (
+				CCC680D01B129A620007DD85 /* calendarController.h */,
+				CCC680D11B129A620007DD85 /* calendarController.m */,
+			);
+			name = calendarScene;
+			sourceTree = "<group>";
+		};
 		CCF0A4401B0BEEB8002F619B = {
 			isa = PBXGroup;
 			children = (
@@ -231,9 +240,8 @@
 				CC81CD161B1541B80039EA60 /* model */,
 				CCDB3B5F1B12FBD200A68DCB /* myEventsScene */,
 				CCDB3B631B13F93C00A68DCB /* addEventScene */,
-				CCC680D01B129A620007DD85 /* calendarController.h */,
 				CC579CAE1B18030200115705 /* eventDetailScene */,
-				CCC680D11B129A620007DD85 /* calendarController.m */,
+				CCE344161B1BA150001FB58F /* calendarScene */,
 				CCF0A4561B0BEEB8002F619B /* Main.storyboard */,
 				CCF0A4591B0BEEB8002F619B /* Images.xcassets */,
 				CCF0A45B1B0BEEB8002F619B /* LaunchScreen.xib */,

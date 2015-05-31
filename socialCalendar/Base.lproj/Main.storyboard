@@ -134,6 +134,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Events" id="5RW-HU-FDG">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="jKd-cT-esF"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="B9U-Fk-lWt">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -144,7 +145,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2R-Rr-9BA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="725" y="-24"/>
+            <point key="canvasLocation" x="725" y="-292"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Qk8-yv-aZV">
@@ -662,7 +663,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOr-V1-X3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87" y="761"/>
+            <point key="canvasLocation" x="-79" y="446"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Ypm-o8-V2L">
+            <objects>
+                <tableViewController id="j3h-u6-wK4" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LEq-1B-ByL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bG2-N1-f3y">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bG2-N1-f3y" id="zJJ-Ho-J8r">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="j3h-u6-wK4" id="RiI-BS-K2s"/>
+                            <outlet property="delegate" destination="j3h-u6-wK4" id="7PR-jv-nd4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Kni-D4-VK4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioN-aV-wXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725" y="1229"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BCK-HQ-TeT">
@@ -677,11 +705,12 @@
                     <connections>
                         <segue destination="z9d-gb-6i6" kind="relationship" relationship="viewControllers" id="zRd-g0-tCh"/>
                         <segue destination="Cob-De-PYN" kind="relationship" relationship="viewControllers" id="kNM-AO-c6H"/>
+                        <segue destination="CAH-gn-bbf" kind="relationship" relationship="viewControllers" id="N2K-Ud-Td9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UkK-Dv-pkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-803" y="258"/>
+            <point key="canvasLocation" x="-1381" y="686"/>
         </scene>
         <!--event-->
         <scene sceneID="3rP-K0-4o6">
@@ -700,7 +729,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYf-Jv-cCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87" y="-24"/>
+            <point key="canvasLocation" x="-79" y="-292"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tAj-Zv-abC">
@@ -738,6 +767,25 @@
             </objects>
             <point key="canvasLocation" x="3131" y="-561"/>
         </scene>
+        <!--user-->
+        <scene sceneID="7NN-w6-FBa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CAH-gn-bbf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="user" image="user" id="Wyi-GV-oqX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FVH-F0-cvw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j3h-u6-wK4" kind="relationship" relationship="rootViewController" id="X5w-0Z-abu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLK-lo-0Ij" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-67" y="1229"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back" width="50" height="50"/>
@@ -745,5 +793,6 @@
         <image name="location" width="25" height="25"/>
         <image name="pin" width="25" height="25"/>
         <image name="share" width="25" height="25"/>
+        <image name="user" width="25" height="25"/>
     </resources>
 </document>
