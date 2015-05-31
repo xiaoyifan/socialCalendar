@@ -19,6 +19,8 @@
 
 -(void)findObjectsofDate:(NSDate *)date ToCompletion:(void (^)(NSArray *array))completion;
 
+-(NSArray *)findObjectsFromNativeCalendarOnDate:(NSDate *)date;
+
 -(void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user;
 
 -(void)insertNewObjectToDatabase:(eventObject *)newObj;

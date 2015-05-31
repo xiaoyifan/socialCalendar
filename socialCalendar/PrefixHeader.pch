@@ -17,5 +17,7 @@
 #import "eventObject.h"
 #import "MyLocation.h"
 #import "ParsingHandle.h"
+#import "EventKit/EventKit.h"
+#import "EventKitUI/EventKitUI.h"
 
 #endif

@@ -22,6 +22,8 @@
 		CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDB3B6D1B13FFCC00A68DCB /* addEventTableViewController.m */; };
 		CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDBB61C1B1924D4007C2E81 /* ParsingHandle.m */; };
 		CCE344191B1BB02B001FB58F /* calendarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE344181B1BB02B001FB58F /* calendarTableViewCell.m */; };
+		CCE3441B1B1BB7FB001FB58F /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE3441A1B1BB7FB001FB58F /* EventKit.framework */; };
+		CCE3441D1B1BB805001FB58F /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE3441C1B1BB805001FB58F /* EventKitUI.framework */; };
 		CCF0A44F1B0BEEB8002F619B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF0A44E1B0BEEB8002F619B /* main.m */; };
 		CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF0A4511B0BEEB8002F619B /* AppDelegate.m */; };
 		CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF0A4561B0BEEB8002F619B /* Main.storyboard */; };
@@ -82,6 +84,8 @@
 		CCDBB61C1B1924D4007C2E81 /* ParsingHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsingHandle.m; sourceTree = "<group>"; };
 		CCE344171B1BB02B001FB58F /* calendarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarTableViewCell.h; sourceTree = "<group>"; };
 		CCE344181B1BB02B001FB58F /* calendarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarTableViewCell.m; sourceTree = "<group>"; };
+		CCE3441A1B1BB7FB001FB58F /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		CCE3441C1B1BB805001FB58F /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		CCF0A4491B0BEEB8002F619B /* socialCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF0A44D1B0BEEB8002F619B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCF0A44E1B0BEEB8002F619B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE3441D1B1BB805001FB58F /* EventKitUI.framework in Frameworks */,
+				CCE3441B1B1BB7FB001FB58F /* EventKit.framework in Frameworks */,
 				CCC680DF1B129E320007DD85 /* Bolts.framework in Frameworks */,
 				CCF0A4901B0BF1FD002F619B /* Social.framework in Frameworks */,
 				CCF0A4801B0BF176002F619B /* AudioToolbox.framework in Frameworks */,
@@ -309,6 +315,8 @@
 		D039DA7C97DEC38A4668DA3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CCE3441C1B1BB805001FB58F /* EventKitUI.framework */,
+				CCE3441A1B1BB7FB001FB58F /* EventKit.framework */,
 				CC81CD111B14F43B0039EA60 /* MapKit.framework */,
 				E0EDD79DA0424417BCB1D051 /* libPods-socialCalendar.a */,
 			);

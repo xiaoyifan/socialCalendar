@@ -49,7 +49,7 @@
 
 -(void)findObjectsofDate:(NSDate *)date ToCompletion:(void (^)(NSArray *array))completion{
     
-
+    NSLog(@"date to find: %@", date);
     NSCalendar *calendarCurrent = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendarCurrent components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
     [components setHour:0];
@@ -73,6 +73,45 @@
     }];
 }
 
+-(NSArray *)findObjectsFromNativeCalendarOnDate:(NSDate *)date{
+    
+    EKEventStore *eventStore = [[EKEventStore alloc] init];
+    
+    NSCalendar *calendarCurrent = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendarCurrent components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
+    [components setHour:0];
+    [components setMinute:0];
+    [components setSecond:1];
+    NSDate *morningStart = [calendarCurrent dateFromComponents:components];
+    
+    [components setHour:23];
+    [components setMinute:59];
+    [components setSecond:59];
+    NSDate *tonightEnd = [calendarCurrent dateFromComponents:components];
+    
+    
+//    NSArray *calendars = [eventStore calendarsForEntityType:EKEntityTypeReminder];
+    NSPredicate *predicate = [eventStore predicateForEventsWithStartDate:morningStart
+                                                                 endDate:tonightEnd
+                                                               calendars:nil];
+    
+    [eventStore requestAccessToEntityType:EKEntityTypeEvent
+                                    completion:^(BOOL granted, NSError *error) {
+                                        
+                                        NSLog(@"Granted %d", granted);
+                                    }];
+    
+    NSArray *matchingEvents = [eventStore eventsMatchingPredicate:predicate];
+
+    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    
+    for (EKEvent * event in matchingEvents) {
+        [array addObject:[self parseNativeEventToEventObject:event]];
+    }
+    
+    return [array copy];
+}
 
 -(void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user{
     
@@ -122,5 +161,30 @@
     return retrivedObj;
 }
 
+-(eventObject *)parseNativeEventToEventObject:(EKEvent *)object{
+
+    eventObject *newObj = [[eventObject alloc] init];
+    newObj.title = object.title;
+    newObj.time = object.startDate;
+    newObj.reminderDate = object.endDate;
+    newObj.locationDescription = object.location;
+    newObj.eventNote = object.notes;
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder geocodeAddressString:object.location completionHandler:^(NSArray *placemarks, NSError *error) {
+        if([placemarks count]) {
+            CLPlacemark *placemark = [placemarks objectAtIndex:0];
+            CLLocation *location = placemark.location;
+            
+            newObj.location = location;
+            
+            CLLocationCoordinate2D coordinate = location.coordinate;
+            NSLog(@"coordinate = (%f, %f)", coordinate.latitude, coordinate.longitude);
+            
+        }
+    }];
+    
+    return newObj;
+}
 
 @end

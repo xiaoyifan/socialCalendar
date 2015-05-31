@@ -63,6 +63,8 @@
             eventObject *newObj = [[ParsingHandle sharedParsing] parseObjectToEventObject:obj];
             [self.eventsToday addObject:newObj];
         }
+        [self.eventsToday addObjectsFromArray:[[ParsingHandle sharedParsing] findObjectsFromNativeCalendarOnDate:[NSDate date]]];
+
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
@@ -138,6 +140,8 @@
             eventObject *newObj = [[ParsingHandle sharedParsing] parseObjectToEventObject:obj];
             [self.eventsToday addObject:newObj];
         }
+        
+        [self.eventsToday addObjectsFromArray:[[ParsingHandle sharedParsing] findObjectsFromNativeCalendarOnDate:date]];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
@@ -228,6 +232,7 @@
     }
 
 }
+
 
 
 @end
