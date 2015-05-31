@@ -62,8 +62,10 @@
 //    NSInteger wd = lLast.frame.origin.y;
 //    NSInteger ht = lLast.frame.size.height;
     
-//    sizeOfContent = wd+ht;
-//    
+    sizeOfContent = 850;
+    
+    NSLog(@"scroll view size: %f", sizeOfContent);
+    
     self.mainScrollView.contentSize = CGSizeMake(self.mainScrollView.frame.size.width, sizeOfContent);
 //    NSLog(@"scroll height %f", sizeOfContent);
     
