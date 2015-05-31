@@ -235,23 +235,26 @@
         return;
     }
     
-    if(self.titleField.text.length == 0)
+    if([self.titleField.text isEqualToString:@""])
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"the title can't be empty" message:@"please complete all the necessary information" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
+
     }
+    else{
+        
+        self.object= [[eventObject alloc] init];
+        self.object.title = self.titleField.text;
+        self.object.time = self.eventDate;
     
-    self.object= [[eventObject alloc] init];
-    self.object.title = self.titleField.text;
-    self.object.time = self.eventDate;
+        self.object.reminderDate = [self getDateFromText:self.reminderLabel.text];
     
-    self.object.reminderDate = [self getDateFromText:self.reminderLabel.text];
+        self.object.location = self.itemLocation;
+        self.object.locationDescription = self.locationLabel.text;
+        self.object.eventNote = self.noteField.text;
     
-    self.object.location = self.itemLocation;
-    self.object.locationDescription = self.locationLabel.text;
-    self.object.eventNote = self.noteField.text;
-    
-    [[ParsingHandle sharedParsing] insertNewObjectToDatabase:self.object];
+        [[ParsingHandle sharedParsing] insertNewObjectToDatabase:self.object];
+    }
 }
 
 
