@@ -11,7 +11,7 @@
 #import "FacebookStyleBar.h"
 #import "FacebookStyleBarBehaviorDefiner.h"
 
-@interface FacebookStyleViewController () <UITableViewDataSource>
+@interface FacebookStyleViewController () <UITableViewDataSource, flexibleHeightBarDelegate>
 
 @property (nonatomic) FacebookStyleBar *myCustomBar;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -28,6 +28,7 @@
     
     // Setup the bar
     self.myCustomBar = [[FacebookStyleBar alloc] initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.frame), 100.0)];
+    self.myCustomBar.delegate = self;
     
     FacebookStyleBarBehaviorDefiner *behaviorDefiner = [[FacebookStyleBarBehaviorDefiner alloc] init];
     [behaviorDefiner addSnappingPositionProgress:0.0 forProgressRangeStart:0.0 end:40.0/(105.0-20.0)];
@@ -66,6 +67,15 @@
     [closeButton addLayoutAttributes:finalCloseButtonLayoutAttributes forProgress:1.0];
     
     [self.myCustomBar addSubview:closeButton];
+    
+}
+
+-(void)friendButtonPressed{
+    NSLog(@"friend is selected");
+}
+
+-(void)requestButtonPressed{
+    NSLog(@"request is selected");
 }
 
 - (void)didReceiveMemoryWarning

@@ -87,14 +87,43 @@
     UIView *bottomBorderView = [[UIView alloc] initWithFrame:CGRectMake(0.0, initialWhiteBarLayoutAttributes.size.height-0.5, initialWhiteBarLayoutAttributes.size.width, 0.5)];
     bottomBorderView.backgroundColor = [UIColor colorWithRed:0.75 green:0.76 blue:0.78 alpha:1];
     [whiteBarView addSubview:bottomBorderView];
+
     
-    UIView *leftVerticalDividerView = [[UIView alloc] initWithFrame:CGRectMake(initialWhiteBarLayoutAttributes.size.width*0.334, initialWhiteBarLayoutAttributes.size.height*0.1, 0.5, initialWhiteBarLayoutAttributes.size.height*0.8)];
-    leftVerticalDividerView.backgroundColor = [UIColor colorWithRed:0.85 green:0.86 blue:0.88 alpha:1];
-    [whiteBarView addSubview:leftVerticalDividerView];
+    UIView *middleIntervalDividerView = [[UIView alloc] initWithFrame:CGRectMake(initialWhiteBarLayoutAttributes.size.width*0.5, initialWhiteBarLayoutAttributes.size.height*0.1, 0.5, initialWhiteBarLayoutAttributes.size.height*0.8)];
+    middleIntervalDividerView.backgroundColor = [UIColor colorWithRed:0.85 green:0.86 blue:0.88 alpha:1];
+    [whiteBarView addSubview:middleIntervalDividerView];
     
-    UIView *rightVerticalDividerView = [[UIView alloc] initWithFrame:CGRectMake(initialWhiteBarLayoutAttributes.size.width*0.667, initialWhiteBarLayoutAttributes.size.height*0.1, 0.5, initialWhiteBarLayoutAttributes.size.height*0.8)];
-    rightVerticalDividerView.backgroundColor = [UIColor colorWithRed:0.85 green:0.86 blue:0.88 alpha:1];
-    [whiteBarView addSubview:rightVerticalDividerView];
+    self.friendButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0, initialWhiteBarLayoutAttributes.size.height*0.1, initialWhiteBarLayoutAttributes.size.width*0.5, initialWhiteBarLayoutAttributes.size.height*0.8)];
+    
+    self.friendButton.tintColor = [UIColor darkGrayColor];
+    
+    [self.friendButton setTitle:@"friends" forState:UIControlStateNormal];
+    [self.friendButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    
+    [self.friendButton addTarget:self action:@selector(friendButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [whiteBarView addSubview:self.friendButton];
+    
+    
+    self.requestButton = [[UIButton alloc] initWithFrame:CGRectMake(initialWhiteBarLayoutAttributes.size.width*0.5, initialWhiteBarLayoutAttributes.size.height*0.1, initialWhiteBarLayoutAttributes.size.width*0.5, initialWhiteBarLayoutAttributes.size.height*0.8)];
+    self.requestButton.tintColor = [UIColor darkGrayColor];
+    
+    [self.requestButton setTitle:@"requests" forState:UIControlStateNormal];
+    [self.requestButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [self.requestButton addTarget:self action:@selector(requestButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [whiteBarView addSubview:self.requestButton];
+}
+
+-(void)friendButtonTapped:(id)sender{
+ 
+    [self.delegate friendButtonPressed];
+}
+
+-(void)requestButtonTapped:(id)sender{
+    
+    [self.delegate requestButtonPressed];
+    
 }
 
 @end
