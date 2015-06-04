@@ -28,5 +28,10 @@
 
 -(eventObject *)parseObjectToEventObject:(PFObject *)object;
 
+-(NSArray *)getMyFriends;
+
+-(NSArray *)getMyPendingRequest;
+
+
 
 @end

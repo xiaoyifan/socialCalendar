@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HexColor.h"
 
 @interface FacebookStyleViewController : UIViewController
+
+@property NSMutableArray *friendsArray;
+
+@property NSMutableArray *requestArray;
+
+@property NSMutableArray *dataArray;
 
 @end

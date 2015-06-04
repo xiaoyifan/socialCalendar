@@ -10,6 +10,7 @@
 
 #import "FacebookStyleBar.h"
 #import "FacebookStyleBarBehaviorDefiner.h"
+#import "userTableViewCell.h"
 
 @interface FacebookStyleViewController () <UITableViewDataSource, flexibleHeightBarDelegate>
 
@@ -41,7 +42,7 @@
     [self.view addSubview:self.myCustomBar];
     
     // Setup the table view
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+   // [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     self.tableView.contentInset = UIEdgeInsetsMake(self.myCustomBar.maximumBarHeight, 0.0, 0.0, 0.0);
     self.tableView.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1];
     
@@ -70,12 +71,33 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    
+    self.friendsArray = [[[ParsingHandle sharedParsing] getMyFriends] mutableCopy];
+    
+    self.dataArray = self.friendsArray;
+    
+    [self.tableView reloadData];
+}
+
 -(void)friendButtonPressed{
     NSLog(@"friend is selected");
+    
+    self.friendsArray = [[[ParsingHandle sharedParsing] getMyFriends] mutableCopy];
+    
+    self.dataArray = self.friendsArray;
+    
+    [self.tableView reloadData];
 }
 
 -(void)requestButtonPressed{
     NSLog(@"request is selected");
+    
+    self.requestArray = [[[ParsingHandle sharedParsing] getMyPendingRequest] mutableCopy];
+    
+    self.dataArray = self.requestArray;
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,13 +121,24 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    userTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1];
+    
+    [cell.actionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [cell.actionButton setTitle:@"add" forState:UIControlStateNormal];
+    [cell.actionButton setBackgroundColor:[UIColor colorWithHexString:@"#0099FF"]];
+    cell.actionButton.layer.cornerRadius = 5.0;
+    
+    
+    PFUser *user = [self.dataArray objectAtIndex:indexPath.row];
+    cell.username.text = user.username;
+    cell.mailaddress.text = user.email;
+    
     return cell;
 }
 

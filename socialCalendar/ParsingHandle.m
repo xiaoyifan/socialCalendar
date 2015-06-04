@@ -187,4 +187,16 @@
     return newObj;
 }
 
+-(NSArray *)getMyFriends{
+    
+    
+    
+    return nil;
+}
+
+-(NSArray *)getMyPendingRequest{
+    
+    return nil;
+}
+
 @end
