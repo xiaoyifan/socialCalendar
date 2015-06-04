@@ -1,5 +1,6 @@
 PODS:
   - AAShareBubbles (1.1.0)
+  - BLKFlexibleHeightBar (1.0.2)
   - DCModalSegue (0.0.2)
   - FoldingTabBar (1.0.0)
   - HexColors (2.2.1)
@@ -11,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - AAShareBubbles
+  - BLKFlexibleHeightBar
   - DCModalSegue
   - FoldingTabBar (~> 1.0.0)
   - HexColors
@@ -20,6 +22,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AAShareBubbles: 960610d6a3c4da57d7cd295f4bec68790307bce8
+  BLKFlexibleHeightBar: b27572a69633d8e33f1f2bbc486b04d8e86f742d
   DCModalSegue: 68c79b992a87c72ca6ded9ae61722b073f5fcdd3
   FoldingTabBar: 463d247453a2ba826ae79f5be1e6b8b93b6aa0ce
   HexColors: abfd172e329dab59888614ccba6f216cec59289d

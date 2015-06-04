@@ -49,6 +49,8 @@
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                      action:@selector(handleDouleTap)];
     recognizer.numberOfTapsRequired = 2;
+    recognizer.cancelsTouchesInView = YES;
+    recognizer.delaysTouchesBegan =YES;
     [self.eventTableView addGestureRecognizer:recognizer];
 }
 

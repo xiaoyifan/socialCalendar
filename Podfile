@@ -10,6 +10,7 @@ pod 'DCModalSegue'
 pod 'HSDatePickerViewController'
 pod 'HexColors'
 pod 'AAShareBubbles'
+pod 'BLKFlexibleHeightBar'
 
 end
 
