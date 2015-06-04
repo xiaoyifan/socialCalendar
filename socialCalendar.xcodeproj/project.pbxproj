@@ -13,6 +13,10 @@
 		CC81CD121B14F43B0039EA60 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC81CD111B14F43B0039EA60 /* MapKit.framework */; };
 		CC81CD151B1535330039EA60 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81CD141B1535330039EA60 /* KLCPopup.m */; };
 		CC81CD191B1541E00039EA60 /* eventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81CD181B1541E00039EA60 /* eventObject.m */; };
+		CCB59FEE1B2031E40050352D /* FacebookStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB59FEB1B2031E40050352D /* FacebookStyleViewController.m */; };
+		CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB59FED1B2031E40050352D /* FacebookStyleBar.m */; };
+		CCB59FF11B20335F0050352D /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB59FF01B20335F0050352D /* Close.png */; };
+		CCB59FF51B20360A0050352D /* Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB59FF41B20360A0050352D /* Plus.png */; };
 		CCC680D21B129A620007DD85 /* calendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC680D11B129A620007DD85 /* calendarController.m */; };
 		CCC680DF1B129E320007DD85 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680D91B129E320007DD85 /* Bolts.framework */; };
 		CCC680E01B129E320007DD85 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680DA1B129E320007DD85 /* Parse.framework */; };
@@ -69,6 +73,12 @@
 		CC81CD141B1535330039EA60 /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
 		CC81CD171B1541E00039EA60 /* eventObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventObject.h; sourceTree = "<group>"; };
 		CC81CD181B1541E00039EA60 /* eventObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventObject.m; sourceTree = "<group>"; };
+		CCB59FEA1B2031E40050352D /* FacebookStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookStyleViewController.h; sourceTree = "<group>"; };
+		CCB59FEB1B2031E40050352D /* FacebookStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookStyleViewController.m; sourceTree = "<group>"; };
+		CCB59FEC1B2031E40050352D /* FacebookStyleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookStyleBar.h; sourceTree = "<group>"; };
+		CCB59FED1B2031E40050352D /* FacebookStyleBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookStyleBar.m; sourceTree = "<group>"; };
+		CCB59FF01B20335F0050352D /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close.png; sourceTree = "<group>"; };
+		CCB59FF41B20360A0050352D /* Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus.png; sourceTree = "<group>"; };
 		CCC680D01B129A620007DD85 /* calendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarController.h; sourceTree = "<group>"; };
 		CCC680D11B129A620007DD85 /* calendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarController.m; sourceTree = "<group>"; };
 		CCC680D91B129E320007DD85 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -177,6 +187,18 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		CCB59FE91B2031820050352D /* profileScene */ = {
+			isa = PBXGroup;
+			children = (
+				CCB59FEA1B2031E40050352D /* FacebookStyleViewController.h */,
+				CCB59FEB1B2031E40050352D /* FacebookStyleViewController.m */,
+				CCB59FEC1B2031E40050352D /* FacebookStyleBar.h */,
+				CCB59FED1B2031E40050352D /* FacebookStyleBar.m */,
+			);
+			name = profileScene;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		CCDB3B5F1B12FBD200A68DCB /* myEventsScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +275,7 @@
 				CCDB3B631B13F93C00A68DCB /* addEventScene */,
 				CC579CAE1B18030200115705 /* eventDetailScene */,
 				CCE344161B1BA150001FB58F /* calendarScene */,
+				CCB59FE91B2031820050352D /* profileScene */,
 				CCF0A4561B0BEEB8002F619B /* Main.storyboard */,
 				CCF0A4591B0BEEB8002F619B /* Images.xcassets */,
 				CCF0A45B1B0BEEB8002F619B /* LaunchScreen.xib */,
@@ -264,6 +287,8 @@
 		CCF0A44C1B0BEEB8002F619B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CCB59FF41B20360A0050352D /* Plus.png */,
+				CCB59FF01B20335F0050352D /* Close.png */,
 				CCF0A4501B0BEEB8002F619B /* AppDelegate.h */,
 				CCF0A4511B0BEEB8002F619B /* AppDelegate.m */,
 				CCF0A4991B0BF3F8002F619B /* PrefixHeader.pch */,
@@ -419,6 +444,8 @@
 			files = (
 				CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */,
 				CCF0A45D1B0BEEB8002F619B /* LaunchScreen.xib in Resources */,
+				CCB59FF51B20360A0050352D /* Plus.png in Resources */,
+				CCB59FF11B20335F0050352D /* Close.png in Resources */,
 				CCF0A45A1B0BEEB8002F619B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +499,8 @@
 			files = (
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
+				CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */,
+				CCB59FEE1B2031E40050352D /* FacebookStyleViewController.m in Sources */,
 				CCE344191B1BB02B001FB58F /* calendarTableViewCell.m in Sources */,
 				CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */,
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
