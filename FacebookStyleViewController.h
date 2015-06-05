@@ -17,4 +17,7 @@
 
 @property NSMutableArray *dataArray;
 
+
+@property (nonatomic, strong) PFRelation *friendsRelation;
+
 @end

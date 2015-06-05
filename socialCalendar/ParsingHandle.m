@@ -194,25 +194,70 @@
         return;
     }
     
-    PFQuery *query = [PFUser query];
+    PFRelation *friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
+    PFQuery *query = [friendsRelation query];
     [query orderByAscending:@"username"];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             //Etc...
             completion(objects);
         }
+        else{
+            NSLog(@"the error is %@", error);
+        }
     }];
     
 }
 
--(void)getMyPendingRequestToCompletion:(void (^)(NSArray *array))completion{
+-(void)getMyPendingReceivedRequestToCompletion:(void (^)(NSArray *array))completion{
     
     if(![PFUser currentUser])
     {
         return;
     }
     
+    PFQuery * query = [PFQuery queryWithClassName:@"FriendRequest"];
+    [query whereKey:@"toUser" equalTo:[PFUser currentUser]];
+    [query whereKey:@"status" equalTo:@"pending"];
     
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error)
+        {
+            NSLog(@"error info %@", error);
+        }
+        else {
+            completion(objects);
+        }
+    
+
+    }];
+}
+
+
+-(void)getMyPendingSentRequestToCompletion:(void (^)(NSArray *array))completion{
+    
+    if(![PFUser currentUser])
+    {
+        return;
+    }
+    
+    PFQuery * query = [PFQuery queryWithClassName:@"FriendRequest"];
+    [query whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+    [query whereKey:@"status" equalTo:@"pending"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error)
+        {
+            NSLog(@"error info %@", error);
+        }
+        else {
+            completion(objects);
+        }
+        
+        
+    }];
 }
 
 @end
+

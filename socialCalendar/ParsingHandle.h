@@ -30,8 +30,9 @@
 
 -(void)getMyFriendsToCompletion:(void (^)(NSArray *array))completion;
 
--(void)getMyPendingRequestToCompletion:(void (^)(NSArray *array))completion;
+-(void)getMyPendingReceivedRequestToCompletion:(void (^)(NSArray *array))completion;
 
+-(void)getMyPendingSentRequestToCompletion:(void (^)(NSArray *array))completion;
 
 
 @end

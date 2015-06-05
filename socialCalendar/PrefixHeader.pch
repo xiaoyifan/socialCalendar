@@ -19,5 +19,6 @@
 #import "ParsingHandle.h"
 #import "EventKit/EventKit.h"
 #import "EventKitUI/EventKitUI.h"
+#import "HexColor.h"
 
 #endif

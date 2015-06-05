@@ -7,6 +7,7 @@
 //
 
 #import "userTableViewController.h"
+#import "listTableViewCell.h"
 
 @interface userTableViewController ()
 
@@ -47,12 +48,17 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"userCell" forIndexPath:indexPath];
+    listTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listCell" forIndexPath:indexPath];
     
     PFUser *user = [self.userArray objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = user.username;
-    cell.detailTextLabel.text = user.email;
+    cell.username.text = user.username;
+    cell.email.text = user.email;
+    cell.addButton.layer.cornerRadius = 5.0;
+    cell.addButton.tag = indexPath.row;
+    [cell.addButton setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
+    
+    //if the user is in the friend request already, if so, change the button color and title text.
     
     return cell;
 }
@@ -63,6 +69,30 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)addUserButton:(id)sender {
+    
+    UIButton *senderButton = (UIButton *)sender;
+    NSLog(@"%ld", (long)senderButton.tag);
+    if ([senderButton.titleLabel.text isEqualToString:@"add"]) {
+        [senderButton setTitle:@"sent" forState:UIControlStateNormal];
+        [senderButton setBackgroundColor:[UIColor darkGrayColor]];
+    }
+    else{
+        [senderButton setTitle:@"add" forState:UIControlStateNormal];
+        [senderButton setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
+    }
+    
+    
+    PFUser *addedUser = [self.userArray objectAtIndex:senderButton.tag];
+    
+    NSLog(@"%@", addedUser.username);
+    
+    
+//    listTableViewCell *cell = (listTableViewCell *)[self.tableView cellForRowAtIndexPath:pathToCell];
+//    [cell.addButton setTitle:@"sent" forState:UIControlStateNormal];
+    
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
