@@ -25,43 +25,29 @@
     
 //    [self initData];
     
-    [[ParsingHandle sharedParsing] findObjectsOfCurrentUserToCompletion:^(NSArray *array){
+    if ([PFUser currentUser]) {
         
-        self.events = [[NSMutableArray alloc] init];
-        
-        for (PFObject *obj in array) {
-            eventObject *newObj = [[ParsingHandle sharedParsing] parseObjectToEventObject:obj];
-            [self.events addObject:newObj];
-        }
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
+        [[ParsingHandle sharedParsing] findObjectsOfCurrentUserToCompletion:^(NSArray *array){
             
-            [self.tableView reloadData];
+            self.events = [[NSMutableArray alloc] init];
             
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"tableViewdidLoad" object:self];
-        });
-    }];
+            for (PFObject *obj in array) {
+                eventObject *newObj = [[ParsingHandle sharedParsing] parseObjectToEventObject:obj];
+                [self.events addObject:newObj];
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.tableView reloadData];
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"tableViewdidLoad" object:self];
+            });
+        }];
+        
+    }
     
    
 
-}
-
--(void)initData{
-
-    eventObject *newObj = [[eventObject alloc] init];
-    newObj.title = @"first Event in the app";
-    newObj.time = [NSDate date];
-    newObj.reminderDate = [NSDate date];
-    newObj.locationDescription = @"Time Square, New York City, NY, USA";
-    newObj.eventNote = @"this is just a test on the note initialization. check the details of the event by open the note. ";
-    [self.events addObject:newObj];
-    
-    eventObject *newObj2 = [[eventObject alloc] init];
-    newObj2.title = @"second Event in the app";
-    newObj2.time = [NSDate date];
-    newObj2.reminderDate = [NSDate date];
-    newObj2.locationDescription = @"UCLA, Los Angeles, USA";
-    [self.events addObject:newObj2];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -363,6 +349,12 @@
          
      }
  }
+
+
+- (IBAction)logoutButtonPressed:(id)sender {
+    
+    [PFUser logOut];
+}
 
 
 

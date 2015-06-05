@@ -73,17 +73,24 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     
-    self.friendsArray = [[[ParsingHandle sharedParsing] getMyFriends] mutableCopy];
+    [[ParsingHandle sharedParsing] getMyFriendsToCompletion:^(NSArray *array){
+       
+        self.friendsArray = [array mutableCopy];
+        self.dataArray = self.friendsArray;
+        
+        [self.tableView reloadData];
+    }];
     
-    self.dataArray = self.friendsArray;
     
-    [self.tableView reloadData];
 }
 
 -(void)friendButtonPressed{
     NSLog(@"friend is selected");
     
-    self.friendsArray = [[[ParsingHandle sharedParsing] getMyFriends] mutableCopy];
+    [[ParsingHandle sharedParsing] getMyFriendsToCompletion:^(NSArray *array){
+        
+        self.friendsArray = [array mutableCopy];
+    }];
     
     self.dataArray = self.friendsArray;
     
@@ -93,7 +100,10 @@
 -(void)requestButtonPressed{
     NSLog(@"request is selected");
     
-    self.requestArray = [[[ParsingHandle sharedParsing] getMyPendingRequest] mutableCopy];
+    [[ParsingHandle sharedParsing] getMyPendingRequestToCompletion:^(NSArray *array){
+        
+        self.requestArray = [array mutableCopy];
+    }];
     
     self.dataArray = self.requestArray;
     
@@ -113,7 +123,11 @@
 
 - (void)addUser:(id)sender
 {
-    //[self dismissViewControllerAnimated:YES completion:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    UINavigationController *controller = [storyboard instantiateViewControllerWithIdentifier:@"userNav"];
+    
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 

@@ -28,9 +28,9 @@
 
 -(eventObject *)parseObjectToEventObject:(PFObject *)object;
 
--(NSArray *)getMyFriends;
+-(void)getMyFriendsToCompletion:(void (^)(NSArray *array))completion;
 
--(NSArray *)getMyPendingRequest;
+-(void)getMyPendingRequestToCompletion:(void (^)(NSArray *array))completion;
 
 
 

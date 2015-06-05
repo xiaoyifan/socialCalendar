@@ -187,16 +187,32 @@
     return newObj;
 }
 
--(NSArray *)getMyFriends{
+-(void)getMyFriendsToCompletion:(void (^)(NSArray *array))completion{
     
+    if(![PFUser currentUser])
+    {
+        return;
+    }
     
+    PFQuery *query = [PFUser query];
+    [query orderByAscending:@"username"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            //Etc...
+            completion(objects);
+        }
+    }];
     
-    return nil;
 }
 
--(NSArray *)getMyPendingRequest{
+-(void)getMyPendingRequestToCompletion:(void (^)(NSArray *array))completion{
     
-    return nil;
+    if(![PFUser currentUser])
+    {
+        return;
+    }
+    
+    
 }
 
 @end
