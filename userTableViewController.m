@@ -18,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[ParsingHandle sharedParsing] getMyPendingSentRequestToCompletion:^(NSArray *array){
+       
+        self.sentRequestUserArray = [array mutableCopy];
+        //get all the users that I've sent request
+    }];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -56,11 +62,30 @@
     cell.email.text = user.email;
     cell.addButton.layer.cornerRadius = 5.0;
     cell.addButton.tag = indexPath.row;
-    [cell.addButton setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
+    
+    if ([self requestSentTo:user]) {
+        [cell.addButton setBackgroundColor:[UIColor darkGrayColor]];
+        [cell.addButton setTitle:@"sent" forState:UIControlStateNormal];
+    }
+    else{
+        [cell.addButton setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
+        [cell.addButton setTitle:@"add" forState:UIControlStateNormal];
+        
+    }
+    
     
     //if the user is in the friend request already, if so, change the button color and title text.
     
     return cell;
+}
+
+-(BOOL)requestSentTo:(PFUser *)user{
+    for (PFUser *request in self.sentRequestUserArray) {
+        if ([request.objectId isEqualToString:user.objectId]) {
+            return true;
+        }
+    }
+    return false;
 }
 
 
@@ -76,10 +101,14 @@
     if ([senderButton.titleLabel.text isEqualToString:@"add"]) {
         [senderButton setTitle:@"sent" forState:UIControlStateNormal];
         [senderButton setBackgroundColor:[UIColor darkGrayColor]];
+        
+        //add new request
     }
     else{
         [senderButton setTitle:@"add" forState:UIControlStateNormal];
         [senderButton setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
+        
+        //delete existed request
     }
     
     

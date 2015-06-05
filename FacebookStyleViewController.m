@@ -105,7 +105,7 @@
 -(void)requestButtonPressed{
     NSLog(@"request is selected");
     
-    [[ParsingHandle sharedParsing] getMyPendingRequestToCompletion:^(NSArray *array){
+    [[ParsingHandle sharedParsing] getMyPendingReceivedRequestToCompletion:^(NSArray *array){
         
         self.requestArray = [array mutableCopy];
     }];

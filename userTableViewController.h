@@ -10,7 +10,8 @@
 
 @interface userTableViewController : UITableViewController
 
-
 @property NSMutableArray *userArray;
+
+@property NSMutableArray *sentRequestUserArray;
 
 @end
