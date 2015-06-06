@@ -28,11 +28,14 @@
 
 -(eventObject *)parseObjectToEventObject:(PFObject *)object;
 
+-(void)getAllUsersToCompletion:(void (^)(NSArray *array))completion;
+
 -(void)getMyFriendsToCompletion:(void (^)(NSArray *array))completion;
 
 -(void)getMyPendingReceivedRequestToCompletion:(void (^)(NSArray *array))completion;
 
 -(void)getMyPendingSentRequestToCompletion:(void (^)(NSArray *array))completion;
 
+-(void)sendUserFriendRequest:(PFUser *)user;
 
 @end

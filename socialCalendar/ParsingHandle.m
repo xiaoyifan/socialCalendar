@@ -187,6 +187,25 @@
     return newObj;
 }
 
+
+-(void)getAllUsersToCompletion:(void (^)(NSArray *array))completion{
+    
+    PFQuery *query = [PFUser query];
+    
+    [query orderByAscending:@"username"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error){
+       
+        if (error) {
+            NSLog(@"the error is %@", error);
+        }
+        else{
+            completion(array);
+        }
+    }];
+    
+}
+
 -(void)getMyFriendsToCompletion:(void (^)(NSArray *array))completion{
     
     if(![PFUser currentUser])
@@ -217,8 +236,8 @@
         return;
     }
     
-    PFQuery * query = [PFQuery queryWithClassName:@"FriendRequest"];
-    [query whereKey:@"toUser" equalTo:[PFUser currentUser]];
+    PFQuery * query = [PFQuery queryWithClassName:@"friendRequest"];
+    [query whereKey:@"to" equalTo:[PFUser currentUser]];
     [query whereKey:@"status" equalTo:@"pending"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -242,8 +261,8 @@
         return;
     }
     
-    PFQuery * query = [PFQuery queryWithClassName:@"FriendRequest"];
-    [query whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+    PFQuery * query = [PFQuery queryWithClassName:@"friendRequest"];
+    [query whereKey:@"from" equalTo:[PFUser currentUser]];
     [query whereKey:@"status" equalTo:@"pending"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -252,11 +271,29 @@
             NSLog(@"error info %@", error);
         }
         else {
+            
+            NSLog(@"%lu requests sent", (unsigned long)objects.count);
             completion(objects);
         }
         
         
     }];
+}
+
+
+-(void)sendUserFriendRequest:(PFUser *)user{
+    
+    PFObject *request = [PFObject objectWithClassName:@"friendRequest"];
+    request[@"from"]  =[PFUser currentUser];
+    request[@"to"] = user;
+    request[@"status"] = @"pending";
+    
+    [request saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+        if (!succeeded) {
+            NSLog(@"the error is %@", error);
+        }
+    }];
+    
 }
 
 @end

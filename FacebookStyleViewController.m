@@ -70,10 +70,6 @@
     [self.myCustomBar addSubview:closeButton];
     
     
-//    self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
-//    PFQuery *query = [self.friendsRelation query];
-//    [query orderByAscending:@"username"];
-//    [query findObjectsInBackgroundWithBlock:<#(nullable PFArrayResultBlock(nullable )block#>]
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -102,18 +98,32 @@
     [self.tableView reloadData];
 }
 
+
+
 -(void)requestButtonPressed{
     NSLog(@"request is selected");
     
     [[ParsingHandle sharedParsing] getMyPendingReceivedRequestToCompletion:^(NSArray *array){
         
-        self.requestArray = [array mutableCopy];
+        NSMutableArray *userArray = [[NSMutableArray alloc] init];
+        
+        for (PFObject *request in array) {
+            PFUser *from = request[@"from"];
+            
+            [userArray addObject:from];
+            
+        }
+        //get all the users who sent the request to current user
+        
+        self.requestArray = userArray;
     }];
     
     self.dataArray = self.requestArray;
     
     [self.tableView reloadData];
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

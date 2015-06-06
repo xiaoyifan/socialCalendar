@@ -22,13 +22,15 @@
        
         self.sentRequestUserArray = [array mutableCopy];
         //get all the users that I've sent request
+        
+        [self.tableView reloadData];
     }];
     
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     
-    [[ParsingHandle sharedParsing] getMyFriendsToCompletion:^(NSArray *array){
+    [[ParsingHandle sharedParsing] getAllUsersToCompletion:^(NSArray *array){
         
         self.userArray = [array mutableCopy];
         [self.tableView reloadData];
@@ -80,8 +82,11 @@
 }
 
 -(BOOL)requestSentTo:(PFUser *)user{
-    for (PFUser *request in self.sentRequestUserArray) {
-        if ([request.objectId isEqualToString:user.objectId]) {
+    for (PFObject *request in self.sentRequestUserArray) {
+        
+        PFUser *sentUser = request[@"to"];
+        
+        if ([sentUser.objectId isEqualToString:user.objectId]) {
             return true;
         }
     }
@@ -98,10 +103,13 @@
     
     UIButton *senderButton = (UIButton *)sender;
     NSLog(@"%ld", (long)senderButton.tag);
+    PFUser *addedUser = [self.userArray objectAtIndex:senderButton.tag];
+    
     if ([senderButton.titleLabel.text isEqualToString:@"add"]) {
         [senderButton setTitle:@"sent" forState:UIControlStateNormal];
         [senderButton setBackgroundColor:[UIColor darkGrayColor]];
         
+        [[ParsingHandle sharedParsing] sendUserFriendRequest:addedUser];
         //add new request
     }
     else{
@@ -111,8 +119,6 @@
         //delete existed request
     }
     
-    
-    PFUser *addedUser = [self.userArray objectAtIndex:senderButton.tag];
     
     NSLog(@"%@", addedUser.username);
     
