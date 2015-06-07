@@ -97,6 +97,8 @@
     
     [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
     [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor whiteColor]];
+    [self.myCustomBar.friendButton setBackgroundColor:[UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1]];
+    [self.myCustomBar.requestButton setBackgroundColor:[UIColor whiteColor]];
     
 }
 
