@@ -1,9 +1,9 @@
 //
 //  FacebookStyleBar.m
-//  BLKFlexibleHeightBar Demo
+//  socialCalendar
 //
-//  Created by Bryan Keller on 3/7/15.
-//  Copyright (c) 2015 Bryan Keller. All rights reserved.
+//  Created by Yifan Xiao on 6/4/15.
+//  Copyright (c) 2015 Yifan Xiao. All rights reserved.
 //
 
 #import "FacebookStyleBar.h"
@@ -93,27 +93,38 @@
     middleIntervalDividerView.backgroundColor = [UIColor colorWithRed:0.85 green:0.86 blue:0.88 alpha:1];
     [whiteBarView addSubview:middleIntervalDividerView];
     
-    self.friendButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0, initialWhiteBarLayoutAttributes.size.height*0.1, initialWhiteBarLayoutAttributes.size.width*0.5, initialWhiteBarLayoutAttributes.size.height*0.8)];
+    self.friendButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0, whiteBarView.frame.origin.y, initialWhiteBarLayoutAttributes.size.width*0.5, initialWhiteBarLayoutAttributes.size.height*0.9)];
     
     self.friendButton.tintColor = [UIColor darkGrayColor];
     
     [self.friendButton setTitle:@"friends" forState:UIControlStateNormal];
     [self.friendButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [self.friendButton setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
+    [self.friendButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
     [self.friendButton addTarget:self action:@selector(friendButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     [whiteBarView addSubview:self.friendButton];
     
     
-    self.requestButton = [[UIButton alloc] initWithFrame:CGRectMake(initialWhiteBarLayoutAttributes.size.width*0.5, initialWhiteBarLayoutAttributes.size.height*0.1, initialWhiteBarLayoutAttributes.size.width*0.5, initialWhiteBarLayoutAttributes.size.height*0.8)];
+    self.friendIndicatorView = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.friendButton.frame.origin.y + self.friendButton.frame.size.height, self.friendButton.frame.size.width, initialWhiteBarLayoutAttributes.size.height*0.1)];
+    
+    [whiteBarView addSubview:self.friendIndicatorView];
+    
+    self.requestButton = [[UIButton alloc] initWithFrame:CGRectMake(initialWhiteBarLayoutAttributes.size.width*0.5, whiteBarView.frame.origin.y, initialWhiteBarLayoutAttributes.size.width*0.5, initialWhiteBarLayoutAttributes.size.height*0.9)];
     self.requestButton.tintColor = [UIColor darkGrayColor];
     
     [self.requestButton setTitle:@"requests" forState:UIControlStateNormal];
     [self.requestButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [self.requestButton setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
+    [self.requestButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
     [self.requestButton addTarget:self action:@selector(requestButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     [whiteBarView addSubview:self.requestButton];
+    
+    
+    self.requestIndicatorView = [[UIView alloc] initWithFrame:CGRectMake(self.requestButton.frame.origin.x, self.requestButton.frame.origin.y + self.requestButton.frame.size.height, self.requestButton.frame.size.width, initialWhiteBarLayoutAttributes.size.height*0.1)];
+    
+    [whiteBarView addSubview:self.requestIndicatorView];
 }
 
 -(void)friendButtonTapped:(id)sender{

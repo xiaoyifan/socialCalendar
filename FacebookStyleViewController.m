@@ -93,6 +93,8 @@
         [self.tableView reloadData];
     }];
     
+    [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
+    
     
 }
 
@@ -100,6 +102,13 @@
     NSLog(@"friend is selected");
     
     self.showFriend = true;
+    
+    [self.myCustomBar.friendButton setBackgroundColor:[UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1]];
+    [self.myCustomBar.requestButton setBackgroundColor:[UIColor whiteColor]];
+    
+    [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
+    
+    [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor whiteColor]];
     
     [[ParsingHandle sharedParsing] getMyFriendsToCompletion:^(NSArray *array){
         
@@ -118,6 +127,12 @@
     NSLog(@"request is selected");
     
     self.showFriend = false;
+    
+    [self.myCustomBar.friendButton setBackgroundColor:[UIColor whiteColor]];
+    [self.myCustomBar.requestButton setBackgroundColor:[UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1]];
+    
+    [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor whiteColor]];
+    [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
     
     [[ParsingHandle sharedParsing] getMyPendingReceivedRequestToCompletion:^(NSArray *array){
         

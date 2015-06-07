@@ -821,13 +821,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLp-jB-4O2">
-                                            <rect key="frame" x="18" y="8" width="474" height="18"/>
+                                            <rect key="frame" x="18" y="13" width="474" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCu-Ov-DWW">
-                                            <rect key="frame" x="18" y="43" width="474" height="16"/>
+                                            <rect key="frame" x="18" y="41" width="474" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -850,10 +850,10 @@
                                     <constraints>
                                         <constraint firstItem="cCu-Ov-DWW" firstAttribute="leading" secondItem="iYR-ct-MlK" secondAttribute="leadingMargin" constant="10" id="24H-0X-PhZ"/>
                                         <constraint firstItem="zZq-wK-yzF" firstAttribute="leading" secondItem="pLp-jB-4O2" secondAttribute="trailing" constant="20" id="53k-Ms-5Ck"/>
-                                        <constraint firstItem="cCu-Ov-DWW" firstAttribute="bottom" secondItem="iYR-ct-MlK" secondAttribute="bottomMargin" id="Yg4-cr-Tfl"/>
+                                        <constraint firstItem="cCu-Ov-DWW" firstAttribute="bottom" secondItem="iYR-ct-MlK" secondAttribute="bottomMargin" constant="-2" id="Yg4-cr-Tfl"/>
                                         <constraint firstItem="pLp-jB-4O2" firstAttribute="leading" secondItem="iYR-ct-MlK" secondAttribute="leadingMargin" constant="10" id="bqb-NS-0q7"/>
                                         <constraint firstItem="zZq-wK-yzF" firstAttribute="leading" secondItem="cCu-Ov-DWW" secondAttribute="trailing" constant="20" id="fzG-Ck-wzQ"/>
-                                        <constraint firstItem="pLp-jB-4O2" firstAttribute="top" secondItem="iYR-ct-MlK" secondAttribute="topMargin" id="mdy-qG-YAU"/>
+                                        <constraint firstItem="pLp-jB-4O2" firstAttribute="top" secondItem="iYR-ct-MlK" secondAttribute="topMargin" constant="5" id="mdy-qG-YAU"/>
                                         <constraint firstAttribute="centerY" secondItem="zZq-wK-yzF" secondAttribute="centerY" id="pcg-81-K5S"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="zZq-wK-yzF" secondAttribute="trailing" constant="15" id="pwa-ZB-pgm"/>
                                     </constraints>

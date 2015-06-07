@@ -1,9 +1,9 @@
 //
 //  FacebookStyleBar.h
-//  BLKFlexibleHeightBar Demo
+//  socialCalendar
 //
-//  Created by Bryan Keller on 3/7/15.
-//  Copyright (c) 2015 Bryan Keller. All rights reserved.
+//  Created by Yifan Xiao on 6/4/15.
+//  Copyright (c) 2015 Yifan Xiao. All rights reserved.
 //
 
 #import "BLKFlexibleHeightBar.h"
@@ -24,6 +24,10 @@
 @property UIButton *friendButton;
 
 @property UIButton *requestButton;
+
+@property UIView *friendIndicatorView;
+
+@property UIView *requestIndicatorView;
 
 @property (nonatomic, assign) id <flexibleHeightBarDelegate> delegate;
 

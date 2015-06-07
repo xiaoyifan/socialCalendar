@@ -27,6 +27,7 @@
     
     [self loadDataEvents];
    
+    self.tableView.backgroundColor = [UIColor colorWithHexString:@"#EDEDED"];
 
 }
 
@@ -110,6 +111,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     eventViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"eventCell" forIndexPath:indexPath];
+    
+    cell.contentView.backgroundColor = [UIColor colorWithHexString:@"#EDEDED"];
 
     cell.backgroundCardView.layer.cornerRadius = 10.0;
     
