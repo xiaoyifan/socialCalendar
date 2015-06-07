@@ -54,10 +54,8 @@
     recognizer.cancelsTouchesInView = YES;
     recognizer.delaysTouchesBegan =YES;
     [self.eventTableView addGestureRecognizer:recognizer];
-}
-
-
--(void)viewWillAppear:(BOOL)animated{
+    
+    
     [[ParsingHandle sharedParsing] findObjectsofDate:[NSDate date] ToCompletion:^(NSArray *array){
         
         self.eventsToday = [[NSMutableArray alloc] init];
@@ -68,7 +66,7 @@
             [self.eventsToday addObject:newObj];
         }
         [self.eventsToday addObjectsFromArray:[[ParsingHandle sharedParsing] findObjectsFromNativeCalendarOnDate:[NSDate date]]];
-
+        
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
@@ -78,6 +76,11 @@
         });
         
     }];
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    
 }
 
 -(void)handleDouleTap{
