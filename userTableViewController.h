@@ -14,4 +14,7 @@
 
 @property NSMutableArray *sentRequestUserArray;
 
+
+@property NSArray *friendsArray;
+
 @end

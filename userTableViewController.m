@@ -26,16 +26,48 @@
         [self.tableView reloadData];
     }];
     
+    NSLog(@"how many friends this user has: %lu", (unsigned long)self.friendsArray.count);
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     
+    self.userArray = [[NSMutableArray alloc] init];
+    
     [[ParsingHandle sharedParsing] getAllUsersToCompletion:^(NSArray *array){
         
-        self.userArray = [array mutableCopy];
+       NSMutableArray *strangerArray = [array mutableCopy];
+        
+        for (PFUser *singleUser in strangerArray) {
+            if (![self isFriendOrHost:singleUser]) {
+                [self.userArray addObject:singleUser];
+            }
+        }
+        //delete the users who are my friends alreay, or myself
+        
+        NSLog(@"how many strangers I have: %lu", (unsigned long)self.userArray.count);
+        
         [self.tableView reloadData];
     }];
 }
+
+-(BOOL)isFriendOrHost:(PFUser *)user{
+    
+    if ([user.objectId isEqualToString:[PFUser currentUser].objectId]) {
+        return true;
+    }
+    
+    for (PFUser *friend in self.friendsArray) {
+        if ([friend.objectId isEqualToString:user.objectId]) {
+            return true;
+        }
+    }
+    
+    
+    return false;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

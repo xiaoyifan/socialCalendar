@@ -12,6 +12,8 @@
 #import "FacebookStyleBarBehaviorDefiner.h"
 #import "userTableViewCell.h"
 
+#import "userTableViewController.h"
+
 @interface FacebookStyleViewController () <UITableViewDataSource, flexibleHeightBarDelegate>
 
 @property (nonatomic) FacebookStyleBar *myCustomBar;
@@ -212,6 +214,10 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     UINavigationController *controller = [storyboard instantiateViewControllerWithIdentifier:@"userNav"];
+    
+    userTableViewController *userController = (userTableViewController *)[controller.viewControllers objectAtIndex:0];
+    
+    userController.friendsArray = [self.friendsArray copy];
     
     [self presentViewController:controller animated:YES completion:nil];
 }

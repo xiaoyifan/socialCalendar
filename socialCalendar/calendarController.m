@@ -44,6 +44,8 @@
     
     self.eventTableView.delegate = self;
     self.eventTableView.dataSource = self;
+    self.calendar.calendarAppearance.dayCircleColorSelected = [UIColor colorWithHexString:@"#008A2E"];
+    self.calendar.calendarAppearance.dayTextColorSelected = [UIColor whiteColor];
     
     
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
