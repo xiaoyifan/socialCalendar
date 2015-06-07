@@ -194,7 +194,7 @@
 			name = model;
 			sourceTree = "<group>";
 		};
-		CCB59FE91B2031820050352D /* profileScene */ = {
+		CCB59FE91B2031820050352D /* userListScene */ = {
 			isa = PBXGroup;
 			children = (
 				CCB59FEA1B2031E40050352D /* FacebookStyleViewController.h */,
@@ -204,7 +204,7 @@
 				CCB59FF61B20F4A90050352D /* userTableViewCell.h */,
 				CCB59FF71B20F4A90050352D /* userTableViewCell.m */,
 			);
-			name = profileScene;
+			name = userListScene;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -296,7 +296,7 @@
 				CCDB3B631B13F93C00A68DCB /* addEventScene */,
 				CC579CAE1B18030200115705 /* eventDetailScene */,
 				CCE344161B1BA150001FB58F /* calendarScene */,
-				CCB59FE91B2031820050352D /* profileScene */,
+				CCB59FE91B2031820050352D /* userListScene */,
 				CCB59FF91B2118CA0050352D /* userList */,
 				CCF0A4561B0BEEB8002F619B /* Main.storyboard */,
 				CCF0A4591B0BEEB8002F619B /* Images.xcassets */,
