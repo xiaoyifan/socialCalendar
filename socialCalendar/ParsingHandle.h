@@ -38,4 +38,8 @@
 
 -(void)sendUserFriendRequest:(PFUser *)user;
 
+-(void)approvedFriendRequestFrom:(PFUser *)user;
+
+-(void)getApprovedUsersToCompletion:(void (^)(NSArray *array))completion;
+
 @end

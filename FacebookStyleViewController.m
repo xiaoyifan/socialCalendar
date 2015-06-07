@@ -17,6 +17,8 @@
 @property (nonatomic) FacebookStyleBar *myCustomBar;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
+@property BOOL showFriend;
+
 @end
 
 @implementation FacebookStyleViewController
@@ -69,15 +71,24 @@
     
     [self.myCustomBar addSubview:closeButton];
     
+    self.showFriend = true;
+    
     
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     
+    self.showFriend = true;
+    
     [[ParsingHandle sharedParsing] getMyFriendsToCompletion:^(NSArray *array){
        
         self.friendsArray = [array mutableCopy];
         self.dataArray = self.friendsArray;
+        
+        [[ParsingHandle sharedParsing] getApprovedUsersToCompletion:^(NSArray *array){
+            
+            [self.dataArray addObjectsFromArray:array];
+        }];
         
         [self.tableView reloadData];
     }];
@@ -88,14 +99,17 @@
 -(void)friendButtonPressed{
     NSLog(@"friend is selected");
     
+    self.showFriend = true;
+    
     [[ParsingHandle sharedParsing] getMyFriendsToCompletion:^(NSArray *array){
         
         self.friendsArray = [array mutableCopy];
+        
+        self.dataArray = self.friendsArray;
+        
+        [self.tableView reloadData];
     }];
     
-    self.dataArray = self.friendsArray;
-    
-    [self.tableView reloadData];
 }
 
 
@@ -103,7 +117,12 @@
 -(void)requestButtonPressed{
     NSLog(@"request is selected");
     
+    self.showFriend = false;
+    
     [[ParsingHandle sharedParsing] getMyPendingReceivedRequestToCompletion:^(NSArray *array){
+        
+        self.requestObjectArray = [array mutableCopy];
+        //use this array to store the request, not the request users
         
         NSMutableArray *userArray = [[NSMutableArray alloc] init];
         
@@ -116,11 +135,48 @@
         //get all the users who sent the request to current user
         
         self.requestArray = userArray;
+        self.dataArray = self.requestArray;
+        
+        [self.tableView reloadData];
     }];
     
-    self.dataArray = self.requestArray;
+}
+
+
+- (IBAction)actionButtonTapped:(id)sender {
     
-    [self.tableView reloadData];
+    UIButton *senderButton = (UIButton *)sender;
+    NSLog(@"%ld", (long)senderButton.tag);
+    PFUser *user = [self.dataArray objectAtIndex:senderButton.tag];
+    //get the user from
+    
+    //load data in friends table
+    if (self.showFriend) {
+        
+        [senderButton setTitle:@"unfriended" forState:UIControlStateNormal];
+        [senderButton setBackgroundColor:[UIColor darkGrayColor]];
+        
+        
+    }
+    else{
+    //load data in request table
+    //in request function, when the button is tapped, we gonna add the user into my user PFRelation
+    //and select the request as approved
+        
+    //for the button, we gonna set the layout as accepted, then no more processing, in the next view loading, the cell would disappear.
+        [senderButton setTitle:@"accepted" forState:UIControlStateNormal];
+        [senderButton setBackgroundColor:[UIColor darkGrayColor]];
+        
+        PFObject *approvedQuery = [self.requestObjectArray objectAtIndex:senderButton.tag];
+        
+        [approvedQuery setObject:@"approved" forKey:@"status"];
+        [approvedQuery saveInBackgroundWithBlock:nil];
+        
+        [[ParsingHandle sharedParsing] approvedFriendRequestFrom:user];
+        //add two users to the relation
+        
+    }
+    
 }
 
 
@@ -159,8 +215,20 @@
     cell.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1];
     
     [cell.actionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [cell.actionButton setTitle:@"add" forState:UIControlStateNormal];
-    [cell.actionButton setBackgroundColor:[UIColor colorWithHexString:@"#0099FF"]];
+    
+    if (self.showFriend) {
+        
+        [cell.actionButton setTitle:@"unfriend" forState:UIControlStateNormal];
+        [cell.actionButton setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
+        
+    }
+    else{//request table
+        
+        [cell.actionButton setTitle:@"add" forState:UIControlStateNormal];
+        [cell.actionButton setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
+        
+    }
+    
     cell.actionButton.layer.cornerRadius = 5.0;
     
     

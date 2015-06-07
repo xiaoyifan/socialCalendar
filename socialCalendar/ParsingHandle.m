@@ -213,7 +213,7 @@
         return;
     }
     
-    PFRelation *friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
+    PFRelation *friendsRelation = [[PFUser currentUser] objectForKey:@"friendRelation"];
     PFQuery *query = [friendsRelation query];
     [query orderByAscending:@"username"];
     
@@ -237,6 +237,7 @@
     }
     
     PFQuery * query = [PFQuery queryWithClassName:@"friendRequest"];
+    [query includeKey:@"from"];
     [query whereKey:@"to" equalTo:[PFUser currentUser]];
     [query whereKey:@"status" equalTo:@"pending"];
     
@@ -294,6 +295,65 @@
         }
     }];
     
+}
+
+
+-(void)approvedFriendRequestFrom:(PFUser *)user{
+    
+    PFRelation *friendRelation = [[PFUser currentUser] relationForKey:@"friendRelation"];
+    
+    [friendRelation addObject:user];
+    [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+        if (!succeeded) {
+            NSLog(@"the error is %@", error);
+        }
+    }];
+
+}
+
+-(void)getApprovedUsersToCompletion:(void (^)(NSArray *array))completion{
+    
+    if(![PFUser currentUser])
+    {
+        return;
+    }
+    
+    PFQuery * query = [PFQuery queryWithClassName:@"friendRequest"];
+    [query whereKey:@"from" equalTo:[PFUser currentUser]];
+    [query whereKey:@"status" equalTo:@"approved"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error)
+        {
+            NSLog(@"error info %@", error);
+        }
+        else {
+            
+            NSLog(@"%lu requests sent", (unsigned long)objects.count);
+            
+            NSMutableArray *array = [[NSMutableArray alloc] init];
+            
+            for (PFObject *request in objects) {
+                PFUser *user = request[@"to"];
+                [array addObject:user];
+                PFRelation *friendRelation = [[PFUser currentUser] relationForKey:@"friendRelation"];
+                
+                [friendRelation addObject:user];
+                [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+                    if (!succeeded) {
+                        NSLog(@"the error is %@", error);
+                    }
+                }];
+                
+                [request deleteEventually];
+                
+            }
+            
+            completion(array);
+        }
+        
+        
+    }];
 }
 
 @end

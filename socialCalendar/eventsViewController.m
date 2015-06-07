@@ -25,27 +25,7 @@
     
 //    [self initData];
     
-    if ([PFUser currentUser]) {
-        
-        [[ParsingHandle sharedParsing] findObjectsOfCurrentUserToCompletion:^(NSArray *array){
-            
-            self.events = [[NSMutableArray alloc] init];
-            
-            for (PFObject *obj in array) {
-                eventObject *newObj = [[ParsingHandle sharedParsing] parseObjectToEventObject:obj];
-                [self.events addObject:newObj];
-            }
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                
-                [self.tableView reloadData];
-                
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"tableViewdidLoad" object:self];
-            });
-        }];
-        
-    }
-    
+    [self loadDataEvents];
    
 
 }
@@ -58,6 +38,13 @@
 -(void)viewDidAppear:(BOOL)animated{
     
     NSLog(@"%@", [PFUser currentUser]);
+    
+    [self handleLogginAndSignUp];
+    
+}
+
+
+-(void)handleLogginAndSignUp{
     
     if (![PFUser currentUser]) { // No user logged in
         // Create the log in view controller
@@ -82,6 +69,31 @@
     }
     
     
+}
+
+
+-(void)loadDataEvents{
+    
+    if ([PFUser currentUser]) {
+        
+        [[ParsingHandle sharedParsing] findObjectsOfCurrentUserToCompletion:^(NSArray *array){
+            
+            self.events = [[NSMutableArray alloc] init];
+            
+            for (PFObject *obj in array) {
+                eventObject *newObj = [[ParsingHandle sharedParsing] parseObjectToEventObject:obj];
+                [self.events addObject:newObj];
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.tableView reloadData];
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"tableViewdidLoad" object:self];
+            });
+        }];
+        
+    }
 }
 
 #pragma mark - Table view data source
@@ -216,6 +228,7 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     
+    [self loadDataEvents];
     [self.tableView reloadData];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
@@ -354,6 +367,8 @@
 - (IBAction)logoutButtonPressed:(id)sender {
     
     [PFUser logOut];
+    
+    [self handleLogginAndSignUp];
 }
 
 

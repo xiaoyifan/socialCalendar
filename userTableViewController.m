@@ -84,7 +84,8 @@
 -(BOOL)requestSentTo:(PFUser *)user{
     for (PFObject *request in self.sentRequestUserArray) {
         
-        PFUser *sentUser = request[@"to"];
+        PFUser *sentUser = [request objectForKey:@"to"];
+//        NSLog(@"the sent request user name is %@", sentUser.username);
         
         if ([sentUser.objectId isEqualToString:user.objectId]) {
             return true;

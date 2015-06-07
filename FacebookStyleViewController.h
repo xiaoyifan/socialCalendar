@@ -15,6 +15,8 @@
 
 @property NSMutableArray *requestArray;
 
+@property NSMutableArray *requestObjectArray;
+
 @property NSMutableArray *dataArray;
 
 

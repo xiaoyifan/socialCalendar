@@ -99,7 +99,7 @@
     
     [self.friendButton setTitle:@"friends" forState:UIControlStateNormal];
     [self.friendButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    
+    [self.friendButton setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [self.friendButton addTarget:self action:@selector(friendButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     [whiteBarView addSubview:self.friendButton];
@@ -110,6 +110,7 @@
     
     [self.requestButton setTitle:@"requests" forState:UIControlStateNormal];
     [self.requestButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [self.requestButton setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [self.requestButton addTarget:self action:@selector(requestButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     [whiteBarView addSubview:self.requestButton];
