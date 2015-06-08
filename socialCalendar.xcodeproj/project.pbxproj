@@ -26,8 +26,9 @@
 		CCB5A0121B25DE730050352D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0111B25DE730050352D /* CoreText.framework */; };
 		CCB5A0141B25DE7A0050352D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0131B25DE7A0050352D /* MediaPlayer.framework */; };
 		CCB5A0161B25E90C0050352D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0151B25E90C0050352D /* MessageUI.framework */; };
-		CCB5A0201B25F27B0050352D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A01D1B25F27B0050352D /* libWeChatSDK.a */; };
 		CCB5A0221B25F9240050352D /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0211B25F9240050352D /* libc++.dylib */; };
+		CCB5A0241B2625E10050352D /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0231B2625E10050352D /* libc++.1.dylib */; };
+		CCB5A0261B2626C80050352D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0251B2626C80050352D /* libWeChatSDK.a */; };
 		CCC680D21B129A620007DD85 /* calendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC680D11B129A620007DD85 /* calendarController.m */; };
 		CCC680DF1B129E320007DD85 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680D91B129E320007DD85 /* Bolts.framework */; };
 		CCC680E01B129E320007DD85 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680DA1B129E320007DD85 /* Parse.framework */; };
@@ -103,10 +104,11 @@
 		CCB5A0111B25DE730050352D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		CCB5A0131B25DE7A0050352D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CCB5A0151B25E90C0050352D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		CCB5A01D1B25F27B0050352D /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		CCB5A01E1B25F27B0050352D /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		CCB5A01F1B25F27B0050352D /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		CCB5A0211B25F9240050352D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		CCB5A0231B2625E10050352D /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "usr/lib/libc++.1.dylib"; sourceTree = SDKROOT; };
+		CCB5A0251B2626C80050352D /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		CCC680D01B129A620007DD85 /* calendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarController.h; sourceTree = "<group>"; };
 		CCC680D11B129A620007DD85 /* calendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarController.m; sourceTree = "<group>"; };
 		CCC680D91B129E320007DD85 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -156,12 +158,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB5A0241B2625E10050352D /* libc++.1.dylib in Frameworks */,
 				CCB5A0221B25F9240050352D /* libc++.dylib in Frameworks */,
 				CCB5A0161B25E90C0050352D /* MessageUI.framework in Frameworks */,
 				CCB5A0141B25DE7A0050352D /* MediaPlayer.framework in Frameworks */,
 				CCB5A0121B25DE730050352D /* CoreText.framework in Frameworks */,
 				CCF0A4861B0BF1D5002F619B /* CoreGraphics.framework in Frameworks */,
-				CCB5A0201B25F27B0050352D /* libWeChatSDK.a in Frameworks */,
 				CCB5A0101B25DE5F0050352D /* CoreMotion.framework in Frameworks */,
 				CCB5A00E1B25DE4F0050352D /* AssetsLibrary.framework in Frameworks */,
 				CCB5A00C1B25DE460050352D /* AddressBook.framework in Frameworks */,
@@ -170,6 +172,7 @@
 				CCC680DF1B129E320007DD85 /* Bolts.framework in Frameworks */,
 				CCF0A4901B0BF1FD002F619B /* Social.framework in Frameworks */,
 				CCF0A4801B0BF176002F619B /* AudioToolbox.framework in Frameworks */,
+				CCB5A0261B2626C80050352D /* libWeChatSDK.a in Frameworks */,
 				CCF0A4841B0BF1CD002F619B /* CFNetwork.framework in Frameworks */,
 				CC81CD121B14F43B0039EA60 /* MapKit.framework in Frameworks */,
 				CCF0A4881B0BF1DB002F619B /* CoreLocation.framework in Frameworks */,
@@ -244,10 +247,18 @@
 				CCB59FFB1B2119010050352D /* userTableViewController.m */,
 				CCB59FFD1B212CE20050352D /* listTableViewCell.h */,
 				CCB59FFE1B212CE20050352D /* listTableViewCell.m */,
+			);
+			name = userList;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CCB5A0271B262AFB0050352D /* friendsInvitingScene */ = {
+			isa = PBXGroup;
+			children = (
 				CCB5A0041B2558E80050352D /* friendsPickingTableViewController.h */,
 				CCB5A0051B2558E80050352D /* friendsPickingTableViewController.m */,
 			);
-			name = userList;
+			name = friendsInvitingScene;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -329,6 +340,7 @@
 				CCE344161B1BA150001FB58F /* calendarScene */,
 				CCB59FE91B2031820050352D /* userListScene */,
 				CCB59FF91B2118CA0050352D /* userList */,
+				CCB5A0271B262AFB0050352D /* friendsInvitingScene */,
 				CCF0A4561B0BEEB8002F619B /* Main.storyboard */,
 				CCF0A4591B0BEEB8002F619B /* Images.xcassets */,
 				CCF0A45B1B0BEEB8002F619B /* LaunchScreen.xib */,
@@ -370,7 +382,7 @@
 		CCF0A4721B0BF14F002F619B /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				CCB5A01D1B25F27B0050352D /* libWeChatSDK.a */,
+				CCB5A0251B2626C80050352D /* libWeChatSDK.a */,
 				CCB5A01E1B25F27B0050352D /* WXApi.h */,
 				CCB5A01F1B25F27B0050352D /* WXApiObject.h */,
 				CCF0A4971B0BF21F002F619B /* libsqlite3.dylib */,
@@ -395,6 +407,7 @@
 		D039DA7C97DEC38A4668DA3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CCB5A0231B2625E10050352D /* libc++.1.dylib */,
 				CCB5A0211B25F9240050352D /* libc++.dylib */,
 				CCB5A0151B25E90C0050352D /* MessageUI.framework */,
 				CCB5A0131B25DE7A0050352D /* MediaPlayer.framework */,

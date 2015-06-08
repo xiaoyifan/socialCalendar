@@ -24,7 +24,7 @@
         
         self.selectMarkArray = [[NSMutableArray alloc] initWithCapacity:self.friendsArray.count];
         
-        for (int i=0; i<self.selectMarkArray.count; i++) {
+        for (int i=0; i<self.friendsArray.count; i++) {
             [self.selectMarkArray addObject:@0];
         }
         
