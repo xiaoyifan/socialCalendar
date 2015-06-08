@@ -50,10 +50,10 @@
     
     NSString *eventTime = [dateformat stringFromDate:self.detailObject.time];
     
-    self.timeLabel.text = [NSString stringWithFormat:@"%@", eventTime];
+    self.timeLabel.text = [NSString stringWithFormat:@"%@ EVENT TIME", eventTime];
     
     NSString *remindTime = [dateformat stringFromDate:self.detailObject.reminderDate];
-    self.reminderLabel.text = [NSString stringWithFormat:@"%@", remindTime];
+    self.reminderLabel.text = [NSString stringWithFormat:@"%@ REMIND TIME", remindTime];
     
     self.noteLabel.text = self.detailObject.eventNote;
     

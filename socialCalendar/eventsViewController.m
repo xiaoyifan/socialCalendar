@@ -13,12 +13,15 @@
 #import "detailViewController.h"
 #import "WXApi.h"
 #import "WXApiObject.h"
+#import "socialCalendar-Swift.h"
 
 @interface eventsViewController ()<AAShareBubblesDelegate,MFMailComposeViewControllerDelegate>
 
 @property NSMutableArray *events;
 
 @property eventObject *eventToShare;
+
+@property (retain,nonatomic) ViewController *vc;
 
 
 @end
@@ -28,7 +31,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self initData];
+    self.vc = [[ViewController alloc] init];
+    [self presentViewController:self.vc animated:NO completion:nil];
+    [self.view addSubview:self.vc.view];
     
     [self loadDataEvents];
    

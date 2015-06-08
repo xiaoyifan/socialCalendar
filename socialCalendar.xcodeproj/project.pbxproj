@@ -29,6 +29,9 @@
 		CCB5A0221B25F9240050352D /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0211B25F9240050352D /* libc++.dylib */; };
 		CCB5A0241B2625E10050352D /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0231B2625E10050352D /* libc++.1.dylib */; };
 		CCB5A0261B2626C80050352D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0251B2626C80050352D /* libWeChatSDK.a */; };
+		CCB5A02D1B2643BC0050352D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5A02A1B2643BC0050352D /* ViewController.swift */; };
+		CCB5A02E1B2643BC0050352D /* RMParallaxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5A02B1B2643BC0050352D /* RMParallaxItem.swift */; };
+		CCB5A02F1B2643BC0050352D /* RMParallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5A02C1B2643BC0050352D /* RMParallax.swift */; };
 		CCC680D21B129A620007DD85 /* calendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC680D11B129A620007DD85 /* calendarController.m */; };
 		CCC680DF1B129E320007DD85 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680D91B129E320007DD85 /* Bolts.framework */; };
 		CCC680E01B129E320007DD85 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680DA1B129E320007DD85 /* Parse.framework */; };
@@ -109,6 +112,10 @@
 		CCB5A0211B25F9240050352D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		CCB5A0231B2625E10050352D /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "usr/lib/libc++.1.dylib"; sourceTree = SDKROOT; };
 		CCB5A0251B2626C80050352D /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		CCB5A0291B2643BA0050352D /* socialCalendar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "socialCalendar-Bridging-Header.h"; sourceTree = "<group>"; };
+		CCB5A02A1B2643BC0050352D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CCB5A02B1B2643BC0050352D /* RMParallaxItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMParallaxItem.swift; sourceTree = "<group>"; };
+		CCB5A02C1B2643BC0050352D /* RMParallax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMParallax.swift; sourceTree = "<group>"; };
 		CCC680D01B129A620007DD85 /* calendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarController.h; sourceTree = "<group>"; };
 		CCC680D11B129A620007DD85 /* calendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarController.m; sourceTree = "<group>"; };
 		CCC680D91B129E320007DD85 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -262,6 +269,17 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		CCB5A0281B2643720050352D /* splashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CCB5A02A1B2643BC0050352D /* ViewController.swift */,
+				CCB5A02B1B2643BC0050352D /* RMParallaxItem.swift */,
+				CCB5A02C1B2643BC0050352D /* RMParallax.swift */,
+				CCB5A0291B2643BA0050352D /* socialCalendar-Bridging-Header.h */,
+			);
+			name = splashScreen;
+			sourceTree = "<group>";
+		};
 		CCDB3B5F1B12FBD200A68DCB /* myEventsScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +350,7 @@
 		CCF0A44B1B0BEEB8002F619B /* socialCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				CCB5A0281B2643720050352D /* splashScreen */,
 				CCDBB61A1B192490007C2E81 /* parseHandling */,
 				CC81CD161B1541B80039EA60 /* model */,
 				CCDB3B5F1B12FBD200A68DCB /* myEventsScene */,
@@ -573,15 +592,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB59FF81B20F4A90050352D /* userTableViewCell.m in Sources */,
+				CCB5A02E1B2643BC0050352D /* RMParallaxItem.swift in Sources */,
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
 				CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */,
+				CCB5A02F1B2643BC0050352D /* RMParallax.swift in Sources */,
 				CCB59FEE1B2031E40050352D /* FacebookStyleViewController.m in Sources */,
 				CCB59FFF1B212CE20050352D /* listTableViewCell.m in Sources */,
 				CCE344191B1BB02B001FB58F /* calendarTableViewCell.m in Sources */,
 				CCB59FFC1B2119010050352D /* userTableViewController.m in Sources */,
 				CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */,
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
+				CCB5A02D1B2643BC0050352D /* ViewController.swift in Sources */,
 				CC579CB11B18032700115705 /* detailViewController.m in Sources */,
 				CC81CD151B1535330039EA60 /* KLCPopup.m in Sources */,
 				CCB5A0061B2558E80050352D /* friendsPickingTableViewController.m in Sources */,
@@ -719,6 +741,7 @@
 			baseConfigurationReference = 30F1B6E1F8520A242EE2DB5A /* Pods-socialCalendar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yifan Xiao (75YSC2B5TC)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -734,6 +757,8 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "socialCalendar/socialCalendar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -742,6 +767,7 @@
 			baseConfigurationReference = 008107CB8CF00338DC111110 /* Pods-socialCalendar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yifan Xiao (75YSC2B5TC)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -757,6 +783,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "socialCalendar/socialCalendar-Bridging-Header.h";
 			};
 			name = Release;
 		};
