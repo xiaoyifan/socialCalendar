@@ -12,9 +12,12 @@
 #import "AAShareBubbles.h"
 #import "detailViewController.h"
 
-@interface eventsViewController ()<AAShareBubblesDelegate>
+@interface eventsViewController ()<AAShareBubblesDelegate,MFMailComposeViewControllerDelegate>
 
 @property NSMutableArray *events;
+
+@property eventObject *eventToShare;
+
 
 @end
 
@@ -159,9 +162,8 @@
     shareBubbles.showFacebookBubble = YES;
     shareBubbles.showTwitterBubble = YES;
     shareBubbles.showMailBubble = YES;
-    shareBubbles.showGooglePlusBubble = YES;
-    shareBubbles.showLinkedInBubble = YES;
-    shareBubbles.showWhatsappBubble = YES;
+    
+    self.eventToShare = [self.events objectAtIndex:sender.tag];
     
     [shareBubbles show];
 }
@@ -191,26 +193,6 @@
     return sliceColors[rad];
     
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
 
 #pragma mark - implementation of PFLogInViewControllerDelegate
@@ -337,25 +319,130 @@
     switch (bubbleType) {
         case AAShareBubbleTypeFacebook:
             NSLog(@"Facebook");
+            [self shareOnFacebook];
             break;
         case AAShareBubbleTypeTwitter:
             NSLog(@"Twitter");
-            break;
-        case AAShareBubbleTypeGooglePlus:
-            NSLog(@"Google+");
-            break;
-        case AAShareBubbleTypeLinkedIn:
-            NSLog(@"LinkedIn");
-            break;
-        case AAShareBubbleTypeWhatsapp:
-            NSLog(@"Whatsapp");
+            [self shareOnTwitter];
             break;
         case AAShareBubbleTypeMail:
             NSLog(@"mail");
+            [self shareOnMail];
             break;
         default:
             break;
     }
+}
+
+-(void)shareOnFacebook{
+    
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        SLComposeViewController *facebookPost = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        
+        NSDate *date = self.eventToShare.time;
+        
+        NSDateFormatter *dateFormater = [NSDateFormatter new];
+        
+        dateFormater.dateFormat = @"MM.dd.yyyy";
+        NSString *dateString = [dateFormater stringFromDate:date];
+        
+        dateFormater.dateFormat = @"HH:mm";
+        NSString *timeString =[dateFormater stringFromDate:date];
+        
+        NSString *text = [NSString stringWithFormat:@"%@, join us at the event: %@ at %@", dateString, self.eventToShare.title, timeString];
+        [facebookPost setInitialText:text];
+        [self presentViewController:facebookPost animated:YES completion:nil];
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Sorry"
+                                  message:@"You can't send a Facebook post right now, make sure your device has an internet connection and you have at least one Facebook account setup"
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+-(void)shareOnTwitter{
+    
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        SLComposeViewController *twitterPost = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        
+        NSDate *date = self.eventToShare.time;
+        
+        NSDateFormatter *dateFormater = [NSDateFormatter new];
+        
+        dateFormater.dateFormat = @"MM.dd.yyyy";
+        NSString *dateString = [dateFormater stringFromDate:date];
+        
+        dateFormater.dateFormat = @"HH:mm";
+        NSString *timeString =[dateFormater stringFromDate:date];
+        
+        NSString *text = [NSString stringWithFormat:@"%@, join us at the event: %@ at %@", dateString, self.eventToShare.title, timeString];
+        [twitterPost setInitialText:text];
+        [self presentViewController:twitterPost animated:YES completion:nil];
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Sorry"
+                                  message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup"
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+    
+}
+
+
+-(void)shareOnMail{
+    
+    NSString *emailTitle = @"Event Invite";
+    // Email Content
+    NSDate *date = self.eventToShare.time;
+    
+    NSDateFormatter *dateFormater = [NSDateFormatter new];
+    
+    dateFormater.dateFormat = @"MM.dd.yyyy";
+    NSString *dateString = [dateFormater stringFromDate:date];
+    
+    dateFormater.dateFormat = @"HH:mm";
+    NSString *timeString =[dateFormater stringFromDate:date];
+    
+    NSString *text = [NSString stringWithFormat:@"%@, join us at the event: %@ at %@", dateString, self.eventToShare.title, timeString];
+
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:text isHTML:NO];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 -(void)aaShareBubblesDidHide:(AAShareBubbles *)bubbles {

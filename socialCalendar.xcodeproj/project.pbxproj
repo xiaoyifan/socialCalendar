@@ -20,6 +20,12 @@
 		CCB59FFC1B2119010050352D /* userTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB59FFB1B2119010050352D /* userTableViewController.m */; };
 		CCB59FFF1B212CE20050352D /* listTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB59FFE1B212CE20050352D /* listTableViewCell.m */; };
 		CCB5A0061B2558E80050352D /* friendsPickingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB5A0051B2558E80050352D /* friendsPickingTableViewController.m */; };
+		CCB5A00C1B25DE460050352D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A00B1B25DE460050352D /* AddressBook.framework */; };
+		CCB5A00E1B25DE4F0050352D /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A00D1B25DE4F0050352D /* AssetsLibrary.framework */; };
+		CCB5A0101B25DE5F0050352D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A00F1B25DE5F0050352D /* CoreMotion.framework */; };
+		CCB5A0121B25DE730050352D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0111B25DE730050352D /* CoreText.framework */; };
+		CCB5A0141B25DE7A0050352D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0131B25DE7A0050352D /* MediaPlayer.framework */; };
+		CCB5A0161B25E90C0050352D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0151B25E90C0050352D /* MessageUI.framework */; };
 		CCC680D21B129A620007DD85 /* calendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC680D11B129A620007DD85 /* calendarController.m */; };
 		CCC680DF1B129E320007DD85 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680D91B129E320007DD85 /* Bolts.framework */; };
 		CCC680E01B129E320007DD85 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680DA1B129E320007DD85 /* Parse.framework */; };
@@ -89,6 +95,12 @@
 		CCB59FFE1B212CE20050352D /* listTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = listTableViewCell.m; sourceTree = "<group>"; };
 		CCB5A0041B2558E80050352D /* friendsPickingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friendsPickingTableViewController.h; sourceTree = "<group>"; };
 		CCB5A0051B2558E80050352D /* friendsPickingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = friendsPickingTableViewController.m; sourceTree = "<group>"; };
+		CCB5A00B1B25DE460050352D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		CCB5A00D1B25DE4F0050352D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		CCB5A00F1B25DE5F0050352D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		CCB5A0111B25DE730050352D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		CCB5A0131B25DE7A0050352D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		CCB5A0151B25E90C0050352D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CCC680D01B129A620007DD85 /* calendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarController.h; sourceTree = "<group>"; };
 		CCC680D11B129A620007DD85 /* calendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarController.m; sourceTree = "<group>"; };
 		CCC680D91B129E320007DD85 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -138,6 +150,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB5A0161B25E90C0050352D /* MessageUI.framework in Frameworks */,
+				CCB5A0141B25DE7A0050352D /* MediaPlayer.framework in Frameworks */,
+				CCB5A0121B25DE730050352D /* CoreText.framework in Frameworks */,
+				CCF0A4861B0BF1D5002F619B /* CoreGraphics.framework in Frameworks */,
+				CCB5A0101B25DE5F0050352D /* CoreMotion.framework in Frameworks */,
+				CCB5A00E1B25DE4F0050352D /* AssetsLibrary.framework in Frameworks */,
+				CCB5A00C1B25DE460050352D /* AddressBook.framework in Frameworks */,
 				CCE3441D1B1BB805001FB58F /* EventKitUI.framework in Frameworks */,
 				CCE3441B1B1BB7FB001FB58F /* EventKit.framework in Frameworks */,
 				CCC680DF1B129E320007DD85 /* Bolts.framework in Frameworks */,
@@ -145,7 +164,6 @@
 				CCF0A4801B0BF176002F619B /* AudioToolbox.framework in Frameworks */,
 				CCF0A4841B0BF1CD002F619B /* CFNetwork.framework in Frameworks */,
 				CC81CD121B14F43B0039EA60 /* MapKit.framework in Frameworks */,
-				CCF0A4861B0BF1D5002F619B /* CoreGraphics.framework in Frameworks */,
 				CCF0A4881B0BF1DB002F619B /* CoreLocation.framework in Frameworks */,
 				CCC680E01B129E320007DD85 /* Parse.framework in Frameworks */,
 				CCF0A48A1B0BF1E4002F619B /* MobileCoreServices.framework in Frameworks */,
@@ -366,6 +384,12 @@
 		D039DA7C97DEC38A4668DA3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CCB5A0151B25E90C0050352D /* MessageUI.framework */,
+				CCB5A0131B25DE7A0050352D /* MediaPlayer.framework */,
+				CCB5A0111B25DE730050352D /* CoreText.framework */,
+				CCB5A00F1B25DE5F0050352D /* CoreMotion.framework */,
+				CCB5A00D1B25DE4F0050352D /* AssetsLibrary.framework */,
+				CCB5A00B1B25DE460050352D /* AddressBook.framework */,
 				CCE3441C1B1BB805001FB58F /* EventKitUI.framework */,
 				CCE3441A1B1BB7FB001FB58F /* EventKit.framework */,
 				CC81CD111B14F43B0039EA60 /* MapKit.framework */,
