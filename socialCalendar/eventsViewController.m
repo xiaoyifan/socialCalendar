@@ -47,7 +47,9 @@
 
 -(void)handleLogginAndSignUp{
     
-    if (![PFUser currentUser]) { // No user logged in
+    PFUser *user = [PFUser currentUser];
+    
+    if ((![PFUser currentUser])||(user[@"emailVerified"] == false)) { // No user logged in
         // Create the log in view controller
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
         [logInViewController setDelegate:self]; // Set ourselves as the delegate
@@ -233,7 +235,14 @@
     
     [self loadDataEvents];
     [self.tableView reloadData];
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    
+    if ([user[@"emailVerified"]  isEqual: @1]) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+    else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Verification Required" message:@"please verify your email first" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 // Sent to the delegate when the log in attempt fails.
@@ -286,10 +295,15 @@
 // Sent to the delegate when a PFUser is signed up.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     
+    [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss the PFSignUpViewController
     [self loadDataEvents];
+    
+    if (user[@"emailVerified"] == false) {
+        return;
+    }
+
     [self.tableView reloadData];
     
-    [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss the PFSignUpViewController
 }
 
 // Sent to the delegate when the sign up attempt fails.
