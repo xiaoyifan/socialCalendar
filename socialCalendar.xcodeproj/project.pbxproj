@@ -19,6 +19,7 @@
 		CCB59FF81B20F4A90050352D /* userTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB59FF71B20F4A90050352D /* userTableViewCell.m */; };
 		CCB59FFC1B2119010050352D /* userTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB59FFB1B2119010050352D /* userTableViewController.m */; };
 		CCB59FFF1B212CE20050352D /* listTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB59FFE1B212CE20050352D /* listTableViewCell.m */; };
+		CCB5A0061B2558E80050352D /* friendsPickingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB5A0051B2558E80050352D /* friendsPickingTableViewController.m */; };
 		CCC680D21B129A620007DD85 /* calendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC680D11B129A620007DD85 /* calendarController.m */; };
 		CCC680DF1B129E320007DD85 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680D91B129E320007DD85 /* Bolts.framework */; };
 		CCC680E01B129E320007DD85 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680DA1B129E320007DD85 /* Parse.framework */; };
@@ -86,6 +87,8 @@
 		CCB59FFB1B2119010050352D /* userTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userTableViewController.m; sourceTree = "<group>"; };
 		CCB59FFD1B212CE20050352D /* listTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = listTableViewCell.h; sourceTree = "<group>"; };
 		CCB59FFE1B212CE20050352D /* listTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = listTableViewCell.m; sourceTree = "<group>"; };
+		CCB5A0041B2558E80050352D /* friendsPickingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friendsPickingTableViewController.h; sourceTree = "<group>"; };
+		CCB5A0051B2558E80050352D /* friendsPickingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = friendsPickingTableViewController.m; sourceTree = "<group>"; };
 		CCC680D01B129A620007DD85 /* calendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarController.h; sourceTree = "<group>"; };
 		CCC680D11B129A620007DD85 /* calendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarController.m; sourceTree = "<group>"; };
 		CCC680D91B129E320007DD85 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 				CCB59FFB1B2119010050352D /* userTableViewController.m */,
 				CCB59FFD1B212CE20050352D /* listTableViewCell.h */,
 				CCB59FFE1B212CE20050352D /* listTableViewCell.m */,
+				CCB5A0041B2558E80050352D /* friendsPickingTableViewController.h */,
+				CCB5A0051B2558E80050352D /* friendsPickingTableViewController.m */,
 			);
 			name = userList;
 			path = ..;
@@ -529,6 +534,7 @@
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
 				CC579CB11B18032700115705 /* detailViewController.m in Sources */,
 				CC81CD151B1535330039EA60 /* KLCPopup.m in Sources */,
+				CCB5A0061B2558E80050352D /* friendsPickingTableViewController.m in Sources */,
 				CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */,
 				CC81CD191B1541E00039EA60 /* eventObject.m in Sources */,
 				CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */,

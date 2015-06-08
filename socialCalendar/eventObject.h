@@ -19,4 +19,6 @@
 @property (strong,nonatomic) NSString *locationDescription;
 @property (strong,nonatomic) NSString *eventNote;
 
+@property (strong,nonatomic) NSArray *group;
+
 @end

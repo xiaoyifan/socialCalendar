@@ -29,7 +29,7 @@
 -(void)findObjectsOfUser:(PFUser *)user ToCompletion:(void(^)(NSArray *array))completion{
     
     PFQuery *eventQuery = [PFQuery queryWithClassName:@"Events"];
-    [eventQuery whereKey:@"createdBy" equalTo:user];
+    [eventQuery whereKey:@"group" equalTo:user];
     
     
     [eventQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -63,6 +63,7 @@
     NSDate *tonightEnd = [calendarCurrent dateFromComponents:components];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Events"];
+    [query whereKey:@"createdBy" equalTo:[PFUser currentUser]];
     [query whereKey:@"time" greaterThan:morningStart];
     [query whereKey:@"time" lessThan:tonightEnd];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -128,6 +129,14 @@
     event[@"eventNote"] = newObj.eventNote;
     
     [event setObject:user forKey:@"createdBy"];
+    
+    
+    PFRelation *groupRelation = [event relationForKey:@"group"];
+    
+    for (PFUser *user in newObj.group) {
+        [groupRelation addObject:user];
+    }
+    [groupRelation addObject:[PFUser currentUser]];
     
     [event saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!succeeded) {
