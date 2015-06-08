@@ -210,6 +210,16 @@
         [[ParsingHandle sharedParsing] approvedFriendRequestFrom:user];
         //add two users to the relation
         
+        PFQuery *pushQuery = [PFInstallation query];
+        [pushQuery whereKey:@"user" equalTo:user];
+        
+        // Send push notification to query
+        PFPush *push = [[PFPush alloc] init];
+        [push setQuery:pushQuery]; // Set our Installation query
+        [push setMessage:@"Your friend request is approved"];
+        
+        [push sendPushInBackground];
+        
     }
     
 }

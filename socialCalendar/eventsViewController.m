@@ -84,6 +84,10 @@
     
     if ([PFUser currentUser]) {
         
+        PFInstallation *installation = [PFInstallation currentInstallation];
+        installation[@"user"] = [PFUser currentUser];
+        [installation saveInBackground];
+        
         [[ParsingHandle sharedParsing] findObjectsOfCurrentUserToCompletion:^(NSArray *array){
             
             self.events = [[NSMutableArray alloc] init];
@@ -229,6 +233,11 @@
     [self.tableView reloadData];
     
     if ([user[@"emailVerified"]  isEqual: @1]) {
+        
+        PFInstallation *installation = [PFInstallation currentInstallation];
+        installation[@"user"] = [PFUser currentUser];
+        [installation saveInBackground];
+        
         [self dismissViewControllerAnimated:YES completion:NULL];
     }
     else{
