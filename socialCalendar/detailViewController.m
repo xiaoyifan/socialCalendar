@@ -42,10 +42,27 @@
     
     
     self.eventLabel.text = self.detailObject.title;
-    self.timeLabel.text = [NSString stringWithFormat:@"%@", self.detailObject.time];
-    self.reminderLabel.text = [NSString stringWithFormat:@"%@", self.detailObject.reminderDate];
+    
+    NSDateFormatter *dateformat = [[NSDateFormatter alloc]init];
+    [dateformat setDateFormat:@"dd-MMM-YYYY HH:mm"];
+    
+    dateformat.timeZone = [NSTimeZone localTimeZone];
+    
+    NSString *eventTime = [dateformat stringFromDate:self.detailObject.time];
+    
+    self.timeLabel.text = [NSString stringWithFormat:@"%@", eventTime];
+    
+    NSString *remindTime = [dateformat stringFromDate:self.detailObject.reminderDate];
+    self.reminderLabel.text = [NSString stringWithFormat:@"%@", remindTime];
+    
     self.noteLabel.text = self.detailObject.eventNote;
-    self.locationLabel.text = self.detailObject.locationDescription;
+    
+    if (self.detailObject.locationDescription != nil) {
+        self.locationLabel.text = self.detailObject.locationDescription;
+    }
+    else{
+        self.locationLabel.text = @"the location is not provided";
+    }
 
     self.mapView.delegate = self;
     self.mapView.showsUserLocation = YES;
