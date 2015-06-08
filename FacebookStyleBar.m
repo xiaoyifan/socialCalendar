@@ -47,26 +47,26 @@
     
     
     // Add search field and close button
-    UITextField *searchField = [[UITextField alloc] init];
-    searchField.layer.cornerRadius = 5.0;
-    searchField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Search" attributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:0.55 green:0.6 blue:0.75 alpha:1]}];
-    searchField.backgroundColor = [UIColor colorWithRed:0.22 green:0.27 blue:0.46 alpha:1];
-    searchField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
+    self.searchField = [[UITextField alloc] init];
+    self.searchField.layer.cornerRadius = 5.0;
+    self.searchField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Search" attributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:0.55 green:0.6 blue:0.75 alpha:1]}];
+    self.searchField.backgroundColor = [UIColor colorWithRed:0.22 green:0.27 blue:0.46 alpha:1];
+    self.searchField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
     
     BLKFlexibleHeightBarSubviewLayoutAttributes *initialSearchFieldLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] init];
     initialSearchFieldLayoutAttributes.frame = CGRectMake(8.0, 25.0, initialBlueBarLayoutAttributes.size.width * 0.85, initialBlueBarLayoutAttributes.size.height-8.0);
     initialSearchFieldLayoutAttributes.zIndex = 1024;
-    [searchField addLayoutAttributes:initialSearchFieldLayoutAttributes forProgress:0.0];
-    [searchField addLayoutAttributes:initialSearchFieldLayoutAttributes forProgress:40.0/(105.0-20.0)];
+    [self.searchField addLayoutAttributes:initialSearchFieldLayoutAttributes forProgress:0.0];
+    [self.searchField addLayoutAttributes:initialSearchFieldLayoutAttributes forProgress:40.0/(105.0-20.0)];
     
     BLKFlexibleHeightBarSubviewLayoutAttributes *finalSearchFieldLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] initWithExistingLayoutAttributes:initialSearchFieldLayoutAttributes];
     finalSearchFieldLayoutAttributes.transform = CGAffineTransformMakeTranslation(0.0, -0.3*(105-20));
     finalSearchFieldLayoutAttributes.alpha = 0.0;
     
-    [searchField addLayoutAttributes:finalSearchFieldLayoutAttributes forProgress:0.8];
-    [searchField addLayoutAttributes:finalSearchFieldLayoutAttributes forProgress:1.0];
+    [self.searchField addLayoutAttributes:finalSearchFieldLayoutAttributes forProgress:0.8];
+    [self.searchField addLayoutAttributes:finalSearchFieldLayoutAttributes forProgress:1.0];
     
-    [self addSubview:searchField];
+    [self addSubview:self.searchField];
     
     
     // Add white bar view

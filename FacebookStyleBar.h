@@ -29,6 +29,8 @@
 
 @property UIView *requestIndicatorView;
 
+@property UITextField *searchField;
+
 @property (nonatomic, assign) id <flexibleHeightBarDelegate> delegate;
 
 

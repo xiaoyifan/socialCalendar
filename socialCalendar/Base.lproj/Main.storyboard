@@ -787,11 +787,7 @@
                             <constraint firstItem="gIL-im-Lk1" firstAttribute="leading" secondItem="XGj-oX-pOh" secondAttribute="leadingMargin" constant="-16" id="pNJ-wx-qEV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Calendar" id="aYO-kx-PCe">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZbR-lf-tWO">
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Calendar" id="aYO-kx-PCe"/>
                     <connections>
                         <outlet property="calendarContentView" destination="UmZ-KQ-VUe" id="x2S-v9-rTV"/>
                         <outlet property="calendarContentViewHeight" destination="5eh-Uc-i5X" id="ref-gz-qAX"/>
@@ -1109,6 +1105,6 @@
         <image name="share" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AEd-hR-1b8"/>
+        <segue reference="TFM-Vn-6Ne"/>
     </inferredMetricsTieBreakers>
 </document>

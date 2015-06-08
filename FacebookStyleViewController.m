@@ -14,7 +14,7 @@
 
 #import "userTableViewController.h"
 
-@interface FacebookStyleViewController () <UITableViewDataSource, flexibleHeightBarDelegate>
+@interface FacebookStyleViewController () <UITableViewDataSource, flexibleHeightBarDelegate, UITextFieldDelegate>
 
 @property (nonatomic) FacebookStyleBar *myCustomBar;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -34,6 +34,7 @@
     // Setup the bar
     self.myCustomBar = [[FacebookStyleBar alloc] initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.frame), 100.0)];
     self.myCustomBar.delegate = self;
+    self.myCustomBar.searchField.delegate = self;
     
     FacebookStyleBarBehaviorDefiner *behaviorDefiner = [[FacebookStyleBarBehaviorDefiner alloc] init];
     [behaviorDefiner addSnappingPositionProgress:0.0 forProgressRangeStart:0.0 end:40.0/(105.0-20.0)];
@@ -76,6 +77,21 @@
     self.showFriend = true;
     
     
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    if (textField.text.length != 0) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(username CONTAINS[cd] %@) OR (email CONTAINS[cd] %@)", textField.text, textField.text];
+        
+        NSArray *tempArr = [self.dataArray filteredArrayUsingPredicate:predicate];
+        
+        self.dataArray = [tempArr mutableCopy];
+        
+        [self.tableView reloadData];
+    }
+    
+    return YES;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
