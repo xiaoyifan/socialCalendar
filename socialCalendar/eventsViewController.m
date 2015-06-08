@@ -11,6 +11,8 @@
 #import "addEventTableViewController.h"
 #import "AAShareBubbles.h"
 #import "detailViewController.h"
+#import "WXApi.h"
+#import "WXApiObject.h"
 
 @interface eventsViewController ()<AAShareBubblesDelegate,MFMailComposeViewControllerDelegate>
 
@@ -162,6 +164,14 @@
     shareBubbles.showFacebookBubble = YES;
     shareBubbles.showTwitterBubble = YES;
     shareBubbles.showMailBubble = YES;
+    
+    [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"wechat"]
+                          backgroundColor:[UIColor colorWithHexString:@"#00CC00"]
+                              andButtonId:100];
+    
+    [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"weibo"]
+                          backgroundColor:[UIColor colorWithHexString:@"#FFCC11"]
+                              andButtonId:101];
     
     self.eventToShare = [self.events objectAtIndex:sender.tag];
     
@@ -329,6 +339,12 @@
             NSLog(@"mail");
             [self shareOnMail];
             break;
+        case 100:
+            NSLog(@"wechat");
+            [self shareOnWechat];
+        case 101:
+            NSLog(@"Weibo");
+            [self shareOnWeibo];
         default:
             break;
     }
@@ -443,6 +459,48 @@
     
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
+-(void)shareOnWechat{
+    
+    SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+    req.text = self.eventToShare.title;
+    req.bText = YES;
+    req.scene = WXSceneTimeline;
+    [WXApi sendReq:req];
+}
+
+
+-(void)shareOnWeibo{
+    
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeSinaWeibo]) {
+        SLComposeViewController *weiboPost = [SLComposeViewController
+                                              composeViewControllerForServiceType:SLServiceTypeSinaWeibo];
+        
+        NSDate *date = self.eventToShare.time;
+        
+        NSDateFormatter *dateFormater = [NSDateFormatter new];
+        
+        dateFormater.dateFormat = @"MM.dd.yyyy";
+        NSString *dateString = [dateFormater stringFromDate:date];
+        
+        dateFormater.dateFormat = @"HH:mm";
+        NSString *timeString =[dateFormater stringFromDate:date];
+        
+        NSString *text = [NSString stringWithFormat:@"%@, join us at the event: %@ at %@", dateString, self.eventToShare.title, timeString];
+        [weiboPost setInitialText:text];
+        [self presentViewController:weiboPost animated:YES completion:nil];
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Sorry"
+                                  message:@"You can't send a weibo right now, make sure your device has an internet connection and you have at least one Weibo account setup"
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+    }
 }
 
 -(void)aaShareBubblesDidHide:(AAShareBubbles *)bubbles {
