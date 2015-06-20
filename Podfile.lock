@@ -9,6 +9,7 @@ PODS:
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
   - JTCalendar (1.2.3)
+  - MBProgressHUD (0.9.1)
 
 DEPENDENCIES:
   - AAShareBubbles
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - HSDatePickerViewController
   - JSQMessagesViewController
   - JTCalendar
+  - MBProgressHUD
 
 SPEC CHECKSUMS:
   AAShareBubbles: 960610d6a3c4da57d7cd295f4bec68790307bce8
@@ -30,5 +32,6 @@ SPEC CHECKSUMS:
   JSQMessagesViewController: bb6649691182b1899dc52b42266ad69efc473510
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   JTCalendar: 246ea3e338fb97624846ec77cdcde448242c4d5c
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
 
-COCOAPODS: 0.37.1
+COCOAPODS: 0.37.2

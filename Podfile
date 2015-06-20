@@ -11,6 +11,7 @@ pod 'HSDatePickerViewController'
 pod 'HexColors'
 pod 'AAShareBubbles'
 pod 'BLKFlexibleHeightBar'
+pod 'MBProgressHUD'
 
 end
 
