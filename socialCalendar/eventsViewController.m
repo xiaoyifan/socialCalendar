@@ -21,7 +21,7 @@
 
 @property eventObject *eventToShare;
 
-@property (retain,nonatomic) ViewController *vc;
+@property (retain,nonatomic) UIViewController *vc;
 
 
 @end
@@ -31,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.vc = [[ViewController alloc] init];
+    self.vc = [[UIViewController alloc] init];
     [self presentViewController:self.vc animated:NO completion:nil];
     [self.view addSubview:self.vc.view];
     
