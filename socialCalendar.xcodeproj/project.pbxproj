@@ -62,6 +62,7 @@
 		CCF0A4961B0BF217002F619B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A4951B0BF217002F619B /* libz.dylib */; };
 		CCF0A4981B0BF21F002F619B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A4971B0BF21F002F619B /* libsqlite3.dylib */; };
 		D65661636D9610AC9C3A8E9C /* libPods-socialCalendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EDD79DA0424417BCB1D051 /* libPods-socialCalendar.a */; };
+		FF1BE66E1B35FC7600AF8886 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,8 @@
 		CCF0A4971B0BF21F002F619B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CCF0A4991B0BF3F8002F619B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E0EDD79DA0424417BCB1D051 /* libPods-socialCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socialCalendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1BE66C1B35FC7600AF8886 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +353,7 @@
 		CCF0A44B1B0BEEB8002F619B /* socialCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				FF1BE66B1B35FC5600AF8886 /* loadingIndicator */,
 				CCB5A0281B2643720050352D /* splashScreen */,
 				CCDBB61A1B192490007C2E81 /* parseHandling */,
 				CC81CD161B1541B80039EA60 /* model */,
@@ -440,6 +444,15 @@
 				E0EDD79DA0424417BCB1D051 /* libPods-socialCalendar.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF1BE66B1B35FC5600AF8886 /* loadingIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				FF1BE66C1B35FC7600AF8886 /* ProgressHUD.h */,
+				FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */,
+			);
+			name = loadingIndicator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,6 +613,7 @@
 				CCB59FEE1B2031E40050352D /* FacebookStyleViewController.m in Sources */,
 				CCB59FFF1B212CE20050352D /* listTableViewCell.m in Sources */,
 				CCE344191B1BB02B001FB58F /* calendarTableViewCell.m in Sources */,
+				FF1BE66E1B35FC7600AF8886 /* ProgressHUD.m in Sources */,
 				CCB59FFC1B2119010050352D /* userTableViewController.m in Sources */,
 				CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */,
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
