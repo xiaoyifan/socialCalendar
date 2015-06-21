@@ -42,7 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.pickerData = @[@"10 mins head", @"15 mins head", @"30 mins head", @"1 hour head", @"5 hours head", @"1 day head"];
+    self.pickerData = @[@"10 mins ahead", @"15 mins ahead", @"30 mins ahead", @"1 hour ahead", @"5 hours ahead", @"1 day ahead"];
 
 }
 
@@ -200,7 +200,36 @@
         self.object.group = self.selectedFriends;
     
         [[ParsingHandle sharedParsing] insertNewObjectToDatabase:self.object];
+        
+        [self registerLocalNotificationForEvent:self.object];
+
     }
+}
+
+#pragma mark -localNotification registration
+
+-(void)registerLocalNotificationForEvent:(eventObject *)event{
+    UILocalNotification* localNotification1 = [[UILocalNotification alloc] init];
+    localNotification1.fireDate = event.reminderDate;
+    localNotification1.alertBody = self.object.title;
+    localNotification1.timeZone = [NSTimeZone defaultTimeZone];
+    localNotification1.soundName = UILocalNotificationDefaultSoundName;
+    NSString *key1 = [NSString stringWithFormat:@"%@-date", self.title];
+    NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                              key1, @"key", nil];
+    localNotification1.userInfo = infoDict;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification1];
+    
+    UILocalNotification* localNotification2 = [[UILocalNotification alloc] init];
+    localNotification2.fireDate = event.reminderDate;
+    localNotification2.alertBody = self.object.title;
+    localNotification2.timeZone = [NSTimeZone defaultTimeZone];
+    localNotification2.soundName = UILocalNotificationDefaultSoundName;
+    NSString *key2 = [NSString stringWithFormat:@"%@-remind", self.title];
+    NSDictionary *infoDict2 = [NSDictionary dictionaryWithObjectsAndKeys:
+                              key2, @"key", nil];
+    localNotification2.userInfo = infoDict2;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification2];
 }
 
 #pragma mark - unwind segue
