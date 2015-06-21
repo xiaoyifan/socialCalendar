@@ -72,21 +72,27 @@
     NSLog(@"log out the location %@", self.detailObject.location);
 }
 
-- (void)viewDidLayoutSubviews {
+
+-(void)viewWillLayoutSubviews{
     
-    float sizeOfContent = 0;
-//    UIView *lLast = [self.mainScrollView.subviews lastObject];
-//    NSInteger wd = lLast.frame.origin.y;
-//    NSInteger ht = lLast.frame.size.height;
     
-    sizeOfContent = 850;
+    CGFloat scrollViewHeight = 0.0f;
+    for (UIView* view in self.mainScrollView.subviews)
+    {
+        scrollViewHeight += view.frame.size.height;
+    }
     
-    NSLog(@"scroll view size: %f", sizeOfContent);
+    scrollViewHeight+=50;
     
-    self.mainScrollView.contentSize = CGSizeMake(self.mainScrollView.frame.size.width, sizeOfContent);
-//    NSLog(@"scroll height %f", sizeOfContent);
+    NSLog(@"the HEIGHT %f", scrollViewHeight);
     
+    [self.scrollViewHeight setConstant:scrollViewHeight];
+    [self.mainScrollView setContentSize:CGSizeMake(self.view.frame.size.width, scrollViewHeight)];
+    
+    [self.mainScrollView setNeedsDisplay];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

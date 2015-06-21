@@ -54,7 +54,9 @@
     
 }
 
-
+/**
+ *  handle the login and signup basic configuration with parse.
+ */
 -(void)handleLogginAndSignUp{
     
     PFUser *user = [PFUser currentUser];
@@ -84,7 +86,9 @@
     
 }
 
-
+/**
+ *  query the data from Parse to load the table
+ */
 -(void)loadDataEvents{
     
     if ([PFUser currentUser]) {
