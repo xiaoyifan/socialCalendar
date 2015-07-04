@@ -54,6 +54,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-socialCalendar-pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-socialCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,57 +67,62 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A5321919E1A9B07929D96E8</key>
+		<key>08B37F265A62DACBDB927BE7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>248C9256510062B3F68B7692</key>
+		<key>3C734E1A1B382CA49589B047</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3DD41F3B0C9E0980CA6E7463</key>
+		<key>43C0B1FD1FD171E6A5818EBD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>812646C9D65D88BABBCC4F85</key>
+		<key>525DA744EA463F10140A1FE5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C04191AE85CF2D27B0D22158</key>
+		<key>5313BF8C289A41EACCDF55FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5963BF8240D8FEAED5B34B9</key>
+		<key>70CDDC898599ED2809833754</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D95C0E2C51623C65924BA6F4</key>
+		<key>7374C1FC10EE84BC08428400</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E19E88831D91C6A390AD1250</key>
+		<key>8142D8CBB7584413C87A28A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED8EA13A70C653EE070DF726</key>
+		<key>CB572E638BC31D0A35AE9FDD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF431969B49E39653B602BF0</key>
+		<key>E27E37AFF49AB883B1892567</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FFB3EC2DE868C2416AD45CF9</key>
+		<key>E2DCE328EFF23B7DF2FF2407</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E7CD815C615AC78320196221</key>
 		<dict>
 			<key>primary</key>
 			<true/>

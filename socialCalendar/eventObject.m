@@ -19,6 +19,7 @@
     [encoder encodeObject:self.locationDescription forKey:@"locationDescription"];
     [encoder encodeObject:self.eventNote forKey:@"eventNote"];
     [encoder encodeObject:self.group forKey:@"group"];
+    [encoder encodeObject:self.objectId forKey:@"objectId"];
 
     
 }
@@ -33,6 +34,7 @@
     self.locationDescription = [decoder decodeObjectForKey:@"locationDescription"];
     self.eventNote = [decoder decodeObjectForKey:@"eventNote"];
     self.group = [decoder decodeObjectForKey:@"group"];
+    self.objectId = [decoder decodeObjectForKey:@"objectId"];
     
     return self;
 }

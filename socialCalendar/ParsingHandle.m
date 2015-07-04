@@ -162,10 +162,10 @@
     
     PFGeoPoint *point = [object objectForKey:@"location"];
     retrivedObj.location = [[CLLocation alloc] initWithLatitude:point.latitude longitude:point.longitude];
-    
     retrivedObj.locationDescription = [object objectForKey:@"locationDescription"];
     retrivedObj.eventNote = [object objectForKey:@"eventNote"];
     
+    retrivedObj.objectId = object.objectId;
     
     return retrivedObj;
 }
@@ -326,43 +326,44 @@
     {
         return;
     }
-    
     PFQuery * query = [PFQuery queryWithClassName:@"friendRequest"];
     [query whereKey:@"from" equalTo:[PFUser currentUser]];
     [query whereKey:@"status" equalTo:@"approved"];
-    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error)
         {
             NSLog(@"error info %@", error);
         }
         else {
-            
             NSLog(@"%lu requests sent", (unsigned long)objects.count);
-            
             NSMutableArray *array = [[NSMutableArray alloc] init];
-            
             for (PFObject *request in objects) {
                 PFUser *user = request[@"to"];
                 [array addObject:user];
                 PFRelation *friendRelation = [[PFUser currentUser] relationForKey:@"friendRelation"];
-                
                 [friendRelation addObject:user];
                 [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
                     if (!succeeded) {
                         NSLog(@"the error is %@", error);
                     }
                 }];
-                
                 [request deleteEventually];
-                
             }
-            
             completion(array);
         }
-        
-        
     }];
+}
+
+-(void)deleteEventFromCloudByID:(NSString *)objectId ToCompletion:(void (^)())completion{
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Events"];
+    
+    // Retrieve the object by id
+    [query getObjectInBackgroundWithId:objectId
+                                 block:^(PFObject *eventObj, NSError *error) {
+                                     [eventObj deleteInBackground];
+                                     completion();
+                                 }];
 }
 
 @end

@@ -24,5 +24,6 @@
 
 
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UIButton * deleteButton;
 
 @end

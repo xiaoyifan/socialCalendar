@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D95C0E2C51623C65924BA6F4"
+               BlueprintIdentifier = "3C734E1A1B382CA49589B047"
                BuildableName = "libPods-socialCalendar-JSQSystemSoundPlayer.a"
                BlueprintName = "Pods-socialCalendar-JSQSystemSoundPlayer"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -63,6 +63,10 @@
 		CCF0A4981B0BF21F002F619B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A4971B0BF21F002F619B /* libsqlite3.dylib */; };
 		D65661636D9610AC9C3A8E9C /* libPods-socialCalendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EDD79DA0424417BCB1D051 /* libPods-socialCalendar.a */; };
 		FF1BE66E1B35FC7600AF8886 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */; };
+		FFDB42881B47B49900785D6A /* popingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42871B47B49900785D6A /* popingViewController.m */; };
+		FFDB428C1B47B50200785D6A /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428B1B47B50200785D6A /* UIColor+CustomColors.m */; };
+		FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428F1B47B6DC00785D6A /* PresentingAnimator.m */; };
+		FFDB42951B47B71F00785D6A /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42941B47B71F00785D6A /* DismissingAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +166,14 @@
 		FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = socialCalendar.entitlements; sourceTree = "<group>"; };
 		FF1BE66C1B35FC7600AF8886 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		FFDB42861B47B49900785D6A /* popingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popingViewController.h; sourceTree = "<group>"; };
+		FFDB42871B47B49900785D6A /* popingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popingViewController.m; sourceTree = "<group>"; };
+		FFDB428A1B47B50200785D6A /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		FFDB428B1B47B50200785D6A /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		FFDB428E1B47B6DC00785D6A /* PresentingAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingAnimator.h; sourceTree = "<group>"; };
+		FFDB428F1B47B6DC00785D6A /* PresentingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingAnimator.m; sourceTree = "<group>"; };
+		FFDB42931B47B71F00785D6A /* DismissingAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissingAnimator.h; sourceTree = "<group>"; };
+		FFDB42941B47B71F00785D6A /* DismissingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissingAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +366,9 @@
 		CCF0A44B1B0BEEB8002F619B /* socialCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				FFDB42911B47B70200785D6A /* Animator */,
+				FFDB42891B47B4F500785D6A /* categories */,
+				FFDB42851B47B48200785D6A /* popingVC */,
 				FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */,
 				FF1BE66B1B35FC5600AF8886 /* loadingIndicator */,
 				CCB5A0281B2643720050352D /* splashScreen */,
@@ -455,6 +470,51 @@
 				FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */,
 			);
 			name = loadingIndicator;
+			sourceTree = "<group>";
+		};
+		FFDB42851B47B48200785D6A /* popingVC */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB42861B47B49900785D6A /* popingViewController.h */,
+				FFDB42871B47B49900785D6A /* popingViewController.m */,
+			);
+			name = popingVC;
+			sourceTree = "<group>";
+		};
+		FFDB42891B47B4F500785D6A /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB428A1B47B50200785D6A /* UIColor+CustomColors.h */,
+				FFDB428B1B47B50200785D6A /* UIColor+CustomColors.m */,
+			);
+			name = categories;
+			sourceTree = "<group>";
+		};
+		FFDB428D1B47B6CB00785D6A /* PresentingAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB428E1B47B6DC00785D6A /* PresentingAnimator.h */,
+				FFDB428F1B47B6DC00785D6A /* PresentingAnimator.m */,
+			);
+			name = PresentingAnimator;
+			sourceTree = "<group>";
+		};
+		FFDB42911B47B70200785D6A /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB42921B47B70E00785D6A /* DismissingAnimator */,
+				FFDB428D1B47B6CB00785D6A /* PresentingAnimator */,
+			);
+			name = Animator;
+			sourceTree = "<group>";
+		};
+		FFDB42921B47B70E00785D6A /* DismissingAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB42931B47B71F00785D6A /* DismissingAnimator.h */,
+				FFDB42941B47B71F00785D6A /* DismissingAnimator.m */,
+			);
+			name = DismissingAnimator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -612,9 +672,11 @@
 			files = (
 				CCB59FF81B20F4A90050352D /* userTableViewCell.m in Sources */,
 				CCB5A02E1B2643BC0050352D /* RMParallaxItem.swift in Sources */,
+				FFDB42951B47B71F00785D6A /* DismissingAnimator.m in Sources */,
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
 				CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */,
+				FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */,
 				CCB5A02F1B2643BC0050352D /* RMParallax.swift in Sources */,
 				CCB59FEE1B2031E40050352D /* FacebookStyleViewController.m in Sources */,
 				CCB59FFF1B212CE20050352D /* listTableViewCell.m in Sources */,
@@ -622,6 +684,7 @@
 				FF1BE66E1B35FC7600AF8886 /* ProgressHUD.m in Sources */,
 				CCB59FFC1B2119010050352D /* userTableViewController.m in Sources */,
 				CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */,
+				FFDB428C1B47B50200785D6A /* UIColor+CustomColors.m in Sources */,
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
 				CCB5A02D1B2643BC0050352D /* ViewController.swift in Sources */,
 				CC579CB11B18032700115705 /* detailViewController.m in Sources */,
@@ -630,6 +693,7 @@
 				CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */,
 				CC81CD191B1541E00039EA60 /* eventObject.m in Sources */,
 				CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */,
+				FFDB42881B47B49900785D6A /* popingViewController.m in Sources */,
 				CCF0A44F1B0BEEB8002F619B /* main.m in Sources */,
 				CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */,
 				CCC680E91B12CA430007DD85 /* eventsViewController.m in Sources */,

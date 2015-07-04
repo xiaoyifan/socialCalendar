@@ -12,6 +12,7 @@ pod 'HexColors'
 pod 'AAShareBubbles'
 pod 'BLKFlexibleHeightBar'
 pod 'MBProgressHUD'
+pod 'pop'
 
 end
 

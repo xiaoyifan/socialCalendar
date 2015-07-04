@@ -42,4 +42,6 @@
 
 -(void)getApprovedUsersToCompletion:(void (^)(NSArray *array))completion;
 
+-(void)deleteEventFromCloudByID:(NSString *)objectId ToCompletion:(void (^)())completion;
+
 @end

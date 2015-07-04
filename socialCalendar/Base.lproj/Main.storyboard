@@ -25,17 +25,27 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfp-YL-z2w">
                                             <rect key="frame" x="10" y="5" width="580" height="190"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1X-3T-vHB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="580" height="40"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVe-pN-xtp">
                                                     <rect key="frame" x="0.0" y="0.0" width="580" height="50"/>
                                                     <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uao-ou-CMF">
+                                                            <rect key="frame" x="20" y="14" width="42" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3v-SI-t1A">
+                                                            <rect key="frame" x="540" y="14" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="FfJ-E9-ONe"/>
+                                                                <constraint firstAttribute="height" constant="25" id="TFg-lP-quj"/>
+                                                            </constraints>
+                                                            <state key="normal" image="cancel">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                        </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPd-kz-mDV">
-                                                            <rect key="frame" x="535" y="13" width="25" height="25"/>
+                                                            <rect key="frame" x="507" y="12.5" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="Uhu-q3-vZX"/>
                                                                 <constraint firstAttribute="height" constant="25" id="gsg-aM-S2A"/>
@@ -43,21 +53,29 @@
                                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <state key="normal" image="share"/>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uao-ou-CMF">
-                                                            <rect key="frame" x="20" y="14" width="42" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="nPd-kz-mDV" firstAttribute="top" secondItem="uao-ou-CMF" secondAttribute="top" id="0JB-tt-Jmh"/>
                                                         <constraint firstAttribute="trailing" secondItem="nPd-kz-mDV" secondAttribute="trailing" constant="20" id="0My-gF-1aA"/>
+                                                        <constraint firstItem="m3v-SI-t1A" firstAttribute="leading" secondItem="nPd-kz-mDV" secondAttribute="trailing" constant="8" symbolic="YES" id="2Z9-xG-lCi"/>
+                                                        <constraint firstAttribute="trailing" secondItem="m3v-SI-t1A" secondAttribute="trailing" constant="15" id="Afw-dL-rDC"/>
                                                         <constraint firstAttribute="centerY" secondItem="nPd-kz-mDV" secondAttribute="centerY" id="Gt1-JA-YcA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="nPd-kz-mDV" secondAttribute="trailing" constant="48" id="Tbx-Lr-CWg"/>
                                                         <constraint firstAttribute="height" constant="50" id="cRn-Ya-wPM"/>
                                                         <constraint firstItem="uao-ou-CMF" firstAttribute="leading" secondItem="vVe-pN-xtp" secondAttribute="leading" constant="20" id="d5m-Vr-w4c"/>
                                                         <constraint firstAttribute="centerY" secondItem="uao-ou-CMF" secondAttribute="centerY" id="dLL-RK-ogo"/>
+                                                        <constraint firstItem="nPd-kz-mDV" firstAttribute="top" secondItem="m3v-SI-t1A" secondAttribute="top" id="oIh-gy-qNW"/>
+                                                        <constraint firstAttribute="centerY" secondItem="m3v-SI-t1A" secondAttribute="centerY" constant="-1.5" id="q42-mO-fvE"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="0JB-tt-Jmh"/>
+                                                            <exclude reference="0My-gF-1aA"/>
+                                                            <exclude reference="Tbx-Lr-CWg"/>
+                                                            <exclude reference="oIh-gy-qNW"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exu-UM-PtJ">
                                                     <rect key="frame" x="20" y="65" width="540" height="60"/>
@@ -69,7 +87,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIu-ER-lob">
-                                                    <rect key="frame" x="20" y="155" width="540" height="15"/>
+                                                    <rect key="frame" x="20" y="155" width="540" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -98,9 +116,6 @@
                                                 <constraint firstItem="Exu-UM-PtJ" firstAttribute="leading" secondItem="sfp-YL-z2w" secondAttribute="leading" constant="20" id="yRk-MV-k1q"/>
                                             </constraints>
                                             <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="M1X-3T-vHB"/>
-                                                </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="Z4X-CA-aTb"/>
                                                 </mask>
@@ -120,6 +135,7 @@
                                     <outlet property="addressLabel" destination="PIu-ER-lob" id="Qkx-ti-6v8"/>
                                     <outlet property="backgroundCardView" destination="sfp-YL-z2w" id="pRy-Au-QNQ"/>
                                     <outlet property="dateLabel" destination="uao-ou-CMF" id="Nz5-U8-HTc"/>
+                                    <outlet property="deleteButton" destination="m3v-SI-t1A" id="MKj-Fj-PH9"/>
                                     <outlet property="eventName" destination="Exu-UM-PtJ" id="bHu-ed-Ygd"/>
                                     <outlet property="shareButton" destination="nPd-kz-mDV" id="joB-mm-erq"/>
                                     <outlet property="timeLabel" destination="6aD-Qs-K3H" id="3MO-kY-5pl"/>
@@ -1092,6 +1108,7 @@
     <resources>
         <image name="back" width="50" height="50"/>
         <image name="calendar" width="25" height="25"/>
+        <image name="cancel" width="50" height="50"/>
         <image name="dismiss" width="25" height="25"/>
         <image name="friends" width="25" height="25"/>
         <image name="location" width="25" height="25"/>
@@ -1099,6 +1116,6 @@
         <image name="share" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TFM-Vn-6Ne"/>
+        <segue reference="AEd-hR-1b8"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,4 +21,6 @@
 
 @property (strong,nonatomic) NSArray *group;
 
+@property (strong,nonatomic) NSString *objectId;
+
 @end

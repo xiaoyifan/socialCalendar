@@ -14,8 +14,11 @@
 #import "WXApi.h"
 #import "WXApiObject.h"
 #import "socialCalendar-Swift.h"
+#import "popingViewController.h"
+#import "PresentingAnimator.h"
+#import "DismissingAnimator.h"
 
-@interface eventsViewController ()<AAShareBubblesDelegate,MFMailComposeViewControllerDelegate>
+@interface eventsViewController ()<AAShareBubblesDelegate,MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
 
 @property NSMutableArray *events;
 
@@ -23,6 +26,7 @@
 
 @property (retain,nonatomic) ViewController *vc;
 
+@property NSInteger cellIndexToDelete;
 
 @end
 
@@ -163,60 +167,12 @@
     cell.shareButton.tag = indexPath.row;
     
     [cell.shareButton addTarget:self action:@selector(shareButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    cell.deleteButton.tag = indexPath.row;
+    [cell.deleteButton addTarget:self action:@selector(deleteButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
     return cell;
 }
-
--(void)shareButtonClicked:(UIButton*)sender
-{
-    NSLog(@"share button %ld clicked", (long)sender.tag);
-    
-    
-    AAShareBubbles *shareBubbles = [[AAShareBubbles alloc] initCenteredInWindowWithRadius:150];
-    shareBubbles.delegate = self;
-    shareBubbles.bubbleRadius = 45; // Default is 40
-    shareBubbles.showFacebookBubble = YES;
-    shareBubbles.showTwitterBubble = YES;
-    shareBubbles.showMailBubble = YES;
-    
-    [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"wechat"]
-                          backgroundColor:[UIColor colorWithHexString:@"#00CC00"]
-                              andButtonId:100];
-    
-    [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"weibo"]
-                          backgroundColor:[UIColor colorWithHexString:@"#FFCC11"]
-                              andButtonId:101];
-    
-    self.eventToShare = [self.events objectAtIndex:sender.tag];
-    
-    [shareBubbles show];
-}
-
--(UIColor *)randomColor{
-    NSArray *sliceColors =[NSArray arrayWithObjects:
-                           
-                           [UIColor colorWithRed:121/255.0 green:134/255.0 blue:203/255.0 alpha:1], //5. indigo
-                           [UIColor colorWithRed:174/255.0 green:213/255.0 blue:129/255.0 alpha:1], //14. light green
-                           [UIColor colorWithRed:100/255.0 green:181/255.0 blue:246/255.0 alpha:1], //2. blue
-                           [UIColor colorWithRed:220/255.0 green:231/255.0 blue:117/255.0 alpha:1], //8. lime
-                           [UIColor colorWithRed:79/255.0 green:195/255.0 blue:247/255.0 alpha:1], //7. light blue
-                           [UIColor colorWithRed:77/255.0 green:208/255.0 blue:225/255.0 alpha:1], //3. cyan
-                           [UIColor colorWithRed:77/255.0 green:182/255.0 blue:172/255.0 alpha:1], //13. teal
-                           [UIColor colorWithRed:129/255.0 green:199/255.0 blue:132/255.0 alpha:1], //9. green
-                           [UIColor colorWithRed:255/255.0 green:241/255.0 blue:118/255.0 alpha:1], //16. yellow
-                           [UIColor colorWithRed:255/255.0 green:213/255.0 blue:79/255.0 alpha:1], //12. amber
-                           [UIColor colorWithRed:255/255.0 green:183/255.0 blue:77/255.0 alpha:1], //4. orange
-                           [UIColor colorWithRed:255/255.0 green:138/255.0 blue:101/255.0 alpha:1], //10. deep orange
-                           [UIColor colorWithRed:144/255.0 green:164/255.0 blue:174/255.0 alpha:1], //15. blue grey
-                           [UIColor colorWithRed:229/255.0 green:155/255.0 blue:155/255.0 alpha:1], //6. red
-                           [UIColor colorWithRed:240/255.0 green:98/255.0 blue:146/255.0 alpha:1], //1. pink
-                           [UIColor colorWithRed:186/255.0 green:104/255.0 blue:200/255.0 alpha:1], //11. purple
-                           nil];
-    
-    int rad = arc4random() % 16;
-    return sliceColors[rad];
-    
-}
-
 
 #pragma mark - implementation of PFLogInViewControllerDelegate
 
@@ -341,6 +297,29 @@
 
 
 #pragma mark - share button pressed delegate
+
+-(void)shareButtonClicked:(UIButton*)sender
+{
+
+    AAShareBubbles *shareBubbles = [[AAShareBubbles alloc] initCenteredInWindowWithRadius:150];
+    shareBubbles.delegate = self;
+    shareBubbles.bubbleRadius = 45; // Default is 40
+    shareBubbles.showFacebookBubble = YES;
+    shareBubbles.showTwitterBubble = YES;
+    shareBubbles.showMailBubble = YES;
+    
+    [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"wechat"]
+                          backgroundColor:[UIColor colorWithHexString:@"#00CC00"]
+                              andButtonId:100];
+    
+    [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"weibo"]
+                          backgroundColor:[UIColor colorWithHexString:@"#FFCC11"]
+                              andButtonId:101];
+    
+    self.eventToShare = [self.events objectAtIndex:sender.tag];
+    
+    [shareBubbles show];
+}
 
 -(void)aaShareBubbles:(AAShareBubbles *)shareBubbles tappedBubbleWithType:(int)bubbleType
 {
@@ -555,6 +534,76 @@
     [self handleLogginAndSignUp];
 }
 
+#pragma mark -- color choosing 
 
+-(UIColor *)randomColor{
+    NSArray *sliceColors =[NSArray arrayWithObjects:
+                           
+                           [UIColor colorWithRed:121/255.0 green:134/255.0 blue:203/255.0 alpha:1], //5. indigo
+                           [UIColor colorWithRed:174/255.0 green:213/255.0 blue:129/255.0 alpha:1], //14. light green
+                           [UIColor colorWithRed:100/255.0 green:181/255.0 blue:246/255.0 alpha:1], //2. blue
+                           [UIColor colorWithRed:220/255.0 green:231/255.0 blue:117/255.0 alpha:1], //8. lime
+                           [UIColor colorWithRed:79/255.0 green:195/255.0 blue:247/255.0 alpha:1], //7. light blue
+                           [UIColor colorWithRed:77/255.0 green:208/255.0 blue:225/255.0 alpha:1], //3. cyan
+                           [UIColor colorWithRed:77/255.0 green:182/255.0 blue:172/255.0 alpha:1], //13. teal
+                           [UIColor colorWithRed:129/255.0 green:199/255.0 blue:132/255.0 alpha:1], //9. green
+                           [UIColor colorWithRed:255/255.0 green:241/255.0 blue:118/255.0 alpha:1], //16. yellow
+                           [UIColor colorWithRed:255/255.0 green:213/255.0 blue:79/255.0 alpha:1], //12. amber
+                           [UIColor colorWithRed:255/255.0 green:183/255.0 blue:77/255.0 alpha:1], //4. orange
+                           [UIColor colorWithRed:255/255.0 green:138/255.0 blue:101/255.0 alpha:1], //10. deep orange
+                           [UIColor colorWithRed:144/255.0 green:164/255.0 blue:174/255.0 alpha:1], //15. blue grey
+                           [UIColor colorWithRed:229/255.0 green:155/255.0 blue:155/255.0 alpha:1], //6. red
+                           [UIColor colorWithRed:240/255.0 green:98/255.0 blue:146/255.0 alpha:1], //1. pink
+                           [UIColor colorWithRed:186/255.0 green:104/255.0 blue:200/255.0 alpha:1], //11. purple
+                           nil];
+    
+    int rad = arc4random() % 16;
+    return sliceColors[rad];
+    
+}
+
+#pragma mark -- event deleting 
+
+-(void)deleteButtonClicked:(UIButton *)sender{
+    self.cellIndexToDelete = sender.tag;
+
+    popingViewController *popViewController = [popingViewController new];
+    popViewController.transitioningDelegate = (id)self;
+    popViewController.modalPresentationStyle = UIModalPresentationCustom;
+    popViewController.delegate = self;
+    [self.navigationController presentViewController:popViewController
+                                            animated:YES
+                                          completion:NULL];
+}
+
+-(void)sendDataToSource{
+    // Delete the object from the datasource.
+    eventObject *object = [self.events objectAtIndex:self.cellIndexToDelete];
+    
+    [self.events removeObjectAtIndex:self.cellIndexToDelete];
+    
+    [[ParsingHandle sharedParsing] deleteEventFromCloudByID:object.objectId ToCompletion:^(){
+        
+    }];
+    
+    // Tell the table what has changed.
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.cellIndexToDelete inSection:0];
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                          withRowAnimation:UITableViewRowAnimationFade];
+    
+    [self.tableView reloadData];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source
+{
+    return [PresentingAnimator new];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [DismissingAnimator new];
+}
 
 @end

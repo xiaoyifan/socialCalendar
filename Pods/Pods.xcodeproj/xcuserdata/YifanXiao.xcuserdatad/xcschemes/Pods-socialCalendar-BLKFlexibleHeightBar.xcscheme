@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C04191AE85CF2D27B0D22158"
+               BlueprintIdentifier = "E27E37AFF49AB883B1892567"
                BuildableName = "libPods-socialCalendar-BLKFlexibleHeightBar.a"
                BlueprintName = "Pods-socialCalendar-BLKFlexibleHeightBar"
                ReferencedContainer = "container:Pods.xcodeproj">
