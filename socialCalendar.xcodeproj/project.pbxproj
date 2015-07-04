@@ -67,6 +67,7 @@
 		FFDB428C1B47B50200785D6A /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428B1B47B50200785D6A /* UIColor+CustomColors.m */; };
 		FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428F1B47B6DC00785D6A /* PresentingAnimator.m */; };
 		FFDB42951B47B71F00785D6A /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42941B47B71F00785D6A /* DismissingAnimator.m */; };
+		FFDB42991B48491D00785D6A /* expireMarkingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42981B48491D00785D6A /* expireMarkingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +175,8 @@
 		FFDB428F1B47B6DC00785D6A /* PresentingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingAnimator.m; sourceTree = "<group>"; };
 		FFDB42931B47B71F00785D6A /* DismissingAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissingAnimator.h; sourceTree = "<group>"; };
 		FFDB42941B47B71F00785D6A /* DismissingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissingAnimator.m; sourceTree = "<group>"; };
+		FFDB42971B48491D00785D6A /* expireMarkingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expireMarkingView.h; sourceTree = "<group>"; };
+		FFDB42981B48491D00785D6A /* expireMarkingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expireMarkingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,10 +369,11 @@
 		CCF0A44B1B0BEEB8002F619B /* socialCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				FFDB42961B4848EE00785D6A /* expireMark */,
+				FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */,
 				FFDB42911B47B70200785D6A /* Animator */,
 				FFDB42891B47B4F500785D6A /* categories */,
 				FFDB42851B47B48200785D6A /* popingVC */,
-				FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */,
 				FF1BE66B1B35FC5600AF8886 /* loadingIndicator */,
 				CCB5A0281B2643720050352D /* splashScreen */,
 				CCDBB61A1B192490007C2E81 /* parseHandling */,
@@ -515,6 +519,15 @@
 				FFDB42941B47B71F00785D6A /* DismissingAnimator.m */,
 			);
 			name = DismissingAnimator;
+			sourceTree = "<group>";
+		};
+		FFDB42961B4848EE00785D6A /* expireMark */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB42971B48491D00785D6A /* expireMarkingView.h */,
+				FFDB42981B48491D00785D6A /* expireMarkingView.m */,
+			);
+			name = expireMark;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -677,6 +690,7 @@
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
 				CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */,
 				FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */,
+				FFDB42991B48491D00785D6A /* expireMarkingView.m in Sources */,
 				CCB5A02F1B2643BC0050352D /* RMParallax.swift in Sources */,
 				CCB59FEE1B2031E40050352D /* FacebookStyleViewController.m in Sources */,
 				CCB59FFF1B212CE20050352D /* listTableViewCell.m in Sources */,

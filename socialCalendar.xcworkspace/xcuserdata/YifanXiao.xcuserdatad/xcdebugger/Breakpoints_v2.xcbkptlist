@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "socialCalendar/eventsViewController.m"
-            timestampString = "457687884.155044"
+            timestampString = "457726081.322799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "580"
-            endingLineNumber = "580"
+            startingLineNumber = "614"
+            endingLineNumber = "614"
             landmarkName = "-sendDataToSource"
             landmarkType = "5">
          </BreakpointContent>

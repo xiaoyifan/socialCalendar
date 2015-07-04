@@ -17,6 +17,7 @@
 #import "popingViewController.h"
 #import "PresentingAnimator.h"
 #import "DismissingAnimator.h"
+#import "expireMarkingView.h"
 
 @interface eventsViewController ()<AAShareBubblesDelegate,MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
 
@@ -171,7 +172,39 @@
     cell.deleteButton.tag = indexPath.row;
     [cell.deleteButton addTarget:self action:@selector(deleteButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
+    if ([eventDate compare:[NSDate date]] == NSOrderedAscending) {
+        [self addExpiredMarkToView:cell.contentView];
+        cell.topBar.backgroundColor = [UIColor darkGrayColor];
+    }
+    
     return cell;
+}
+
+-(void)addExpiredMarkToView:(UIView *)contentView{
+    
+    expireMarkingView *boundingView = [[expireMarkingView alloc] initWithFrame:CGRectMake(0, 0, 135.0f, 70.0f)];
+    boundingView.backgroundColor = [UIColor clearColor];
+    
+    CGAffineTransform transform =
+    CGAffineTransformMakeRotation(45.0f);
+    
+    boundingView.transform = transform;
+    
+    boundingView.center = CGPointMake(contentView.frame.size.width  / 2.0,
+                                      contentView.frame.size.height / 2.0);
+    
+    [contentView addSubview:boundingView];
+    
+    UILabel *expiredLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 135.0f, 70.0f)];
+    expiredLabel.textColor = [UIColor redColor];
+    expiredLabel.text = @"expired";
+    expiredLabel.font = [UIFont fontWithName:@"Avenir" size:24.0f];
+    expiredLabel.transform = transform;
+    
+    expiredLabel.center = CGPointMake(contentView.frame.size.width  / 2.0+15,
+                                      contentView.frame.size.height / 2.0+20);
+    [contentView addSubview:expiredLabel];
+    
 }
 
 #pragma mark - implementation of PFLogInViewControllerDelegate
@@ -576,6 +609,7 @@
                                           completion:NULL];
 }
 
+#pragma mark -- popping view delegate
 -(void)sendDataToSource{
     // Delete the object from the datasource.
     eventObject *object = [self.events objectAtIndex:self.cellIndexToDelete];
