@@ -146,22 +146,22 @@
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     
     
-    if ([string isEqualToString:@"10 mins head"]) {
+    if ([string isEqualToString:@"10 mins ahead"]) {
         [offsetComponents setMinute:-10]; // note that I'm setting it to -1
     }
-    else if ([string isEqualToString:@"15 mins head"]) {
+    else if ([string isEqualToString:@"15 mins ahead"]) {
         [offsetComponents setMinute:-15]; // note that I'm setting it to -1
     }
-    else if ([string isEqualToString:@"30 mins head"]) {
+    else if ([string isEqualToString:@"30 mins ahead"]) {
         [offsetComponents setMinute:-30]; // note that I'm setting it to -1
     }
-    else if ([string isEqualToString:@"1 hour head"]) {
+    else if ([string isEqualToString:@"1 hour ahead"]) {
         [offsetComponents setHour:-1]; // note that I'm setting it to -1
     }
-    else if ([string isEqualToString:@"5 hours head"]) {
+    else if ([string isEqualToString:@"5 hours ahead"]) {
         [offsetComponents setHour:-5]; // note that I'm setting it to -1
     }
-    else if ([string isEqualToString:@"1 day head"]) {
+    else if ([string isEqualToString:@"1 day ahead"]) {
         [offsetComponents setDay:-1]; // note that I'm setting it to -1
     }
     
@@ -198,6 +198,15 @@
         self.object.locationDescription = self.locationLabel.text;
         self.object.eventNote = self.noteField.text;
         self.object.group = self.selectedFriends;
+        
+        //sent notifications to all selected users
+        PFQuery *pushQuery = [PFInstallation query];
+        [pushQuery whereKey:@"owner" containedIn:self.selectedFriends];
+        
+        PFPush *push = [[PFPush alloc] init];
+        [push setQuery:pushQuery];
+        [push setMessage:[NSString stringWithFormat: @"%@ wants to add you to the event: %@", [PFUser currentUser].username, self.object.title]];
+        [push sendPushInBackground];
     
         [[ParsingHandle sharedParsing] insertNewObjectToDatabase:self.object];
         
