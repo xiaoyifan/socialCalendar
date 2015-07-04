@@ -807,7 +807,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOr-V1-X3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317" y="782"/>
+            <point key="canvasLocation" x="941" y="606"/>
         </scene>
         <!--profile-->
         <scene sceneID="SBv-c2-WFp">
@@ -895,7 +895,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcS-m3-cRt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="1846"/>
+            <point key="canvasLocation" x="183" y="1502"/>
+        </scene>
+        <!--About me-->
+        <scene sceneID="NwL-4z-BZx">
+            <objects>
+                <viewController id="7eD-3e-zxP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4W0-wi-Elp"/>
+                        <viewControllerLayoutGuide type="bottom" id="g3S-VT-vw0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I4U-ER-mha">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About me" image="me" id="NJu-cC-4bD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qg5-aW-JOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189" y="2356"/>
         </scene>
         <!--UserList-->
         <scene sceneID="OTw-Up-jD1">
@@ -972,7 +991,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2d-Ny-7SN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1615" y="1841"/>
+            <point key="canvasLocation" x="1743" y="1497"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BCK-HQ-TeT">
@@ -988,6 +1007,7 @@
                         <segue destination="z9d-gb-6i6" kind="relationship" relationship="viewControllers" id="zRd-g0-tCh"/>
                         <segue destination="NUb-Gt-f0q" kind="relationship" relationship="viewControllers" id="kNM-AO-c6H"/>
                         <segue destination="3Gc-cX-gER" kind="relationship" relationship="viewControllers" id="ib4-do-Fbb"/>
+                        <segue destination="7eD-3e-zxP" kind="relationship" relationship="viewControllers" id="IMz-8Q-uFi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UkK-Dv-pkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1066,7 +1086,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bw-qs-GBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493" y="782"/>
+            <point key="canvasLocation" x="-11" y="606"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a27-Ei-mm1">
@@ -1084,7 +1104,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIl-tZ-IZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917" y="1846"/>
+            <point key="canvasLocation" x="965" y="1502"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4ji-kv-exI">
@@ -1112,10 +1132,11 @@
         <image name="dismiss" width="25" height="25"/>
         <image name="friends" width="25" height="25"/>
         <image name="location" width="25" height="25"/>
+        <image name="me" width="25" height="25"/>
         <image name="pin" width="25" height="25"/>
         <image name="share" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AEd-hR-1b8"/>
+        <segue reference="TFM-Vn-6Ne"/>
     </inferredMetricsTieBreakers>
 </document>
