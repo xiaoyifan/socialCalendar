@@ -9,7 +9,7 @@
 #import "userTableViewController.h"
 #import "listTableViewCell.h"
 
-@interface userTableViewController ()<UISearchBarDelegate, UISearchResultsUpdating, UISearchDisplayDelegate>
+@interface userTableViewController ()<UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property IBOutlet UISearchBar *searchBar;
 @property (strong,nonatomic) NSMutableArray *filteredArray;
