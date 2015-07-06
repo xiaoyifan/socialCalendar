@@ -27,6 +27,7 @@
     self.titleLabel.text = eventObj.title;
     self.headerView.backgroundColor = self.backgroundColor;
     self.addressLabel.text = eventObj.locationDescription;
+    self.eventNoteLabel.text = eventObj.eventNote;
     
     [self.timeTable registerNib:[UINib nibWithNibName:@"StoreHourCell" bundle:nil] forCellReuseIdentifier:@"StoreHourCell"];
     
@@ -37,6 +38,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //return [self.store.hours count];
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -44,6 +46,8 @@
 //    LPStoreHourCell *cell = [tableView dequeueReusableCellWithIdentifier:kStoreHourCellReuseIdentifier forIndexPath:indexPath];
 //    [cell setupCellWithStoreHours:self.store.hours[indexPath.row]];
 //    return cell;
+    
+    return nil;
 }
 
 

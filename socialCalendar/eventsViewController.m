@@ -18,6 +18,7 @@
 #import "PresentingAnimator.h"
 #import "DismissingAnimator.h"
 #import "expireMarkingView.h"
+#import "SCEventInfoViewController.h"
 
 @interface eventsViewController ()<AAShareBubblesDelegate,MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
 
@@ -179,6 +180,21 @@
     
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self showStoreInfoViewWithEvent:self.events[indexPath.row]];
+}
+
+
+- (void)showStoreInfoViewWithEvent:(eventObject *)eventObj
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"eventDetail" bundle:nil];
+    SCEventInfoViewController *eventDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"eventDetailViewController"];
+    [eventDetailVC setupWithEvent:eventObj];
+    [self.navigationController pushViewController:eventDetailVC animated:YES];
+}
+
 
 -(void)addExpiredMarkToView:(UIView *)contentView{
     
@@ -541,23 +557,23 @@
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- 
-     if ([segue.identifier  isEqual: @"detailSegue"]) {
-         
-         detailViewController *controller = (detailViewController *)[segue destinationViewController];
-         
-         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-         
-         eventViewCell *cell = (eventViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-         
-         eventObject * selectedObject = [self.events objectAtIndex:indexPath.row];
-         //get the item tapped in the tableView
-         controller.detailObject = selectedObject;
-         controller.cardBackgroundColor = cell.topBar.backgroundColor;
-         
-     }
- }
+// - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+// 
+//     if ([segue.identifier  isEqual: @"detailSegue"]) {
+//         
+//         detailViewController *controller = (detailViewController *)[segue destinationViewController];
+//         
+//         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//         
+//         eventViewCell *cell = (eventViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+//         
+//         eventObject * selectedObject = [self.events objectAtIndex:indexPath.row];
+//         //get the item tapped in the tableView
+//         controller.detailObject = selectedObject;
+//         controller.cardBackgroundColor = cell.topBar.backgroundColor;
+//         
+//     }
+// }
 
 
 - (IBAction)logoutButtonPressed:(id)sender {

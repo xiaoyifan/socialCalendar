@@ -71,6 +71,8 @@
 		FFF2B98F1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF2B98E1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m */; };
 		FFF2B9951B4A15050039F9BB /* eventInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF2B9941B4A15050039F9BB /* eventInfo.xib */; };
 		FFF2B99A1B4A280E0039F9BB /* StoreHourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF2B9981B4A280E0039F9BB /* StoreHourCell.xib */; };
+		FFF2B9B31B4B1CEE0039F9BB /* eventDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF2B9B21B4B1CEE0039F9BB /* eventDetail.storyboard */; };
+		FFF2B9B61B4B2CB10039F9BB /* SCEventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF2B9B51B4B2CB10039F9BB /* SCEventInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +189,9 @@
 		FFF2B98E1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventDetailCollectionViewCell.m; sourceTree = "<group>"; };
 		FFF2B9941B4A15050039F9BB /* eventInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventInfo.xib; sourceTree = "<group>"; };
 		FFF2B9981B4A280E0039F9BB /* StoreHourCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreHourCell.xib; sourceTree = "<group>"; };
+		FFF2B9B21B4B1CEE0039F9BB /* eventDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = eventDetail.storyboard; sourceTree = "<group>"; };
+		FFF2B9B41B4B2CB10039F9BB /* SCEventInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventInfoViewController.h; sourceTree = "<group>"; };
+		FFF2B9B51B4B2CB10039F9BB /* SCEventInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,14 +251,15 @@
 		CC579CAE1B18030200115705 /* eventDetailScene */ = {
 			isa = PBXGroup;
 			children = (
-				FFF2B98A1B4A0D2E0039F9BB /* SCCollectionViewCell.h */,
-				FFF2B98B1B4A0D2E0039F9BB /* SCCollectionViewCell.m */,
+				FFF2B9B71B4B30550039F9BB /* eventDetailCell */,
 				CC579CAF1B18032700115705 /* detailViewController.h */,
 				CC579CB01B18032700115705 /* detailViewController.m */,
-				FFF2B98D1B4A0FE90039F9BB /* eventDetailCollectionViewCell.h */,
-				FFF2B98E1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m */,
-				FFF2B9941B4A15050039F9BB /* eventInfo.xib */,
+				FFF2B98A1B4A0D2E0039F9BB /* SCCollectionViewCell.h */,
+				FFF2B98B1B4A0D2E0039F9BB /* SCCollectionViewCell.m */,
+				FFF2B9B21B4B1CEE0039F9BB /* eventDetail.storyboard */,
 				FFF2B9981B4A280E0039F9BB /* StoreHourCell.xib */,
+				FFF2B9B41B4B2CB10039F9BB /* SCEventInfoViewController.h */,
+				FFF2B9B51B4B2CB10039F9BB /* SCEventInfoViewController.m */,
 			);
 			name = eventDetailScene;
 			sourceTree = "<group>";
@@ -384,8 +390,8 @@
 		CCF0A44B1B0BEEB8002F619B /* socialCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				FFDB42961B4848EE00785D6A /* expireMark */,
 				FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */,
+				FFDB42961B4848EE00785D6A /* expireMark */,
 				FFDB42911B47B70200785D6A /* Animator */,
 				FFDB42891B47B4F500785D6A /* categories */,
 				FFDB42851B47B48200785D6A /* popingVC */,
@@ -546,6 +552,16 @@
 			name = expireMark;
 			sourceTree = "<group>";
 		};
+		FFF2B9B71B4B30550039F9BB /* eventDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				FFF2B98D1B4A0FE90039F9BB /* eventDetailCollectionViewCell.h */,
+				FFF2B98E1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m */,
+				FFF2B9941B4A15050039F9BB /* eventInfo.xib */,
+			);
+			name = eventDetailCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -651,6 +667,7 @@
 				CCB59FF51B20360A0050352D /* Plus.png in Resources */,
 				CCF0A45A1B0BEEB8002F619B /* Images.xcassets in Resources */,
 				FFF2B99A1B4A280E0039F9BB /* StoreHourCell.xib in Resources */,
+				FFF2B9B31B4B1CEE0039F9BB /* eventDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +726,7 @@
 				CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */,
 				FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */,
 				FFF2B98C1B4A0D2E0039F9BB /* SCCollectionViewCell.m in Sources */,
+				FFF2B9B61B4B2CB10039F9BB /* SCEventInfoViewController.m in Sources */,
 				FFF2B98F1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m in Sources */,
 				FFDB42991B48491D00785D6A /* expireMarkingView.m in Sources */,
 				CCB5A02F1B2643BC0050352D /* RMParallax.swift in Sources */,

@@ -21,6 +21,9 @@ static NSString *const kEventInfoCellReuseIdentifier = @"eventDetail";
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 @property (weak, nonatomic) IBOutlet UITableView *timeTable;
+
+@property (weak, nonatomic) IBOutlet UILabel *eventNoteLabel;
+
 @property (strong, nonatomic)IBOutletCollection(NSLayoutConstraint) NSArray * separatorLinesHeightConstraints;
 @property (strong, nonatomic)IBOutletCollection(NSLayoutConstraint) NSArray * storeHoursHeightsConstraints;
 

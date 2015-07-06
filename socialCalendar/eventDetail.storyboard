@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Event Info View Controller-->
+        <scene sceneID="L0F-6c-oST">
+            <objects>
+                <viewController storyboardIdentifier="eventDetailViewController" id="O1U-Ka-ICX" customClass="SCEventInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R25-6Y-4Pe"/>
+                        <viewControllerLayoutGuide type="bottom" id="94B-Ra-PDy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ccX-X9-Zwo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vM4-gS-ss9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Rr-vp-5ah">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="50" height="267"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Y6O-QM-w2q">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="94B-Ra-PDy" firstAttribute="top" secondItem="vM4-gS-ss9" secondAttribute="bottom" id="Rl2-PB-wem"/>
+                            <constraint firstAttribute="trailing" secondItem="vM4-gS-ss9" secondAttribute="trailing" id="mvL-uw-fST"/>
+                            <constraint firstItem="vM4-gS-ss9" firstAttribute="top" secondItem="ccX-X9-Zwo" secondAttribute="top" id="nUo-kP-JRK"/>
+                            <constraint firstItem="vM4-gS-ss9" firstAttribute="leading" secondItem="ccX-X9-Zwo" secondAttribute="leading" id="yAv-bQ-zBH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vM4-gS-ss9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Rl2-PB-wem"/>
+                                <exclude reference="mvL-uw-fST"/>
+                                <exclude reference="nUo-kP-JRK"/>
+                                <exclude reference="yAv-bQ-zBH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vM4-gS-ss9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Rl2-PB-wem"/>
+                                <include reference="mvL-uw-fST"/>
+                                <include reference="nUo-kP-JRK"/>
+                                <include reference="yAv-bQ-zBH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49b-dq-hyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="370.5" y="339"/>
+        </scene>
+    </scenes>
+</document>
