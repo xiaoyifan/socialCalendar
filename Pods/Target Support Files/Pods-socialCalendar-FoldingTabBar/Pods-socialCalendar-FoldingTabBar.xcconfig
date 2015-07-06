@@ -1,1 +1,0 @@
-PODS_SOCIALCALENDAR_FOLDINGTABBAR_OTHER_LDFLAGS = -framework "QuartzCore" -framework "UIKit"

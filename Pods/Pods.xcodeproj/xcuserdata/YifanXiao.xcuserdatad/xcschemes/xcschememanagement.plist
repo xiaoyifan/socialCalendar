@@ -4,57 +4,57 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-socialCalendar-AAShareBubbles.xcscheme</key>
+		<key>AAShareBubbles.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-BLKFlexibleHeightBar.xcscheme</key>
+		<key>AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-DCModalSegue.xcscheme</key>
+		<key>BLKFlexibleHeightBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-FoldingTabBar.xcscheme</key>
+		<key>DCModalSegue.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-HSDatePickerViewController.xcscheme</key>
+		<key>FoldingTabBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-HexColors.xcscheme</key>
+		<key>HSDatePickerViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-JSQMessagesViewController.xcscheme</key>
+		<key>HexColors.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-JSQSystemSoundPlayer.xcscheme</key>
+		<key>JSQMessagesViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-JTCalendar.xcscheme</key>
+		<key>JSQSystemSoundPlayer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-MBProgressHUD.xcscheme</key>
+		<key>JTCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-pop.xcscheme</key>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -64,65 +64,75 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08B37F265A62DACBDB927BE7</key>
+		<key>00281F9FEDED8DD53247C42C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3C734E1A1B382CA49589B047</key>
+		<key>40DEE6B17C9553B1BD174E82</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>43C0B1FD1FD171E6A5818EBD</key>
+		<key>41C65E39735EEEA54CF6BEEE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>525DA744EA463F10140A1FE5</key>
+		<key>4FB2F6B48DB9AB3561DFF32B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5313BF8C289A41EACCDF55FE</key>
+		<key>521006CC05BA2E63FA69748B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>70CDDC898599ED2809833754</key>
+		<key>772C0F76A4F91714A54F6C84</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7374C1FC10EE84BC08428400</key>
+		<key>C34C24F80B7CAC8710673FFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8142D8CBB7584413C87A28A9</key>
+		<key>C52A61A1505AD2C710072BC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB572E638BC31D0A35AE9FDD</key>
+		<key>C92EBC2DA8E43C5110F8E320</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E27E37AFF49AB883B1892567</key>
+		<key>CCDCC64A52328C4D096A865A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E2DCE328EFF23B7DF2FF2407</key>
+		<key>D5604B1EF585F5F70A4CA4AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E7CD815C615AC78320196221</key>
+		<key>EB31607E42D137B362DAC18A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB67B041E0086FFCB7DCFFCA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -68,6 +68,10 @@
 		FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428F1B47B6DC00785D6A /* PresentingAnimator.m */; };
 		FFDB42951B47B71F00785D6A /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42941B47B71F00785D6A /* DismissingAnimator.m */; };
 		FFDB42991B48491D00785D6A /* expireMarkingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42981B48491D00785D6A /* expireMarkingView.m */; };
+		FFF2B99E1B4A2D1D0039F9BB /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF2B99D1B4A2D1D0039F9BB /* LPNetworkingManager.m */; };
+		FFF2B9A31B4A2D490039F9BB /* LPBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF2B9A01B4A2D490039F9BB /* LPBannerView.xib */; };
+		FFF2B9A41B4A2D490039F9BB /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF2B9A21B4A2D490039F9BB /* LPBannerView.m */; };
+		FFF2B9A71B4A2DC20039F9BB /* UIView+LoadNib.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF2B9A61B4A2DC20039F9BB /* UIView+LoadNib.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +181,13 @@
 		FFDB42941B47B71F00785D6A /* DismissingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissingAnimator.m; sourceTree = "<group>"; };
 		FFDB42971B48491D00785D6A /* expireMarkingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expireMarkingView.h; sourceTree = "<group>"; };
 		FFDB42981B48491D00785D6A /* expireMarkingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expireMarkingView.m; sourceTree = "<group>"; };
+		FFF2B99C1B4A2D1D0039F9BB /* LPNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNetworkingManager.h; sourceTree = "<group>"; };
+		FFF2B99D1B4A2D1D0039F9BB /* LPNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNetworkingManager.m; sourceTree = "<group>"; };
+		FFF2B9A01B4A2D490039F9BB /* LPBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPBannerView.xib; sourceTree = "<group>"; };
+		FFF2B9A11B4A2D490039F9BB /* LPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPBannerView.h; sourceTree = "<group>"; };
+		FFF2B9A21B4A2D490039F9BB /* LPBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPBannerView.m; sourceTree = "<group>"; };
+		FFF2B9A51B4A2DC20039F9BB /* UIView+LoadNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadNib.h"; sourceTree = "<group>"; };
+		FFF2B9A61B4A2DC20039F9BB /* UIView+LoadNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadNib.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +380,8 @@
 		CCF0A44B1B0BEEB8002F619B /* socialCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				FFF2B99F1B4A2D350039F9BB /* BannerView */,
+				FFF2B99B1B4A2D090039F9BB /* Networking */,
 				FFDB42961B4848EE00785D6A /* expireMark */,
 				FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */,
 				FFDB42911B47B70200785D6A /* Animator */,
@@ -488,6 +501,8 @@
 		FFDB42891B47B4F500785D6A /* categories */ = {
 			isa = PBXGroup;
 			children = (
+				FFF2B9A51B4A2DC20039F9BB /* UIView+LoadNib.h */,
+				FFF2B9A61B4A2DC20039F9BB /* UIView+LoadNib.m */,
 				FFDB428A1B47B50200785D6A /* UIColor+CustomColors.h */,
 				FFDB428B1B47B50200785D6A /* UIColor+CustomColors.m */,
 			);
@@ -528,6 +543,25 @@
 				FFDB42981B48491D00785D6A /* expireMarkingView.m */,
 			);
 			name = expireMark;
+			sourceTree = "<group>";
+		};
+		FFF2B99B1B4A2D090039F9BB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FFF2B99C1B4A2D1D0039F9BB /* LPNetworkingManager.h */,
+				FFF2B99D1B4A2D1D0039F9BB /* LPNetworkingManager.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		FFF2B99F1B4A2D350039F9BB /* BannerView */ = {
+			isa = PBXGroup;
+			children = (
+				FFF2B9A01B4A2D490039F9BB /* LPBannerView.xib */,
+				FFF2B9A11B4A2D490039F9BB /* LPBannerView.h */,
+				FFF2B9A21B4A2D490039F9BB /* LPBannerView.m */,
+			);
+			name = BannerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -630,6 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */,
+				FFF2B9A31B4A2D490039F9BB /* LPBannerView.xib in Resources */,
 				CCF0A45D1B0BEEB8002F619B /* LaunchScreen.xib in Resources */,
 				CCB59FF51B20360A0050352D /* Plus.png in Resources */,
 				CCF0A45A1B0BEEB8002F619B /* Images.xcassets in Resources */,
@@ -685,6 +720,7 @@
 			files = (
 				CCB59FF81B20F4A90050352D /* userTableViewCell.m in Sources */,
 				CCB5A02E1B2643BC0050352D /* RMParallaxItem.swift in Sources */,
+				FFF2B99E1B4A2D1D0039F9BB /* LPNetworkingManager.m in Sources */,
 				FFDB42951B47B71F00785D6A /* DismissingAnimator.m in Sources */,
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
@@ -694,6 +730,7 @@
 				CCB5A02F1B2643BC0050352D /* RMParallax.swift in Sources */,
 				CCB59FEE1B2031E40050352D /* FacebookStyleViewController.m in Sources */,
 				CCB59FFF1B212CE20050352D /* listTableViewCell.m in Sources */,
+				FFF2B9A41B4A2D490039F9BB /* LPBannerView.m in Sources */,
 				CCE344191B1BB02B001FB58F /* calendarTableViewCell.m in Sources */,
 				FF1BE66E1B35FC7600AF8886 /* ProgressHUD.m in Sources */,
 				CCB59FFC1B2119010050352D /* userTableViewController.m in Sources */,
@@ -709,6 +746,7 @@
 				CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */,
 				FFDB42881B47B49900785D6A /* popingViewController.m in Sources */,
 				CCF0A44F1B0BEEB8002F619B /* main.m in Sources */,
+				FFF2B9A71B4A2DC20039F9BB /* UIView+LoadNib.m in Sources */,
 				CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */,
 				CCC680E91B12CA430007DD85 /* eventsViewController.m in Sources */,
 			);

@@ -13,6 +13,7 @@ pod 'AAShareBubbles'
 pod 'BLKFlexibleHeightBar'
 pod 'MBProgressHUD'
 pod 'pop'
+pod 'AFNetworking'
 
 end
 
