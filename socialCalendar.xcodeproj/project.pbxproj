@@ -27,7 +27,6 @@
 		CCB5A0141B25DE7A0050352D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0131B25DE7A0050352D /* MediaPlayer.framework */; };
 		CCB5A0161B25E90C0050352D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0151B25E90C0050352D /* MessageUI.framework */; };
 		CCB5A0221B25F9240050352D /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0211B25F9240050352D /* libc++.dylib */; };
-		CCB5A0241B2625E10050352D /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0231B2625E10050352D /* libc++.1.dylib */; };
 		CCB5A0261B2626C80050352D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0251B2626C80050352D /* libWeChatSDK.a */; };
 		CCB5A02D1B2643BC0050352D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5A02A1B2643BC0050352D /* ViewController.swift */; };
 		CCB5A02E1B2643BC0050352D /* RMParallaxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5A02B1B2643BC0050352D /* RMParallaxItem.swift */; };
@@ -68,6 +67,10 @@
 		FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428F1B47B6DC00785D6A /* PresentingAnimator.m */; };
 		FFDB42951B47B71F00785D6A /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42941B47B71F00785D6A /* DismissingAnimator.m */; };
 		FFDB42991B48491D00785D6A /* expireMarkingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42981B48491D00785D6A /* expireMarkingView.m */; };
+		FFF2B98C1B4A0D2E0039F9BB /* SCCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF2B98B1B4A0D2E0039F9BB /* SCCollectionViewCell.m */; };
+		FFF2B98F1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF2B98E1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m */; };
+		FFF2B9951B4A15050039F9BB /* eventInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF2B9941B4A15050039F9BB /* eventInfo.xib */; };
+		FFF2B99A1B4A280E0039F9BB /* StoreHourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF2B9981B4A280E0039F9BB /* StoreHourCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +170,7 @@
 		FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = socialCalendar.entitlements; sourceTree = "<group>"; };
 		FF1BE66C1B35FC7600AF8886 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		FF5DC0E71B49D342006369C9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FFDB42861B47B49900785D6A /* popingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popingViewController.h; sourceTree = "<group>"; };
 		FFDB42871B47B49900785D6A /* popingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popingViewController.m; sourceTree = "<group>"; };
 		FFDB428A1B47B50200785D6A /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
@@ -177,6 +181,12 @@
 		FFDB42941B47B71F00785D6A /* DismissingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissingAnimator.m; sourceTree = "<group>"; };
 		FFDB42971B48491D00785D6A /* expireMarkingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expireMarkingView.h; sourceTree = "<group>"; };
 		FFDB42981B48491D00785D6A /* expireMarkingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expireMarkingView.m; sourceTree = "<group>"; };
+		FFF2B98A1B4A0D2E0039F9BB /* SCCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCollectionViewCell.h; sourceTree = "<group>"; };
+		FFF2B98B1B4A0D2E0039F9BB /* SCCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCollectionViewCell.m; sourceTree = "<group>"; };
+		FFF2B98D1B4A0FE90039F9BB /* eventDetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventDetailCollectionViewCell.h; sourceTree = "<group>"; };
+		FFF2B98E1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventDetailCollectionViewCell.m; sourceTree = "<group>"; };
+		FFF2B9941B4A15050039F9BB /* eventInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventInfo.xib; sourceTree = "<group>"; };
+		FFF2B9981B4A280E0039F9BB /* StoreHourCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreHourCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +194,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCB5A0241B2625E10050352D /* libc++.1.dylib in Frameworks */,
 				CCB5A0221B25F9240050352D /* libc++.dylib in Frameworks */,
 				CCB5A0161B25E90C0050352D /* MessageUI.framework in Frameworks */,
 				CCB5A0141B25DE7A0050352D /* MediaPlayer.framework in Frameworks */,
@@ -237,8 +246,14 @@
 		CC579CAE1B18030200115705 /* eventDetailScene */ = {
 			isa = PBXGroup;
 			children = (
+				FFF2B98A1B4A0D2E0039F9BB /* SCCollectionViewCell.h */,
+				FFF2B98B1B4A0D2E0039F9BB /* SCCollectionViewCell.m */,
 				CC579CAF1B18032700115705 /* detailViewController.h */,
 				CC579CB01B18032700115705 /* detailViewController.m */,
+				FFF2B98D1B4A0FE90039F9BB /* eventDetailCollectionViewCell.h */,
+				FFF2B98E1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m */,
+				FFF2B9941B4A15050039F9BB /* eventInfo.xib */,
+				FFF2B9981B4A280E0039F9BB /* StoreHourCell.xib */,
 			);
 			name = eventDetailScene;
 			sourceTree = "<group>";
@@ -451,6 +466,7 @@
 		D039DA7C97DEC38A4668DA3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF5DC0E71B49D342006369C9 /* StoreKit.framework */,
 				CCB5A0231B2625E10050352D /* libc++.1.dylib */,
 				CCB5A0211B25F9240050352D /* libc++.dylib */,
 				CCB5A0151B25E90C0050352D /* MessageUI.framework */,
@@ -629,10 +645,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF2B9951B4A15050039F9BB /* eventInfo.xib in Resources */,
 				CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */,
 				CCF0A45D1B0BEEB8002F619B /* LaunchScreen.xib in Resources */,
 				CCB59FF51B20360A0050352D /* Plus.png in Resources */,
 				CCF0A45A1B0BEEB8002F619B /* Images.xcassets in Resources */,
+				FFF2B99A1B4A280E0039F9BB /* StoreHourCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +708,8 @@
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
 				CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */,
 				FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */,
+				FFF2B98C1B4A0D2E0039F9BB /* SCCollectionViewCell.m in Sources */,
+				FFF2B98F1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m in Sources */,
 				FFDB42991B48491D00785D6A /* expireMarkingView.m in Sources */,
 				CCB5A02F1B2643BC0050352D /* RMParallax.swift in Sources */,
 				CCB59FEE1B2031E40050352D /* FacebookStyleViewController.m in Sources */,
