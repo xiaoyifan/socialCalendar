@@ -4,7 +4,6 @@
 target 'socialCalendar' do
     
 pod 'FoldingTabBar', '~> 1.0.0'
-pod 'JSQMessagesViewController'
 pod 'JTCalendar'
 pod 'DCModalSegue'
 pod 'HSDatePickerViewController'
@@ -13,6 +12,11 @@ pod 'AAShareBubbles'
 pod 'BLKFlexibleHeightBar'
 pod 'MBProgressHUD'
 pod 'pop'
+pod 'AFNetworking'
+pod 'JSQMessagesViewController'
+pod 'JSQSystemSoundPlayer'
+pod 'RNGridMenu'
+pod 'IDMPhotoBrowser'
 
 end
 

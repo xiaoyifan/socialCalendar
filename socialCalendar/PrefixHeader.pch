@@ -23,4 +23,6 @@
 #import "EventKitUI/EventKitUI.h"
 #import "HexColor.h"
 
+#import "SCConstants.h"
+
 #endif

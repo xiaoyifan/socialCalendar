@@ -1,0 +1,1 @@
+DCMODALSEGUE_OTHER_LDFLAGS = -framework "QuartzCore"

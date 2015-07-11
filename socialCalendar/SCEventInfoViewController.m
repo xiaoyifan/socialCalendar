@@ -7,8 +7,15 @@
 //
 
 #import "SCEventInfoViewController.h"
+#import "eventDetailDataController.h"
 
-@interface SCEventInfoViewController ()
+@interface SCEventInfoViewController ()<eventDetailDataControllerDelegate>
+
+@property (strong, nonatomic) eventObject *event;
+
+@property (weak, nonatomic) IBOutlet UITableView *storeInfoTableView;
+
+@property (strong, nonatomic) eventDetailDataController *eventDetailDataController;
 
 @end
 
@@ -17,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupDataController];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,18 +34,30 @@
 
 - (void)setupWithEvent:(eventObject *)eventObj{
     
-        
+    self.event = eventObj;
 }
 
+#pragma mark - Private Methods
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setupDataController
+{
+    [self.eventDetailDataController setupWithDelegate:self event:self.event tableView:self.storeInfoTableView];
 }
-*/
+
+#pragma mark - Accessors
+
+- (eventDetailDataController *)eventDetailDataController
+{
+    if (!_eventDetailDataController) {
+        _eventDetailDataController = [eventDetailDataController new];
+    }
+    return _eventDetailDataController;
+}
+
+-(void)eventDetailDataController:(eventDetailDataController *)dataController didSelectAtIndexPath:(NSIndexPath *)indexPath{
+//    if (indexPath.row == LPStoreInfoModuleTypeAddress) {
+//        [LPLocationManager openMapsWithStore:self.store];
+//    }
+}
 
 @end

@@ -62,15 +62,16 @@
 		CCF0A4981B0BF21F002F619B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A4971B0BF21F002F619B /* libsqlite3.dylib */; };
 		D65661636D9610AC9C3A8E9C /* libPods-socialCalendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EDD79DA0424417BCB1D051 /* libPods-socialCalendar.a */; };
 		FF1BE66E1B35FC7600AF8886 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */; };
+		FF286BC91B51A7C600F7D166 /* eventDetailDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BC81B51A7C600F7D166 /* eventDetailDataController.m */; };
+		FF286BD01B51B51C00F7D166 /* SCEventNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BCB1B51B51C00F7D166 /* SCEventNameTableViewCell.m */; };
+		FF286BD11B51B51C00F7D166 /* SCEventNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF286BCC1B51B51C00F7D166 /* SCEventNameTableViewCell.xib */; };
+		FF286BD21B51B51C00F7D166 /* SCEventAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BCE1B51B51C00F7D166 /* SCEventAddressTableViewCell.m */; };
+		FF286BD31B51B51C00F7D166 /* SCEventAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF286BCF1B51B51C00F7D166 /* SCEventAddressTableViewCell.xib */; };
 		FFDB42881B47B49900785D6A /* popingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42871B47B49900785D6A /* popingViewController.m */; };
 		FFDB428C1B47B50200785D6A /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428B1B47B50200785D6A /* UIColor+CustomColors.m */; };
 		FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428F1B47B6DC00785D6A /* PresentingAnimator.m */; };
 		FFDB42951B47B71F00785D6A /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42941B47B71F00785D6A /* DismissingAnimator.m */; };
 		FFDB42991B48491D00785D6A /* expireMarkingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42981B48491D00785D6A /* expireMarkingView.m */; };
-		FFF2B98C1B4A0D2E0039F9BB /* SCCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF2B98B1B4A0D2E0039F9BB /* SCCollectionViewCell.m */; };
-		FFF2B98F1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF2B98E1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m */; };
-		FFF2B9951B4A15050039F9BB /* eventInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF2B9941B4A15050039F9BB /* eventInfo.xib */; };
-		FFF2B99A1B4A280E0039F9BB /* StoreHourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF2B9981B4A280E0039F9BB /* StoreHourCell.xib */; };
 		FFF2B9B31B4B1CEE0039F9BB /* eventDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF2B9B21B4B1CEE0039F9BB /* eventDetail.storyboard */; };
 		FFF2B9B61B4B2CB10039F9BB /* SCEventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF2B9B51B4B2CB10039F9BB /* SCEventInfoViewController.m */; };
 /* End PBXBuildFile section */
@@ -172,6 +173,15 @@
 		FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = socialCalendar.entitlements; sourceTree = "<group>"; };
 		FF1BE66C1B35FC7600AF8886 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		FF286BC71B51A7C600F7D166 /* eventDetailDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventDetailDataController.h; sourceTree = "<group>"; };
+		FF286BC81B51A7C600F7D166 /* eventDetailDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventDetailDataController.m; sourceTree = "<group>"; };
+		FF286BCA1B51B51C00F7D166 /* SCEventNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventNameTableViewCell.h; sourceTree = "<group>"; };
+		FF286BCB1B51B51C00F7D166 /* SCEventNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventNameTableViewCell.m; sourceTree = "<group>"; };
+		FF286BCC1B51B51C00F7D166 /* SCEventNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCEventNameTableViewCell.xib; sourceTree = "<group>"; };
+		FF286BCD1B51B51C00F7D166 /* SCEventAddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventAddressTableViewCell.h; sourceTree = "<group>"; };
+		FF286BCE1B51B51C00F7D166 /* SCEventAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventAddressTableViewCell.m; sourceTree = "<group>"; };
+		FF286BCF1B51B51C00F7D166 /* SCEventAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCEventAddressTableViewCell.xib; sourceTree = "<group>"; };
+		FF286BD41B51BB2E00F7D166 /* SCConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SCConstants.h; path = ../SCConstants.h; sourceTree = "<group>"; };
 		FF5DC0E71B49D342006369C9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FFDB42861B47B49900785D6A /* popingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popingViewController.h; sourceTree = "<group>"; };
 		FFDB42871B47B49900785D6A /* popingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popingViewController.m; sourceTree = "<group>"; };
@@ -183,12 +193,6 @@
 		FFDB42941B47B71F00785D6A /* DismissingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissingAnimator.m; sourceTree = "<group>"; };
 		FFDB42971B48491D00785D6A /* expireMarkingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expireMarkingView.h; sourceTree = "<group>"; };
 		FFDB42981B48491D00785D6A /* expireMarkingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expireMarkingView.m; sourceTree = "<group>"; };
-		FFF2B98A1B4A0D2E0039F9BB /* SCCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCollectionViewCell.h; sourceTree = "<group>"; };
-		FFF2B98B1B4A0D2E0039F9BB /* SCCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCollectionViewCell.m; sourceTree = "<group>"; };
-		FFF2B98D1B4A0FE90039F9BB /* eventDetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventDetailCollectionViewCell.h; sourceTree = "<group>"; };
-		FFF2B98E1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventDetailCollectionViewCell.m; sourceTree = "<group>"; };
-		FFF2B9941B4A15050039F9BB /* eventInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventInfo.xib; sourceTree = "<group>"; };
-		FFF2B9981B4A280E0039F9BB /* StoreHourCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreHourCell.xib; sourceTree = "<group>"; };
 		FFF2B9B21B4B1CEE0039F9BB /* eventDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = eventDetail.storyboard; sourceTree = "<group>"; };
 		FFF2B9B41B4B2CB10039F9BB /* SCEventInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventInfoViewController.h; sourceTree = "<group>"; };
 		FFF2B9B51B4B2CB10039F9BB /* SCEventInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventInfoViewController.m; sourceTree = "<group>"; };
@@ -251,15 +255,13 @@
 		CC579CAE1B18030200115705 /* eventDetailScene */ = {
 			isa = PBXGroup;
 			children = (
+				FF286BC61B51A70300F7D166 /* originalDetailVC */,
 				FFF2B9B71B4B30550039F9BB /* eventDetailCell */,
-				CC579CAF1B18032700115705 /* detailViewController.h */,
-				CC579CB01B18032700115705 /* detailViewController.m */,
-				FFF2B98A1B4A0D2E0039F9BB /* SCCollectionViewCell.h */,
-				FFF2B98B1B4A0D2E0039F9BB /* SCCollectionViewCell.m */,
 				FFF2B9B21B4B1CEE0039F9BB /* eventDetail.storyboard */,
-				FFF2B9981B4A280E0039F9BB /* StoreHourCell.xib */,
 				FFF2B9B41B4B2CB10039F9BB /* SCEventInfoViewController.h */,
 				FFF2B9B51B4B2CB10039F9BB /* SCEventInfoViewController.m */,
+				FF286BC71B51A7C600F7D166 /* eventDetailDataController.h */,
+				FF286BC81B51A7C600F7D166 /* eventDetailDataController.m */,
 			);
 			name = eventDetailScene;
 			sourceTree = "<group>";
@@ -390,6 +392,7 @@
 		CCF0A44B1B0BEEB8002F619B /* socialCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				FF286BD41B51BB2E00F7D166 /* SCConstants.h */,
 				FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */,
 				FFDB42961B4848EE00785D6A /* expireMark */,
 				FFDB42911B47B70200785D6A /* Animator */,
@@ -498,6 +501,15 @@
 			name = loadingIndicator;
 			sourceTree = "<group>";
 		};
+		FF286BC61B51A70300F7D166 /* originalDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				CC579CAF1B18032700115705 /* detailViewController.h */,
+				CC579CB01B18032700115705 /* detailViewController.m */,
+			);
+			name = originalDetailVC;
+			sourceTree = "<group>";
+		};
 		FFDB42851B47B48200785D6A /* popingVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -555,9 +567,12 @@
 		FFF2B9B71B4B30550039F9BB /* eventDetailCell */ = {
 			isa = PBXGroup;
 			children = (
-				FFF2B98D1B4A0FE90039F9BB /* eventDetailCollectionViewCell.h */,
-				FFF2B98E1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m */,
-				FFF2B9941B4A15050039F9BB /* eventInfo.xib */,
+				FF286BCA1B51B51C00F7D166 /* SCEventNameTableViewCell.h */,
+				FF286BCB1B51B51C00F7D166 /* SCEventNameTableViewCell.m */,
+				FF286BCC1B51B51C00F7D166 /* SCEventNameTableViewCell.xib */,
+				FF286BCD1B51B51C00F7D166 /* SCEventAddressTableViewCell.h */,
+				FF286BCE1B51B51C00F7D166 /* SCEventAddressTableViewCell.m */,
+				FF286BCF1B51B51C00F7D166 /* SCEventAddressTableViewCell.xib */,
 			);
 			name = eventDetailCell;
 			sourceTree = "<group>";
@@ -661,12 +676,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFF2B9951B4A15050039F9BB /* eventInfo.xib in Resources */,
+				FF286BD31B51B51C00F7D166 /* SCEventAddressTableViewCell.xib in Resources */,
 				CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */,
 				CCF0A45D1B0BEEB8002F619B /* LaunchScreen.xib in Resources */,
+				FF286BD11B51B51C00F7D166 /* SCEventNameTableViewCell.xib in Resources */,
 				CCB59FF51B20360A0050352D /* Plus.png in Resources */,
 				CCF0A45A1B0BEEB8002F619B /* Images.xcassets in Resources */,
-				FFF2B99A1B4A280E0039F9BB /* StoreHourCell.xib in Resources */,
 				FFF2B9B31B4B1CEE0039F9BB /* eventDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,19 +735,20 @@
 			files = (
 				CCB59FF81B20F4A90050352D /* userTableViewCell.m in Sources */,
 				CCB5A02E1B2643BC0050352D /* RMParallaxItem.swift in Sources */,
+				FF286BC91B51A7C600F7D166 /* eventDetailDataController.m in Sources */,
 				FFDB42951B47B71F00785D6A /* DismissingAnimator.m in Sources */,
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
 				CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */,
 				FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */,
-				FFF2B98C1B4A0D2E0039F9BB /* SCCollectionViewCell.m in Sources */,
 				FFF2B9B61B4B2CB10039F9BB /* SCEventInfoViewController.m in Sources */,
-				FFF2B98F1B4A0FE90039F9BB /* eventDetailCollectionViewCell.m in Sources */,
 				FFDB42991B48491D00785D6A /* expireMarkingView.m in Sources */,
 				CCB5A02F1B2643BC0050352D /* RMParallax.swift in Sources */,
 				CCB59FEE1B2031E40050352D /* FacebookStyleViewController.m in Sources */,
 				CCB59FFF1B212CE20050352D /* listTableViewCell.m in Sources */,
+				FF286BD21B51B51C00F7D166 /* SCEventAddressTableViewCell.m in Sources */,
 				CCE344191B1BB02B001FB58F /* calendarTableViewCell.m in Sources */,
+				FF286BD01B51B51C00F7D166 /* SCEventNameTableViewCell.m in Sources */,
 				FF1BE66E1B35FC7600AF8886 /* ProgressHUD.m in Sources */,
 				CCB59FFC1B2119010050352D /* userTableViewController.m in Sources */,
 				CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */,

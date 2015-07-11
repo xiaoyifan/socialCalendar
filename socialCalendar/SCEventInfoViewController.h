@@ -10,7 +10,11 @@
 
 @interface SCEventInfoViewController : UIViewController
 
-
+/**
+ *  Set the detail View Controller with specified event
+ *
+ *  @param eventObj The event object.
+ */
 - (void)setupWithEvent:(eventObject *)eventObj;
 
 

@@ -4,57 +4,67 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-socialCalendar-AAShareBubbles.xcscheme</key>
+		<key>AAShareBubbles.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-BLKFlexibleHeightBar.xcscheme</key>
+		<key>AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-DCModalSegue.xcscheme</key>
+		<key>BLKFlexibleHeightBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-FoldingTabBar.xcscheme</key>
+		<key>DACircularProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-HSDatePickerViewController.xcscheme</key>
+		<key>DCModalSegue.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-HexColors.xcscheme</key>
+		<key>FoldingTabBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-JSQMessagesViewController.xcscheme</key>
+		<key>HSDatePickerViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-JSQSystemSoundPlayer.xcscheme</key>
+		<key>HexColors.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-JTCalendar.xcscheme</key>
+		<key>IDMPhotoBrowser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-MBProgressHUD.xcscheme</key>
+		<key>JSQMessagesViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-socialCalendar-pop.xcscheme</key>
+		<key>JSQSystemSoundPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JTCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -64,65 +74,95 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RNGridMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08B37F265A62DACBDB927BE7</key>
+		<key>026182A9966D15855088CE00</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3C734E1A1B382CA49589B047</key>
+		<key>1C2ABF6C138AB3EB9C4A7F22</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>43C0B1FD1FD171E6A5818EBD</key>
+		<key>219E9F85B34E28AA49808F4F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>525DA744EA463F10140A1FE5</key>
+		<key>2996189B6F8F0DC2C41ECA52</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5313BF8C289A41EACCDF55FE</key>
+		<key>2A8B5FBA2048D8F9CA4B0EBF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>70CDDC898599ED2809833754</key>
+		<key>325257BE9BE5D9ECA85FCFCE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7374C1FC10EE84BC08428400</key>
+		<key>5A2FE93E3E925BC72FD9E0D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8142D8CBB7584413C87A28A9</key>
+		<key>5CA68F1A0F12C5F1D0EA4361</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB572E638BC31D0A35AE9FDD</key>
+		<key>7DEB93C9C2BF5299E75EF66A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E27E37AFF49AB883B1892567</key>
+		<key>93F6611EFD2C3B8C2F5C5A0F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E2DCE328EFF23B7DF2FF2407</key>
+		<key>ADC1931683350100CBB719D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E7CD815C615AC78320196221</key>
+		<key>BE993298463EF744E6D89790</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CB717DEF4957DD16A2591CAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA000A1F4EFAF20BBF312846</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDDB770BEC29378C42AA6143</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E002C0E0E543EAC4E526A822</key>
 		<dict>
 			<key>primary</key>
 			<true/>

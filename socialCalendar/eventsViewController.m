@@ -183,11 +183,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [self showStoreInfoViewWithEvent:self.events[indexPath.row]];
+    [self showEventInfoViewWithEvent:self.events[indexPath.row]];
 }
 
 
-- (void)showStoreInfoViewWithEvent:(eventObject *)eventObj
+- (void)showEventInfoViewWithEvent:(eventObject *)eventObj
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"eventDetail" bundle:nil];
     SCEventInfoViewController *eventDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"eventDetailViewController"];
