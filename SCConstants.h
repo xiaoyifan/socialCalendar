@@ -8,13 +8,17 @@
 
 #ifndef socialCalendar_SCConstants_h
 
+#pragma mark -- TableViewCells
 static NSString *const kEventNameCellIdentifier = @"eventNameTableViewCell";
 static NSString *const kEventAddressCellIdentifier = @"eventAddressTableViewCell";
 
-
+#pragma mark -- Nib Files
 static NSString *const kEventNameCellNibName = @"SCEventNameTableViewCell";
 static NSString *const kEventAddressCellNibName = @"SCEventAddressTableViewCell";
 
+#pragma mark -- Strings & Titles
+
+static NSString *const kEventDetailTitle = @"Event Detail";
 
 #define socialCalendar_SCConstants_h
 

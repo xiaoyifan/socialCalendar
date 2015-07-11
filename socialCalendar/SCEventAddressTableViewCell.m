@@ -7,6 +7,7 @@
 //
 
 #import "SCEventAddressTableViewCell.h"
+#import "UIColor+CustomColors.h"
 
 @interface SCEventAddressTableViewCell ()
 
@@ -20,6 +21,7 @@
 - (void)setupWithEvent:(eventObject *)event
 {
         self.titleLabel.text = @"ADDRESS";
+        self.titleLabel.textColor = [UIColor customBlueColor];
         self.descriptionLabel.text = event.locationDescription;
 }
 
