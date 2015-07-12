@@ -8,7 +8,7 @@
         <!--Event Info View Controller-->
         <scene sceneID="L0F-6c-oST">
             <objects>
-                <viewController storyboardIdentifier="eventDetailViewController" id="O1U-Ka-ICX" customClass="SCEventInfoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="eventDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="O1U-Ka-ICX" customClass="SCEventInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R25-6Y-4Pe"/>
                         <viewControllerLayoutGuide type="bottom" id="94B-Ra-PDy"/>
@@ -23,14 +23,10 @@
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Rr-vp-5ah">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="50" height="267"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
-                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Y6O-QM-w2q">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </collectionReusableView>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BuJ-1H-LUN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -44,17 +40,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BuJ-1H-LUN" firstAttribute="leading" secondItem="ccX-X9-Zwo" secondAttribute="leading" id="076-rF-mtp"/>
+                            <constraint firstItem="BuJ-1H-LUN" firstAttribute="top" secondItem="R25-6Y-4Pe" secondAttribute="bottom" id="A6x-dw-w8d"/>
                             <constraint firstItem="BuJ-1H-LUN" firstAttribute="top" secondItem="ccX-X9-Zwo" secondAttribute="topMargin" id="HpS-lP-QLe"/>
                             <constraint firstItem="94B-Ra-PDy" firstAttribute="top" secondItem="BuJ-1H-LUN" secondAttribute="bottom" id="J47-mk-ark"/>
-                            <constraint firstItem="BuJ-1H-LUN" firstAttribute="top" secondItem="R25-6Y-4Pe" secondAttribute="bottom" id="LDW-Qo-4za"/>
+                            <constraint firstItem="94B-Ra-PDy" firstAttribute="top" secondItem="BuJ-1H-LUN" secondAttribute="bottom" id="LbQ-gy-UjJ"/>
                             <constraint firstItem="94B-Ra-PDy" firstAttribute="top" secondItem="vM4-gS-ss9" secondAttribute="bottom" id="Rl2-PB-wem"/>
-                            <constraint firstItem="94B-Ra-PDy" firstAttribute="top" secondItem="BuJ-1H-LUN" secondAttribute="bottom" id="c7t-aK-K3Q"/>
-                            <constraint firstAttribute="trailing" secondItem="BuJ-1H-LUN" secondAttribute="trailing" id="d6F-II-Ie2"/>
+                            <constraint firstItem="BuJ-1H-LUN" firstAttribute="leading" secondItem="ccX-X9-Zwo" secondAttribute="leading" id="bwC-Ce-ke9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BuJ-1H-LUN" secondAttribute="trailing" id="dsi-v5-UNq"/>
                             <constraint firstItem="BuJ-1H-LUN" firstAttribute="leading" secondItem="ccX-X9-Zwo" secondAttribute="leadingMargin" id="fIX-b3-7rc"/>
                             <constraint firstAttribute="trailing" secondItem="vM4-gS-ss9" secondAttribute="trailing" id="mvL-uw-fST"/>
                             <constraint firstItem="vM4-gS-ss9" firstAttribute="top" secondItem="ccX-X9-Zwo" secondAttribute="top" id="nUo-kP-JRK"/>
+                            <constraint firstAttribute="trailing" secondItem="BuJ-1H-LUN" secondAttribute="trailing" id="qFO-Fp-jZO"/>
                             <constraint firstItem="BuJ-1H-LUN" firstAttribute="top" secondItem="ccX-X9-Zwo" secondAttribute="top" id="vxA-t9-gMc"/>
                             <constraint firstItem="vM4-gS-ss9" firstAttribute="leading" secondItem="ccX-X9-Zwo" secondAttribute="leading" id="yAv-bQ-zBH"/>
                         </constraints>
@@ -64,19 +60,19 @@
                                 <exclude reference="BuJ-1H-LUN"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="076-rF-mtp"/>
-                                <exclude reference="HpS-lP-QLe"/>
-                                <exclude reference="LDW-Qo-4za"/>
-                                <exclude reference="d6F-II-Ie2"/>
-                                <exclude reference="dsi-v5-UNq"/>
-                                <exclude reference="fIX-b3-7rc"/>
-                                <exclude reference="vxA-t9-gMc"/>
-                                <exclude reference="J47-mk-ark"/>
-                                <exclude reference="Rl2-PB-wem"/>
-                                <exclude reference="c7t-aK-K3Q"/>
                                 <exclude reference="mvL-uw-fST"/>
                                 <exclude reference="nUo-kP-JRK"/>
                                 <exclude reference="yAv-bQ-zBH"/>
+                                <exclude reference="A6x-dw-w8d"/>
+                                <exclude reference="HpS-lP-QLe"/>
+                                <exclude reference="bwC-Ce-ke9"/>
+                                <exclude reference="dsi-v5-UNq"/>
+                                <exclude reference="fIX-b3-7rc"/>
+                                <exclude reference="qFO-Fp-jZO"/>
+                                <exclude reference="vxA-t9-gMc"/>
+                                <exclude reference="J47-mk-ark"/>
+                                <exclude reference="LbQ-gy-UjJ"/>
+                                <exclude reference="Rl2-PB-wem"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -85,19 +81,19 @@
                                 <include reference="BuJ-1H-LUN"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="076-rF-mtp"/>
+                                <exclude reference="mvL-uw-fST"/>
+                                <exclude reference="nUo-kP-JRK"/>
+                                <exclude reference="yAv-bQ-zBH"/>
+                                <include reference="A6x-dw-w8d"/>
                                 <exclude reference="HpS-lP-QLe"/>
-                                <include reference="LDW-Qo-4za"/>
-                                <include reference="d6F-II-Ie2"/>
+                                <include reference="bwC-Ce-ke9"/>
                                 <exclude reference="dsi-v5-UNq"/>
                                 <exclude reference="fIX-b3-7rc"/>
+                                <include reference="qFO-Fp-jZO"/>
                                 <exclude reference="vxA-t9-gMc"/>
                                 <exclude reference="J47-mk-ark"/>
+                                <include reference="LbQ-gy-UjJ"/>
                                 <exclude reference="Rl2-PB-wem"/>
-                                <include reference="c7t-aK-K3Q"/>
-                                <include reference="mvL-uw-fST"/>
-                                <include reference="nUo-kP-JRK"/>
-                                <include reference="yAv-bQ-zBH"/>
                             </mask>
                         </variation>
                     </view>

@@ -20,8 +20,8 @@
     
     [self registerNibs];
     
-    //self.tableView.tableHeaderView = self.mapController.mapView;
-    self.tableView.tableHeaderView.frame = CGRectMake(0.0f, 0.0f, CGRectGetWidth(tableView.frame), 500.0f);
+    self.tableView.tableHeaderView = self.mapController.mapView;
+    self.tableView.tableHeaderView.frame = CGRectMake(0.0f, 0.0f, CGRectGetWidth(tableView.frame), 260.0f);
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.tableView.dataSource = self;
@@ -29,15 +29,13 @@
     [self.tableView reloadData];
 }
 
-#pragma mark - Accessors
-
-//- (LPStoreMapController *)mapController
-//{
-//    if (!_mapController) {
-//        _mapController = [[LPStoreMapController alloc] initWithStores:@[self.store]];
-//    }
-//    return _mapController;
-//}
+- (SCEventMapController *)mapController
+{
+    if (!_mapController) {
+        _mapController = [[SCEventMapController alloc] initWithStores:@[self.event]];
+    }
+    return _mapController;
+}
 
 #pragma mark - Private Methods
 
@@ -70,7 +68,7 @@
             cell = [tableView dequeueReusableCellWithIdentifier:eventAddressTableViewCellIdentifier forIndexPath:indexPath];
             [( (SCEventAddressTableViewCell *)cell ) setupWithEvent:self.event withRowType:indexPath.row];
             break;
-            
+
         default:
             break;
     }
@@ -82,6 +80,14 @@
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    return UITableViewAutomaticDimension;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == SCEventDetailModuleTypeName) {
+        return 120.0;
+    }
+    
     return UITableViewAutomaticDimension;
 }
 

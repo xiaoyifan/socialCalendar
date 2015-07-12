@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SCEventMapController.h"
 
 typedef NS_ENUM(NSInteger, SCEventDetailModuleType)
 {
@@ -36,7 +37,9 @@ typedef NS_ENUM(NSInteger, SCEventDetailModuleType)
 @property (weak, nonatomic) id <eventDetailDataControllerDelegate> delegate;
 @property (weak, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) eventObject *event;
-//@property (strong, nonatomic) LPStoreMapController *mapController;
+
+@property (strong, nonatomic) SCEventMapController *mapController;
+
 
 /**
  *  Setup the data controller.

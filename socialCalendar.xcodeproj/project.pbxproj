@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC579CB11B18032700115705 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC579CB01B18032700115705 /* detailViewController.m */; };
 		CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81CD0C1B1448A00039EA60 /* mapViewController.m */; };
 		CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81CD0F1B1448FD0039EA60 /* MyLocation.m */; };
 		CC81CD121B14F43B0039EA60 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC81CD111B14F43B0039EA60 /* MapKit.framework */; };
@@ -67,6 +66,9 @@
 		FF286BD11B51B51C00F7D166 /* SCEventNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF286BCC1B51B51C00F7D166 /* SCEventNameTableViewCell.xib */; };
 		FF286BD21B51B51C00F7D166 /* SCEventAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BCE1B51B51C00F7D166 /* SCEventAddressTableViewCell.m */; };
 		FF286BD31B51B51C00F7D166 /* SCEventAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF286BCF1B51B51C00F7D166 /* SCEventAddressTableViewCell.xib */; };
+		FF286BDD1B52273E00F7D166 /* SCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BDC1B52273E00F7D166 /* SCLocationManager.m */; };
+		FF286BE31B522A1A00F7D166 /* SCEventMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BE21B522A1A00F7D166 /* SCEventMapController.m */; };
+		FF286BE61B52321800F7D166 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BE51B52321800F7D166 /* detailViewController.m */; };
 		FFDB42881B47B49900785D6A /* popingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42871B47B49900785D6A /* popingViewController.m */; };
 		FFDB428C1B47B50200785D6A /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428B1B47B50200785D6A /* UIColor+CustomColors.m */; };
 		FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428F1B47B6DC00785D6A /* PresentingAnimator.m */; };
@@ -89,8 +91,6 @@
 /* Begin PBXFileReference section */
 		008107CB8CF00338DC111110 /* Pods-socialCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-socialCalendar/Pods-socialCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		30F1B6E1F8520A242EE2DB5A /* Pods-socialCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-socialCalendar/Pods-socialCalendar.debug.xcconfig"; sourceTree = "<group>"; };
-		CC579CAF1B18032700115705 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
-		CC579CB01B18032700115705 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		CC81CD0B1B1448A00039EA60 /* mapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapViewController.h; sourceTree = "<group>"; };
 		CC81CD0C1B1448A00039EA60 /* mapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapViewController.m; sourceTree = "<group>"; };
 		CC81CD0E1B1448FD0039EA60 /* MyLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocation.h; sourceTree = "<group>"; };
@@ -182,6 +182,12 @@
 		FF286BCE1B51B51C00F7D166 /* SCEventAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventAddressTableViewCell.m; sourceTree = "<group>"; };
 		FF286BCF1B51B51C00F7D166 /* SCEventAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCEventAddressTableViewCell.xib; sourceTree = "<group>"; };
 		FF286BD41B51BB2E00F7D166 /* SCConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SCConstants.h; path = ../SCConstants.h; sourceTree = "<group>"; };
+		FF286BDB1B52273E00F7D166 /* SCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLocationManager.h; sourceTree = "<group>"; };
+		FF286BDC1B52273E00F7D166 /* SCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLocationManager.m; sourceTree = "<group>"; };
+		FF286BE11B522A1A00F7D166 /* SCEventMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventMapController.h; sourceTree = "<group>"; };
+		FF286BE21B522A1A00F7D166 /* SCEventMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventMapController.m; sourceTree = "<group>"; };
+		FF286BE41B52321800F7D166 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
+		FF286BE51B52321800F7D166 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		FF5DC0E71B49D342006369C9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FFDB42861B47B49900785D6A /* popingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popingViewController.h; sourceTree = "<group>"; };
 		FFDB42871B47B49900785D6A /* popingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popingViewController.m; sourceTree = "<group>"; };
@@ -255,13 +261,16 @@
 		CC579CAE1B18030200115705 /* eventDetailScene */ = {
 			isa = PBXGroup;
 			children = (
-				FF286BC61B51A70300F7D166 /* originalDetailVC */,
+				FF286BE41B52321800F7D166 /* detailViewController.h */,
+				FF286BE51B52321800F7D166 /* detailViewController.m */,
 				FFF2B9B71B4B30550039F9BB /* eventDetailCell */,
 				FFF2B9B21B4B1CEE0039F9BB /* eventDetail.storyboard */,
 				FFF2B9B41B4B2CB10039F9BB /* SCEventInfoViewController.h */,
 				FFF2B9B51B4B2CB10039F9BB /* SCEventInfoViewController.m */,
 				FF286BC71B51A7C600F7D166 /* eventDetailDataController.h */,
 				FF286BC81B51A7C600F7D166 /* eventDetailDataController.m */,
+				FF286BE11B522A1A00F7D166 /* SCEventMapController.h */,
+				FF286BE21B522A1A00F7D166 /* SCEventMapController.m */,
 			);
 			name = eventDetailScene;
 			sourceTree = "<group>";
@@ -371,6 +380,7 @@
 		CCF0A4401B0BEEB8002F619B = {
 			isa = PBXGroup;
 			children = (
+				FF286BDA1B52272900F7D166 /* LocationManager */,
 				CCF0A4721B0BF14F002F619B /* Framework */,
 				CCF0A44B1B0BEEB8002F619B /* socialCalendar */,
 				CCF0A4651B0BEEB8002F619B /* socialCalendarTests */,
@@ -501,13 +511,13 @@
 			name = loadingIndicator;
 			sourceTree = "<group>";
 		};
-		FF286BC61B51A70300F7D166 /* originalDetailVC */ = {
+		FF286BDA1B52272900F7D166 /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
-				CC579CAF1B18032700115705 /* detailViewController.h */,
-				CC579CB01B18032700115705 /* detailViewController.m */,
+				FF286BDB1B52273E00F7D166 /* SCLocationManager.h */,
+				FF286BDC1B52273E00F7D166 /* SCLocationManager.m */,
 			);
-			name = originalDetailVC;
+			name = LocationManager;
 			sourceTree = "<group>";
 		};
 		FFDB42851B47B48200785D6A /* popingVC */ = {
@@ -736,6 +746,7 @@
 				CCB59FF81B20F4A90050352D /* userTableViewCell.m in Sources */,
 				CCB5A02E1B2643BC0050352D /* RMParallaxItem.swift in Sources */,
 				FF286BC91B51A7C600F7D166 /* eventDetailDataController.m in Sources */,
+				FF286BE61B52321800F7D166 /* detailViewController.m in Sources */,
 				FFDB42951B47B71F00785D6A /* DismissingAnimator.m in Sources */,
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
@@ -749,15 +760,16 @@
 				FF286BD21B51B51C00F7D166 /* SCEventAddressTableViewCell.m in Sources */,
 				CCE344191B1BB02B001FB58F /* calendarTableViewCell.m in Sources */,
 				FF286BD01B51B51C00F7D166 /* SCEventNameTableViewCell.m in Sources */,
+				FF286BE31B522A1A00F7D166 /* SCEventMapController.m in Sources */,
 				FF1BE66E1B35FC7600AF8886 /* ProgressHUD.m in Sources */,
 				CCB59FFC1B2119010050352D /* userTableViewController.m in Sources */,
 				CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */,
 				FFDB428C1B47B50200785D6A /* UIColor+CustomColors.m in Sources */,
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
 				CCB5A02D1B2643BC0050352D /* ViewController.swift in Sources */,
-				CC579CB11B18032700115705 /* detailViewController.m in Sources */,
 				CC81CD151B1535330039EA60 /* KLCPopup.m in Sources */,
 				CCB5A0061B2558E80050352D /* friendsPickingTableViewController.m in Sources */,
+				FF286BDD1B52273E00F7D166 /* SCLocationManager.m in Sources */,
 				CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */,
 				CC81CD191B1541E00039EA60 /* eventObject.m in Sources */,
 				CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */,

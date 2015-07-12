@@ -11,10 +11,12 @@
 #pragma mark -- TableViewCells
 static NSString *const kEventNameCellIdentifier = @"eventNameTableViewCell";
 static NSString *const kEventAddressCellIdentifier = @"eventAddressTableViewCell";
+static NSString *const kEventMapCellIdentifier = @"eventMapTableViewCell";
 
 #pragma mark -- Nib Files
 static NSString *const kEventNameCellNibName = @"SCEventNameTableViewCell";
 static NSString *const kEventAddressCellNibName = @"SCEventAddressTableViewCell";
+static NSString *const kEventMapCellNibName = @"SCEventMapTableViewCell";
 
 #pragma mark -- Strings & Titles
 

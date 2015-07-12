@@ -12,15 +12,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventNameTableViewCell" rowHeight="266" id="KGk-i7-Jjw" customClass="SCEventNameTableViewCell">
-            <rect key="frame" x="0.0" y="-4" width="320" height="188"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventNameTableViewCell" rowHeight="180" id="KGk-i7-Jjw" customClass="SCEventNameTableViewCell">
+            <rect key="frame" x="0.0" y="1" width="320" height="102"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Store name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgM-wn-bcs">
-                        <rect key="frame" x="15" y="100" width="290" height="72.5"/>
+                        <rect key="frame" x="15" y="37" width="290" height="28"/>
                         <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="24"/>
                         <color key="textColor" red="0.0078431372550000003" green="0.050980392159999999" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -41,9 +41,11 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="PgM-wn-bcs" secondAttribute="bottom" constant="15" id="4hw-Qt-Pzu"/>
                     <constraint firstItem="SKW-wi-JZI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Aib-ha-uOL"/>
+                    <constraint firstAttribute="centerX" secondItem="PgM-wn-bcs" secondAttribute="centerX" id="Bqv-dG-aIO"/>
                     <constraint firstAttribute="trailing" secondItem="SKW-wi-JZI" secondAttribute="trailing" constant="15" id="C6P-xK-69p"/>
                     <constraint firstItem="PgM-wn-bcs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="LIo-S8-KNY"/>
                     <constraint firstAttribute="bottom" secondItem="SKW-wi-JZI" secondAttribute="bottom" constant="15" id="MEL-I1-abh"/>
+                    <constraint firstAttribute="centerY" secondItem="PgM-wn-bcs" secondAttribute="centerY" id="McW-fP-aTW"/>
                     <constraint firstItem="PgM-wn-bcs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="bhr-1M-FyV"/>
                     <constraint firstAttribute="trailing" secondItem="PgM-wn-bcs" secondAttribute="trailing" constant="15" id="ePA-gf-EsH"/>
                     <constraint firstItem="PgM-wn-bcs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="100" id="gBX-AR-WJ4"/>
@@ -57,7 +59,9 @@
                     <mask key="constraints">
                         <exclude reference="Aib-ha-uOL"/>
                         <exclude reference="z5E-al-uau"/>
+                        <exclude reference="4hw-Qt-Pzu"/>
                         <exclude reference="bhr-1M-FyV"/>
+                        <exclude reference="gBX-AR-WJ4"/>
                         <exclude reference="lt3-wA-41H"/>
                     </mask>
                 </variation>
@@ -65,7 +69,7 @@
             <connections>
                 <outlet property="nameLabel" destination="PgM-wn-bcs" id="FsX-bL-baz"/>
             </connections>
-            <point key="canvasLocation" x="510" y="530"/>
+            <point key="canvasLocation" x="510" y="573"/>
         </tableViewCell>
     </objects>
 </document>

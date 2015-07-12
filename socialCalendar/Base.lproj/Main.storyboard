@@ -496,7 +496,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="note" id="fAB-Gf-Nto">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="aQg-LO-51z">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="eventNote" rowHeight="150" id="aQg-LO-51z">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aQg-LO-51z" id="mj4-5K-GqD">
                                             <autoresizingMask key="autoresizingMask"/>

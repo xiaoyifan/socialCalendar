@@ -8,6 +8,7 @@
 
 #import "SCEventInfoViewController.h"
 #import "eventDetailDataController.h"
+#import "SCLocationManager.h"
 
 @interface SCEventInfoViewController ()<eventDetailDataControllerDelegate>
 
@@ -43,6 +44,8 @@
 - (void)setupDataController
 {
     [self.eventDetailDataController setupWithDelegate:self event:self.event tableView:self.storeInfoTableView];
+    
+    [self.storeInfoTableView reloadData];
 }
 
 #pragma mark - Accessors
@@ -56,9 +59,9 @@
 }
 
 -(void)eventDetailDataController:(eventDetailDataController *)dataController didSelectAtIndexPath:(NSIndexPath *)indexPath{
-//    if (indexPath.row == LPStoreInfoModuleTypeAddress) {
-//        [LPLocationManager openMapsWithStore:self.store];
-//    }
+    if (indexPath.row == SCEventDetailModuleTypeAddress) {
+        [SCLocationManager openMapsWithStore:self.event];
+    }
 }
 
 @end
