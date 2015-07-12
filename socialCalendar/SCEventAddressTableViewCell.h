@@ -21,6 +21,6 @@ static NSString *const eventAddressTableViewCellIdentifier = @"eventAddressTable
  *  @param store The store to display.
  *  @param type  The row type.
  */
-- (void)setupWithEvent:(eventObject *)event;
+- (void)setupWithEvent:(eventObject *)event withRowType:(SCEventDetailModuleType)rowType;
 
 @end

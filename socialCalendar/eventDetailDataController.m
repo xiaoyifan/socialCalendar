@@ -10,10 +10,6 @@
 #import "SCEventNameTableViewCell.h"
 #import "SCEventAddressTableViewCell.h"
 
-//static CGFloat kStoreHourDefaultHeight = 20.0f;
-//static CGFloat kStoreHourDefaultSpacing = 33.0f;
-static CGFloat kStoreInfoAddressDefaultHeight = 90.0f;
-
 @implementation eventDetailDataController
 
 -(void)setupWithDelegate:(id<eventDetailDataControllerDelegate>)delegate event:(eventObject *)event tableView:(UITableView *)tableView{
@@ -69,9 +65,10 @@ static CGFloat kStoreInfoAddressDefaultHeight = 90.0f;
             [( (SCEventNameTableViewCell *)cell ) setupWithEvent:self.event];
             break;
             
+        case SCEventDetailModuleTypeNote:
         case SCEventDetailModuleTypeAddress:
             cell = [tableView dequeueReusableCellWithIdentifier:eventAddressTableViewCellIdentifier forIndexPath:indexPath];
-            [( (SCEventAddressTableViewCell *)cell ) setupWithEvent:self.event];
+            [( (SCEventAddressTableViewCell *)cell ) setupWithEvent:self.event withRowType:indexPath.row];
             break;
             
         default:
@@ -88,15 +85,6 @@ static CGFloat kStoreInfoAddressDefaultHeight = 90.0f;
     return UITableViewAutomaticDimension;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row == SCEventDetailModuleTypeAddress) {
-        return kStoreInfoAddressDefaultHeight;
-    }
-    
-    return UITableViewAutomaticDimension;
-}
-
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return (indexPath.row == SCEventDetailModuleTypeAddress);
@@ -105,9 +93,6 @@ static CGFloat kStoreInfoAddressDefaultHeight = 90.0f;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    NSIndexPath *index = [NSIndexPath indexPathForRow:0 inSection:0];
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:index];
     
     if ([self.delegate respondsToSelector:@selector(eventDetailDataController:didSelectAtIndexPath:)]) {
         [self.delegate eventDetailDataController:self didSelectAtIndexPath:indexPath];

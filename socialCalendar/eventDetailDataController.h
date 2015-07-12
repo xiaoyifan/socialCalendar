@@ -12,6 +12,7 @@ typedef NS_ENUM(NSInteger, SCEventDetailModuleType)
 {
     SCEventDetailModuleTypeName = 0,
     SCEventDetailModuleTypeAddress,
+    SCEventDetailModuleTypeNote,
     SCEventDetailModuleTypeCount
 };
 

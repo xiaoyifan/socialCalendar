@@ -18,11 +18,17 @@
 
 @implementation SCEventAddressTableViewCell
 
-- (void)setupWithEvent:(eventObject *)event
+- (void)setupWithEvent:(eventObject *)event  withRowType:(SCEventDetailModuleType)rowType
 {
+    if (rowType == SCEventDetailModuleTypeNote) {
+        self.titleLabel.text = @"NOTE";
+        self.descriptionLabel.text = event.eventNote;
+    }
+    else if(rowType == SCEventDetailModuleTypeAddress){
         self.titleLabel.text = @"ADDRESS";
-        self.titleLabel.textColor = [UIColor customBlueColor];
         self.descriptionLabel.text = event.locationDescription;
+    }    
+        self.titleLabel.textColor = [UIColor customBlueColor];
 }
 
 @end
