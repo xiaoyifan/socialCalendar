@@ -20,7 +20,7 @@
     [encoder encodeObject:self.eventNote forKey:@"eventNote"];
     [encoder encodeObject:self.group forKey:@"group"];
     [encoder encodeObject:self.objectId forKey:@"objectId"];
-
+    [encoder encodeBool:self.isInternalEvent forKey:@"isInternal"];
     
 }
 
@@ -35,6 +35,7 @@
     self.eventNote = [decoder decodeObjectForKey:@"eventNote"];
     self.group = [decoder decodeObjectForKey:@"group"];
     self.objectId = [decoder decodeObjectForKey:@"objectId"];
+    self.isInternalEvent = [decoder decodeObjectForKey:@"isInternal"];
     
     return self;
 }

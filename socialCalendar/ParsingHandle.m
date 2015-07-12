@@ -167,6 +167,8 @@
     
     retrivedObj.objectId = object.objectId;
     
+    retrivedObj.isInternalEvent = FALSE;
+    
     return retrivedObj;
 }
 
@@ -178,7 +180,7 @@
     newObj.reminderDate = object.endDate;
     newObj.locationDescription = object.location;
     newObj.eventNote = object.notes;
-    
+    newObj.isInternalEvent = TRUE;
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     [geocoder geocodeAddressString:object.location completionHandler:^(NSArray *placemarks, NSError *error) {
         if([placemarks count]) {

@@ -23,4 +23,6 @@
 
 @property (strong,nonatomic) NSString *objectId;
 
+@property (strong,nonatomic) BOOL isInternalEvent;
+
 @end
