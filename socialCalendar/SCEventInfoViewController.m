@@ -10,7 +10,7 @@
 #import "eventDetailDataController.h"
 #import "SCLocationManager.h"
 
-@interface SCEventInfoViewController ()<eventDetailDataControllerDelegate>
+@interface SCEventInfoViewController () <eventDetailDataControllerDelegate>
 
 @property (strong, nonatomic) eventObject *event;
 
@@ -22,20 +22,22 @@
 
 @implementation SCEventInfoViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupDataController];
     self.navigationItem.title = kEventDetailTitle;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setupWithEvent:(eventObject *)eventObj{
-    
+- (void)setupWithEvent:(eventObject *)eventObj
+{
     self.event = eventObj;
 }
 
@@ -44,7 +46,7 @@
 - (void)setupDataController
 {
     [self.eventDetailDataController setupWithDelegate:self event:self.event tableView:self.storeInfoTableView];
-    
+
     [self.storeInfoTableView reloadData];
 }
 
@@ -58,7 +60,8 @@
     return _eventDetailDataController;
 }
 
--(void)eventDetailDataController:(eventDetailDataController *)dataController didSelectAtIndexPath:(NSIndexPath *)indexPath{
+- (void)eventDetailDataController:(eventDetailDataController *)dataController didSelectAtIndexPath:(NSIndexPath *)indexPath
+{
     if (indexPath.row == SCEventDetailModuleTypeAddress) {
         [SCLocationManager openMapsWithStore:self.event];
     }

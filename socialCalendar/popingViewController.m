@@ -9,7 +9,7 @@
 #import "popingViewController.h"
 #import "UIColor+CustomColors.h"
 
-@interface popingViewController()
+@interface popingViewController ()
 - (void)addDismissButton;
 - (void)dismiss:(id)sender;
 - (void)addDeleteButton;
@@ -23,7 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.view.layer.cornerRadius = 8.f;
     self.view.backgroundColor = [UIColor customBlueColor];
     [self addDismissButton];
@@ -42,7 +42,7 @@
     titleLabel.font = [UIFont fontWithName:@"Avenir" size:16.0f];
     titleLabel.text = @"Want to delete this event?";
     [self.view addSubview:titleLabel];
-    
+
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:titleLabel
                                                           attribute:NSLayoutAttributeCenterX
                                                           relatedBy:NSLayoutRelationEqual
@@ -50,12 +50,12 @@
                                                           attribute:NSLayoutAttributeCenterX
                                                          multiplier:1.f
                                                            constant:0.f]];
-    
+
     [self.view addConstraints:[NSLayoutConstraint
                                constraintsWithVisualFormat:@"V:|-20.0-[titleLabel]"
-                               options:0
-                               metrics:nil
-                               views:NSDictionaryOfVariableBindings(titleLabel)]];
+                                                   options:0
+                                                   metrics:nil
+                                                     views:NSDictionaryOfVariableBindings(titleLabel)]];
 }
 
 - (void)addSubtitleLabel
@@ -67,7 +67,7 @@
     [dismissButton setTitle:@"Cancel" forState:UIControlStateNormal];
     [dismissButton addTarget:self action:@selector(dismiss:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:dismissButton];
-    
+
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:dismissButton
                                                           attribute:NSLayoutAttributeCenterX
                                                           relatedBy:NSLayoutRelationEqual
@@ -75,12 +75,12 @@
                                                           attribute:NSLayoutAttributeCenterX
                                                          multiplier:1.f
                                                            constant:0.f]];
-    
+
     [self.view addConstraints:[NSLayoutConstraint
                                constraintsWithVisualFormat:@"V:[dismissButton]-20.0-|"
-                               options:0
-                               metrics:nil
-                               views:NSDictionaryOfVariableBindings(dismissButton)]];
+                                                   options:0
+                                                   metrics:nil
+                                                     views:NSDictionaryOfVariableBindings(dismissButton)]];
 }
 
 - (void)addDismissButton
@@ -103,12 +103,13 @@
 
     [self.view addConstraints:[NSLayoutConstraint
                                constraintsWithVisualFormat:@"V:[dismissButton]-20.0-|"
-                               options:0
-                               metrics:nil
-                               views:NSDictionaryOfVariableBindings(dismissButton)]];
+                                                   options:0
+                                                   metrics:nil
+                                                     views:NSDictionaryOfVariableBindings(dismissButton)]];
 }
 
--(void)addDeleteButton{
+- (void)addDeleteButton
+{
     UIButton *deleteButton = [UIButton buttonWithType:UIButtonTypeSystem];
     deleteButton.translatesAutoresizingMaskIntoConstraints = NO;
     deleteButton.tintColor = [UIColor whiteColor];
@@ -116,7 +117,7 @@
     [deleteButton setTitle:@"Delete" forState:UIControlStateNormal];
     [deleteButton addTarget:self action:@selector(delete:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:deleteButton];
-    
+
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:deleteButton
                                                           attribute:NSLayoutAttributeCenterX
                                                           relatedBy:NSLayoutRelationEqual
@@ -124,13 +125,12 @@
                                                           attribute:NSLayoutAttributeCenterX
                                                          multiplier:1.f
                                                            constant:0.f]];
-    
+
     [self.view addConstraints:[NSLayoutConstraint
                                constraintsWithVisualFormat:@"V:[deleteButton]-60.0-|"
-                               options:0
-                               metrics:nil
-                               views:NSDictionaryOfVariableBindings(deleteButton)]];
-
+                                                   options:0
+                                                   metrics:nil
+                                                     views:NSDictionaryOfVariableBindings(deleteButton)]];
 }
 
 - (void)dismiss:(id)sender
@@ -140,7 +140,7 @@
 
 - (void)delete:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:^{
+    [self dismissViewControllerAnimated:YES completion: ^{
         [self.delegate sendDataToSource];
     }];
 }

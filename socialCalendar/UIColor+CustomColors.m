@@ -41,9 +41,9 @@
                     green:(NSUInteger)green
                      blue:(NSUInteger)blue
 {
-    return [UIColor colorWithRed:(float)(red/255.f)
-                           green:(float)(green/255.f)
-                            blue:(float)(blue/255.f)
+    return [UIColor colorWithRed:(float)(red / 255.f)
+                           green:(float)(green / 255.f)
+                            blue:(float)(blue / 255.f)
                            alpha:1.f];
 }
 

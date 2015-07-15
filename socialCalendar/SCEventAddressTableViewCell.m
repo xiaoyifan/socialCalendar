@@ -23,12 +23,11 @@
     if (rowType == SCEventDetailModuleTypeNote) {
         self.titleLabel.text = @"NOTE";
         self.descriptionLabel.text = event.eventNote;
-    }
-    else if(rowType == SCEventDetailModuleTypeAddress){
+    } else if (rowType == SCEventDetailModuleTypeAddress)    {
         self.titleLabel.text = @"ADDRESS";
         self.descriptionLabel.text = event.locationDescription;
-    }    
-        self.titleLabel.textColor = [UIColor customBlueColor];
+    }
+    self.titleLabel.textColor = [UIColor customBlueColor];
 }
 
 @end

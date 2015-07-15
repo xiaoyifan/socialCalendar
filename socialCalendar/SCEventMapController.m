@@ -60,11 +60,10 @@ static CGFloat const kMapAltitude = 1000.0f;
 - (void)addStoreAnnotations
 {
     for (eventObject *event in self.events) {
-        
         MyLocation *annotation = [[MyLocation alloc] initWithName:[NSString stringWithFormat:@"%@", event.title]
                                                           address:event.locationDescription
                                                        coordinate:event.location.coordinate];
-        
+
         [self.mapView addAnnotation:annotation];
     }
 }

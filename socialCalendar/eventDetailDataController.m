@@ -12,18 +12,18 @@
 
 @implementation eventDetailDataController
 
--(void)setupWithDelegate:(id<eventDetailDataControllerDelegate>)delegate event:(eventObject *)event tableView:(UITableView *)tableView{
-    
+- (void)setupWithDelegate:(id <eventDetailDataControllerDelegate>)delegate event:(eventObject *)event tableView:(UITableView *)tableView
+{
     self.delegate = delegate;
     self.event = event;
     self.tableView = tableView;
-    
+
     [self registerNibs];
-    
+
     self.tableView.tableHeaderView = self.mapController.mapView;
     self.tableView.tableHeaderView.frame = CGRectMake(0.0f, 0.0f, CGRectGetWidth(tableView.frame), 260.0f);
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    
+
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView reloadData];
@@ -49,7 +49,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
     return SCEventDetailModuleTypeCount;
 }
 
@@ -62,7 +61,7 @@
             cell = [tableView dequeueReusableCellWithIdentifier:eventNameTableViewCellIdentifier forIndexPath:indexPath];
             [( (SCEventNameTableViewCell *)cell ) setupWithEvent:self.event];
             break;
-            
+
         case SCEventDetailModuleTypeNote:
         case SCEventDetailModuleTypeAddress:
             cell = [tableView dequeueReusableCellWithIdentifier:eventAddressTableViewCellIdentifier forIndexPath:indexPath];
@@ -72,7 +71,7 @@
         default:
             break;
     }
-    
+
     return cell;
 }
 
@@ -83,11 +82,12 @@
     return UITableViewAutomaticDimension;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (indexPath.row == SCEventDetailModuleTypeName) {
         return 120.0;
     }
-    
+
     return UITableViewAutomaticDimension;
 }
 
@@ -99,7 +99,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+
     if ([self.delegate respondsToSelector:@selector(eventDetailDataController:didSelectAtIndexPath:)]) {
         [self.delegate eventDetailDataController:self didSelectAtIndexPath:indexPath];
     }

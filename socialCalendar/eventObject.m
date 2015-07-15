@@ -11,7 +11,8 @@
 @implementation eventObject
 
 //Implement the encoding method
-- (void)encodeWithCoder:(NSCoder *)encoder {
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
     [encoder encodeObject:self.title forKey:@"title"];
     [encoder encodeObject:self.time forKey:@"time"];
     [encoder encodeObject:self.reminderDate forKey:@"reminderDate"];
@@ -21,11 +22,11 @@
     [encoder encodeObject:self.group forKey:@"group"];
     [encoder encodeObject:self.objectId forKey:@"objectId"];
     [encoder encodeBool:self.isInternalEvent forKey:@"isInternal"];
-    
 }
 
 //implement the decoding method
-- (id) initWithCoder:(NSCoder *)decoder {
+- (id)initWithCoder:(NSCoder *)decoder
+{
     self = [super init];
     self.title = [decoder decodeObjectForKey:@"title"];
     self.time = [decoder decodeObjectForKey:@"time"];
@@ -36,7 +37,7 @@
     self.group = [decoder decodeObjectForKey:@"group"];
     self.objectId = [decoder decodeObjectForKey:@"objectId"];
     self.isInternalEvent = [decoder decodeObjectForKey:@"isInternal"];
-    
+
     return self;
 }
 

@@ -25,7 +25,7 @@
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
 
     __block UIView *dimmingView;
-    [transitionContext.containerView.subviews enumerateObjectsUsingBlock:^(UIView *view, NSUInteger idx, BOOL *stop) {
+    [transitionContext.containerView.subviews enumerateObjectsUsingBlock: ^(UIView *view, NSUInteger idx, BOOL *stop) {
         if (view.layer.opacity < 1.f) {
             dimmingView = view;
             *stop = YES;
@@ -36,7 +36,7 @@
 
     POPBasicAnimation *offscreenAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
     offscreenAnimation.toValue = @(-fromVC.view.layer.position.y);
-    [offscreenAnimation setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
+    [offscreenAnimation setCompletionBlock: ^(POPAnimation *anim, BOOL finished) {
         [transitionContext completeTransition:YES];
     }];
     [fromVC.view.layer pop_addAnimation:offscreenAnimation forKey:@"offscreenAnimation"];
