@@ -66,7 +66,7 @@ static CGFloat kEventHourDefaultSpacing = 33.0f;
             cell = [tableView dequeueReusableCellWithIdentifier:eventNameTableViewCellIdentifier forIndexPath:indexPath];
             [( (SCEventNameTableViewCell *)cell ) setupWithEvent:self.event];
             break;
-            
+
         case SCEventDetailModuleTypeTime:
             cell = [tableView dequeueReusableCellWithIdentifier:kEventHoursTableViewCellIdentifier forIndexPath:indexPath];
             [( (SCEventHoursTableViewCell *)cell ) setupWithEvent:self.event];
@@ -96,16 +96,14 @@ static CGFloat kEventHourDefaultSpacing = 33.0f;
 {
     if (indexPath.row == SCEventDetailModuleTypeName) {
         return 120.0;
-    }
-    else if(indexPath.row == SCEventDetailModuleTypeTime){
+    } else if (indexPath.row == SCEventDetailModuleTypeTime)    {
         if (self.event.isInternalEvent) {
             return kEventHourDefaultHeight + kEventHourDefaultSpacing;
-        }
-        else{
-            return kEventHourDefaultHeight*3 + kEventHourDefaultSpacing;
+        } else {
+            return kEventHourDefaultHeight * 3 + kEventHourDefaultSpacing;
         }
     }
-    
+
     return UITableViewAutomaticDimension;
 }
 

@@ -42,11 +42,9 @@
 {
     if (self.event.isInternalEvent) {
         return 1;
-    }
-    else{
+    } else {
         return 2;
     }
-    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -55,8 +53,7 @@
 
     if (indexPath.row == 0) {
         [cell setupCellWithTime:self.event.time withTitle:@"EVENT TIME"];
-    }
-    else{
+    } else {
         [cell setupCellWithTime:self.event.reminderDate withTitle:@"REMIND ME"];
     }
     return cell;

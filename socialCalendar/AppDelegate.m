@@ -41,6 +41,8 @@
 
     [WXApi registerApp:@"wx5fd45371cb6f6aed"];
 
+    [LPNetworkingManager new];
+
     return YES;
 }
 

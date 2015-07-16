@@ -69,6 +69,10 @@
 		FF286BDD1B52273E00F7D166 /* SCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BDC1B52273E00F7D166 /* SCLocationManager.m */; };
 		FF286BE31B522A1A00F7D166 /* SCEventMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BE21B522A1A00F7D166 /* SCEventMapController.m */; };
 		FF286BE61B52321800F7D166 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BE51B52321800F7D166 /* detailViewController.m */; };
+		FF39EC4A1B57516B007FA3FB /* LPBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF39EC471B57516B007FA3FB /* LPBannerView.xib */; };
+		FF39EC4B1B57516B007FA3FB /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC491B57516B007FA3FB /* LPBannerView.m */; };
+		FF39EC4F1B575190007FA3FB /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC4E1B575190007FA3FB /* LPNetworkingManager.m */; };
+		FF39EC521B5751B9007FA3FB /* UIView+LoadNib.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC511B5751B9007FA3FB /* UIView+LoadNib.m */; };
 		FFDB42881B47B49900785D6A /* popingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42871B47B49900785D6A /* popingViewController.m */; };
 		FFDB428C1B47B50200785D6A /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428B1B47B50200785D6A /* UIColor+CustomColors.m */; };
 		FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428F1B47B6DC00785D6A /* PresentingAnimator.m */; };
@@ -192,6 +196,13 @@
 		FF286BE21B522A1A00F7D166 /* SCEventMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventMapController.m; sourceTree = "<group>"; };
 		FF286BE41B52321800F7D166 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
 		FF286BE51B52321800F7D166 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
+		FF39EC471B57516B007FA3FB /* LPBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPBannerView.xib; sourceTree = "<group>"; };
+		FF39EC481B57516B007FA3FB /* LPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPBannerView.h; sourceTree = "<group>"; };
+		FF39EC491B57516B007FA3FB /* LPBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPBannerView.m; sourceTree = "<group>"; };
+		FF39EC4D1B575190007FA3FB /* LPNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNetworkingManager.h; sourceTree = "<group>"; };
+		FF39EC4E1B575190007FA3FB /* LPNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNetworkingManager.m; sourceTree = "<group>"; };
+		FF39EC501B5751B9007FA3FB /* UIView+LoadNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadNib.h"; sourceTree = "<group>"; };
+		FF39EC511B5751B9007FA3FB /* UIView+LoadNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadNib.m"; sourceTree = "<group>"; };
 		FF5DC0E71B49D342006369C9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FFDB42861B47B49900785D6A /* popingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popingViewController.h; sourceTree = "<group>"; };
 		FFDB42871B47B49900785D6A /* popingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popingViewController.m; sourceTree = "<group>"; };
@@ -390,7 +401,6 @@
 		CCF0A4401B0BEEB8002F619B = {
 			isa = PBXGroup;
 			children = (
-				FF286BDA1B52272900F7D166 /* LocationManager */,
 				CCF0A4721B0BF14F002F619B /* Framework */,
 				CCF0A44B1B0BEEB8002F619B /* socialCalendar */,
 				CCF0A4651B0BEEB8002F619B /* socialCalendarTests */,
@@ -412,8 +422,11 @@
 		CCF0A44B1B0BEEB8002F619B /* socialCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				FF39EC4C1B57517F007FA3FB /* networkManager */,
+				FF39EC461B57515B007FA3FB /* BannerView */,
 				FF286BD41B51BB2E00F7D166 /* SCConstants.h */,
 				FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */,
+				FF286BDA1B52272900F7D166 /* LocationManager */,
 				FFDB42961B4848EE00785D6A /* expireMark */,
 				FFDB42911B47B70200785D6A /* Animator */,
 				FFDB42891B47B4F500785D6A /* categories */,
@@ -528,6 +541,26 @@
 				FF286BDC1B52273E00F7D166 /* SCLocationManager.m */,
 			);
 			name = LocationManager;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FF39EC461B57515B007FA3FB /* BannerView */ = {
+			isa = PBXGroup;
+			children = (
+				FF39EC471B57516B007FA3FB /* LPBannerView.xib */,
+				FF39EC481B57516B007FA3FB /* LPBannerView.h */,
+				FF39EC491B57516B007FA3FB /* LPBannerView.m */,
+			);
+			name = BannerView;
+			sourceTree = "<group>";
+		};
+		FF39EC4C1B57517F007FA3FB /* networkManager */ = {
+			isa = PBXGroup;
+			children = (
+				FF39EC4D1B575190007FA3FB /* LPNetworkingManager.h */,
+				FF39EC4E1B575190007FA3FB /* LPNetworkingManager.m */,
+			);
+			name = networkManager;
 			sourceTree = "<group>";
 		};
 		FFDB42851B47B48200785D6A /* popingVC */ = {
@@ -542,6 +575,8 @@
 		FFDB42891B47B4F500785D6A /* categories */ = {
 			isa = PBXGroup;
 			children = (
+				FF39EC501B5751B9007FA3FB /* UIView+LoadNib.h */,
+				FF39EC511B5751B9007FA3FB /* UIView+LoadNib.m */,
 				FFDB428A1B47B50200785D6A /* UIColor+CustomColors.h */,
 				FFDB428B1B47B50200785D6A /* UIColor+CustomColors.m */,
 			);
@@ -708,6 +743,7 @@
 				CCF0A45D1B0BEEB8002F619B /* LaunchScreen.xib in Resources */,
 				FF286BD11B51B51C00F7D166 /* SCEventNameTableViewCell.xib in Resources */,
 				FFFB6E461B561FE300409BCE /* SCEventHourCell.xib in Resources */,
+				FF39EC4A1B57516B007FA3FB /* LPBannerView.xib in Resources */,
 				CCB59FF51B20360A0050352D /* Plus.png in Resources */,
 				CCF0A45A1B0BEEB8002F619B /* Images.xcassets in Resources */,
 				FFF2B9B31B4B1CEE0039F9BB /* eventDetail.storyboard in Resources */,
@@ -763,10 +799,13 @@
 			files = (
 				CCB59FF81B20F4A90050352D /* userTableViewCell.m in Sources */,
 				CCB5A02E1B2643BC0050352D /* RMParallaxItem.swift in Sources */,
+				FF39EC4B1B57516B007FA3FB /* LPBannerView.m in Sources */,
 				FF286BC91B51A7C600F7D166 /* eventDetailDataController.m in Sources */,
 				FF286BE61B52321800F7D166 /* detailViewController.m in Sources */,
+				FF39EC4F1B575190007FA3FB /* LPNetworkingManager.m in Sources */,
 				FFDB42951B47B71F00785D6A /* DismissingAnimator.m in Sources */,
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
+				FF39EC521B5751B9007FA3FB /* UIView+LoadNib.m in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
 				CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */,
 				FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */,

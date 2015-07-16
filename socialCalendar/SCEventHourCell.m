@@ -19,19 +19,20 @@
 
 #pragma mark - Public Methods
 
-- (void)setupCellWithTime:(NSDate *)time withTitle:(NSString*)title;
+- (void)setupCellWithTime:(NSDate *)time withTitle:(NSString *)title;
 {
     self.titleLabel.text = title;
     self.hourLabel.text = [self formattedDate:time];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
--(NSString *)formattedDate:(NSDate*)date{
+- (NSString *)formattedDate:(NSDate *)date
+{
     NSDateFormatter *dateformat = [[NSDateFormatter alloc]init];
     [dateformat setDateFormat:kDatePresentingFormat];
-    
+
     dateformat.timeZone = [NSTimeZone localTimeZone];
-    
+
     return [dateformat stringFromDate:date];
 }
 

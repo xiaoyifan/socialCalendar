@@ -23,12 +23,11 @@
     if (rowType == SCEventDetailModuleTypeNote) {
         self.titleLabel.text = @"NOTE";
         self.descriptionLabel.text = event.eventNote;
-    } else if (rowType == SCEventDetailModuleTypeAddress)    {
+    } else if (rowType == SCEventDetailModuleTypeAddress) {
         self.titleLabel.text = @"ADDRESS";
         if (event.locationDescription) {
             self.descriptionLabel.text = event.locationDescription;
-        }
-        else{
+        } else {
             self.descriptionLabel.text = kEventNoAddressText;
         }
     }

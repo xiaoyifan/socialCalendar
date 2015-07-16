@@ -22,6 +22,8 @@
 #import "EventKit/EventKit.h"
 #import "EventKitUI/EventKitUI.h"
 #import "HexColor.h"
+#import "LPNetworkingManager.h"
+
 
 #import "SCConstants.h"
 

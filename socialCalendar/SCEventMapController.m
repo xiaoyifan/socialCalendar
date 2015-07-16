@@ -43,17 +43,15 @@ static CGFloat const kMapAltitude = 1000.0f;
     self.mapView.showsUserLocation = YES;
 
     [self removeAllMapAnnotations];
-    
+
     eventObject *obj = [self.events objectAtIndex:0];
-    
+
     if (obj.location) {
         [self addStoreAnnotations];
         [self zoomMapToFitAnnotations];
-    }
-    else{
+    } else {
         [self addUserAnnotation];
     }
-    
 }
 
 #pragma mark - MKMapKit Methods
@@ -66,11 +64,12 @@ static CGFloat const kMapAltitude = 1000.0f;
     [self.mapView removeAnnotations:annotations];
 }
 
-- (void)addUserAnnotation{
+- (void)addUserAnnotation
+{
     MyLocation *annotation = [[MyLocation alloc] initWithName:[NSString stringWithFormat:@"%@", @"My Location"]
                                                       address:nil
                                                    coordinate:self.mapView.userLocation.coordinate];
-    
+
     [self.mapView addAnnotation:annotation];
 }
 

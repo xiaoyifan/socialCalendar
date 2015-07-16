@@ -146,15 +146,15 @@
 
     if ([string isEqualToString:@"10 mins ahead"]) {
         [offsetComponents setMinute:-10]; // note that I'm setting it to -1
-    } else if ([string isEqualToString:@"15 mins ahead"])   {
+    } else if ([string isEqualToString:@"15 mins ahead"]) {
         [offsetComponents setMinute:-15]; // note that I'm setting it to -1
-    } else if ([string isEqualToString:@"30 mins ahead"])   {
+    } else if ([string isEqualToString:@"30 mins ahead"]) {
         [offsetComponents setMinute:-30]; // note that I'm setting it to -1
-    } else if ([string isEqualToString:@"1 hour ahead"])   {
+    } else if ([string isEqualToString:@"1 hour ahead"]) {
         [offsetComponents setHour:-1]; // note that I'm setting it to -1
-    } else if ([string isEqualToString:@"5 hours ahead"])   {
+    } else if ([string isEqualToString:@"5 hours ahead"]) {
         [offsetComponents setHour:-5]; // note that I'm setting it to -1
-    } else if ([string isEqualToString:@"1 day ahead"])   {
+    } else if ([string isEqualToString:@"1 day ahead"]) {
         [offsetComponents setDay:-1]; // note that I'm setting it to -1
     }
 

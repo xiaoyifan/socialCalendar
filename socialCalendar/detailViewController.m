@@ -136,7 +136,7 @@
         self.locationManager.activityType = CLActivityTypeFitness;
 
         [self.locationManager startUpdatingLocation];
-    } else if (status == kCLAuthorizationStatusDenied)    {
+    } else if (status == kCLAuthorizationStatusDenied) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Loacation serice not authorized" message:@"This app needs you to authorize locations service to work" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil, nil];
         [alert show];
     } else {
