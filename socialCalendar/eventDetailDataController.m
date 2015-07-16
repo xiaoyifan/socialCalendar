@@ -9,6 +9,10 @@
 #import "eventDetailDataController.h"
 #import "SCEventNameTableViewCell.h"
 #import "SCEventAddressTableViewCell.h"
+#import "SCEventHoursTableViewCell.h"
+
+static CGFloat kEventHourDefaultHeight = 25.0f;
+static CGFloat kEventHourDefaultSpacing = 33.0f;
 
 @implementation eventDetailDataController
 
@@ -43,6 +47,7 @@
 {
     [self.tableView registerNib:[UINib nibWithNibName:kEventNameCellNibName bundle:nil] forCellReuseIdentifier:kEventNameCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:kEventAddressCellNibName bundle:nil] forCellReuseIdentifier:kEventAddressCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:kEventHoursTableViewCellNibName bundle:nil] forCellReuseIdentifier:kEventHoursTableViewCellIdentifier];
 }
 
 #pragma mark - UITableViewDataSource Methods
@@ -60,6 +65,11 @@
         case SCEventDetailModuleTypeName:
             cell = [tableView dequeueReusableCellWithIdentifier:eventNameTableViewCellIdentifier forIndexPath:indexPath];
             [( (SCEventNameTableViewCell *)cell ) setupWithEvent:self.event];
+            break;
+            
+        case SCEventDetailModuleTypeTime:
+            cell = [tableView dequeueReusableCellWithIdentifier:kEventHoursTableViewCellIdentifier forIndexPath:indexPath];
+            [( (SCEventHoursTableViewCell *)cell ) setupWithEvent:self.event];
             break;
 
         case SCEventDetailModuleTypeNote:
@@ -87,7 +97,15 @@
     if (indexPath.row == SCEventDetailModuleTypeName) {
         return 120.0;
     }
-
+    else if(indexPath.row == SCEventDetailModuleTypeTime){
+        if (self.event.isInternalEvent) {
+            return kEventHourDefaultHeight + kEventHourDefaultSpacing;
+        }
+        else{
+            return kEventHourDefaultHeight*3 + kEventHourDefaultSpacing;
+        }
+    }
+    
     return UITableViewAutomaticDimension;
 }
 

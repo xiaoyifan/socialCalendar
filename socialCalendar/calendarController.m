@@ -8,7 +8,7 @@
 
 #import "calendarController.h"
 #import "calendarTableViewCell.h"
-#import "detailViewController.h"
+#import "SCEventInfoViewController.h"
 
 @interface calendarController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -188,6 +188,18 @@
 
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self showEventInfoViewWithEvent:self.eventsToday[indexPath.row]];
+}
+
+- (void)showEventInfoViewWithEvent:(eventObject *)eventObj
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"eventDetail" bundle:nil];
+    SCEventInfoViewController *eventDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"eventDetailViewController"];
+    [eventDetailVC setupWithEvent:eventObj];
+    [self.navigationController pushViewController:eventDetailVC animated:YES];
+}
 
 - (UIColor *)randomColor
 {
@@ -215,23 +227,23 @@
     return sliceColors[rad];
 }
 
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqual:@"detailSegue"]) {
-        detailViewController *controller = (detailViewController *)[segue destinationViewController];
-
-        NSIndexPath *indexPath = [self.eventTableView indexPathForSelectedRow];
-
-        calendarTableViewCell *cell = (calendarTableViewCell *)[self.eventTableView cellForRowAtIndexPath:indexPath];
-
-        eventObject *selectedObject = [self.eventsToday objectAtIndex:indexPath.row];
-        //get the item tapped in the tableView
-        controller.detailObject = selectedObject;
-        controller.cardBackgroundColor = cell.separator.backgroundColor;
-    }
-}
+//#pragma mark - Navigation
+//
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([segue.identifier isEqual:@"detailSegue"]) {
+//        detailViewController *controller = (detailViewController *)[segue destinationViewController];
+//
+//        NSIndexPath *indexPath = [self.eventTableView indexPathForSelectedRow];
+//
+//        calendarTableViewCell *cell = (calendarTableViewCell *)[self.eventTableView cellForRowAtIndexPath:indexPath];
+//
+//        eventObject *selectedObject = [self.eventsToday objectAtIndex:indexPath.row];
+//        //get the item tapped in the tableView
+//        controller.detailObject = selectedObject;
+//        controller.cardBackgroundColor = cell.separator.backgroundColor;
+//    }
+//}
 
 @end

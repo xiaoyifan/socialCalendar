@@ -76,6 +76,10 @@
 		FFDB42991B48491D00785D6A /* expireMarkingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42981B48491D00785D6A /* expireMarkingView.m */; };
 		FFF2B9B31B4B1CEE0039F9BB /* eventDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF2B9B21B4B1CEE0039F9BB /* eventDetail.storyboard */; };
 		FFF2B9B61B4B2CB10039F9BB /* SCEventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF2B9B51B4B2CB10039F9BB /* SCEventInfoViewController.m */; };
+		FFFB6E411B55FB1E00409BCE /* SCEventHourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFB6E3C1B55FB1E00409BCE /* SCEventHourCell.m */; };
+		FFFB6E431B55FB1E00409BCE /* SCEventHoursTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFB6E3F1B55FB1E00409BCE /* SCEventHoursTableViewCell.m */; };
+		FFFB6E441B55FB1E00409BCE /* SCEventHoursTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFB6E401B55FB1E00409BCE /* SCEventHoursTableViewCell.xib */; };
+		FFFB6E461B561FE300409BCE /* SCEventHourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFB6E451B561FE300409BCE /* SCEventHourCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +206,12 @@
 		FFF2B9B21B4B1CEE0039F9BB /* eventDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = eventDetail.storyboard; sourceTree = "<group>"; };
 		FFF2B9B41B4B2CB10039F9BB /* SCEventInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventInfoViewController.h; sourceTree = "<group>"; };
 		FFF2B9B51B4B2CB10039F9BB /* SCEventInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventInfoViewController.m; sourceTree = "<group>"; };
+		FFFB6E3B1B55FB1E00409BCE /* SCEventHourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventHourCell.h; sourceTree = "<group>"; };
+		FFFB6E3C1B55FB1E00409BCE /* SCEventHourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventHourCell.m; sourceTree = "<group>"; };
+		FFFB6E3E1B55FB1E00409BCE /* SCEventHoursTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventHoursTableViewCell.h; sourceTree = "<group>"; };
+		FFFB6E3F1B55FB1E00409BCE /* SCEventHoursTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventHoursTableViewCell.m; sourceTree = "<group>"; };
+		FFFB6E401B55FB1E00409BCE /* SCEventHoursTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCEventHoursTableViewCell.xib; sourceTree = "<group>"; };
+		FFFB6E451B561FE300409BCE /* SCEventHourCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCEventHourCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -583,6 +593,12 @@
 				FF286BCD1B51B51C00F7D166 /* SCEventAddressTableViewCell.h */,
 				FF286BCE1B51B51C00F7D166 /* SCEventAddressTableViewCell.m */,
 				FF286BCF1B51B51C00F7D166 /* SCEventAddressTableViewCell.xib */,
+				FFFB6E3B1B55FB1E00409BCE /* SCEventHourCell.h */,
+				FFFB6E3C1B55FB1E00409BCE /* SCEventHourCell.m */,
+				FFFB6E451B561FE300409BCE /* SCEventHourCell.xib */,
+				FFFB6E3E1B55FB1E00409BCE /* SCEventHoursTableViewCell.h */,
+				FFFB6E3F1B55FB1E00409BCE /* SCEventHoursTableViewCell.m */,
+				FFFB6E401B55FB1E00409BCE /* SCEventHoursTableViewCell.xib */,
 			);
 			name = eventDetailCell;
 			sourceTree = "<group>";
@@ -686,10 +702,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFFB6E441B55FB1E00409BCE /* SCEventHoursTableViewCell.xib in Resources */,
 				FF286BD31B51B51C00F7D166 /* SCEventAddressTableViewCell.xib in Resources */,
 				CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */,
 				CCF0A45D1B0BEEB8002F619B /* LaunchScreen.xib in Resources */,
 				FF286BD11B51B51C00F7D166 /* SCEventNameTableViewCell.xib in Resources */,
+				FFFB6E461B561FE300409BCE /* SCEventHourCell.xib in Resources */,
 				CCB59FF51B20360A0050352D /* Plus.png in Resources */,
 				CCF0A45A1B0BEEB8002F619B /* Images.xcassets in Resources */,
 				FFF2B9B31B4B1CEE0039F9BB /* eventDetail.storyboard in Resources */,
@@ -770,12 +788,14 @@
 				CC81CD151B1535330039EA60 /* KLCPopup.m in Sources */,
 				CCB5A0061B2558E80050352D /* friendsPickingTableViewController.m in Sources */,
 				FF286BDD1B52273E00F7D166 /* SCLocationManager.m in Sources */,
+				FFFB6E431B55FB1E00409BCE /* SCEventHoursTableViewCell.m in Sources */,
 				CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */,
 				CC81CD191B1541E00039EA60 /* eventObject.m in Sources */,
 				CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */,
 				FFDB42881B47B49900785D6A /* popingViewController.m in Sources */,
 				CCF0A44F1B0BEEB8002F619B /* main.m in Sources */,
 				CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */,
+				FFFB6E411B55FB1E00409BCE /* SCEventHourCell.m in Sources */,
 				CCC680E91B12CA430007DD85 /* eventsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

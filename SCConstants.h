@@ -17,10 +17,18 @@ static NSString *const kEventMapCellIdentifier = @"eventMapTableViewCell";
 static NSString *const kEventNameCellNibName = @"SCEventNameTableViewCell";
 static NSString *const kEventAddressCellNibName = @"SCEventAddressTableViewCell";
 static NSString *const kEventMapCellNibName = @"SCEventMapTableViewCell";
+static NSString *const kEventHoursTableViewCellNibName = @"SCEventHoursTableViewCell";
+static NSString *const kEventHourCellNibName = @"SCEventHourCell";
+
 
 #pragma mark -- Strings & Titles
 
 static NSString *const kEventDetailTitle = @"Event Detail";
+static NSString *const kEventNoAddressText = @"event address is not available";
+
+#pragma mark -- keys
+
+static NSString *const kDatePresentingFormat = @"dd-MMM-YYYY HH:mm";
 
 #define socialCalendar_SCConstants_h
 
