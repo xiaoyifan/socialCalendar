@@ -96,7 +96,7 @@ static CGFloat kEventHourDefaultSpacing = 33.0f;
 {
     if (indexPath.row == SCEventDetailModuleTypeName) {
         return 120.0;
-    } else if (indexPath.row == SCEventDetailModuleTypeTime)    {
+    } else if (indexPath.row == SCEventDetailModuleTypeTime) {
         if (self.event.isInternalEvent) {
             return kEventHourDefaultHeight + kEventHourDefaultSpacing;
         } else {
