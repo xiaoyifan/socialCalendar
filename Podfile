@@ -18,6 +18,7 @@ pod 'JSQSystemSoundPlayer'
 pod 'RNGridMenu'
 pod 'IDMPhotoBrowser'
 pod 'IQKeyboardManager'
+pod 'MBTwitterScroll'
 
 end
 
