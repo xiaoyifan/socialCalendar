@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Clouds.png"
+      "filename" : "BK 3.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Clouds@2x.png"
+      "filename" : "BK 2.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "Clouds@3x.png"
+      "filename" : "BK.png"
     }
   ],
   "info" : {

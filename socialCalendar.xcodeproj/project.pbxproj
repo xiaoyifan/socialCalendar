@@ -68,7 +68,6 @@
 		FF286BD31B51B51C00F7D166 /* SCEventAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF286BCF1B51B51C00F7D166 /* SCEventAddressTableViewCell.xib */; };
 		FF286BDD1B52273E00F7D166 /* SCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BDC1B52273E00F7D166 /* SCLocationManager.m */; };
 		FF286BE31B522A1A00F7D166 /* SCEventMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BE21B522A1A00F7D166 /* SCEventMapController.m */; };
-		FF286BE61B52321800F7D166 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BE51B52321800F7D166 /* detailViewController.m */; };
 		FF39EC4A1B57516B007FA3FB /* LPBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF39EC471B57516B007FA3FB /* LPBannerView.xib */; };
 		FF39EC4B1B57516B007FA3FB /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC491B57516B007FA3FB /* LPBannerView.m */; };
 		FF39EC4F1B575190007FA3FB /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC4E1B575190007FA3FB /* LPNetworkingManager.m */; };
@@ -195,8 +194,6 @@
 		FF286BDC1B52273E00F7D166 /* SCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLocationManager.m; sourceTree = "<group>"; };
 		FF286BE11B522A1A00F7D166 /* SCEventMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventMapController.h; sourceTree = "<group>"; };
 		FF286BE21B522A1A00F7D166 /* SCEventMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventMapController.m; sourceTree = "<group>"; };
-		FF286BE41B52321800F7D166 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
-		FF286BE51B52321800F7D166 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		FF39EC471B57516B007FA3FB /* LPBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPBannerView.xib; sourceTree = "<group>"; };
 		FF39EC481B57516B007FA3FB /* LPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPBannerView.h; sourceTree = "<group>"; };
 		FF39EC491B57516B007FA3FB /* LPBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPBannerView.m; sourceTree = "<group>"; };
@@ -285,8 +282,6 @@
 		CC579CAE1B18030200115705 /* eventDetailScene */ = {
 			isa = PBXGroup;
 			children = (
-				FF286BE41B52321800F7D166 /* detailViewController.h */,
-				FF286BE51B52321800F7D166 /* detailViewController.m */,
 				FFF2B9B71B4B30550039F9BB /* eventDetailCell */,
 				FFF2B9B21B4B1CEE0039F9BB /* eventDetail.storyboard */,
 				FFF2B9B41B4B2CB10039F9BB /* SCEventInfoViewController.h */,
@@ -404,7 +399,6 @@
 		CCF0A4401B0BEEB8002F619B = {
 			isa = PBXGroup;
 			children = (
-				FFB0D2EB1B58C7AD008113B9 /* myProfile */,
 				CCF0A4721B0BF14F002F619B /* Framework */,
 				CCF0A44B1B0BEEB8002F619B /* socialCalendar */,
 				CCF0A4651B0BEEB8002F619B /* socialCalendarTests */,
@@ -446,6 +440,7 @@
 				CCB59FE91B2031820050352D /* userListScene */,
 				CCB59FF91B2118CA0050352D /* userList */,
 				CCB5A0271B262AFB0050352D /* friendsInvitingScene */,
+				FFB0D2EB1B58C7AD008113B9 /* myProfile */,
 				CCF0A4561B0BEEB8002F619B /* Main.storyboard */,
 				CCF0A4591B0BEEB8002F619B /* Images.xcassets */,
 				CCF0A45B1B0BEEB8002F619B /* LaunchScreen.xib */,
@@ -574,6 +569,7 @@
 				FFB0D2EE1B58C7D1008113B9 /* profileViewController.m */,
 			);
 			name = myProfile;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		FFDB42851B47B48200785D6A /* popingVC */ = {
@@ -814,7 +810,6 @@
 				CCB5A02E1B2643BC0050352D /* RMParallaxItem.swift in Sources */,
 				FF39EC4B1B57516B007FA3FB /* LPBannerView.m in Sources */,
 				FF286BC91B51A7C600F7D166 /* eventDetailDataController.m in Sources */,
-				FF286BE61B52321800F7D166 /* detailViewController.m in Sources */,
 				FF39EC4F1B575190007FA3FB /* LPNetworkingManager.m in Sources */,
 				FFDB42951B47B71F00785D6A /* DismissingAnimator.m in Sources */,
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,

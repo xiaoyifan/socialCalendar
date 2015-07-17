@@ -7,9 +7,24 @@
 //
 
 #import "profileViewController.h"
+#import "SCEventHourCell.h"
 
+typedef NS_ENUM(NSInteger, SCUserDetailModuleType)
+{
+    SCUserDetailModuleTypeNickName = 0,
+    SCUserDetailModuleTypeEmail,
+    SCUserDetailModuleTypeWhatsUp,
+    SCUserDetailModuleTypeGender,
+    SCUserDetailModuleTypeRegion,
+    SCUserDetailModuleTypeEducation,
+    SCUserDetailModuleTypeWork,
+    SCUserDetailModuleTypeWebsite,
+    SCUserDetailModuleTypeCount
+};
 
 @interface profileViewController ()
+
+@property (nonatomic,strong) MBTwitterScroll* myTableView;
 
 @end
 
@@ -18,18 +33,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    MBTwitterScroll *myTableView = [[MBTwitterScroll alloc]
+    self.myTableView = [[MBTwitterScroll alloc]
                                     initTableViewWithBackgound:[UIImage imageNamed:@"background"]
                                     avatarImage:[UIImage imageNamed:@"avatar.png"]
                                     titleString:@"Yifan Xiao"
                                     subtitleString:@"xiaoyifan@uchicago.edu"
                                     buttonTitle:nil];  // Set nil for no button
     
-    myTableView.tableView.delegate = self;
-    myTableView.tableView.dataSource = self;
-    myTableView.delegate = self;
-    [self.view addSubview:myTableView];
+    self.myTableView.tableView.delegate = self;
+    self.myTableView.tableView.dataSource = self;
+    self.myTableView.delegate = self;
     
+    [self registerNibs];
+    
+    [self.view addSubview:self.myTableView];
+    
+}
+
+-(void)registerNibs{
+    [self.myTableView.tableView registerNib:[UINib nibWithNibName:kEventHourCellNibName bundle:nil] forCellReuseIdentifier:kEventHourCellReuseIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +61,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 30;
+    return SCUserDetailModuleTypeCount;
 }
 
 -(void) recievedMBTwitterScrollEvent {
@@ -48,13 +70,8 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSString *identifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-    }
-    
-    cell.textLabel.text =  @"Cell";
+    SCEventHourCell *cell = [tableView dequeueReusableCellWithIdentifier:kEventHourCellReuseIdentifier forIndexPath:indexPath];
+     //[cell setupCellWithTime:self.event.time withTitle:@"EVENT TIME"];
     
     return cell;
 }
