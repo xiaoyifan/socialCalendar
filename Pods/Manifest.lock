@@ -31,6 +31,7 @@ PODS:
     - AFNetworking
     - DACircularProgress
     - pop
+  - IQKeyboardManager (3.2.4)
   - JSQMessagesViewController (7.0.2):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - HexColors
   - HSDatePickerViewController
   - IDMPhotoBrowser
+  - IQKeyboardManager
   - JSQMessagesViewController
   - JSQSystemSoundPlayer
   - JTCalendar
@@ -65,6 +67,7 @@ SPEC CHECKSUMS:
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   HSDatePickerViewController: b292f2a53b2644a68aa5e1343053d2f3554de64c
   IDMPhotoBrowser: ebbfa6690456b72dd92d93b7bc11d71519f4d06d
+  IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
   JSQMessagesViewController: bb6649691182b1899dc52b42266ad69efc473510
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   JTCalendar: 246ea3e338fb97624846ec77cdcde448242c4d5c
@@ -72,4 +75,4 @@ SPEC CHECKSUMS:
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
   RNGridMenu: c58db81f87b5473936bb1b675dc3e947c409b51d
 
-COCOAPODS: 0.38.0.beta.1
+COCOAPODS: 0.38.0.beta.2

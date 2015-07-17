@@ -17,6 +17,7 @@ pod 'JSQMessagesViewController'
 pod 'JSQSystemSoundPlayer'
 pod 'RNGridMenu'
 pod 'IDMPhotoBrowser'
+pod 'IQKeyboardManager'
 
 end
 

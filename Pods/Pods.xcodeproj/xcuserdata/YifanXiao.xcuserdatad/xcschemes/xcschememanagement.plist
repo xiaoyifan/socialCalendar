@@ -49,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JSQMessagesViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -87,82 +92,87 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>026182A9966D15855088CE00</key>
+		<key>070834D6D84FD2A22C4D110ED88931AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1C2ABF6C138AB3EB9C4A7F22</key>
+		<key>0BA4E4E6CE075E0BBC405F0CBC48ED63</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>219E9F85B34E28AA49808F4F</key>
+		<key>1B44882C5B65F696A2ED7CEA98A83649</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2996189B6F8F0DC2C41ECA52</key>
+		<key>572FBC349B852A71A780CBAFBAA6B72F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2A8B5FBA2048D8F9CA4B0EBF</key>
+		<key>6A661BDF94F84D3E9379F9AF8D4D3E4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>325257BE9BE5D9ECA85FCFCE</key>
+		<key>778BF0866BA8411208469805042A921D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5A2FE93E3E925BC72FD9E0D6</key>
+		<key>796615F45179B59CA944F1BD304296F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5CA68F1A0F12C5F1D0EA4361</key>
+		<key>827F1B108C7969F79ADA56D9DBB37AB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7DEB93C9C2BF5299E75EF66A</key>
+		<key>A2B2494D18B46EE9FAB2BBEF904056DE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93F6611EFD2C3B8C2F5C5A0F</key>
+		<key>AB07FC68F15D0AF49ED7283853038A99</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ADC1931683350100CBB719D3</key>
+		<key>AF7B3A741EBCD42A06BF6EC744D3D819</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BE993298463EF744E6D89790</key>
+		<key>B2C5D5B9E00FB92041E4DB3D3DAFB952</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB717DEF4957DD16A2591CAD</key>
+		<key>C6131AC609C025F300F710498F193E54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DA000A1F4EFAF20BBF312846</key>
+		<key>D39F9B972D09DB79E5BBB42A72F3329D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DDDB770BEC29378C42AA6143</key>
+		<key>E44FC9C9049754E743270FEC28D4CDF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E002C0E0E543EAC4E526A822</key>
+		<key>ED3383A03B260F8E97FB0F22947D33EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA4D3B263D0FA8B63AD3498845B58D4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
