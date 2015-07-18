@@ -111,7 +111,7 @@
     return [array copy];
 }
 
-- (void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user
+- (void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user ToCompletion:(void (^)())completion
 {
     PFObject *event = [PFObject objectWithClassName:@"Events"];
 
@@ -140,12 +140,15 @@
             // The object has been saved.
             NSLog(@"%@", error);
         }
+        else{
+            completion();
+        }
     }];
 }
 
-- (void)insertNewObjectToDatabase:(eventObject *)newObj
+- (void)insertNewObjectToDatabase:(eventObject *)newObj ToCompletion:(void (^)())completion
 {
-    [self insertNewObjectToDatabase:newObj createdBy:[PFUser currentUser]];
+    [self insertNewObjectToDatabase:newObj createdBy:[PFUser currentUser] ToCompletion:completion];
 }
 
 - (eventObject *)parseObjectToEventObject:(PFObject *)object

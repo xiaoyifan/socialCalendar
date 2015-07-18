@@ -76,10 +76,6 @@
     }];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-}
-
 - (void)handleDouleTap
 {
     NSLog(@"table view double tapped");
@@ -136,7 +132,7 @@
 - (void)calendarDidDateSelected:(JTCalendar *)calendar date:(NSDate *)date
 {
     NSLog(@"%@", date);
-
+    [SVProgressHUD show];
     [[ParsingHandle sharedParsing] findObjectsofDate:date ToCompletion: ^(NSArray *array) {
         self.eventsToday = [[NSMutableArray alloc] init];
         NSLog(@"today contains %lu events", (unsigned long)array.count);
@@ -150,7 +146,7 @@
 
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.eventTableView reloadData];
-
+            [SVProgressHUD dismiss];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"TodaytableViewdidLoad" object:self];
         });
     }];

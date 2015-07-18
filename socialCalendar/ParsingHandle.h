@@ -23,7 +23,7 @@
 
 -(void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user;
 
--(void)insertNewObjectToDatabase:(eventObject *)newObj;
+-(void)insertNewObjectToDatabase:(eventObject *)newObj ToCompletion:(void (^)())completion;
 
 
 -(eventObject *)parseObjectToEventObject:(PFObject *)object;

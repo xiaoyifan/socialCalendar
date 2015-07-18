@@ -23,7 +23,8 @@
 #import "EventKitUI/EventKitUI.h"
 #import "HexColor.h"
 #import "LPNetworkingManager.h"
-
+#import "SVProgressHUD.h"
+#import "ProgressHUD.h"
 
 #import "SCConstants.h"
 

@@ -98,6 +98,7 @@
     
     self.showFriend = true;
     
+    [SVProgressHUD show];
     [[ParsingHandle sharedParsing] getMyFriendsToCompletion:^(NSArray *array){
        
         self.friendsArray = [array mutableCopy];
@@ -109,6 +110,7 @@
         }];
         
         [self.tableView reloadData];
+        [SVProgressHUD dismiss];
     }];
     
     [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
@@ -130,6 +132,7 @@
     
     [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor whiteColor]];
     
+    [SVProgressHUD show];
     [[ParsingHandle sharedParsing] getMyFriendsToCompletion:^(NSArray *array){
         
         self.friendsArray = [array mutableCopy];
@@ -137,6 +140,7 @@
         self.dataArray = self.friendsArray;
         
         [self.tableView reloadData];
+        [SVProgressHUD dismiss];
     }];
     
 }
@@ -154,6 +158,7 @@
     [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor whiteColor]];
     [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
     
+    [SVProgressHUD show];
     [[ParsingHandle sharedParsing] getMyPendingReceivedRequestToCompletion:^(NSArray *array){
         
         self.requestObjectArray = [array mutableCopy];
@@ -173,6 +178,7 @@
         self.dataArray = self.requestArray;
         
         [self.tableView reloadData];
+        [SVProgressHUD dismiss];
     }];
     
 }

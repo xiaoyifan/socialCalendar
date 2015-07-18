@@ -176,6 +176,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"the title can't be empty" message:@"please complete all the necessary information" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     } else {
+        [SVProgressHUD show];
         self.object = [[eventObject alloc] init];
         self.object.title = self.titleField.text;
         self.object.time = self.eventDate;
@@ -196,7 +197,9 @@
         [push setMessage:[NSString stringWithFormat:@"%@ wants to add you to the event: %@", [PFUser currentUser].username, self.object.title]];
         [push sendPushInBackground];
 
-        [[ParsingHandle sharedParsing] insertNewObjectToDatabase:self.object];
+        [[ParsingHandle sharedParsing] insertNewObjectToDatabase:self.object ToCompletion:^{
+            [SVProgressHUD dismiss];
+        }];
 
         [self registerLocalNotificationForEvent:self.object];
     }
