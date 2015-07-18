@@ -10,7 +10,6 @@
 #import "eventViewCell.h"
 #import "addEventTableViewController.h"
 #import "AAShareBubbles.h"
-#import "detailViewController.h"
 #import "WXApi.h"
 #import "WXApiObject.h"
 #import "socialCalendar-Swift.h"
