@@ -199,6 +199,7 @@
 
         [[ParsingHandle sharedParsing] insertNewObjectToDatabase:self.object ToCompletion:^{
             [SVProgressHUD dismiss];
+            [SVProgressHUD showSuccessWithStatus:@"New Events Added!"];
         }];
 
         [self registerLocalNotificationForEvent:self.object];
