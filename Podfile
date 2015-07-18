@@ -4,7 +4,7 @@
 target 'socialCalendar' do
     
 pod 'FoldingTabBar', '~> 1.0.0'
-pod 'JTCalendar'
+pod 'JTCalendar', '~> 1.2.3'
 pod 'DCModalSegue'
 pod 'HSDatePickerViewController'
 pod 'HexColors'
@@ -19,6 +19,7 @@ pod 'RNGridMenu'
 pod 'IDMPhotoBrowser'
 pod 'IQKeyboardManager'
 pod 'MBTwitterScroll'
+pod 'JVFloatLabeledTextField'
 
 end
 

@@ -36,6 +36,7 @@ PODS:
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
   - JTCalendar (1.2.3)
+  - JVFloatLabeledTextField (1.1.0)
   - MBProgressHUD (0.9.1)
   - MBTwitterScroll (0.1)
   - pop (1.0.7)
@@ -53,7 +54,8 @@ DEPENDENCIES:
   - IQKeyboardManager
   - JSQMessagesViewController
   - JSQSystemSoundPlayer
-  - JTCalendar
+  - JTCalendar (~> 1.2.3)
+  - JVFloatLabeledTextField
   - MBProgressHUD
   - MBTwitterScroll
   - pop
@@ -73,6 +75,7 @@ SPEC CHECKSUMS:
   JSQMessagesViewController: bb6649691182b1899dc52b42266ad69efc473510
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   JTCalendar: 246ea3e338fb97624846ec77cdcde448242c4d5c
+  JVFloatLabeledTextField: ea4a3d8387ddd43724c472bb2b8ab39b79af05d4
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MBTwitterScroll: 6c69bb2b864423db52b631f42311706b8d0440b6
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
