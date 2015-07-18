@@ -68,6 +68,9 @@
 		FF286BD31B51B51C00F7D166 /* SCEventAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF286BCF1B51B51C00F7D166 /* SCEventAddressTableViewCell.xib */; };
 		FF286BDD1B52273E00F7D166 /* SCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BDC1B52273E00F7D166 /* SCLocationManager.m */; };
 		FF286BE31B522A1A00F7D166 /* SCEventMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BE21B522A1A00F7D166 /* SCEventMapController.m */; };
+		FF353DA31B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353D9E1B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m */; };
+		FF353DA41B5A1B7800DBA4A2 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FF353DA01B5A1B7800DBA4A2 /* SVProgressHUD.bundle */; };
+		FF353DA51B5A1B7800DBA4A2 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DA21B5A1B7800DBA4A2 /* SVProgressHUD.m */; };
 		FF39EC4A1B57516B007FA3FB /* LPBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF39EC471B57516B007FA3FB /* LPBannerView.xib */; };
 		FF39EC4B1B57516B007FA3FB /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC491B57516B007FA3FB /* LPBannerView.m */; };
 		FF39EC4F1B575190007FA3FB /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC4E1B575190007FA3FB /* LPNetworkingManager.m */; };
@@ -194,6 +197,12 @@
 		FF286BDC1B52273E00F7D166 /* SCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLocationManager.m; sourceTree = "<group>"; };
 		FF286BE11B522A1A00F7D166 /* SCEventMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventMapController.h; sourceTree = "<group>"; };
 		FF286BE21B522A1A00F7D166 /* SCEventMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventMapController.m; sourceTree = "<group>"; };
+		FF353D9D1B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		FF353D9E1B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		FF353D9F1B5A1B7800DBA4A2 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		FF353DA01B5A1B7800DBA4A2 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		FF353DA11B5A1B7800DBA4A2 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		FF353DA21B5A1B7800DBA4A2 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		FF39EC471B57516B007FA3FB /* LPBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPBannerView.xib; sourceTree = "<group>"; };
 		FF39EC481B57516B007FA3FB /* LPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPBannerView.h; sourceTree = "<group>"; };
 		FF39EC491B57516B007FA3FB /* LPBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPBannerView.m; sourceTree = "<group>"; };
@@ -527,6 +536,7 @@
 		FF1BE66B1B35FC5600AF8886 /* loadingIndicator */ = {
 			isa = PBXGroup;
 			children = (
+				FF353D9C1B5A1B7800DBA4A2 /* SVProgressHUD */,
 				FF1BE66C1B35FC7600AF8886 /* ProgressHUD.h */,
 				FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */,
 			);
@@ -541,6 +551,19 @@
 			);
 			name = LocationManager;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		FF353D9C1B5A1B7800DBA4A2 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				FF353D9D1B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.h */,
+				FF353D9E1B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m */,
+				FF353D9F1B5A1B7800DBA4A2 /* SVProgressHUD-Prefix.pch */,
+				FF353DA01B5A1B7800DBA4A2 /* SVProgressHUD.bundle */,
+				FF353DA11B5A1B7800DBA4A2 /* SVProgressHUD.h */,
+				FF353DA21B5A1B7800DBA4A2 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		FF39EC461B57515B007FA3FB /* BannerView */ = {
@@ -756,6 +779,7 @@
 				CCB59FF51B20360A0050352D /* Plus.png in Resources */,
 				CCF0A45A1B0BEEB8002F619B /* Images.xcassets in Resources */,
 				FFF2B9B31B4B1CEE0039F9BB /* eventDetail.storyboard in Resources */,
+				FF353DA41B5A1B7800DBA4A2 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +853,7 @@
 				FF1BE66E1B35FC7600AF8886 /* ProgressHUD.m in Sources */,
 				CCB59FFC1B2119010050352D /* userTableViewController.m in Sources */,
 				CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */,
+				FF353DA51B5A1B7800DBA4A2 /* SVProgressHUD.m in Sources */,
 				FFDB428C1B47B50200785D6A /* UIColor+CustomColors.m in Sources */,
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
 				FFB0D2EF1B58C7D1008113B9 /* profileViewController.m in Sources */,
@@ -841,6 +866,7 @@
 				CC81CD191B1541E00039EA60 /* eventObject.m in Sources */,
 				CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */,
 				FFDB42881B47B49900785D6A /* popingViewController.m in Sources */,
+				FF353DA31B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m in Sources */,
 				CCF0A44F1B0BEEB8002F619B /* main.m in Sources */,
 				CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */,
 				FFFB6E411B55FB1E00409BCE /* SCEventHourCell.m in Sources */,
