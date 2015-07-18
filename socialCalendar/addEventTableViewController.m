@@ -197,7 +197,7 @@
         [push setMessage:[NSString stringWithFormat:@"%@ wants to add you to the event: %@", [PFUser currentUser].username, self.object.title]];
         [push sendPushInBackground];
 
-        [[ParsingHandle sharedParsing] insertNewObjectToDatabase:self.object ToCompletion:^{
+        [[ParsingHandle sharedParsing] insertNewObjectToDatabase:self.object ToCompletion: ^{
             [SVProgressHUD dismiss];
             [SVProgressHUD showSuccessWithStatus:@"New Events Added!"];
         }];
