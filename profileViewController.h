@@ -13,12 +13,12 @@ typedef NS_ENUM(NSInteger, SCUserDetailModuleType)
 {
     SCUserDetailModuleTypeNickName = 0,
     SCUserDetailModuleTypeEmail,
-//    SCUserDetailModuleTypeWhatsUp,
-//    SCUserDetailModuleTypeGender,
-//    SCUserDetailModuleTypeRegion,
-//    SCUserDetailModuleTypeEducation,
-//    SCUserDetailModuleTypeWork,
-//    SCUserDetailModuleTypeWebsite,
+    SCUserDetailModuleTypeWhatsUp,
+    SCUserDetailModuleTypeGender,
+    SCUserDetailModuleTypeRegion,
+    SCUserDetailModuleTypeEducation,
+    SCUserDetailModuleTypeWork,
+    SCUserDetailModuleTypeWebsite,
     SCUserDetailModuleTypeCount
 };
 

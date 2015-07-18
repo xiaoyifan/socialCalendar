@@ -23,6 +23,6 @@
  *  @param user The specific user.
  *  @param row   The row type.
  */
--(void)setupWithEvent:(PFUser *)user withRowType:(SCUserDetailModuleType)rowtype;
+-(void)setupWithUser:(PFUser *)user withRowType:(SCUserDetailModuleType)rowtype;
 
 @end

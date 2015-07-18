@@ -4,6 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="BentonSans-Regular.otf">
+            <string>BentonSans-Regular</string>
+            <string>BentonSans-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -15,14 +21,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAW-ch-Jhl">
-                        <rect key="frame" x="8" y="35" width="304" height="15.5"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        <rect key="frame" x="8" y="33.5" width="304" height="17"/>
+                        <fontDescription key="fontDescription" name="BentonSans-Regular" family="BentonSans" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuW-Mc-tUx">
-                        <rect key="frame" x="8" y="8" width="304" height="15.5"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        <rect key="frame" x="8" y="8" width="304" height="17"/>
+                        <fontDescription key="fontDescription" name="BentonSans-Regular" family="BentonSans" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -35,11 +41,13 @@
                     <constraint firstItem="qAW-ch-Jhl" firstAttribute="top" secondItem="KuW-Mc-tUx" secondAttribute="bottom" constant="10" id="UaZ-Va-lIX"/>
                     <constraint firstItem="KuW-Mc-tUx" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="fvl-Bv-vFk"/>
                     <constraint firstItem="KuW-Mc-tUx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="lUG-T2-isI"/>
+                    <constraint firstItem="qAW-ch-Jhl" firstAttribute="top" secondItem="KuW-Mc-tUx" secondAttribute="bottom" constant="8.5" id="qZ4-3O-X3l"/>
                     <constraint firstItem="qAW-ch-Jhl" firstAttribute="top" secondItem="KuW-Mc-tUx" secondAttribute="bottom" constant="11.5" id="vjn-q4-T15"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="UaZ-Va-lIX"/>
+                        <exclude reference="vjn-q4-T15"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>

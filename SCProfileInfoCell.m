@@ -10,7 +10,7 @@
 
 @implementation SCProfileInfoCell
 
--(void)setupWithEvent:(PFUser *)user withRowType:(SCUserDetailModuleType)rowtype{
+-(void)setupWithUser:(PFUser *)user withRowType:(SCUserDetailModuleType)rowtype{
     
     switch (rowtype) {
         case SCUserDetailModuleTypeNickName:

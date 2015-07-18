@@ -13,6 +13,7 @@ static NSString *const kEventNameCellIdentifier = @"eventNameTableViewCell";
 static NSString *const kEventAddressCellIdentifier = @"eventAddressTableViewCell";
 static NSString *const kEventMapCellIdentifier = @"eventMapTableViewCell";
 static NSString *const kProfileInfoCellIdentifier = @"profileInfoCell";
+static NSString *const kProfileEditableCellIdentifier = @"profileEditableCell";
 
 #pragma mark -- Nib Files
 static NSString *const kEventNameCellNibName = @"SCEventNameTableViewCell";
@@ -21,6 +22,7 @@ static NSString *const kEventMapCellNibName = @"SCEventMapTableViewCell";
 static NSString *const kEventHoursTableViewCellNibName = @"SCEventHoursTableViewCell";
 static NSString *const kEventHourCellNibName = @"SCEventHourCell";
 static NSString *const kProfileInfoCellNibName= @"SCProfileInfoCell";
+static NSString *const kProfileEditableCellNibName = @"SCProfileEditableCell";
 
 
 #pragma mark -- Strings & Titles

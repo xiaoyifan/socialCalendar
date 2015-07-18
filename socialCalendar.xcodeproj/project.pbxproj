@@ -73,6 +73,8 @@
 		FF353DA51B5A1B7800DBA4A2 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DA21B5A1B7800DBA4A2 /* SVProgressHUD.m */; };
 		FF353DAA1B5A296600DBA4A2 /* SCProfileInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DA81B5A296600DBA4A2 /* SCProfileInfoCell.m */; };
 		FF353DAB1B5A296600DBA4A2 /* SCProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF353DA91B5A296600DBA4A2 /* SCProfileInfoCell.xib */; };
+		FF353DB01B5A4ACA00DBA4A2 /* SCProfileEditableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF353DAF1B5A4ACA00DBA4A2 /* SCProfileEditableCell.xib */; };
+		FF353DB31B5A4F0A00DBA4A2 /* SCProfileEditableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DB21B5A4F0A00DBA4A2 /* SCProfileEditableCell.m */; };
 		FF39EC4A1B57516B007FA3FB /* LPBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF39EC471B57516B007FA3FB /* LPBannerView.xib */; };
 		FF39EC4B1B57516B007FA3FB /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC491B57516B007FA3FB /* LPBannerView.m */; };
 		FF39EC4F1B575190007FA3FB /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC4E1B575190007FA3FB /* LPNetworkingManager.m */; };
@@ -208,6 +210,12 @@
 		FF353DA71B5A296600DBA4A2 /* SCProfileInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoCell.h; sourceTree = "<group>"; };
 		FF353DA81B5A296600DBA4A2 /* SCProfileInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCProfileInfoCell.m; sourceTree = "<group>"; };
 		FF353DA91B5A296600DBA4A2 /* SCProfileInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCProfileInfoCell.xib; sourceTree = "<group>"; };
+		FF353DAC1B5A488300DBA4A2 /* BentonSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans-Light.otf"; sourceTree = "<group>"; };
+		FF353DAD1B5A488300DBA4A2 /* BentonSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans-Medium.otf"; sourceTree = "<group>"; };
+		FF353DAE1B5A488300DBA4A2 /* BentonSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans-Regular.otf"; sourceTree = "<group>"; };
+		FF353DAF1B5A4ACA00DBA4A2 /* SCProfileEditableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCProfileEditableCell.xib; sourceTree = "<group>"; };
+		FF353DB11B5A4F0A00DBA4A2 /* SCProfileEditableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCProfileEditableCell.h; sourceTree = "<group>"; };
+		FF353DB21B5A4F0A00DBA4A2 /* SCProfileEditableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCProfileEditableCell.m; sourceTree = "<group>"; };
 		FF39EC471B57516B007FA3FB /* LPBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPBannerView.xib; sourceTree = "<group>"; };
 		FF39EC481B57516B007FA3FB /* LPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPBannerView.h; sourceTree = "<group>"; };
 		FF39EC491B57516B007FA3FB /* LPBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPBannerView.m; sourceTree = "<group>"; };
@@ -466,6 +474,9 @@
 		CCF0A44C1B0BEEB8002F619B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FF353DAC1B5A488300DBA4A2 /* BentonSans-Light.otf */,
+				FF353DAD1B5A488300DBA4A2 /* BentonSans-Medium.otf */,
+				FF353DAE1B5A488300DBA4A2 /* BentonSans-Regular.otf */,
 				CCB59FF41B20360A0050352D /* Plus.png */,
 				CCF0A4501B0BEEB8002F619B /* AppDelegate.h */,
 				CCF0A4511B0BEEB8002F619B /* AppDelegate.m */,
@@ -577,6 +588,9 @@
 				FF353DA71B5A296600DBA4A2 /* SCProfileInfoCell.h */,
 				FF353DA81B5A296600DBA4A2 /* SCProfileInfoCell.m */,
 				FF353DA91B5A296600DBA4A2 /* SCProfileInfoCell.xib */,
+				FF353DB11B5A4F0A00DBA4A2 /* SCProfileEditableCell.h */,
+				FF353DB21B5A4F0A00DBA4A2 /* SCProfileEditableCell.m */,
+				FF353DAF1B5A4ACA00DBA4A2 /* SCProfileEditableCell.xib */,
 			);
 			name = profileCells;
 			sourceTree = "<group>";
@@ -786,6 +800,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFFB6E441B55FB1E00409BCE /* SCEventHoursTableViewCell.xib in Resources */,
+				FF353DB01B5A4ACA00DBA4A2 /* SCProfileEditableCell.xib in Resources */,
 				FF353DAB1B5A296600DBA4A2 /* SCProfileInfoCell.xib in Resources */,
 				FF286BD31B51B51C00F7D166 /* SCEventAddressTableViewCell.xib in Resources */,
 				CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */,
@@ -886,6 +901,7 @@
 				FFDB42881B47B49900785D6A /* popingViewController.m in Sources */,
 				FF353DA31B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m in Sources */,
 				CCF0A44F1B0BEEB8002F619B /* main.m in Sources */,
+				FF353DB31B5A4F0A00DBA4A2 /* SCProfileEditableCell.m in Sources */,
 				CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */,
 				FFFB6E411B55FB1E00409BCE /* SCEventHourCell.m in Sources */,
 				CCC680E91B12CA430007DD85 /* eventsViewController.m in Sources */,
