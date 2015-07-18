@@ -45,7 +45,7 @@ CGFloat const distance_W_LabelHeader = 35.0;
     
     
     // Header
-    self.header = [[UIView alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 107)];
+    self.header = [[UIView alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 120)];
     [self addSubview:self.header];
     self.headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.header.frame.size.height - 5, self.frame.size.width, 25)];
     self.headerLabel.textAlignment = NSTextAlignmentCenter;

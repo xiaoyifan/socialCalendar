@@ -9,6 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "MBTwitterScroll.h"
 
+typedef NS_ENUM(NSInteger, SCUserDetailModuleType)
+{
+    SCUserDetailModuleTypeNickName = 0,
+    SCUserDetailModuleTypeEmail,
+//    SCUserDetailModuleTypeWhatsUp,
+//    SCUserDetailModuleTypeGender,
+//    SCUserDetailModuleTypeRegion,
+//    SCUserDetailModuleTypeEducation,
+//    SCUserDetailModuleTypeWork,
+//    SCUserDetailModuleTypeWebsite,
+    SCUserDetailModuleTypeCount
+};
+
 @interface profileViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, MBTwitterScrollDelegate>
 
 @end

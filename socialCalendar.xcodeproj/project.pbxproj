@@ -71,6 +71,8 @@
 		FF353DA31B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353D9E1B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m */; };
 		FF353DA41B5A1B7800DBA4A2 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FF353DA01B5A1B7800DBA4A2 /* SVProgressHUD.bundle */; };
 		FF353DA51B5A1B7800DBA4A2 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DA21B5A1B7800DBA4A2 /* SVProgressHUD.m */; };
+		FF353DAA1B5A296600DBA4A2 /* SCProfileInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DA81B5A296600DBA4A2 /* SCProfileInfoCell.m */; };
+		FF353DAB1B5A296600DBA4A2 /* SCProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF353DA91B5A296600DBA4A2 /* SCProfileInfoCell.xib */; };
 		FF39EC4A1B57516B007FA3FB /* LPBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF39EC471B57516B007FA3FB /* LPBannerView.xib */; };
 		FF39EC4B1B57516B007FA3FB /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC491B57516B007FA3FB /* LPBannerView.m */; };
 		FF39EC4F1B575190007FA3FB /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC4E1B575190007FA3FB /* LPNetworkingManager.m */; };
@@ -203,6 +205,9 @@
 		FF353DA01B5A1B7800DBA4A2 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		FF353DA11B5A1B7800DBA4A2 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		FF353DA21B5A1B7800DBA4A2 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		FF353DA71B5A296600DBA4A2 /* SCProfileInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoCell.h; sourceTree = "<group>"; };
+		FF353DA81B5A296600DBA4A2 /* SCProfileInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCProfileInfoCell.m; sourceTree = "<group>"; };
+		FF353DA91B5A296600DBA4A2 /* SCProfileInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCProfileInfoCell.xib; sourceTree = "<group>"; };
 		FF39EC471B57516B007FA3FB /* LPBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPBannerView.xib; sourceTree = "<group>"; };
 		FF39EC481B57516B007FA3FB /* LPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPBannerView.h; sourceTree = "<group>"; };
 		FF39EC491B57516B007FA3FB /* LPBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPBannerView.m; sourceTree = "<group>"; };
@@ -566,6 +571,16 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		FF353DA61B5A290200DBA4A2 /* profileCells */ = {
+			isa = PBXGroup;
+			children = (
+				FF353DA71B5A296600DBA4A2 /* SCProfileInfoCell.h */,
+				FF353DA81B5A296600DBA4A2 /* SCProfileInfoCell.m */,
+				FF353DA91B5A296600DBA4A2 /* SCProfileInfoCell.xib */,
+			);
+			name = profileCells;
+			sourceTree = "<group>";
+		};
 		FF39EC461B57515B007FA3FB /* BannerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +603,7 @@
 		FFB0D2EB1B58C7AD008113B9 /* myProfile */ = {
 			isa = PBXGroup;
 			children = (
+				FF353DA61B5A290200DBA4A2 /* profileCells */,
 				FFB0D2ED1B58C7D1008113B9 /* profileViewController.h */,
 				FFB0D2EE1B58C7D1008113B9 /* profileViewController.m */,
 			);
@@ -770,6 +786,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFFB6E441B55FB1E00409BCE /* SCEventHoursTableViewCell.xib in Resources */,
+				FF353DAB1B5A296600DBA4A2 /* SCProfileInfoCell.xib in Resources */,
 				FF286BD31B51B51C00F7D166 /* SCEventAddressTableViewCell.xib in Resources */,
 				CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */,
 				CCF0A45D1B0BEEB8002F619B /* LaunchScreen.xib in Resources */,
@@ -831,6 +848,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB59FF81B20F4A90050352D /* userTableViewCell.m in Sources */,
+				FF353DAA1B5A296600DBA4A2 /* SCProfileInfoCell.m in Sources */,
 				CCB5A02E1B2643BC0050352D /* RMParallaxItem.swift in Sources */,
 				FF39EC4B1B57516B007FA3FB /* LPBannerView.m in Sources */,
 				FF286BC91B51A7C600F7D166 /* eventDetailDataController.m in Sources */,

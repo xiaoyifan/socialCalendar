@@ -7,20 +7,7 @@
 //
 
 #import "profileViewController.h"
-#import "SCEventHourCell.h"
-
-typedef NS_ENUM(NSInteger, SCUserDetailModuleType)
-{
-    SCUserDetailModuleTypeNickName = 0,
-    SCUserDetailModuleTypeEmail,
-    SCUserDetailModuleTypeWhatsUp,
-    SCUserDetailModuleTypeGender,
-    SCUserDetailModuleTypeRegion,
-    SCUserDetailModuleTypeEducation,
-    SCUserDetailModuleTypeWork,
-    SCUserDetailModuleTypeWebsite,
-    SCUserDetailModuleTypeCount
-};
+#import "SCProfileInfoCell.h"
 
 @interface profileViewController ()
 
@@ -43,6 +30,7 @@ typedef NS_ENUM(NSInteger, SCUserDetailModuleType)
     self.myTableView.tableView.delegate = self;
     self.myTableView.tableView.dataSource = self;
     self.myTableView.delegate = self;
+
     
     [self registerNibs];
     
@@ -51,7 +39,7 @@ typedef NS_ENUM(NSInteger, SCUserDetailModuleType)
 }
 
 -(void)registerNibs{
-    [self.myTableView.tableView registerNib:[UINib nibWithNibName:kEventHourCellNibName bundle:nil] forCellReuseIdentifier:kEventHourCellReuseIdentifier];
+    [self.myTableView.tableView registerNib:[UINib nibWithNibName:kProfileInfoCellNibName bundle:nil] forCellReuseIdentifier:kProfileInfoCellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,10 +58,15 @@ typedef NS_ENUM(NSInteger, SCUserDetailModuleType)
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    SCEventHourCell *cell = [tableView dequeueReusableCellWithIdentifier:kEventHourCellReuseIdentifier forIndexPath:indexPath];
-     //[cell setupCellWithTime:self.event.time withTitle:@"EVENT TIME"];
+    SCProfileInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:kProfileInfoCellIdentifier forIndexPath:indexPath];
+    [cell setupWithEvent:[PFUser currentUser] withRowType:indexPath.row];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewAutomaticDimension;
 }
 
 @end
