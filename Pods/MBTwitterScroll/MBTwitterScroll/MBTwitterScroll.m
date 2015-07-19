@@ -30,7 +30,9 @@ CGFloat const distance_W_LabelHeader = 35.0;
 - (MBTwitterScroll *)initTableViewWithBackgound:(UIImage*)backgroundImage avatarImage:(UIImage *)avatarImage titleString:(NSString *)titleString subtitleString:(NSString *)subtitleString buttonTitle:(NSString *)buttonTitle {
     
     CGRect bounds = [[UIScreen mainScreen] bounds];
-    self = [[MBTwitterScroll alloc] initWithFrame:bounds];
+    
+    CGRect frame = CGRectMake(bounds.origin.x, bounds.origin.y, bounds.size.width, bounds.size.height - 48.0f);
+    self = [[MBTwitterScroll alloc] initWithFrame:frame];
     
     [self setupView:backgroundImage avatarImage:avatarImage titleString:titleString subtitleString:subtitleString buttonTitle:buttonTitle scrollHeight:0 type:MBTable];
     [self.tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
@@ -45,7 +47,7 @@ CGFloat const distance_W_LabelHeader = 35.0;
     
     
     // Header
-    self.header = [[UIView alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 120)];
+    self.header = [[UIView alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 107)];
     [self addSubview:self.header];
     self.headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.header.frame.size.height - 5, self.frame.size.width, 25)];
     self.headerLabel.textAlignment = NSTextAlignmentCenter;

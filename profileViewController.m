@@ -8,7 +8,6 @@
 
 #import "profileViewController.h"
 #import "SCProfileInfoCell.h"
-#import "SCProfileEditableCell.h"
 
 @interface profileViewController ()
 
@@ -61,27 +60,9 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = nil;
-    
-    switch (indexPath.row) {
-        case SCUserDetailModuleTypeWhatsUp:
-        case SCUserDetailModuleTypeEducation:
-        case SCUserDetailModuleTypeWork:
-        case SCUserDetailModuleTypeWebsite:
-        case SCUserDetailModuleTypeRegion:
-        case SCUserDetailModuleTypeGender:
-            cell = (SCProfileEditableCell*)[tableView dequeueReusableCellWithIdentifier:kProfileEditableCellIdentifier forIndexPath:indexPath];
-            [(SCProfileEditableCell *)cell setupWithUser:[PFUser currentUser] withRowType:indexPath.row];
-            break;
-        case SCUserDetailModuleTypeEmail:
-        case SCUserDetailModuleTypeNickName:
             cell = (SCProfileInfoCell*)[tableView dequeueReusableCellWithIdentifier:kProfileInfoCellIdentifier forIndexPath:indexPath];
             [(SCProfileInfoCell *)cell setupWithUser:[PFUser currentUser] withRowType:indexPath.row];
-            break;
-            
-        default:
-            break;
-    }
-    
+
     return cell;
 }
 
