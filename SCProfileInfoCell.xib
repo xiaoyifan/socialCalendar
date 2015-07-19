@@ -35,7 +35,7 @@
                             <constraint firstAttribute="width" constant="100" id="LVm-8n-qih"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="BentonSans-Regular" family="BentonSans" pointSize="15"/>
-                        <color key="textColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.54620422980000005" green="0.54620422980000005" blue="0.54620422980000005" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="default">
                             <mask key="constraints">

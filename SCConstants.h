@@ -34,6 +34,27 @@ static NSString *const kEventNoAddressText = @"event address is not available";
 
 static NSString *const kDatePresentingFormat = @"dd-MMM-YYYY HH:mm";
 
+
+#pragma mark -- AlertView default string
+
+static NSString *const kSCAlertPlaceholderNewName = @"input your new name";
+static NSString *const kSCAlertPlaceholderNewEmail = @"input your new e-mail";
+static NSString *const kSCAlertPlaceholderNewEducation = @"input your education";
+static NSString *const kSCAlertPlaceholderNewWork = @"input your work";
+static NSString *const kSCAlertPlaceholderNewWebsite = @"input your personal site";
+
+static NSString *const kSCAlertTitleNewName = @"new name";
+static NSString *const kSCAlertTitleNewEmail = @"new E-mail";
+static NSString *const kSCAlertTitleNewEducation = @"new education";
+static NSString *const kSCAlertTitleNewWork = @"new work";
+static NSString *const kSCAlertTitleNewWebsite = @"new website";
+
+static NSString *const kSCAlertSubtitleNewName = @"To update your name, type in the text field and press button to confirm";
+static NSString *const kSCAlertSubtitleNewEmail = @"To update your email, type in the text field and press button to confirm";
+static NSString *const kSCAlertSubtitleNewEducation = @"To update your education, type in the text field and press button to confirm";
+static NSString *const kSCAlertSubtitleNewWork = @"To update your work, type in the text field and press button to confirm";
+static NSString *const kSCAlertSubtitleNewWebsite = @"To update your website, type in the text field and press button to confirm";
+
 #define socialCalendar_SCConstants_h
 
 

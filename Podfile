@@ -20,6 +20,7 @@ pod 'IDMPhotoBrowser'
 pod 'IQKeyboardManager'
 pod 'MBTwitterScroll'
 pod 'JVFloatLabeledTextField'
+pod 'SCLAlertView-Objective-C'
 
 end
 

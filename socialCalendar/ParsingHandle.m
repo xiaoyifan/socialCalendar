@@ -338,4 +338,44 @@
     }];
 }
 
+-(void)updateUser:(PFUser*)user Email:(NSString*)email ToCompletion:( void (^)(BOOL finished) )completion
+{
+    [user setEmail:email];
+    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
+        completion(succeeded);
+    }];
+}
+
+-(void)updateUser:(PFUser*)user Username:(NSString*)username ToCompletion:( void (^)(BOOL finished) )completion
+{
+    [user setUsername:username];
+    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
+        completion(succeeded);
+    }];
+}
+
+-(void)updateUser:(PFUser*)user Education:(NSString*)education ToCompletion:( void (^)(BOOL finished) )completion
+{
+    [user setObject:education forKey:@"education"];
+    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
+        completion(succeeded);
+    }];
+}
+
+-(void)updateUser:(PFUser*)user Work:(NSString*)work ToCompletion:( void (^)(BOOL finished) )completion
+{
+    [user setObject:work forKey:@"work"];
+    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
+        completion(succeeded);
+    }];
+}
+
+-(void)updateUser:(PFUser*)user Website:(NSString*)website ToCompletion:( void (^)(BOOL finished) )completion
+{
+    [user setObject:website forKey:@"website"];
+    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
+        completion(succeeded);
+    }];
+}
+
 @end

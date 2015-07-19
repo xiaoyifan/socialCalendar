@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MBTwitterScroll.h"
 
+
 typedef NS_ENUM(NSInteger, SCUserDetailModuleType)
 {
     SCUserDetailModuleTypeNickName = 0,

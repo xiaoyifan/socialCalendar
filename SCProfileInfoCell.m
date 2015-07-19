@@ -27,12 +27,12 @@
             break;
         case SCUserDetailModuleTypeRegion:
             self.titleLabel.text = @"REGION";
-            if (user[@"region"]) {
-               self.contentLabel.text = user[@"region"];
-            }
-            else{
+//            if (user[@"region"]) {
+//               self.contentLabel.text = user[@"region"];
+//            }
+//            else{
                 self.contentLabel.text = @"not available";
-            }
+            //}
             break;
         case SCUserDetailModuleTypeGender:
             self.titleLabel.text = @"GENDER";
@@ -55,7 +55,7 @@
             
         case SCUserDetailModuleTypeEducation:
             self.titleLabel.text = @"EDUCATION";
-            if (user[@"gender"]) {
+            if (user[@"education"]) {
                 self.contentLabel.text = user[@"education"];
             }
             else{

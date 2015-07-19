@@ -41,6 +41,7 @@ PODS:
   - MBTwitterScroll (0.1)
   - pop (1.0.7)
   - RNGridMenu (0.1.3)
+  - SCLAlertView-Objective-C (0.7.3)
 
 DEPENDENCIES:
   - AAShareBubbles
@@ -60,6 +61,7 @@ DEPENDENCIES:
   - MBTwitterScroll
   - pop
   - RNGridMenu
+  - SCLAlertView-Objective-C
 
 SPEC CHECKSUMS:
   AAShareBubbles: 960610d6a3c4da57d7cd295f4bec68790307bce8
@@ -80,5 +82,6 @@ SPEC CHECKSUMS:
   MBTwitterScroll: 6c69bb2b864423db52b631f42311706b8d0440b6
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
   RNGridMenu: c58db81f87b5473936bb1b675dc3e947c409b51d
+  SCLAlertView-Objective-C: 4bf9a07c8a8d1840e5174e643e16bc032239914d
 
 COCOAPODS: 0.38.0.beta.2
