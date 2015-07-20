@@ -74,8 +74,9 @@
 		FF353DAA1B5A296600DBA4A2 /* SCProfileInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DA81B5A296600DBA4A2 /* SCProfileInfoCell.m */; };
 		FF353DAB1B5A296600DBA4A2 /* SCProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF353DA91B5A296600DBA4A2 /* SCProfileInfoCell.xib */; };
 		FF353DB61B5B0FAA00DBA4A2 /* UIFont+OpenForum.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DB51B5B0FAA00DBA4A2 /* UIFont+OpenForum.m */; };
-		FF353DC51B5C092200DBA4A2 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF353DC41B5C092200DBA4A2 /* Profile.storyboard */; };
 		FF353DC81B5C30FB00DBA4A2 /* SCAlertViewDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DC71B5C30FB00DBA4A2 /* SCAlertViewDataController.m */; };
+		FF353DCD1B5C4DF300DBA4A2 /* Region.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF353DCC1B5C4DF300DBA4A2 /* Region.storyboard */; };
+		FF353DD01B5C608900DBA4A2 /* regionSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DCF1B5C608900DBA4A2 /* regionSelectionTableViewController.m */; };
 		FF39EC4A1B57516B007FA3FB /* LPBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF39EC471B57516B007FA3FB /* LPBannerView.xib */; };
 		FF39EC4B1B57516B007FA3FB /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC491B57516B007FA3FB /* LPBannerView.m */; };
 		FF39EC4F1B575190007FA3FB /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC4E1B575190007FA3FB /* LPNetworkingManager.m */; };
@@ -217,9 +218,11 @@
 		FF353DB41B5B0FAA00DBA4A2 /* UIFont+OpenForum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+OpenForum.h"; sourceTree = "<group>"; };
 		FF353DB51B5B0FAA00DBA4A2 /* UIFont+OpenForum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+OpenForum.m"; sourceTree = "<group>"; };
 		FF353DB71B5B253500DBA4A2 /* BentonSans-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans-ExtraLight.otf"; sourceTree = "<group>"; };
-		FF353DC41B5C092200DBA4A2 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		FF353DC61B5C30FB00DBA4A2 /* SCAlertViewDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAlertViewDataController.h; sourceTree = "<group>"; };
 		FF353DC71B5C30FB00DBA4A2 /* SCAlertViewDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAlertViewDataController.m; sourceTree = "<group>"; };
+		FF353DCC1B5C4DF300DBA4A2 /* Region.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Region.storyboard; sourceTree = "<group>"; };
+		FF353DCE1B5C608900DBA4A2 /* regionSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regionSelectionTableViewController.h; sourceTree = "<group>"; };
+		FF353DCF1B5C608900DBA4A2 /* regionSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = regionSelectionTableViewController.m; sourceTree = "<group>"; };
 		FF39EC471B57516B007FA3FB /* LPBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPBannerView.xib; sourceTree = "<group>"; };
 		FF39EC481B57516B007FA3FB /* LPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPBannerView.h; sourceTree = "<group>"; };
 		FF39EC491B57516B007FA3FB /* LPBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPBannerView.m; sourceTree = "<group>"; };
@@ -619,7 +622,9 @@
 		FFB0D2EB1B58C7AD008113B9 /* myProfile */ = {
 			isa = PBXGroup;
 			children = (
-				FF353DC41B5C092200DBA4A2 /* Profile.storyboard */,
+				FF353DCC1B5C4DF300DBA4A2 /* Region.storyboard */,
+				FF353DCE1B5C608900DBA4A2 /* regionSelectionTableViewController.h */,
+				FF353DCF1B5C608900DBA4A2 /* regionSelectionTableViewController.m */,
 				FF353DA61B5A290200DBA4A2 /* profileCells */,
 				FFB0D2ED1B58C7D1008113B9 /* profileViewController.h */,
 				FFB0D2EE1B58C7D1008113B9 /* profileViewController.m */,
@@ -811,7 +816,7 @@
 				FF286BD31B51B51C00F7D166 /* SCEventAddressTableViewCell.xib in Resources */,
 				CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */,
 				CCF0A45D1B0BEEB8002F619B /* LaunchScreen.xib in Resources */,
-				FF353DC51B5C092200DBA4A2 /* Profile.storyboard in Resources */,
+				FF353DCD1B5C4DF300DBA4A2 /* Region.storyboard in Resources */,
 				FF286BD11B51B51C00F7D166 /* SCEventNameTableViewCell.xib in Resources */,
 				FFFB6E461B561FE300409BCE /* SCEventHourCell.xib in Resources */,
 				FF39EC4A1B57516B007FA3FB /* LPBannerView.xib in Resources */,
@@ -882,6 +887,7 @@
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
 				CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */,
 				FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */,
+				FF353DD01B5C608900DBA4A2 /* regionSelectionTableViewController.m in Sources */,
 				FFF2B9B61B4B2CB10039F9BB /* SCEventInfoViewController.m in Sources */,
 				FFDB42991B48491D00785D6A /* expireMarkingView.m in Sources */,
 				CCB5A02F1B2643BC0050352D /* RMParallax.swift in Sources */,

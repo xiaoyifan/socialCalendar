@@ -28,6 +28,9 @@
         case SCUserDetailModuleTypeWebsite:
             return kSCAlertTitleNewWebsite;
             break;
+        case SCUserDetailModuleTypeWhatsUp:
+            return kSCAlertTitleNewWhatsUp;
+            break;
         default:
             return nil;
             break;
@@ -49,6 +52,9 @@
             break;
         case SCUserDetailModuleTypeWebsite:
             return kSCAlertSubtitleNewWebsite;
+            break;
+        case SCUserDetailModuleTypeWhatsUp:
+            return kSCAlertSubtitleNewWhatsUp;
             break;
         default:
             return nil;
@@ -72,6 +78,9 @@
             break;
         case SCUserDetailModuleTypeWebsite:
             return kSCAlertPlaceholderNewWebsite;
+            break;
+        case SCUserDetailModuleTypeWhatsUp:
+            return kSCAlertPlaceholderNewWhatsUp;
             break;
         default:
             return nil;
@@ -115,6 +124,13 @@
         case SCUserDetailModuleTypeWebsite:
         {
             [[ParsingHandle sharedParsing] updateUser:[PFUser currentUser] Website:text ToCompletion:^(BOOL finished){
+                completion(finished);
+            }];
+        }
+            break;
+        case SCUserDetailModuleTypeGender:
+        {
+            [[ParsingHandle sharedParsing] updateUser:[PFUser currentUser] Gender:text ToCompletion:^(BOOL finished){
                 completion(finished);
             }];
         }

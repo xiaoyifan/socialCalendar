@@ -42,6 +42,7 @@ PODS:
   - pop (1.0.7)
   - RNGridMenu (0.1.3)
   - SCLAlertView-Objective-C (0.7.3)
+  - ZFDragableModalTransition (0.5.1)
 
 DEPENDENCIES:
   - AAShareBubbles
@@ -62,6 +63,7 @@ DEPENDENCIES:
   - pop
   - RNGridMenu
   - SCLAlertView-Objective-C
+  - ZFDragableModalTransition
 
 SPEC CHECKSUMS:
   AAShareBubbles: 960610d6a3c4da57d7cd295f4bec68790307bce8
@@ -83,5 +85,6 @@ SPEC CHECKSUMS:
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
   RNGridMenu: c58db81f87b5473936bb1b675dc3e947c409b51d
   SCLAlertView-Objective-C: 4bf9a07c8a8d1840e5174e643e16bc032239914d
+  ZFDragableModalTransition: 048189eda437f91944ce6d5151618b8bf770196d
 
 COCOAPODS: 0.38.0.beta.2

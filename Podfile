@@ -21,6 +21,7 @@ pod 'IQKeyboardManager'
 pod 'MBTwitterScroll'
 pod 'JVFloatLabeledTextField'
 pod 'SCLAlertView-Objective-C'
+pod 'ZFDragableModalTransition'
 
 end
 

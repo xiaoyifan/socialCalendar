@@ -351,11 +351,11 @@
 
     [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"wechat"]
                           backgroundColor:[UIColor colorWithHexString:@"#00CC00"]
-                              andButtonId:100];
+                              andButtonId:101];
 
     [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"weibo"]
                           backgroundColor:[UIColor colorWithHexString:@"#FFCC11"]
-                              andButtonId:101];
+                              andButtonId:120];
 
     self.eventToShare = [self.events objectAtIndex:sender.tag];
 
@@ -380,13 +380,15 @@
             [self shareOnMail];
             break;
 
-        case 100:
+        case 101:
             NSLog(@"wechat");
             [self shareOnWechat];
-
-        case 101:
+            break;
+            
+        case 120:
             NSLog(@"Weibo");
             [self shareOnWeibo];
+            break;
 
         default:
             break;

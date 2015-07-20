@@ -378,4 +378,17 @@
     }];
 }
 
+-(void)updateUser:(PFUser*)user Gender:(NSString*)gender ToCompletion:( void (^)(BOOL finished) )completion{
+    [user setObject:gender forKey:@"gender"];
+    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
+        completion(succeeded);
+    }];
+}
+
+-(void)updateUser:(PFUser*)user Location:(NSString*)location ToCompletion:( void (^)(BOOL finished) )completion{
+    [user setObject:location forKey:@"location"];
+    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
+        completion(succeeded);
+    }];
+}
 @end

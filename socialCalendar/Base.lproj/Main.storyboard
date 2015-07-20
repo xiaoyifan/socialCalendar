@@ -745,33 +745,6 @@
             </objects>
             <point key="canvasLocation" x="183" y="1502"/>
         </scene>
-        <!--notification-->
-        <scene sceneID="Z3L-RB-Vmb">
-            <objects>
-                <tableViewController id="e2C-Ef-yaf" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="m9O-Hs-SX3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HwH-tz-8Pi">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HwH-tz-8Pi" id="NCZ-PG-jiG">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="e2C-Ef-yaf" id="ssi-az-Bjg"/>
-                            <outlet property="delegate" destination="e2C-Ef-yaf" id="9Qa-gt-fS8"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="notification" image="notification" id="YrN-kp-Beq"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfE-fz-LlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-893" y="2339"/>
-        </scene>
         <!--About me-->
         <scene sceneID="NwL-4z-BZx">
             <objects>
@@ -904,7 +877,6 @@
                         <segue destination="NUb-Gt-f0q" kind="relationship" relationship="viewControllers" id="kNM-AO-c6H"/>
                         <segue destination="3Gc-cX-gER" kind="relationship" relationship="viewControllers" id="ib4-do-Fbb"/>
                         <segue destination="7eD-3e-zxP" kind="relationship" relationship="viewControllers" id="IMz-8Q-uFi"/>
-                        <segue destination="e2C-Ef-yaf" kind="relationship" relationship="viewControllers" id="kdY-xN-GEM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UkK-Dv-pkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1029,7 +1001,6 @@
         <image name="friends" width="25" height="25"/>
         <image name="location" width="25" height="25"/>
         <image name="me" width="25" height="25"/>
-        <image name="notification" width="25" height="25"/>
         <image name="pin" width="25" height="25"/>
         <image name="share" width="25" height="25"/>
     </resources>

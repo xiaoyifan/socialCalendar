@@ -21,7 +21,7 @@
 
 -(NSArray *)findObjectsFromNativeCalendarOnDate:(NSDate *)date;
 
--(void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user;
+-(void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user ToCompletion:(void (^)())completion;
 
 -(void)insertNewObjectToDatabase:(eventObject *)newObj ToCompletion:(void (^)())completion;
 
@@ -49,5 +49,6 @@
 -(void)updateUser:(PFUser*)user Education:(NSString*)education ToCompletion:( void (^)(BOOL finished) )completion;
 -(void)updateUser:(PFUser*)user Work:(NSString*)work ToCompletion:( void (^)(BOOL finished) )completion;
 -(void)updateUser:(PFUser*)user Website:(NSString*)website ToCompletion:( void (^)(BOOL finished) )completion;
-
+-(void)updateUser:(PFUser*)user Gender:(NSString*)gender ToCompletion:( void (^)(BOOL finished) )completion;
+-(void)updateUser:(PFUser*)user Location:(NSString*)location ToCompletion:( void (^)(BOOL finished) )completion;
 @end

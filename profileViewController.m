@@ -10,10 +10,13 @@
 #import "SCAlertViewDataController.h"
 #import "SCProfileInfoCell.h"
 #import "SCLAlertView.h"
+#import "ZFModalTransitionAnimator.h"
 
 @interface profileViewController ()
 
 @property (nonatomic,strong) MBTwitterScroll* myTableView;
+
+@property (nonatomic, strong) ZFModalTransitionAnimator *animator;
 
 @end
 
@@ -38,6 +41,10 @@
     
     [self.view addSubview:self.myTableView];
     
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [self.myTableView.tableView reloadData];
 }
 
 -(void)registerNibs{
@@ -81,19 +88,18 @@
         case SCUserDetailModuleTypeEducation:
         case SCUserDetailModuleTypeWork:
         case SCUserDetailModuleTypeWebsite:
-            //show the pop up to set the value
-            [self showPopupWithRowtype:indexPath.row];
-            break;
-        
         case SCUserDetailModuleTypeWhatsUp:
-            //push to view controller with text field
+            //show the pop up to set the value
+            [self showPopupWithTextInRowtype:indexPath.row];
             break;
             
         case SCUserDetailModuleTypeGender:
             //push to view controller with gender selection
+            [self setPopupToUpdateGender];
             break;
             
         case SCUserDetailModuleTypeRegion:
+            [self pushToSetNewRegion];
             //push to view controlleer with map and location
             
             break;
@@ -101,15 +107,65 @@
         default:
             break;
     }
-    //[self showEventInfoViewWithEvent:self.events[indexPath.row]];
 }
 
-- (void)showPopupWithRowtype:(SCUserDetailModuleType)rowType
+
+- (void)pushToSetNewRegion{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Region" bundle:nil];
+        UINavigationController *regionVC = [storyboard instantiateViewControllerWithIdentifier:@"regionViewController"];
+    
+    self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:regionVC];
+    self.animator.dragable = NO;
+    self.animator.bounces = NO;
+    self.animator.behindViewAlpha = 0.5f;
+    self.animator.behindViewScale = 0.5f;
+    self.animator.transitionDuration = 0.7f;
+    self.animator.direction = ZFModalTransitonDirectionBottom;
+    
+    regionVC.transitioningDelegate = self.animator;
+    [self presentViewController:regionVC animated:YES completion:nil];
+}
+
+
+- (void)setPopupToUpdateGender{
+    
+    SCAlertViewDataController *alertData = [SCAlertViewDataController new];
+    
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    alert.backgroundType = Blur;
+    
+    [alert addButton:@"Male" actionBlock:^(void) {
+        [alertData updateUserInfoInRow:SCUserDetailModuleTypeGender withText:@"male" ToCompletion:^(BOOL finished){
+            if (finished) {
+                [SVProgressHUD showSuccessWithStatus:@"succeeded"];
+                [self.myTableView.tableView reloadData];
+            }
+            else{
+                [SVProgressHUD showErrorWithStatus:@"failed"];
+            }
+        }];
+    }];
+    [alert addButton:@"Female" actionBlock:^(void) {
+        [alertData updateUserInfoInRow:SCUserDetailModuleTypeGender withText:@"female" ToCompletion:^(BOOL finished){
+            if (finished) {
+                [SVProgressHUD showSuccessWithStatus:@"succeeded"];
+                [self.myTableView.tableView reloadData];
+            }
+            else{
+                [SVProgressHUD showErrorWithStatus:@"failed"];
+            }
+        }];
+    }];
+    
+    [alert alertIsDismissed:^{
+        NSLog(@"SCLAlertView dismissed!");
+    }];
+    
+    [alert showEdit:self title:@"Gender" subTitle:@"Select your gender" closeButtonTitle:nil duration:0.0f];
+}
+
+- (void)showPopupWithTextInRowtype:(SCUserDetailModuleType)rowType
 {
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Profile" bundle:nil];
-//    SCEventInfoViewController *eventDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"eventDetailViewController"];
-//    [eventDetailVC setupWithEvent:eventObj];
-//    [self.navigationController pushViewController:eventDetailVC animated:YES];
     
     SCAlertViewDataController *alertData = [SCAlertViewDataController new];
     
@@ -129,10 +185,6 @@
                 [SVProgressHUD showErrorWithStatus:@"failed"];
             }
         }];
-    }];
-    
-    [alert alertIsDismissed:^{
-        NSLog(@"SCLAlertView dismissed!");
     }];
     
     [alert showEdit:self title:[alertData setTitleWithRowType:rowType] subTitle:[alertData setSubtitleWithRowType:rowType] closeButtonTitle:nil duration:0.0f];
