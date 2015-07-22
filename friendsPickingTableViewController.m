@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [SVProgressHUD show];
     [[ParsingHandle sharedParsing] getMyFriendsToCompletion:^(NSArray *array){
         
         self.friendsArray = [array mutableCopy];
@@ -27,6 +27,7 @@
         for (int i=0; i<self.friendsArray.count; i++) {
             [self.selectMarkArray addObject:@0];
         }
+        [SVProgressHUD dismiss];
         
     }];
 }
