@@ -2,13 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>BentonSans-Light.otf</string>
-		<string>BentonSans-Medium.otf</string>
-		<string>BentonSans-Regular.otf</string>
-		<string>BentonSans-ExtraLight.otf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDocumentTypes</key>
@@ -50,7 +43,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MKDirectionsApplicationSupportedModes</key>
@@ -66,6 +59,13 @@
 	<string>we track you in the background</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>we use your location to track you</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BentonSans-Light.otf</string>
+		<string>BentonSans-Medium.otf</string>
+		<string>BentonSans-Regular.otf</string>
+		<string>BentonSans-ExtraLight.otf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
