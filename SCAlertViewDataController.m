@@ -128,9 +128,9 @@
             }];
         }
             break;
-        case SCUserDetailModuleTypeGender:
+        case SCUserDetailModuleTypeWhatsUp:
         {
-            [[ParsingHandle sharedParsing] updateUser:[PFUser currentUser] Gender:text ToCompletion:^(BOOL finished){
+            [[ParsingHandle sharedParsing] updateUser:[PFUser currentUser] Whatsup:text ToCompletion:^(BOOL finished){
                 completion(finished);
             }];
         }

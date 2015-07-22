@@ -51,4 +51,6 @@
 -(void)updateUser:(PFUser*)user Website:(NSString*)website ToCompletion:( void (^)(BOOL finished) )completion;
 -(void)updateUser:(PFUser*)user Gender:(NSString*)gender ToCompletion:( void (^)(BOOL finished) )completion;
 -(void)updateUser:(PFUser*)user Location:(NSString*)location ToCompletion:( void (^)(BOOL finished) )completion;
+- (void)updateUser:(PFUser *)user Whatsup:(NSString *)whatsup ToCompletion:( void (^)(BOOL finished) )completion;
+
 @end

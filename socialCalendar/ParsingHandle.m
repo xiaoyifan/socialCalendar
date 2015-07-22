@@ -338,6 +338,14 @@
     }];
 }
 
+- (void)updateUser:(PFUser *)user Username:(NSString *)username ToCompletion:( void (^)(BOOL finished) )completion
+{
+    [user setUsername:username];
+    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
+        completion(succeeded);
+    }];
+}
+
 - (void)updateUser:(PFUser *)user Email:(NSString *)email ToCompletion:( void (^)(BOOL finished) )completion
 {
     [user setEmail:email];
@@ -346,9 +354,25 @@
     }];
 }
 
-- (void)updateUser:(PFUser *)user Username:(NSString *)username ToCompletion:( void (^)(BOOL finished) )completion
+- (void)updateUser:(PFUser *)user Whatsup:(NSString *)whatsup ToCompletion:( void (^)(BOOL finished) )completion
 {
-    [user setUsername:username];
+    [user setObject:whatsup forKey:@"whatsUp"];
+    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
+        completion(succeeded);
+    }];
+}
+
+- (void)updateUser:(PFUser *)user Gender:(NSString *)gender ToCompletion:( void (^)(BOOL finished) )completion
+{
+    [user setObject:gender forKey:@"gender"];
+    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
+        completion(succeeded);
+    }];
+}
+
+- (void)updateUser:(PFUser *)user Location:(NSString *)location ToCompletion:( void (^)(BOOL finished) )completion
+{
+    [user setObject:location forKey:@"location"];
     [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
         completion(succeeded);
     }];
@@ -378,17 +402,4 @@
     }];
 }
 
--(void)updateUser:(PFUser*)user Gender:(NSString*)gender ToCompletion:( void (^)(BOOL finished) )completion{
-    [user setObject:gender forKey:@"gender"];
-    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
-        completion(succeeded);
-    }];
-}
-
--(void)updateUser:(PFUser*)user Location:(NSString*)location ToCompletion:( void (^)(BOOL finished) )completion{
-    [user setObject:location forKey:@"location"];
-    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
-        completion(succeeded);
-    }];
-}
 @end

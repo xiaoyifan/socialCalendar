@@ -76,22 +76,21 @@
     }];
 }
 
-- (IBAction)changeSwitch:(UISwitch *)sender {
-    
-    if([sender isOn]){
+- (IBAction)changeSwitch:(UISwitch *)sender
+{
+    if ([sender isOn]) {
         self.calendar.calendarAppearance.isWeekMode = YES;
-    } else{
+    } else {
         self.calendar.calendarAppearance.isWeekMode = NO;
     }
     [self transitionExample];
 }
 
-- (IBAction)changeToToday:(id)sender {
-    
-     [self.calendar setCurrentDate:[NSDate date]];
+- (IBAction)changeToToday:(id)sender
+{
+    [self.calendar setCurrentDate:[NSDate date]];
     [self calendarDidDateSelected:self.calendar date:[NSDate date]];
 }
-
 
 - (void)handleDouleTap
 {

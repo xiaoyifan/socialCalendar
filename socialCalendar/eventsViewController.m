@@ -384,7 +384,7 @@
             NSLog(@"wechat");
             [self shareOnWechat];
             break;
-            
+
         case 120:
             NSLog(@"Weibo");
             [self shareOnWeibo];
