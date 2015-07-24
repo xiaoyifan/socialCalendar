@@ -43,7 +43,7 @@
 {
     [super viewDidLoad];
 
-    self.pickerData = @[@"10 mins ahead", @"15 mins ahead", @"30 mins ahead", @"1 hour ahead", @"5 hours ahead", @"1 day ahead"];
+    self.pickerData = @[@"10 mins before", @"15 mins before", @"30 mins before", @"1 hour before", @"5 hours before", @"1 day before"];
 }
 
 - (IBAction)timeButtonPressed:(UIButton *)sender
@@ -144,17 +144,17 @@
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
 
 
-    if ([string isEqualToString:@"10 mins ahead"]) {
+    if ([string isEqualToString:@"10 mins before"]) {
         [offsetComponents setMinute:-10]; // note that I'm setting it to -1
-    } else if ([string isEqualToString:@"15 mins ahead"]) {
+    } else if ([string isEqualToString:@"15 mins before"]) {
         [offsetComponents setMinute:-15]; // note that I'm setting it to -1
-    } else if ([string isEqualToString:@"30 mins ahead"]) {
+    } else if ([string isEqualToString:@"30 mins before"]) {
         [offsetComponents setMinute:-30]; // note that I'm setting it to -1
-    } else if ([string isEqualToString:@"1 hour ahead"]) {
+    } else if ([string isEqualToString:@"1 hour before"]) {
         [offsetComponents setHour:-1]; // note that I'm setting it to -1
-    } else if ([string isEqualToString:@"5 hours ahead"]) {
+    } else if ([string isEqualToString:@"5 hours before"]) {
         [offsetComponents setHour:-5]; // note that I'm setting it to -1
-    } else if ([string isEqualToString:@"1 day ahead"]) {
+    } else if ([string isEqualToString:@"1 day before"]) {
         [offsetComponents setDay:-1]; // note that I'm setting it to -1
     }
 
@@ -171,11 +171,7 @@
     if (sender != self.saveButton) {
         return;
     }
-
-    if ([self.titleField.text isEqualToString:@""]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"the title can't be empty" message:@"please complete all the necessary information" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
-    } else {
+    else {
         [SVProgressHUD show];
         self.object = [[eventObject alloc] init];
         self.object.title = self.titleField.text;
@@ -204,6 +200,23 @@
 
         [self registerLocalNotificationForEvent:self.object];
     }
+}
+
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    
+    
+    if ([self.titleField.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"the title can't be empty" message:@"please complete all the necessary information" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return NO;
+    }
+    else if(!self.eventDate){
+        SCLAlertView *alert = [[SCLAlertView alloc] init];
+        [alert showError:self title:@"No Date Selected" subTitle:@"please pick the time of this event" closeButtonTitle:@"Got it" duration:1.0f];
+        return NO;
+    }
+    
+   return YES;
 }
 
 #pragma mark -localNotification registration

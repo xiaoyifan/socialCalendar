@@ -75,9 +75,7 @@
                                       | PFLogInFieldsLogInButton
                                       | PFLogInFieldsSignUpButton
                                       | PFLogInFieldsPasswordForgotten
-                                      | PFLogInFieldsDismissButton
-                                      | PFLogInFieldsFacebook
-                                      | PFLogInFieldsTwitter);
+                                      | PFLogInFieldsDismissButton);
         // Create the sign up view controller
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
         [signUpViewController setDelegate:self]; // Set ourselves as the delegate

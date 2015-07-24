@@ -25,6 +25,8 @@
 #import "LPNetworkingManager.h"
 #import "SVProgressHUD.h"
 #import "ProgressHUD.h"
+#import "SCAlertViewDataController.h"
+#import "SCLAlertView.h"
 
 #import "SCConstants.h"
 
