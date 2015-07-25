@@ -77,6 +77,8 @@
 
 + (void)openMapsWithStore:(eventObject *)event
 {
+    if (event.location) {
+
     CLLocationCoordinate2D coordinate;
     coordinate.latitude = event.location.coordinate.latitude;
     coordinate.longitude = event.location.coordinate.longitude;
@@ -89,6 +91,7 @@
         MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking
     };
     [MKMapItem openMapsWithItems:items launchOptions:launchOptions];
+    }
 }
 
 #pragma mark - CLLocationManagerDelegate Methods

@@ -25,10 +25,10 @@
         self.descriptionLabel.text = event.eventNote;
     } else if (rowType == SCEventDetailModuleTypeAddress) {
         self.titleLabel.text = @"ADDRESS";
-        if (event.locationDescription) {
-            self.descriptionLabel.text = event.locationDescription;
-        } else {
+        if ([event.locationDescription isEqualToString:@"(null)"] || event.locationDescription == nil) {
             self.descriptionLabel.text = kEventNoAddressText;
+        } else {
+            self.descriptionLabel.text = event.locationDescription;
         }
     }
     self.titleLabel.textColor = [UIColor customBlueColor];

@@ -280,9 +280,13 @@
         self.object.time = self.eventDate;
 
         self.object.reminderDate = [self getDateFromText:self.reminderLabel.text];
-
-        self.object.location = self.itemLocation;
-        self.object.locationDescription = self.locationLabel.text;
+        if (self.itemLocation.coordinate.latitude != 0 || self.itemLocation.coordinate.longitude != 0) {
+            self.object.location = self.itemLocation;
+        }
+        
+        if (![self.locationLabel.text isEqualToString:@"add the location"]) {
+            self.object.locationDescription = self.locationLabel.text;
+        }
         self.object.eventNote = self.noteField.text;
         self.object.group = self.selectedFriends;
 
