@@ -22,6 +22,7 @@
 @interface eventsViewController () <AAShareBubblesDelegate, MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
 
 @property NSMutableArray *events;
+@property NSMutableArray *fetchedEvents;
 
 @property eventObject *eventToShare;
 
@@ -99,13 +100,20 @@
         [installation saveInBackground];
 
         [[ParsingHandle sharedParsing] findObjectsOfCurrentUserToCompletion: ^(NSArray *array) {
-            self.events = [[NSMutableArray alloc] init];
+            self.fetchedEvents = [[NSMutableArray alloc] init];
 
             for (PFObject *obj in array) {
                 eventObject *newObj = [[ParsingHandle sharedParsing] parseObjectToEventObject:obj];
-                [self.events addObject:newObj];
+                [self.fetchedEvents addObject:newObj];
             }
-
+            NSArray *sortedArray;
+            sortedArray = [self.fetchedEvents sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+                NSDate *first = ((eventObject *)a).time;
+                NSDate *second = ((eventObject *)b).time;
+                return [second compare:first];
+            }];
+            
+            self.events = [NSMutableArray arrayWithArray:sortedArray];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
 
@@ -587,20 +595,17 @@
                             [UIColor colorWithRed:100 / 255.0 green:181 / 255.0 blue:246 / 255.0 alpha:1], //2. blue
                             [UIColor colorWithRed:220 / 255.0 green:231 / 255.0 blue:117 / 255.0 alpha:1], //8. lime
                             [UIColor colorWithRed:79 / 255.0 green:195 / 255.0 blue:247 / 255.0 alpha:1], //7. light blue
-                            [UIColor colorWithRed:77 / 255.0 green:208 / 255.0 blue:225 / 255.0 alpha:1], //3. cyan
                             [UIColor colorWithRed:77 / 255.0 green:182 / 255.0 blue:172 / 255.0 alpha:1], //13. teal
                             [UIColor colorWithRed:129 / 255.0 green:199 / 255.0 blue:132 / 255.0 alpha:1], //9. green
                             [UIColor colorWithRed:255 / 255.0 green:241 / 255.0 blue:118 / 255.0 alpha:1], //16. yellow
-                            [UIColor colorWithRed:255 / 255.0 green:213 / 255.0 blue:79 / 255.0 alpha:1], //12. amber
                             [UIColor colorWithRed:255 / 255.0 green:183 / 255.0 blue:77 / 255.0 alpha:1], //4. orange
                             [UIColor colorWithRed:255 / 255.0 green:138 / 255.0 blue:101 / 255.0 alpha:1], //10. deep orange
-                            [UIColor colorWithRed:144 / 255.0 green:164 / 255.0 blue:174 / 255.0 alpha:1], //15. blue grey
                             [UIColor colorWithRed:229 / 255.0 green:155 / 255.0 blue:155 / 255.0 alpha:1], //6. red
                             [UIColor colorWithRed:240 / 255.0 green:98 / 255.0 blue:146 / 255.0 alpha:1], //1. pink
                             [UIColor colorWithRed:186 / 255.0 green:104 / 255.0 blue:200 / 255.0 alpha:1], //11. purple
                             nil];
 
-    int rad = arc4random() % 16;
+    int rad = arc4random() % 13;
     return sliceColors[rad];
 }
 
