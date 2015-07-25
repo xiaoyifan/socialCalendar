@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7614C79D76B197DC45EBE17A"
+               BlueprintIdentifier = "1F5EC4B8C9AF1EEB82689BD3"
                BuildableName = "libRNGridMenu.a"
                BlueprintName = "RNGridMenu"
                ReferencedContainer = "container:Pods.xcodeproj">

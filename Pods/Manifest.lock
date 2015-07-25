@@ -40,6 +40,9 @@ PODS:
   - MBProgressHUD (0.9.1)
   - MBTwitterScroll (0.1)
   - pop (1.0.7)
+  - RMActionController (1.0.4)
+  - RMDateSelectionViewController (2.0.1):
+    - RMActionController (~> 1.0.0)
   - RNGridMenu (0.1.3)
   - SCLAlertView-Objective-C (0.7.3)
   - ZFDragableModalTransition (0.5.1)
@@ -61,6 +64,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - MBTwitterScroll
   - pop
+  - RMDateSelectionViewController (~> 2.0.1)
   - RNGridMenu
   - SCLAlertView-Objective-C
   - ZFDragableModalTransition
@@ -83,6 +87,8 @@ SPEC CHECKSUMS:
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MBTwitterScroll: 6c69bb2b864423db52b631f42311706b8d0440b6
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  RMActionController: 19423654600d40ca15132a4e548d005042d68f09
+  RMDateSelectionViewController: 027bdeeaacb78b2b528808ed21efd697490d2b4e
   RNGridMenu: c58db81f87b5473936bb1b675dc3e947c409b51d
   SCLAlertView-Objective-C: 4bf9a07c8a8d1840e5174e643e16bc032239914d
   ZFDragableModalTransition: 048189eda437f91944ce6d5151618b8bf770196d

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D6F1ECABF4181E59BBF8DF7D"
+               BlueprintIdentifier = "F60E1A1D3B7F5D927F9A151F"
                BuildableName = "libPods-socialCalendar.a"
                BlueprintName = "Pods-socialCalendar"
                ReferencedContainer = "container:Pods.xcodeproj">

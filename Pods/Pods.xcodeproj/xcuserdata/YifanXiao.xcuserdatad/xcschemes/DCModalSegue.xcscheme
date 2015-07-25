@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5EAB4AD9927C3C7D7CECCE1"
+               BlueprintIdentifier = "224E2E7864E1EBB509221552"
                BuildableName = "libDCModalSegue.a"
                BlueprintName = "DCModalSegue"
                ReferencedContainer = "container:Pods.xcodeproj">

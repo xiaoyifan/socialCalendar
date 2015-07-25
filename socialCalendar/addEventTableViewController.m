@@ -7,12 +7,12 @@
 //
 
 #import "addEventTableViewController.h"
-#import "HSDatePickerViewController.h"
 #import "mapViewController.h"
 #import "KLCPopup.h"
 #import "friendsPickingTableViewController.h"
+#import "RMDateSelectionViewController.h"
 
-@interface addEventTableViewController () <HSDatePickerViewControllerDelegate, UIPickerViewDelegate, UIAlertViewDelegate>
+@interface addEventTableViewController () <UIPickerViewDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
@@ -44,25 +44,127 @@
     [super viewDidLoad];
 
     self.pickerData = @[@"10 mins before", @"15 mins before", @"30 mins before", @"1 hour before", @"5 hours before", @"1 day before"];
+    
+    self.timeLabel.text = @"Pick your date";
 }
 
-- (IBAction)timeButtonPressed:(UIButton *)sender
+- (IBAction)selectDate:(id)sender {
+    
+    RMActionControllerStyle style = RMActionControllerStyleWhite;
+    
+    RMAction *selectAction = [RMAction actionWithTitle:@"Select" style:RMActionStyleDone andHandler:^(RMActionController *controller) {
+        NSLog(@"Successfully selected date: %@", ((UIDatePicker *)controller.contentView).date);
+        self.eventDate = ((UIDatePicker *)controller.contentView).date;
+        
+            NSDateFormatter *dateFormater = [NSDateFormatter new];
+            dateFormater.dateFormat = kDateFormatInselection;
+            self.timeLabel.text = [dateFormater stringFromDate:self.eventDate];
+        [self showTabBar:self.tabBarController];
+        
+    }];
+    
+    RMAction *cancelAction = [RMAction actionWithTitle:@"Cancel" style:RMActionStyleCancel andHandler:^(RMActionController *controller) {
+        NSLog(@"Date selection was canceled");
+         [self showTabBar:self.tabBarController];
+    }];
+    
+    RMDateSelectionViewController *dateSelectionController = [RMDateSelectionViewController actionControllerWithStyle:style];
+    dateSelectionController.title = @"Pick Date";
+    dateSelectionController.message = @"Pick your event date";
+    
+    [dateSelectionController addAction:selectAction];
+    [dateSelectionController addAction:cancelAction];
+    
+    RMAction *in15MinAction = [RMAction actionWithTitle:@"15 Min" style:RMActionStyleAdditional andHandler:^(RMActionController *controller) {
+        ((UIDatePicker *)controller.contentView).date = [NSDate dateWithTimeIntervalSinceNow:15*60];
+        NSLog(@"15 Min button tapped");
+    }];
+    in15MinAction.dismissesActionController = NO;
+    
+    RMAction *in30MinAction = [RMAction actionWithTitle:@"30 Min" style:RMActionStyleAdditional andHandler:^(RMActionController *controller) {
+        ((UIDatePicker *)controller.contentView).date = [NSDate dateWithTimeIntervalSinceNow:30*60];
+        NSLog(@"30 Min button tapped");
+    }];
+    in30MinAction.dismissesActionController = NO;
+    
+    RMAction *in45MinAction = [RMAction actionWithTitle:@"45 Min" style:RMActionStyleAdditional andHandler:^(RMActionController *controller) {
+        ((UIDatePicker *)controller.contentView).date = [NSDate dateWithTimeIntervalSinceNow:45*60];
+        NSLog(@"45 Min button tapped");
+    }];
+    in45MinAction.dismissesActionController = NO;
+    
+    RMAction *in60MinAction = [RMAction actionWithTitle:@"60 Min" style:RMActionStyleAdditional andHandler:^(RMActionController *controller) {
+        ((UIDatePicker *)controller.contentView).date = [NSDate dateWithTimeIntervalSinceNow:60*60];
+        NSLog(@"60 Min button tapped");
+    }];
+    in60MinAction.dismissesActionController = NO;
+    
+    RMGroupedAction *groupedAction = [RMGroupedAction actionWithStyle:RMActionStyleAdditional andActions:@[in15MinAction, in30MinAction, in45MinAction, in60MinAction]];
+    
+    [dateSelectionController addAction:groupedAction];
+    
+    RMAction *nowAction = [RMAction actionWithTitle:@"Now" style:RMActionStyleAdditional andHandler:^(RMActionController *controller) {
+        ((UIDatePicker *)controller.contentView).date = [NSDate date];
+        NSLog(@"Now button tapped");
+    }];
+    nowAction.dismissesActionController = NO;
+    
+    [dateSelectionController addAction:nowAction];
+    
+    //You can enable or disable blur, bouncing and motion effects
+    dateSelectionController.disableBouncingEffects = NO;
+    dateSelectionController.disableMotionEffects = NO;
+    dateSelectionController.disableBlurEffects = NO;
+    
+    //You can access the actual UIDatePicker via the datePicker property
+    dateSelectionController.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+    dateSelectionController.datePicker.minuteInterval = 5;
+    dateSelectionController.datePicker.date = [NSDate date];
+    
+    //On the iPad we want to show the date selection view controller within a popover. Fortunately, we can use iOS 8 API for this! :)
+    //(Of course only if we are running on iOS 8 or later)
+    if([dateSelectionController respondsToSelector:@selector(popoverPresentationController)] && [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        //First we set the modal presentation style to the popover style
+        dateSelectionController.modalPresentationStyle = UIModalPresentationPopover;
+        
+        //Then we tell the popover presentation controller, where the popover should appear
+        dateSelectionController.popoverPresentationController.sourceView = self.tableView;
+        dateSelectionController.popoverPresentationController.sourceRect = [self.tableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    }
+    
+    //Now just present the date selection controller using the standard iOS presentation method
+    [self presentViewController:dateSelectionController animated:YES completion:nil];
+    [self hideTabBar:self.tabBarController];
+}
+
+- (void)hideTabBar:(UITabBarController *)tabbarcontroller
 {
-    HSDatePickerViewController *hsdpvc = [HSDatePickerViewController new];
-    hsdpvc.delegate = self;
-
-    [self presentViewController:hsdpvc animated:YES completion:nil];
+    [UIView animateWithDuration:0.5f animations:^{
+        for (UIView *view in tabbarcontroller.view.subviews) {
+            if ([view isKindOfClass:[UITabBar class]]) {
+                [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y+49.f, view.frame.size.width, view.frame.size.height)];
+            }
+        }
+    } completion:^(BOOL finished) {
+        //do smth after animation finishes
+        tabbarcontroller.tabBar.hidden = YES;
+    }];
 }
 
-#pragma mark - HSDatePickerViewControllerDelegate
-- (void)hsDatePickerPickedDate:(NSDate *)date
+- (void)showTabBar:(UITabBarController *)tabbarcontroller
 {
-    NSLog(@"Date picked %@", date);
-    self.eventDate = date;
-    NSDateFormatter *dateFormater = [NSDateFormatter new];
-    dateFormater.dateFormat = @"yyyy.MM.dd HH:mm:ss";
-    self.timeLabel.text = [dateFormater stringFromDate:date];
+    tabbarcontroller.tabBar.hidden = NO;
+    [UIView animateWithDuration:0.5f animations:^{
+        for (UIView *view in tabbarcontroller.view.subviews) {
+            if ([view isKindOfClass:[UITabBar class]]) {
+                [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y-49.f, view.frame.size.width, view.frame.size.height)];
+            }
+        }
+    } completion:^(BOOL finished) {
+        //do smth after animation finishes
+    }];
 }
+
 
 - (IBAction)addReminder:(UIButton *)sender
 {
@@ -185,13 +287,15 @@
         self.object.group = self.selectedFriends;
 
         //sent notifications to all selected users
-        PFQuery *pushQuery = [PFInstallation query];
-        [pushQuery whereKey:@"owner" containedIn:self.selectedFriends];
-
-        PFPush *push = [[PFPush alloc] init];
-        [push setQuery:pushQuery];
-        [push setMessage:[NSString stringWithFormat:@"%@ wants to add you to the event: %@", [PFUser currentUser].username, self.object.title]];
-        [push sendPushInBackground];
+        if (self.selectedFriends.count != 0) {
+            PFQuery *pushQuery = [PFInstallation query];
+            [pushQuery whereKey:@"owner" containedIn:self.selectedFriends];
+            
+            PFPush *push = [[PFPush alloc] init];
+            [push setQuery:pushQuery];
+            [push setMessage:[NSString stringWithFormat:@"%@ wants to add you to the event: %@", [PFUser currentUser].username, self.object.title]];
+            [push sendPushInBackground];
+        }
 
         [[ParsingHandle sharedParsing] insertNewObjectToDatabase:self.object ToCompletion: ^{
             [SVProgressHUD dismiss];

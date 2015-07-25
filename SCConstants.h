@@ -33,6 +33,7 @@ static NSString *const kEventNoAddressText = @"event address is not available";
 #pragma mark -- keys
 
 static NSString *const kDatePresentingFormat = @"dd-MMM-YYYY HH:mm";
+static NSString *const kDateFormatInselection = @"yyyy-MMMM-dd HH:mm";
 
 
 #pragma mark -- AlertView default string
@@ -57,6 +58,7 @@ static NSString *const kSCAlertSubtitleNewEducation = @"To update your education
 static NSString *const kSCAlertSubtitleNewWork = @"To update your work, type in the text field and press button to confirm";
 static NSString *const kSCAlertSubtitleNewWebsite = @"To update your website, type in the text field and press button to confirm";
 static NSString *const kSCAlertSubtitleNewWhatsUp = @"Say what you wanna say";
+
 
 #define socialCalendar_SCConstants_h
 

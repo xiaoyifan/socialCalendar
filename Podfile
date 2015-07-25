@@ -22,6 +22,7 @@ pod 'MBTwitterScroll'
 pod 'JVFloatLabeledTextField'
 pod 'SCLAlertView-Objective-C'
 pod 'ZFDragableModalTransition'
+pod 'RMDateSelectionViewController', '~> 2.0.1'
 
 end
 

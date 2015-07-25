@@ -30,4 +30,6 @@
 
 #import "SCConstants.h"
 
+#import "UITabBarController+TabBarVisibility.h"
+
 #endif
