@@ -28,6 +28,8 @@
 
     }];
     
+    [[ParsingHandle sharedParsing] removeDeniedFriendRequestFrom:[PFUser currentUser]];
+    
     
 }
 

@@ -300,6 +300,20 @@
     }];
 }
 
+- (void)removeDeniedFriendRequestFrom:(PFUser *)user
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"friendRequest"];
+    [query whereKey:@"status" equalTo:@"denied"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+       
+        for (PFObject * object in objects) {
+            [object deleteEventually];
+        }
+    }];
+    //Get all my denied requests and remove all the requests from the database
+    
+}
+
 - (void)getApprovedUsersToCompletion:( void (^)(NSArray *array) )completion
 {
     if (![PFUser currentUser]) {
@@ -314,7 +328,8 @@
         } else {
             NSLog(@"%lu requests sent", (unsigned long)objects.count);
             NSMutableArray *array = [[NSMutableArray alloc] init];
-            for (PFObject *request in objects) {
+            for (PFObject *request in objects)
+            {
                 PFUser *user = request[@"to"];
                 [array addObject:user];
                 PFRelation *friendRelation = [[PFUser currentUser] relationForKey:@"friendRelation"];

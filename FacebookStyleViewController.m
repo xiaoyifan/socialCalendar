@@ -231,6 +231,29 @@
 }
 
 
+- (IBAction)cancelButtonPressed:(UIButton *)sender {
+    
+    UIButton *senderButton = (UIButton *)sender;
+    NSLog(@"%ld", (long)senderButton.tag);
+    PFUser *user = [self.dataArray objectAtIndex:senderButton.tag];
+    //get the user from
+    
+    [senderButton setTitle:@"denied" forState:UIControlStateNormal];
+    [senderButton setBackgroundColor:[UIColor darkGrayColor]];
+        
+    PFObject *approvedQuery = [self.requestObjectArray objectAtIndex:senderButton.tag];
+        
+    [approvedQuery setObject:@"denied" forKey:@"status"];
+    [approvedQuery saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!succeeded) {
+            // The object has been saved.
+            NSLog(@"%@", error);
+        }
+    }];
+    //In this method we just need to set the status to denied, no need to delete the object
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -270,11 +293,14 @@
     cell.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1];
     
     [cell.actionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [cell.cancelActionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     if (self.showFriend) {
         
         [cell.actionButton setTitle:@"unfriend" forState:UIControlStateNormal];
         [cell.actionButton setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
+        
+        cell.secondButtonWidth.constant = 0.0f;
         
     }
     else{//request table
@@ -282,10 +308,15 @@
         [cell.actionButton setTitle:@"add" forState:UIControlStateNormal];
         [cell.actionButton setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
         
+        cell.secondButtonWidth.constant = 70.0f;
+        
+        [cell.cancelActionButton setTitle:@"deny" forState:UIControlStateNormal];
+        [cell.cancelActionButton setBackgroundColor:[UIColor redColor]];
+        
     }
     
     cell.actionButton.layer.cornerRadius = 5.0;
-    
+    cell.cancelActionButton.layer.cornerRadius = 5.0;
     
     PFUser *user = [self.dataArray objectAtIndex:indexPath.row];
     cell.username.text = user.username;

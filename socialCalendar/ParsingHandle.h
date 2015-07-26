@@ -40,6 +40,8 @@
 
 -(void)approvedFriendRequestFrom:(PFUser *)user;
 
+- (void)removeDeniedFriendRequestFrom:(PFUser *)user;
+
 -(void)getApprovedUsersToCompletion:(void (^)(NSArray *array))completion;
 
 -(void)deleteEventFromCloudByID:(NSString *)objectId ToCompletion:(void (^)())completion;

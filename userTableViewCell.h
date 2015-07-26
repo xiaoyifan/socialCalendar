@@ -17,4 +17,10 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *actionButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *cancelActionButton;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondButtonWidth;
+
+
+
 @end

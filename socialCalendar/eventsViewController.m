@@ -20,6 +20,9 @@
 #import "SCEventInfoViewController.h"
 #import "UIColor+CustomColors.h"
 
+#import "SCLoginViewController.h"
+#import "SCSignUpViewController.h"
+
 #import <QuartzCore/QuartzCore.h>
 
 @interface eventsViewController () <AAShareBubblesDelegate, MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
@@ -73,7 +76,7 @@
     if ( (![PFUser currentUser]) || (user[@"emailVerified"] == false) ) {
         // No user logged in
         // Create the log in view controller
-        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+        SCLoginViewController *logInViewController = [[SCLoginViewController alloc] init];
         [logInViewController setDelegate:self]; // Set ourselves as the delegate
         logInViewController.fields = (PFLogInFieldsUsernameAndPassword
                                       | PFLogInFieldsLogInButton
@@ -81,7 +84,7 @@
                                       | PFLogInFieldsPasswordForgotten
                                       | PFLogInFieldsDismissButton);
         // Create the sign up view controller
-        PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+        SCSignUpViewController *signUpViewController = [[SCSignUpViewController alloc] init];
         [signUpViewController setDelegate:self]; // Set ourselves as the delegate
 
         // Assign our sign up controller to be displayed from the login controller
