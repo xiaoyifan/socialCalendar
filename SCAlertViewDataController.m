@@ -135,6 +135,13 @@
             }];
         }
             break;
+        case SCUserDetailModuleTypeGender:
+        {
+            [[ParsingHandle sharedParsing] updateUser:[PFUser currentUser] Gender:text ToCompletion:^(BOOL finished){
+                completion(finished);
+            }];
+        }
+            break;
         default:
             completion(FALSE);
             break;

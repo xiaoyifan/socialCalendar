@@ -18,6 +18,9 @@
 #import "DismissingAnimator.h"
 #import "expireMarkingView.h"
 #import "SCEventInfoViewController.h"
+#import "UIColor+CustomColors.h"
+
+#import <QuartzCore/QuartzCore.h>
 
 @interface eventsViewController () <AAShareBubblesDelegate, MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
 
@@ -181,9 +184,18 @@
     cell.deleteButton.tag = indexPath.row;
     [cell.deleteButton addTarget:self action:@selector(deleteButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
 
+    if (indexPath.row == 5) {
+        
+    }
     if ([eventDate compare:[NSDate date]] == NSOrderedAscending) {
-        [self addExpiredMarkToView:cell.contentView];
         cell.topBar.backgroundColor = [UIColor darkGrayColor];
+        cell.expiredLabel.layer.borderColor = [UIColor customRedColor].CGColor;
+        cell.expiredLabel.textColor = [UIColor customRedColor];
+        cell.expiredLabel.layer.borderWidth = 3.0f;
+        cell.expiredLabel.hidden = NO;
+    }
+    else{
+        cell.expiredLabel.hidden = YES;
     }
 
     return cell;
@@ -200,32 +212,6 @@
     SCEventInfoViewController *eventDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"eventDetailViewController"];
     [eventDetailVC setupWithEvent:eventObj];
     [self.navigationController pushViewController:eventDetailVC animated:YES];
-}
-
-- (void)addExpiredMarkToView:(UIView *)contentView
-{
-    expireMarkingView *boundingView = [[expireMarkingView alloc] initWithFrame:CGRectMake(0, 0, 135.0f, 70.0f)];
-    boundingView.backgroundColor = [UIColor clearColor];
-
-    CGAffineTransform transform =
-        CGAffineTransformMakeRotation(45.0f);
-
-    boundingView.transform = transform;
-
-    boundingView.center = CGPointMake(contentView.frame.size.width  / 2.0,
-                                      contentView.frame.size.height / 2.0);
-
-    [contentView addSubview:boundingView];
-
-    UILabel *expiredLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 135.0f, 70.0f)];
-    expiredLabel.textColor = [UIColor redColor];
-    expiredLabel.text = @"expired";
-    expiredLabel.font = [UIFont fontWithName:@"Avenir" size:24.0f];
-    expiredLabel.transform = transform;
-
-    expiredLabel.center = CGPointMake(contentView.frame.size.width  / 2.0 + 15,
-                                      contentView.frame.size.height / 2.0 + 20);
-    [contentView addSubview:expiredLabel];
 }
 
 #pragma mark - implementation of PFLogInViewControllerDelegate
@@ -559,28 +545,6 @@
 {
     NSLog(@"All Bubbles hidden");
 }
-
- #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-// - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//
-//     if ([segue.identifier  isEqual: @"detailSegue"]) {
-//
-//         detailViewController *controller = (detailViewController *)[segue destinationViewController];
-//
-//         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//
-//         eventViewCell *cell = (eventViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-//
-//         eventObject * selectedObject = [self.events objectAtIndex:indexPath.row];
-//         //get the item tapped in the tableView
-//         controller.detailObject = selectedObject;
-//         controller.cardBackgroundColor = cell.topBar.backgroundColor;
-//
-//     }
-// }
-
 
 - (IBAction)logoutButtonPressed:(id)sender
 {
