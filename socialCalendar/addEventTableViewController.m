@@ -230,6 +230,11 @@
     if (itemLocation != nil) {
         self.locationLabel.text = [NSString stringWithFormat:@"%@", address];
     }
+    
+    if ([self.locationLabel.text isEqualToString:@"@(null)"]) {
+        SCLAlertView *alert = [[SCLAlertView alloc] init];
+        [alert showInfo:self title:@"Location Info not available" subTitle:@"The current location has no available information. Try to pick the location again near the streets or some public area." closeButtonTitle:@"Got it" duration:0.0f];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -274,6 +279,7 @@
         return;
     }
     else {
+        [self resignFirstResponder];
         [SVProgressHUD show];
         self.object = [[eventObject alloc] init];
         self.object.title = self.titleField.text;
@@ -286,6 +292,9 @@
         
         if (![self.locationLabel.text isEqualToString:@"add the location"]) {
             self.object.locationDescription = self.locationLabel.text;
+        }
+        else{
+            self.object.locationDescription = @"";
         }
         self.object.eventNote = self.noteField.text;
         self.object.group = self.selectedFriends;

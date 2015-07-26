@@ -122,7 +122,12 @@
     PFGeoPoint *point = [PFGeoPoint geoPointWithLocation:newObj.location];
 
     event[@"location"] = point;
-    event[@"locationDescription"] = newObj.locationDescription;
+    if (newObj.locationDescription.length == 0) {
+        event[@"locationDescription"] = [NSNull null];
+    }
+    else{
+     event[@"locationDescription"] = newObj.locationDescription;   
+    }
     event[@"eventNote"] = newObj.eventNote;
 
     [event setObject:user forKey:@"createdBy"];

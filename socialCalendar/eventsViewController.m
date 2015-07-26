@@ -167,7 +167,12 @@
     dateFormater.dateFormat = @"HH:mm";
     cell.timeLabel.text = [dateFormater stringFromDate:eventDate];
 
-    cell.addressLabel.text = singleEvent.locationDescription;
+    if ([singleEvent.locationDescription isEqual:[NSNull null]] || [singleEvent.locationDescription isEqualToString:@"(null)"]) {
+        cell.addressLabel.text = @"the location description is not available";
+    }
+    else{
+        cell.addressLabel.text = singleEvent.locationDescription;
+    }
 
     cell.shareButton.tag = indexPath.row;
 
