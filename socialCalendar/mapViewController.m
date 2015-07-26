@@ -43,16 +43,25 @@
 
 - (IBAction)myLocation:(id)sender
 {
-    float spanX = 0.00725;
-    float spanY = 0.00725;
-    MKCoordinateRegion region;
-    region.center.latitude = self.mapView.userLocation.coordinate.latitude;
-    region.center.longitude = self.mapView.userLocation.coordinate.longitude;
-    NSLog(@"My location %f, %f", region.center.latitude, region.center.longitude);
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    
+    if (status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusAuthorizedAlways) {
+        float spanX = 0.00725;
+        float spanY = 0.00725;
+        MKCoordinateRegion region;
+        region.center.latitude = self.mapView.userLocation.coordinate.latitude;
+        region.center.longitude = self.mapView.userLocation.coordinate.longitude;
+        NSLog(@"My location %f, %f", region.center.latitude, region.center.longitude);
+        
+        region.span.latitudeDelta = spanX;
+        region.span.longitudeDelta = spanY;
+        [self.mapView setRegion:region animated:YES];
+    }
+    else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Loacation serice not authorized" message:@"This app needs you to authorize locations service to work" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 
-    region.span.latitudeDelta = spanX;
-    region.span.longitudeDelta = spanY;
-    [self.mapView setRegion:region animated:YES];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status

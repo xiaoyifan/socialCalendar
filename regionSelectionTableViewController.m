@@ -34,6 +34,10 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    
+    if (status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusAuthorizedAlways) {
+        
     float spanX = 0.00725;
     float spanY = 0.00725;
     MKCoordinateRegion region;
@@ -45,6 +49,11 @@
     region.span.longitudeDelta = spanY;
     [self.mapView setRegion:region animated:YES];
     [self getLocationDescription];
+    }
+    else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Loacation serice not authorized" message:@"This app needs you to authorize locations service to work" delegate:nil cancelButtonTitle:@"Gotcha" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
