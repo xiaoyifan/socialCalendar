@@ -83,6 +83,9 @@
 		FF39EC521B5751B9007FA3FB /* UIView+LoadNib.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC511B5751B9007FA3FB /* UIView+LoadNib.m */; };
 		FFB0D2EF1B58C7D1008113B9 /* profileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB0D2EE1B58C7D1008113B9 /* profileViewController.m */; };
 		FFC5B1C31B63517400A72286 /* UITabBarController+TabBarVisibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1C21B63517400A72286 /* UITabBarController+TabBarVisibility.m */; };
+		FFC5B1C71B65562900A72286 /* SCTextSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC5B1C41B65562900A72286 /* SCTextSwitchTableViewCell.xib */; };
+		FFC5B1C81B65562900A72286 /* SCTextSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1C61B65562900A72286 /* SCTextSwitchTableViewCell.m */; };
+		FFC5B1CB1B6562FF00A72286 /* SCHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */; };
 		FFDB42881B47B49900785D6A /* popingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42871B47B49900785D6A /* popingViewController.m */; };
 		FFDB428C1B47B50200785D6A /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428B1B47B50200785D6A /* UIColor+CustomColors.m */; };
 		FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428F1B47B6DC00785D6A /* PresentingAnimator.m */; };
@@ -236,6 +239,11 @@
 		FFB0D2EE1B58C7D1008113B9 /* profileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewController.m; sourceTree = "<group>"; };
 		FFC5B1C11B63517400A72286 /* UITabBarController+TabBarVisibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+TabBarVisibility.h"; sourceTree = "<group>"; };
 		FFC5B1C21B63517400A72286 /* UITabBarController+TabBarVisibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+TabBarVisibility.m"; sourceTree = "<group>"; };
+		FFC5B1C41B65562900A72286 /* SCTextSwitchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCTextSwitchTableViewCell.xib; sourceTree = "<group>"; };
+		FFC5B1C51B65562900A72286 /* SCTextSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTextSwitchTableViewCell.h; sourceTree = "<group>"; };
+		FFC5B1C61B65562900A72286 /* SCTextSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTextSwitchTableViewCell.m; sourceTree = "<group>"; };
+		FFC5B1C91B6562FF00A72286 /* SCHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCHelperMethods.h; path = socialCalendar/SCHelperMethods.h; sourceTree = "<group>"; };
+		FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCHelperMethods.m; path = socialCalendar/SCHelperMethods.m; sourceTree = "<group>"; };
 		FFDB42861B47B49900785D6A /* popingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popingViewController.h; sourceTree = "<group>"; };
 		FFDB42871B47B49900785D6A /* popingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popingViewController.m; sourceTree = "<group>"; };
 		FFDB428A1B47B50200785D6A /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
@@ -431,6 +439,8 @@
 		CCF0A4401B0BEEB8002F619B = {
 			isa = PBXGroup;
 			children = (
+				FFC5B1C91B6562FF00A72286 /* SCHelperMethods.h */,
+				FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */,
 				CCF0A4721B0BF14F002F619B /* Framework */,
 				CCF0A44B1B0BEEB8002F619B /* socialCalendar */,
 				CCF0A4651B0BEEB8002F619B /* socialCalendarTests */,
@@ -596,6 +606,9 @@
 		FF353DA61B5A290200DBA4A2 /* profileCells */ = {
 			isa = PBXGroup;
 			children = (
+				FFC5B1C41B65562900A72286 /* SCTextSwitchTableViewCell.xib */,
+				FFC5B1C51B65562900A72286 /* SCTextSwitchTableViewCell.h */,
+				FFC5B1C61B65562900A72286 /* SCTextSwitchTableViewCell.m */,
 				FF353DA71B5A296600DBA4A2 /* SCProfileInfoCell.h */,
 				FF353DA81B5A296600DBA4A2 /* SCProfileInfoCell.m */,
 				FF353DA91B5A296600DBA4A2 /* SCProfileInfoCell.xib */,
@@ -822,6 +835,7 @@
 				CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */,
 				CCF0A45D1B0BEEB8002F619B /* LaunchScreen.xib in Resources */,
 				FF353DCD1B5C4DF300DBA4A2 /* Region.storyboard in Resources */,
+				FFC5B1C71B65562900A72286 /* SCTextSwitchTableViewCell.xib in Resources */,
 				FF286BD11B51B51C00F7D166 /* SCEventNameTableViewCell.xib in Resources */,
 				FFFB6E461B561FE300409BCE /* SCEventHourCell.xib in Resources */,
 				FF39EC4A1B57516B007FA3FB /* LPBannerView.xib in Resources */,
@@ -893,6 +907,7 @@
 				CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */,
 				FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */,
 				FF353DD01B5C608900DBA4A2 /* regionSelectionTableViewController.m in Sources */,
+				FFC5B1C81B65562900A72286 /* SCTextSwitchTableViewCell.m in Sources */,
 				FFF2B9B61B4B2CB10039F9BB /* SCEventInfoViewController.m in Sources */,
 				FFC5B1C31B63517400A72286 /* UITabBarController+TabBarVisibility.m in Sources */,
 				FFDB42991B48491D00785D6A /* expireMarkingView.m in Sources */,
@@ -916,6 +931,7 @@
 				CCB5A0061B2558E80050352D /* friendsPickingTableViewController.m in Sources */,
 				FF286BDD1B52273E00F7D166 /* SCLocationManager.m in Sources */,
 				FFFB6E431B55FB1E00409BCE /* SCEventHoursTableViewCell.m in Sources */,
+				FFC5B1CB1B6562FF00A72286 /* SCHelperMethods.m in Sources */,
 				CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */,
 				CC81CD191B1541E00039EA60 /* eventObject.m in Sources */,
 				CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */,

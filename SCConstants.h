@@ -14,6 +14,8 @@ static NSString *const kEventAddressCellIdentifier = @"eventAddressTableViewCell
 static NSString *const kEventMapCellIdentifier = @"eventMapTableViewCell";
 static NSString *const kProfileInfoCellIdentifier = @"profileInfoCell";
 static NSString *const kProfileEditableCellIdentifier = @"profileEditableCell";
+static NSString *const kTextSwitchCellIdentifier = @"textSwitchCell";
+
 
 #pragma mark -- Nib Files
 static NSString *const kEventNameCellNibName = @"SCEventNameTableViewCell";
@@ -23,7 +25,7 @@ static NSString *const kEventHoursTableViewCellNibName = @"SCEventHoursTableView
 static NSString *const kEventHourCellNibName = @"SCEventHourCell";
 static NSString *const kProfileInfoCellNibName= @"SCProfileInfoCell";
 static NSString *const kProfileEditableCellNibName = @"SCProfileEditableCell";
-
+static NSString *const kTextSwitchCellNibName = @"SCTextSwitchTableViewCell";
 
 #pragma mark -- Strings & Titles
 
@@ -51,6 +53,13 @@ static NSString *const kSCAlertTitleNewEducation = @"new education";
 static NSString *const kSCAlertTitleNewWork = @"new work";
 static NSString *const kSCAlertTitleNewWebsite = @"new website";
 static NSString *const kSCAlertTitleNewWhatsUp = @"What's up";
+
+static NSString *const kPushNotificationActivationAlertTitle = @"ALLOW NOTIFICATIONS";
+static NSString *const kPushNotificationDeactivationAlertTitle = @"DISABLE NOTIFICATIONS";
+static NSString *const kPushNotificationOnAlertMessage = @"To receive alerts about promotions and your latest orders go to “Settings” > Notifications > turn on “Allow Notifications.”";
+static NSString *const kPushNotificationOffAlertMessage = @"To disable alerts about promotions and your latest orders go to “Settings” > Notifications > turn off “Allow Notifications.”";
+
+static NSString *const kCancelButtonTitle = @"Cancel";
 
 static NSString *const kSCAlertSubtitleNewName = @"To update your name, type in the text field and press button to confirm";
 static NSString *const kSCAlertSubtitleNewEmail = @"To update your email, type in the text field and press button to confirm";

@@ -29,7 +29,7 @@
 #import "SCLAlertView.h"
 
 #import "SCConstants.h"
-
+#import "SCHelperMethods.h"
 #import "UITabBarController+TabBarVisibility.h"
 
 #endif

@@ -11,12 +11,15 @@
 #import "SCProfileInfoCell.h"
 #import "SCLAlertView.h"
 #import "ZFModalTransitionAnimator.h"
+#import "SCTextSwitchTableViewCell.h"
 
 @interface profileViewController ()
 
 @property (nonatomic,strong) MBTwitterScroll* myTableView;
 
 @property (nonatomic, strong) ZFModalTransitionAnimator *animator;
+
+@property (weak, nonatomic) SCTextSwitchTableViewCell *notificationSwitchCell;
 
 @end
 
@@ -49,6 +52,7 @@
 
 -(void)registerNibs{
     [self.myTableView.tableView registerNib:[UINib nibWithNibName:kProfileInfoCellNibName bundle:nil] forCellReuseIdentifier:kProfileInfoCellIdentifier];
+    [self.myTableView.tableView registerNib:[UINib nibWithNibName:kTextSwitchCellNibName bundle:nil] forCellReuseIdentifier:kTextSwitchCellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,18 +62,38 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return SCUserDetailModuleTypeCount;
+    if (section == SCUserAccountTypeDetail) {
+        return SCUserDetailModuleTypeCount;
+    }
+    return 1;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    return SCUserAccountTypeCount;
 }
 
 -(void) recievedMBTwitterScrollEvent {
-
+    //Put it null for now.
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = nil;
+    
+    if (indexPath.section == SCUserAccountTypeDetail) {
+      
             cell = (SCProfileInfoCell*)[tableView dequeueReusableCellWithIdentifier:kProfileInfoCellIdentifier forIndexPath:indexPath];
             [(SCProfileInfoCell *)cell setupWithUser:[PFUser currentUser] withRowType:indexPath.row];
+        
+    }
+    else if (indexPath.section == SCUserAccountTypeNotifications){
+        
+        cell = (SCTextSwitchTableViewCell *)[tableView dequeueReusableCellWithIdentifier:kTextSwitchCellIdentifier forIndexPath:indexPath];
+        self.notificationSwitchCell = (SCTextSwitchTableViewCell *)cell;
+        [( (SCTextSwitchTableViewCell *)cell ) setupWithDelegate:self title:@"Notifications" switchOn:[SCHelperMethods isRegisteredFromRemoteNotifications]];
+        
+    }
 
     return cell;
 }
@@ -81,31 +105,35 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    switch (indexPath.row) {
-        case SCUserDetailModuleTypeNickName:
-        case SCUserDetailModuleTypeEmail:
-        case SCUserDetailModuleTypeEducation:
-        case SCUserDetailModuleTypeWork:
-        case SCUserDetailModuleTypeWebsite:
-        case SCUserDetailModuleTypeWhatsUp:
+    if (indexPath.section == SCUserAccountTypeDetail)
+    {
+        switch (indexPath.row)
+        {
+            case SCUserDetailModuleTypeNickName:
+            case SCUserDetailModuleTypeEmail:
+            case SCUserDetailModuleTypeEducation:
+            case SCUserDetailModuleTypeWork:
+            case SCUserDetailModuleTypeWebsite:
+            case SCUserDetailModuleTypeWhatsUp:
             //show the pop up to set the value
             [self showPopupWithTextInRowtype:indexPath.row];
-            break;
+                break;
             
-        case SCUserDetailModuleTypeGender:
+            case SCUserDetailModuleTypeGender:
             //push to view controller with gender selection
             [self setPopupToUpdateGender];
-            break;
+                break;
             
-        case SCUserDetailModuleTypeRegion:
+            case SCUserDetailModuleTypeRegion:
             [self pushToSetNewRegion];
             //push to view controlleer with map and location
             
-            break;
+                break;
             
-        default:
-            break;
+            default:
+                break;
+        }
+        
     }
 }
 
@@ -190,5 +218,66 @@
     [alert showEdit:self title:[alertData setTitleWithRowType:rowType] subTitle:[alertData setSubtitleWithRowType:rowType] closeButtonTitle:nil duration:0.0f];
 }
 
+
+#pragma mark -- UISwitchDelegate In Notification Cell
+
+- (void)textSwitchTableViewCell:(SCTextSwitchTableViewCell *)cell switchStatusChanged:(BOOL)switchStatus
+{
+    
+    if (switchStatus && ![[UIApplication sharedApplication] isRegisteredForRemoteNotifications]) {
+        [self showPushNotificationActivationAlert];
+    } else {
+        [self showPushNotificationDeactivationAlert];
+    }
+}
+
+#pragma mark - UIAlertView Methods
+
+- (void)showPushNotificationActivationAlert
+{
+    __weak typeof(self) weakSelf = self;
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:kPushNotificationActivationAlertTitle
+                                                                             message:kPushNotificationOnAlertMessage
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:kCancelButtonTitle
+                                                           style:UIAlertActionStyleCancel
+                                                         handler: ^(UIAlertAction *action) {
+                                                             [weakSelf.notificationSwitchCell.cellSwitch setOn:NO animated:YES];
+                                                             [alertController dismissViewControllerAnimated:YES completion:nil];
+                                                         }];
+    UIAlertAction *settingsAction = [UIAlertAction actionWithTitle:@"Settings"
+                                                             style:UIAlertActionStyleDefault
+                                                           handler: ^(UIAlertAction *action) {
+                                                               [SCHelperMethods openSettings];
+                                                           }];
+    [alertController addAction:cancelAction];
+    [alertController addAction:settingsAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)showPushNotificationDeactivationAlert
+{
+    __weak typeof(self) weakSelf = self;
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:kPushNotificationDeactivationAlertTitle
+                                                                             message:kPushNotificationOffAlertMessage
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Settings"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler: ^(UIAlertAction *action) {
+                                                             [SCHelperMethods openSettings];
+                                                         }];
+    UIAlertAction *settingsAction = [UIAlertAction actionWithTitle:@"Not now"
+                                                             style:UIAlertActionStyleDefault
+                                                           handler: ^(UIAlertAction *action) {
+                                                               [weakSelf.notificationSwitchCell.cellSwitch setOn:YES animated:YES];
+                                                               
+                                                           }];
+    [alertController addAction:cancelAction];
+    [alertController addAction:settingsAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+}
 
 @end
