@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.65000000000000002" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95454545454545459" green="0.95454545454545459" blue="0.95454545454545459" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4Hg-Bk-Mdr" firstAttribute="top" secondItem="twt-q2-bnj" secondAttribute="top" constant="26" id="Xv6-4h-z0t"/>
                             <constraint firstAttribute="centerX" secondItem="4Hg-Bk-Mdr" secondAttribute="centerX" id="gwF-L2-cR6"/>
@@ -74,12 +74,12 @@
                             <constraint firstAttribute="width" constant="22" id="Gfg-Qp-mcX"/>
                             <constraint firstAttribute="height" constant="22" id="rdg-wK-6py"/>
                         </constraints>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <state key="normal" image="camera"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhM-hK-CzL">
                         <rect key="frame" x="40" y="383" width="240" height="44"/>
-                        <color key="backgroundColor" red="0.51462384379228143" green="0.83999645709991455" blue="0.05969499998924066" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.13333334028720856" green="0.76078438758850098" blue="0.98823535442352295" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="240" id="jDs-Z7-sHp"/>
                             <constraint firstAttribute="height" constant="44" id="wrB-5J-3fl"/>
