@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A09DFBFACACBA6C8F958A4FC"
+               BlueprintIdentifier = "F09C9C587B52BA5ECE80EBF4"
                BuildableName = "libAAShareBubbles.a"
                BlueprintName = "AAShareBubbles"
                ReferencedContainer = "container:Pods.xcodeproj">

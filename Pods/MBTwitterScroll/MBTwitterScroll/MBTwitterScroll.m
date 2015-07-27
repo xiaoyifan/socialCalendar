@@ -85,6 +85,7 @@ CGFloat const distance_W_LabelHeader = 35.0;
     self.avatarImage.layer.borderWidth = 3;
     self.avatarImage.layer.borderColor = [UIColor whiteColor].CGColor;
     self.avatarImage.clipsToBounds = YES;
+    self.avatarImage.userInteractionEnabled = YES;
     
     UILabel * titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 156, 250, 25)];
     titleLabel.text = titleString;

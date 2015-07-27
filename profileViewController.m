@@ -38,7 +38,6 @@
     self.myTableView.tableView.delegate = self;
     self.myTableView.tableView.dataSource = self;
     self.myTableView.delegate = self;
-
     
     [self registerNibs];
     

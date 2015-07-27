@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0xh-XY-cgv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LVT-4w-xIa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98v-Zb-p2C">
@@ -62,10 +64,10 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="SHf-ae-Zwg"/>
-                                        <exclude reference="APb-9E-q6I"/>
-                                        <exclude reference="Nqy-bb-73J"/>
                                         <exclude reference="BMl-tN-GHF"/>
                                         <exclude reference="SXi-6A-CRL"/>
+                                        <exclude reference="APb-9E-q6I"/>
+                                        <exclude reference="Nqy-bb-73J"/>
                                         <exclude reference="JcK-Od-ib4"/>
                                         <exclude reference="j6d-Zw-eTd"/>
                                     </mask>
@@ -78,10 +80,10 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="SHf-ae-Zwg"/>
-                                        <include reference="APb-9E-q6I"/>
-                                        <include reference="Nqy-bb-73J"/>
                                         <include reference="BMl-tN-GHF"/>
                                         <include reference="SXi-6A-CRL"/>
+                                        <include reference="APb-9E-q6I"/>
+                                        <include reference="Nqy-bb-73J"/>
                                         <include reference="JcK-Od-ib4"/>
                                         <include reference="j6d-Zw-eTd"/>
                                     </mask>
