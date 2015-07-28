@@ -39,7 +39,6 @@ PODS:
   - JTCalendar (1.2.3)
   - JVFloatLabeledTextField (1.1.0)
   - MBProgressHUD (0.9.1)
-  - MBTwitterScroll (0.1)
   - pop (1.0.7)
   - RMActionController (1.0.4)
   - RMDateSelectionViewController (2.0.1):
@@ -64,7 +63,6 @@ DEPENDENCIES:
   - JTCalendar (~> 1.2.3)
   - JVFloatLabeledTextField
   - MBProgressHUD
-  - MBTwitterScroll
   - pop
   - RMDateSelectionViewController (~> 2.0.1)
   - RNGridMenu
@@ -88,7 +86,6 @@ SPEC CHECKSUMS:
   JTCalendar: 246ea3e338fb97624846ec77cdcde448242c4d5c
   JVFloatLabeledTextField: ea4a3d8387ddd43724c472bb2b8ab39b79af05d4
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  MBTwitterScroll: 6c69bb2b864423db52b631f42311706b8d0440b6
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
   RMActionController: 19423654600d40ca15132a4e548d005042d68f09
   RMDateSelectionViewController: 027bdeeaacb78b2b528808ed21efd697490d2b4e

@@ -1,5 +1,5 @@
 //
-//  profileViewController.h
+//  CSStickyParallaxHeaderViewController.h
 //  socialCalendar
 //
 //  Created by Yifan Xiao on 7/17/15.
@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MBTwitterScroll.h"
-#import "SCTextSwitchTableViewCell.h"
-
+#import "SCTextSwitchCollectionViewCell.h"
 
 typedef NS_ENUM(NSInteger, SCUserDetailModuleType)
 {
@@ -31,6 +29,6 @@ typedef NS_ENUM(NSInteger, SCUserAccountType)
     SCUserAccountTypeCount
 };
 
-@interface profileViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, MBTwitterScrollDelegate, SCTextSwitchTableViewCellDelegate>
+@interface CSStickyParallaxHeaderViewController : UICollectionViewController<SCTextSwitchCollectionViewCellDelegate>
 
 @end

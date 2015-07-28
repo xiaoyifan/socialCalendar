@@ -1,5 +1,5 @@
 //
-//  profileViewController.m
+//  CSStickyParallaxHeaderViewController.m
 //  socialCalendar
 //
 //  Created by Yifan Xiao on 7/17/15.
@@ -7,103 +7,115 @@
 //
 
 #import "profileViewController.h"
-#import "SCAlertViewDataController.h"
 #import "SCProfileInfoCell.h"
-#import "SCLAlertView.h"
+#import "CSSectionHeader.h"
+#import "CSStickyHeaderFlowLayout.h"
 #import "ZFModalTransitionAnimator.h"
-#import "SCTextSwitchTableViewCell.h"
 
-@interface profileViewController ()
+@interface CSStickyParallaxHeaderViewController ()
 
-@property (nonatomic,strong) MBTwitterScroll* myTableView;
-
+@property (nonatomic, strong) UINib *headerNib;
 @property (nonatomic, strong) ZFModalTransitionAnimator *animator;
 
-@property (weak, nonatomic) SCTextSwitchTableViewCell *notificationSwitchCell;
+@property (weak, nonatomic) SCTextSwitchCollectionViewCell *notificationSwitchCell;
 
 @end
 
-@implementation profileViewController
+@implementation CSStickyParallaxHeaderViewController
 
-- (void)viewDidLoad {
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+
+        self.headerNib = [UINib nibWithNibName:@"profileHeader" bundle:nil];
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.myTableView = [[MBTwitterScroll alloc]
-                                    initTableViewWithBackgound:[UIImage imageNamed:@"background"]
-                                    avatarImage:[UIImage imageNamed:@"avatar.png"]
-                                    titleString:@"Yifan Xiao"
-                                    subtitleString:@"xiaoyifan@uchicago.edu"
-                                    buttonTitle:nil];  // Set nil for no button
-    
-    self.myTableView.tableView.delegate = self;
-    self.myTableView.tableView.dataSource = self;
-    self.myTableView.delegate = self;
     
     [self registerNibs];
-    
-    [self.view addSubview:self.myTableView];
-    
+
+    [self reloadLayout];
+
+    // Also insets the scroll indicator so it appears below the search bar
+    self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+
+    [self.collectionView registerNib:self.headerNib
+          forSupplementaryViewOfKind:CSStickyHeaderParallaxHeader
+                 withReuseIdentifier:@"header"];
+
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [self.myTableView.tableView reloadData];
+    
+    [self.collectionView reloadData];
 }
 
 -(void)registerNibs{
-    [self.myTableView.tableView registerNib:[UINib nibWithNibName:kProfileInfoCellNibName bundle:nil] forCellReuseIdentifier:kProfileInfoCellIdentifier];
-    [self.myTableView.tableView registerNib:[UINib nibWithNibName:kTextSwitchCellNibName bundle:nil] forCellReuseIdentifier:kTextSwitchCellIdentifier];
+    
+    [self.collectionView registerNib:[UINib nibWithNibName:kProfileInfoCellNibName bundle:nil] forCellWithReuseIdentifier:kProfileInfoCellIdentifier];
+    [self.collectionView registerNib:[UINib nibWithNibName:kTextSwitchCellNibName bundle:nil] forCellWithReuseIdentifier:kTextSwitchCellIdentifier];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [self reloadLayout];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (void)reloadLayout {
+
+    CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
+
+    if ([layout isKindOfClass:[CSStickyHeaderFlowLayout class]]) {
+        layout.parallaxHeaderReferenceSize = CGSizeMake(self.view.frame.size.width, 426);
+        layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(self.view.frame.size.width, 110);
+        layout.itemSize = CGSizeMake(self.view.frame.size.width, layout.itemSize.height+10);
+        layout.parallaxHeaderAlwaysOnTop = YES;
+
+        // If we want to disable the sticky header effect
+        layout.disableStickyHeaders = YES;
+    }
+
+}
+
+#pragma mark UICollectionViewDataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return SCUserAccountTypeCount;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (section == SCUserAccountTypeDetail) {
         return SCUserDetailModuleTypeCount;
     }
     return 1;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
-    return SCUserAccountTypeCount;
-}
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
--(void) recievedMBTwitterScrollEvent {
-    //Put it null for now.
-}
-
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UITableViewCell *cell = nil;
+    UICollectionViewCell *cell = nil;
     
     if (indexPath.section == SCUserAccountTypeDetail) {
-      
-            cell = (SCProfileInfoCell*)[tableView dequeueReusableCellWithIdentifier:kProfileInfoCellIdentifier forIndexPath:indexPath];
-            [(SCProfileInfoCell *)cell setupWithUser:[PFUser currentUser] withRowType:indexPath.row];
-        
+    cell = [collectionView dequeueReusableCellWithReuseIdentifier:kProfileInfoCellIdentifier forIndexPath:indexPath];
+    [(SCProfileInfoCell *)cell setupWithUser:[PFUser currentUser] withRowType:indexPath.row];
     }
     else if (indexPath.section == SCUserAccountTypeNotifications){
-        
-        cell = (SCTextSwitchTableViewCell *)[tableView dequeueReusableCellWithIdentifier:kTextSwitchCellIdentifier forIndexPath:indexPath];
-        self.notificationSwitchCell = (SCTextSwitchTableViewCell *)cell;
-        [( (SCTextSwitchTableViewCell *)cell ) setupWithDelegate:self title:@"Notifications" switchOn:[SCHelperMethods isRegisteredFromRemoteNotifications]];
+    
+        cell = (SCTextSwitchCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kTextSwitchCellIdentifier forIndexPath:indexPath];
+        self.notificationSwitchCell = (SCTextSwitchCollectionViewCell *)cell;
+        [( (SCTextSwitchCollectionViewCell *)cell ) setupWithDelegate:self title:@"Notifications" switchOn:[SCHelperMethods isRegisteredFromRemoteNotifications]];
         
     }
-
+    
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return UITableViewAutomaticDimension;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     if (indexPath.section == SCUserAccountTypeDetail)
     {
         switch (indexPath.row)
@@ -114,21 +126,21 @@
             case SCUserDetailModuleTypeWork:
             case SCUserDetailModuleTypeWebsite:
             case SCUserDetailModuleTypeWhatsUp:
-            //show the pop up to set the value
-            [self showPopupWithTextInRowtype:indexPath.row];
+                //show the pop up to set the value
+                [self showPopupWithTextInRowtype:indexPath.row];
                 break;
-            
+                
             case SCUserDetailModuleTypeGender:
-            //push to view controller with gender selection
-            [self setPopupToUpdateGender];
+                //push to view controller with gender selection
+                [self setPopupToUpdateGender];
                 break;
-            
+                
             case SCUserDetailModuleTypeRegion:
-            [self pushToSetNewRegion];
-            //push to view controlleer with map and location
-            
+                [self pushToSetNewRegion];
+                //push to view controlleer with map and location
+                
                 break;
-            
+                
             default:
                 break;
         }
@@ -137,9 +149,38 @@
 }
 
 
+#pragma mark -- Collection View header settings method
+//Default header configuration method, no need to modify it for now.
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+
+        CSSectionHeader *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                                          withReuseIdentifier:@"sectionHeader"
+                                                                 forIndexPath:indexPath];
+        if (indexPath.section == 1) {
+            cell.textLabel.text = @"NOTIFICATION";
+        }
+
+        return cell;
+
+    } else if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
+        UICollectionReusableView *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                                                            withReuseIdentifier:@"header"
+                                                                                   forIndexPath:indexPath];
+
+        return cell;
+    }
+    return nil;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+
 - (void)pushToSetNewRegion{
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Region" bundle:nil];
-        UINavigationController *regionVC = [storyboard instantiateViewControllerWithIdentifier:@"regionViewController"];
+    UINavigationController *regionVC = [storyboard instantiateViewControllerWithIdentifier:@"regionViewController"];
     
     self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:regionVC];
     self.animator.dragable = NO;
@@ -165,7 +206,7 @@
         [alertData updateUserInfoInRow:SCUserDetailModuleTypeGender withText:@"male" ToCompletion:^(BOOL finished){
             if (finished) {
                 [SVProgressHUD showSuccessWithStatus:@"succeeded"];
-                [self.myTableView.tableView reloadData];
+                [self.collectionView reloadData];
             }
             else{
                 [SVProgressHUD showErrorWithStatus:@"failed"];
@@ -176,7 +217,7 @@
         [alertData updateUserInfoInRow:SCUserDetailModuleTypeGender withText:@"female" ToCompletion:^(BOOL finished){
             if (finished) {
                 [SVProgressHUD showSuccessWithStatus:@"succeeded"];
-                [self.myTableView.tableView reloadData];
+                [self.collectionView reloadData];
             }
             else{
                 [SVProgressHUD showErrorWithStatus:@"failed"];
@@ -206,7 +247,7 @@
         [alertData updateUserInfoInRow:rowType withText:textField.text ToCompletion:^(BOOL finished){
             if (finished) {
                 [SVProgressHUD showSuccessWithStatus:@"succeeded"];
-                [self.myTableView.tableView reloadData];
+                [self.collectionView reloadData];
             }
             else{
                 [SVProgressHUD showErrorWithStatus:@"failed"];
@@ -220,7 +261,7 @@
 
 #pragma mark -- UISwitchDelegate In Notification Cell
 
-- (void)textSwitchTableViewCell:(SCTextSwitchTableViewCell *)cell switchStatusChanged:(BOOL)switchStatus
+- (void)textSwitchTableViewCell:(SCTextSwitchCollectionViewCell *)cell switchStatusChanged:(BOOL)switchStatus
 {
     
     if (switchStatus && ![[UIApplication sharedApplication] isRegisteredForRemoteNotifications]) {
@@ -278,5 +319,7 @@
     [self presentViewController:alertController animated:YES completion:nil];
     
 }
+
+
 
 @end

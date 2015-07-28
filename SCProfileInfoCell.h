@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "profileViewController.h"
 
 @class eventObject;
 
-@interface SCProfileInfoCell : UITableViewCell
+@interface SCProfileInfoCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;

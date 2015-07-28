@@ -21,12 +21,6 @@
         self.titleLabel.alpha = 0;
     }
 
-    if (layoutAttributes.progressiveness >= 1) {
-        self.searchBar.alpha = 1;
-    } else {
-        self.searchBar.alpha = 0;
-    }
-
     [UIView commitAnimations];
 }
 

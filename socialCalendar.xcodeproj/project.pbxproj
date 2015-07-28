@@ -74,8 +74,7 @@
 		DDC5715D1B65CAA00043AC40 /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC571501B65CAA00043AC40 /* TOCropToolbar.m */; };
 		DDC5715E1B65CAA00043AC40 /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC571521B65CAA00043AC40 /* TOCropView.m */; };
 		DDC571611B65CAC30043AC40 /* photoCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC571601B65CAC30043AC40 /* photoCropViewController.m */; };
-		DDC571691B65E6280043AC40 /* CSStickyParallaxHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC571681B65E6280043AC40 /* CSStickyParallaxHeaderViewController.m */; };
-		DDC5716E1B65E7C10043AC40 /* CSCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC5716B1B65E7C10043AC40 /* CSCell.m */; };
+		DDC571691B65E6280043AC40 /* profileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC571681B65E6280043AC40 /* profileViewController.m */; };
 		DDC5716F1B65E7C10043AC40 /* CSSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC5716D1B65E7C10043AC40 /* CSSectionHeader.m */; };
 		DDC571731B65E8BA0043AC40 /* profileHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC571711B65E8BA0043AC40 /* profileHeader.m */; };
 		DDC571741B65E8BA0043AC40 /* profileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC571721B65E8BA0043AC40 /* profileHeader.xib */; };
@@ -100,10 +99,9 @@
 		FF39EC4B1B57516B007FA3FB /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC491B57516B007FA3FB /* LPBannerView.m */; };
 		FF39EC4F1B575190007FA3FB /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC4E1B575190007FA3FB /* LPNetworkingManager.m */; };
 		FF39EC521B5751B9007FA3FB /* UIView+LoadNib.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39EC511B5751B9007FA3FB /* UIView+LoadNib.m */; };
-		FFB0D2EF1B58C7D1008113B9 /* profileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB0D2EE1B58C7D1008113B9 /* profileViewController.m */; };
 		FFC5B1C31B63517400A72286 /* UITabBarController+TabBarVisibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1C21B63517400A72286 /* UITabBarController+TabBarVisibility.m */; };
-		FFC5B1C71B65562900A72286 /* SCTextSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC5B1C41B65562900A72286 /* SCTextSwitchTableViewCell.xib */; };
-		FFC5B1C81B65562900A72286 /* SCTextSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1C61B65562900A72286 /* SCTextSwitchTableViewCell.m */; };
+		FFC5B1C71B65562900A72286 /* SCTextSwitchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC5B1C41B65562900A72286 /* SCTextSwitchCollectionViewCell.xib */; };
+		FFC5B1C81B65562900A72286 /* SCTextSwitchCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1C61B65562900A72286 /* SCTextSwitchCollectionViewCell.m */; };
 		FFC5B1CB1B6562FF00A72286 /* SCHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */; };
 		FFDB42881B47B49900785D6A /* popingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42871B47B49900785D6A /* popingViewController.m */; };
 		FFDB428C1B47B50200785D6A /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB428B1B47B50200785D6A /* UIColor+CustomColors.m */; };
@@ -247,12 +245,10 @@
 		DDC571521B65CAA00043AC40 /* TOCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCropView.m; sourceTree = "<group>"; };
 		DDC571531B65CAA00043AC40 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		DDC571541B65CAA00043AC40 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
-		DDC5715F1B65CAC30043AC40 /* photoCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = photoCropViewController.h; sourceTree = "<group>"; };
-		DDC571601B65CAC30043AC40 /* photoCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = photoCropViewController.m; sourceTree = "<group>"; };
-		DDC571671B65E6280043AC40 /* CSStickyParallaxHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSStickyParallaxHeaderViewController.h; sourceTree = "<group>"; };
-		DDC571681B65E6280043AC40 /* CSStickyParallaxHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSStickyParallaxHeaderViewController.m; sourceTree = "<group>"; };
-		DDC5716A1B65E7C10043AC40 /* CSCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCell.h; sourceTree = "<group>"; };
-		DDC5716B1B65E7C10043AC40 /* CSCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCell.m; sourceTree = "<group>"; };
+		DDC5715F1B65CAC30043AC40 /* photoCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = photoCropViewController.h; path = ../photoCropViewController.h; sourceTree = "<group>"; };
+		DDC571601B65CAC30043AC40 /* photoCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = photoCropViewController.m; path = ../photoCropViewController.m; sourceTree = "<group>"; };
+		DDC571671B65E6280043AC40 /* profileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileViewController.h; sourceTree = "<group>"; };
+		DDC571681B65E6280043AC40 /* profileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewController.m; sourceTree = "<group>"; };
 		DDC5716C1B65E7C10043AC40 /* CSSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSectionHeader.h; sourceTree = "<group>"; };
 		DDC5716D1B65E7C10043AC40 /* CSSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSectionHeader.m; sourceTree = "<group>"; };
 		DDC571701B65E8BA0043AC40 /* profileHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileHeader.h; sourceTree = "<group>"; };
@@ -303,13 +299,11 @@
 		FF39EC501B5751B9007FA3FB /* UIView+LoadNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadNib.h"; sourceTree = "<group>"; };
 		FF39EC511B5751B9007FA3FB /* UIView+LoadNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadNib.m"; sourceTree = "<group>"; };
 		FF5DC0E71B49D342006369C9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		FFB0D2ED1B58C7D1008113B9 /* profileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileViewController.h; sourceTree = "<group>"; };
-		FFB0D2EE1B58C7D1008113B9 /* profileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewController.m; sourceTree = "<group>"; };
 		FFC5B1C11B63517400A72286 /* UITabBarController+TabBarVisibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+TabBarVisibility.h"; sourceTree = "<group>"; };
 		FFC5B1C21B63517400A72286 /* UITabBarController+TabBarVisibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+TabBarVisibility.m"; sourceTree = "<group>"; };
-		FFC5B1C41B65562900A72286 /* SCTextSwitchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCTextSwitchTableViewCell.xib; sourceTree = "<group>"; };
-		FFC5B1C51B65562900A72286 /* SCTextSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTextSwitchTableViewCell.h; sourceTree = "<group>"; };
-		FFC5B1C61B65562900A72286 /* SCTextSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTextSwitchTableViewCell.m; sourceTree = "<group>"; };
+		FFC5B1C41B65562900A72286 /* SCTextSwitchCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCTextSwitchCollectionViewCell.xib; sourceTree = "<group>"; };
+		FFC5B1C51B65562900A72286 /* SCTextSwitchCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTextSwitchCollectionViewCell.h; sourceTree = "<group>"; };
+		FFC5B1C61B65562900A72286 /* SCTextSwitchCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTextSwitchCollectionViewCell.m; sourceTree = "<group>"; };
 		FFC5B1C91B6562FF00A72286 /* SCHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCHelperMethods.h; path = socialCalendar/SCHelperMethods.h; sourceTree = "<group>"; };
 		FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCHelperMethods.m; path = socialCalendar/SCHelperMethods.m; sourceTree = "<group>"; };
 		FFDB42861B47B49900785D6A /* popingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popingViewController.h; sourceTree = "<group>"; };
@@ -640,6 +634,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DDBFA0341B6716BE00B62C5B /* photoCropScene */ = {
+			isa = PBXGroup;
+			children = (
+				DDC5715F1B65CAC30043AC40 /* photoCropViewController.h */,
+				DDC571601B65CAC30043AC40 /* photoCropViewController.m */,
+				DDC571301B65CAA00043AC40 /* TOCropLib */,
+			);
+			name = photoCropScene;
+			path = TOCropViewController;
+			sourceTree = "<group>";
+		};
 		DDC571291B65873E0043AC40 /* login&signup */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,7 +656,7 @@
 			name = "login&signup";
 			sourceTree = "<group>";
 		};
-		DDC571301B65CAA00043AC40 /* TOCropViewController */ = {
+		DDC571301B65CAA00043AC40 /* TOCropLib */ = {
 			isa = PBXGroup;
 			children = (
 				DDC571311B65CAA00043AC40 /* TOCropViewControllerLocalizable.strings */,
@@ -660,7 +665,7 @@
 				DDC571491B65CAA00043AC40 /* TOCropViewController.m */,
 				DDC5714A1B65CAA00043AC40 /* Views */,
 			);
-			path = TOCropViewController;
+			name = TOCropLib;
 			sourceTree = "<group>";
 		};
 		DDC5713B1B65CAA00043AC40 /* Models */ = {
@@ -696,8 +701,6 @@
 		DDC571751B65E9CE0043AC40 /* SCPodElements */ = {
 			isa = PBXGroup;
 			children = (
-				DDC5716A1B65E7C10043AC40 /* CSCell.h */,
-				DDC5716B1B65E7C10043AC40 /* CSCell.m */,
 				DDC5716C1B65E7C10043AC40 /* CSSectionHeader.h */,
 				DDC5716D1B65E7C10043AC40 /* CSSectionHeader.m */,
 			);
@@ -750,9 +753,9 @@
 		FF353DA61B5A290200DBA4A2 /* profileCells */ = {
 			isa = PBXGroup;
 			children = (
-				FFC5B1C41B65562900A72286 /* SCTextSwitchTableViewCell.xib */,
-				FFC5B1C51B65562900A72286 /* SCTextSwitchTableViewCell.h */,
-				FFC5B1C61B65562900A72286 /* SCTextSwitchTableViewCell.m */,
+				FFC5B1C41B65562900A72286 /* SCTextSwitchCollectionViewCell.xib */,
+				FFC5B1C51B65562900A72286 /* SCTextSwitchCollectionViewCell.h */,
+				FFC5B1C61B65562900A72286 /* SCTextSwitchCollectionViewCell.m */,
 				FF353DA71B5A296600DBA4A2 /* SCProfileInfoCell.h */,
 				FF353DA81B5A296600DBA4A2 /* SCProfileInfoCell.m */,
 				FF353DA91B5A296600DBA4A2 /* SCProfileInfoCell.xib */,
@@ -782,21 +785,17 @@
 		FFB0D2EB1B58C7AD008113B9 /* myProfile */ = {
 			isa = PBXGroup;
 			children = (
-				DDC571751B65E9CE0043AC40 /* SCPodElements */,
 				FF353DC61B5C30FB00DBA4A2 /* SCAlertViewDataController.h */,
 				FF353DC71B5C30FB00DBA4A2 /* SCAlertViewDataController.m */,
-				DDC571301B65CAA00043AC40 /* TOCropViewController */,
-				DDC5715F1B65CAC30043AC40 /* photoCropViewController.h */,
-				DDC571601B65CAC30043AC40 /* photoCropViewController.m */,
 				DDC571761B65E9EF0043AC40 /* regionSelection */,
+				DDBFA0341B6716BE00B62C5B /* photoCropScene */,
 				FF353DA61B5A290200DBA4A2 /* profileCells */,
-				FFB0D2ED1B58C7D1008113B9 /* profileViewController.h */,
-				FFB0D2EE1B58C7D1008113B9 /* profileViewController.m */,
+				DDC571751B65E9CE0043AC40 /* SCPodElements */,
 				DDC571701B65E8BA0043AC40 /* profileHeader.h */,
 				DDC571711B65E8BA0043AC40 /* profileHeader.m */,
 				DDC571721B65E8BA0043AC40 /* profileHeader.xib */,
-				DDC571671B65E6280043AC40 /* CSStickyParallaxHeaderViewController.h */,
-				DDC571681B65E6280043AC40 /* CSStickyParallaxHeaderViewController.m */,
+				DDC571671B65E6280043AC40 /* profileViewController.h */,
+				DDC571681B65E6280043AC40 /* profileViewController.m */,
 			);
 			name = myProfile;
 			path = ..;
@@ -999,7 +998,7 @@
 				CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */,
 				CCF0A45D1B0BEEB8002F619B /* LaunchScreen.xib in Resources */,
 				FF353DCD1B5C4DF300DBA4A2 /* Region.storyboard in Resources */,
-				FFC5B1C71B65562900A72286 /* SCTextSwitchTableViewCell.xib in Resources */,
+				FFC5B1C71B65562900A72286 /* SCTextSwitchCollectionViewCell.xib in Resources */,
 				DDC571551B65CAA00043AC40 /* TOCropViewControllerLocalizable.strings in Resources */,
 				FF286BD11B51B51C00F7D166 /* SCEventNameTableViewCell.xib in Resources */,
 				DDC571741B65E8BA0043AC40 /* profileHeader.xib in Resources */,
@@ -1075,10 +1074,9 @@
 				CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */,
 				FFDB42901B47B6DC00785D6A /* PresentingAnimator.m in Sources */,
 				DDC5715E1B65CAA00043AC40 /* TOCropView.m in Sources */,
-				DDC571691B65E6280043AC40 /* CSStickyParallaxHeaderViewController.m in Sources */,
+				DDC571691B65E6280043AC40 /* profileViewController.m in Sources */,
 				FF353DD01B5C608900DBA4A2 /* regionSelectionTableViewController.m in Sources */,
-				DDC5716E1B65E7C10043AC40 /* CSCell.m in Sources */,
-				FFC5B1C81B65562900A72286 /* SCTextSwitchTableViewCell.m in Sources */,
+				FFC5B1C81B65562900A72286 /* SCTextSwitchCollectionViewCell.m in Sources */,
 				DDC5716F1B65E7C10043AC40 /* CSSectionHeader.m in Sources */,
 				DDC571561B65CAA00043AC40 /* TOActivityCroppedImageProvider.m in Sources */,
 				DDC5715C1B65CAA00043AC40 /* TOCropScrollView.m in Sources */,
@@ -1102,7 +1100,6 @@
 				FF353DA51B5A1B7800DBA4A2 /* SVProgressHUD.m in Sources */,
 				FFDB428C1B47B50200785D6A /* UIColor+CustomColors.m in Sources */,
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
-				FFB0D2EF1B58C7D1008113B9 /* profileViewController.m in Sources */,
 				DDC571591B65CAA00043AC40 /* UIImage+CropRotate.m in Sources */,
 				DDC5715D1B65CAA00043AC40 /* TOCropToolbar.m in Sources */,
 				FF353DB61B5B0FAA00DBA4A2 /* UIFont+OpenForum.m in Sources */,

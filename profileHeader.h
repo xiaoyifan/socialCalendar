@@ -6,11 +6,9 @@
 //  Copyright (c) 2015 Yifan Xiao. All rights reserved.
 //
 
-#import "CSCell.h"
 
-@interface profileHeader : CSCell
+@interface profileHeader : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

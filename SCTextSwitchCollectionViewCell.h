@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 Prolific Interactive. All rights reserved.
 //
 
-static NSString *const kTextSwitchTableViewCellIdentifier = @"TextSwitchTableViewCell";
+static NSString *const kTextSwitchCollectionViewCellIdentifier = @"TextSwitchCollectionViewCell";
 
-@class SCTextSwitchTableViewCell;
+@class SCTextSwitchCollectionViewCell;
 
-@protocol SCTextSwitchTableViewCellDelegate <NSObject>
+@protocol SCTextSwitchCollectionViewCellDelegate <NSObject>
 
 /**
  *  Indicates when the switch on the cell changes its status.
@@ -18,11 +18,11 @@ static NSString *const kTextSwitchTableViewCellIdentifier = @"TextSwitchTableVie
  *  @param cell         The text switch cell.
  *  @param switchStatus YES if the switch is ON. NO if not.
  */
-- (void)textSwitchTableViewCell:(SCTextSwitchTableViewCell *)cell switchStatusChanged:(BOOL)switchStatus;
+- (void)textSwitchTableViewCell:(SCTextSwitchCollectionViewCell *)cell switchStatusChanged:(BOOL)switchStatus;
 
 @end
 
-@interface SCTextSwitchTableViewCell : UITableViewCell
+@interface SCTextSwitchCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UISwitch *cellSwitch;
 
@@ -33,7 +33,7 @@ static NSString *const kTextSwitchTableViewCellIdentifier = @"TextSwitchTableVie
  *  @param title    The title to display.
  *  @param switchOn Switch.
  */
-- (void)setupWithDelegate:(id<SCTextSwitchTableViewCellDelegate>)delegate title:(NSString *)title switchOn:(BOOL)switchOn;
+- (void)setupWithDelegate:(id<SCTextSwitchCollectionViewCellDelegate>)delegate title:(NSString *)title switchOn:(BOOL)switchOn;
 
 /**
  *  Setup the cell with a title, font size and switch.
@@ -43,6 +43,6 @@ static NSString *const kTextSwitchTableViewCellIdentifier = @"TextSwitchTableVie
  *  @param fontSize The font size to use.
  *  @param switchOn Switch.
  */
-- (void)setupWithDelegate:(id <SCTextSwitchTableViewCellDelegate>)delegate title:(NSString *)title fontSize:(CGFloat)fontSize switchOn:(BOOL)switchOn;
+- (void)setupWithDelegate:(id <SCTextSwitchCollectionViewCellDelegate>)delegate title:(NSString *)title fontSize:(CGFloat)fontSize switchOn:(BOOL)switchOn;
 
 @end

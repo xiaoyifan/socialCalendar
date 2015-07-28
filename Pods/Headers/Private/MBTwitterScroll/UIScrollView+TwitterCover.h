@@ -1,1 +1,0 @@
-../../../MBTwitterScroll/MBTwitterScroll/UIScrollView+TwitterCover.h

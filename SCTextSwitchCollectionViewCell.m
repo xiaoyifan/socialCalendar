@@ -6,27 +6,27 @@
 //  Copyright (c) 2015 Prolific Interactive. All rights reserved.
 //
 
-#import "SCTextSwitchTableViewCell.h"
+#import "SCTextSwitchCollectionViewCell.h"
 
-@interface SCTextSwitchTableViewCell ()
+@interface SCTextSwitchCollectionViewCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleCellLabel;
-@property (weak, nonatomic) id <SCTextSwitchTableViewCellDelegate> delegate;
+@property (weak, nonatomic) id <SCTextSwitchCollectionViewCellDelegate> delegate;
 
 @end
 
-@implementation SCTextSwitchTableViewCell
+@implementation SCTextSwitchCollectionViewCell
 
 #pragma mark - Public Method
 
-- (void)setupWithDelegate:(id <SCTextSwitchTableViewCellDelegate>)delegate title:(NSString *)title switchOn:(BOOL)switchOn
+- (void)setupWithDelegate:(id <SCTextSwitchCollectionViewCellDelegate>)delegate title:(NSString *)title switchOn:(BOOL)switchOn
 {
     self.delegate = delegate;
     self.titleCellLabel.text = title;
     self.cellSwitch.on = switchOn;
 }
 
-- (void)setupWithDelegate:(id <SCTextSwitchTableViewCellDelegate>)delegate title:(NSString *)title fontSize:(CGFloat)fontSize switchOn:(BOOL)switchOn
+- (void)setupWithDelegate:(id <SCTextSwitchCollectionViewCellDelegate>)delegate title:(NSString *)title fontSize:(CGFloat)fontSize switchOn:(BOOL)switchOn
 {
     self.titleCellLabel.font = [UIFont systemFontOfSize:fontSize];
     [self setupWithDelegate:delegate title:title switchOn:switchOn];

@@ -2,71 +2,61 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="BentonSans-ExtraLight.otf">
-            <string>BentonSans-ExtraLight</string>
-        </mutableArray>
-        <mutableArray key="BentonSans-Regular.otf">
-            <string>BentonSans-Regular</string>
-        </mutableArray>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="profileInfoCell" rowHeight="55" id="KGk-i7-Jjw" customClass="SCProfileInfoCell">
-            <rect key="frame" x="0.0" y="1" width="320" height="55"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileInfoCell" id="8Ua-IR-8Ce" customClass="SCProfileInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="70"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAW-ch-Jhl">
-                        <rect key="frame" x="125" y="15" width="152" height="23.5"/>
-                        <fontDescription key="fontDescription" name="BentonSans-ExtraLight" family="BentonSans" pointSize="20"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4G-zz-GUc">
+                        <rect key="frame" x="10" y="25" width="100" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="x2o-hz-Qyx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuW-Mc-tUx">
-                        <rect key="frame" x="15" y="19" width="100" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="JBB-DY-Nhr"/>
-                            <constraint firstAttribute="width" constant="100" id="LVm-8n-qih"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="BentonSans-Regular" family="BentonSans" pointSize="15"/>
-                        <color key="textColor" red="0.54620422980000005" green="0.54620422980000005" blue="0.54620422980000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2S8-MO-GJX">
+                        <rect key="frame" x="120" y="25" width="207" height="20.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="JBB-DY-Nhr"/>
-                            </mask>
-                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7v-vc-1cn">
+                        <rect key="frame" x="10" y="69" width="329" height="1"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.14999999999999999" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ssw-Hk-FAG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <constraints>
-                    <constraint firstAttribute="centerY" secondItem="KuW-Mc-tUx" secondAttribute="centerY" id="LfF-bE-L9A"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="qAW-ch-Jhl" secondAttribute="bottom" constant="7.5" id="My0-Z6-X2a"/>
-                    <constraint firstItem="qAW-ch-Jhl" firstAttribute="top" secondItem="KuW-Mc-tUx" secondAttribute="bottom" constant="10" id="UaZ-Va-lIX"/>
-                    <constraint firstItem="KuW-Mc-tUx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="dbn-Bq-c31"/>
-                    <constraint firstItem="qAW-ch-Jhl" firstAttribute="leading" secondItem="KuW-Mc-tUx" secondAttribute="trailing" constant="10" id="hdI-0K-6wO"/>
-                    <constraint firstAttribute="centerY" secondItem="qAW-ch-Jhl" secondAttribute="centerY" id="nER-OQ-2AV"/>
-                    <constraint firstItem="qAW-ch-Jhl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7.5" id="oPn-e5-HB2"/>
-                    <constraint firstAttribute="trailing" secondItem="qAW-ch-Jhl" secondAttribute="trailing" constant="10" id="qpE-Hm-8Xj"/>
-                    <constraint firstItem="qAW-ch-Jhl" firstAttribute="top" secondItem="KuW-Mc-tUx" secondAttribute="bottom" constant="11.5" id="vjn-q4-T15"/>
-                </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="UaZ-Va-lIX"/>
-                        <exclude reference="vjn-q4-T15"/>
-                    </mask>
-                </variation>
-            </tableViewCellContentView>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="2S8-MO-GJX" secondAttribute="centerY" id="5wC-3r-1ne"/>
+                <constraint firstAttribute="trailing" secondItem="2S8-MO-GJX" secondAttribute="trailing" constant="12" id="IH3-5y-3fg"/>
+                <constraint firstItem="u4G-zz-GUc" firstAttribute="leading" secondItem="8Ua-IR-8Ce" secondAttribute="leading" constant="10" id="Rac-z4-Wu8"/>
+                <constraint firstAttribute="trailing" secondItem="A7v-vc-1cn" secondAttribute="trailing" id="dBD-Mk-FDS"/>
+                <constraint firstAttribute="bottom" secondItem="A7v-vc-1cn" secondAttribute="bottom" id="fLf-Fd-JkQ"/>
+                <constraint firstAttribute="centerY" secondItem="u4G-zz-GUc" secondAttribute="centerY" id="hEN-cP-9tU"/>
+                <constraint firstItem="2S8-MO-GJX" firstAttribute="leading" secondItem="u4G-zz-GUc" secondAttribute="trailing" constant="10" id="nBY-UB-3A8"/>
+                <constraint firstItem="A7v-vc-1cn" firstAttribute="leading" secondItem="8Ua-IR-8Ce" secondAttribute="leading" constant="10" id="z2Z-ER-P9S"/>
+            </constraints>
+            <size key="customSize" width="339" height="50"/>
             <connections>
-                <outlet property="contentLabel" destination="qAW-ch-Jhl" id="GAv-GW-W5a"/>
-                <outlet property="titleLabel" destination="KuW-Mc-tUx" id="d3j-H5-P2R"/>
+                <outlet property="contentLabel" destination="2S8-MO-GJX" id="xTg-G7-ACY"/>
+                <outlet property="titleLabel" destination="u4G-zz-GUc" id="uNi-7c-PzI"/>
             </connections>
-            <point key="canvasLocation" x="155" y="262.5"/>
-        </tableViewCell>
+            <point key="canvasLocation" x="275.5" y="409"/>
+        </collectionViewCell>
     </objects>
 </document>

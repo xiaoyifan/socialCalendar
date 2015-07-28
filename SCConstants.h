@@ -25,7 +25,7 @@ static NSString *const kEventHoursTableViewCellNibName = @"SCEventHoursTableView
 static NSString *const kEventHourCellNibName = @"SCEventHourCell";
 static NSString *const kProfileInfoCellNibName= @"SCProfileInfoCell";
 static NSString *const kProfileEditableCellNibName = @"SCProfileEditableCell";
-static NSString *const kTextSwitchCellNibName = @"SCTextSwitchTableViewCell";
+static NSString *const kTextSwitchCellNibName = @"SCTextSwitchCollectionViewCell";
 
 #pragma mark -- Strings & Titles
 
