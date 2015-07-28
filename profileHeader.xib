@@ -22,7 +22,6 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yifan Xiao" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hg-Bk-Mdr">
                                 <rect key="frame" x="115" y="26" width="89" height="25"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -41,7 +40,7 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yifan Xiao" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dP-Im-gAY">
                                         <rect key="frame" x="20" y="204" width="280" height="37"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="hfE-49-EbU">
@@ -119,6 +118,7 @@
                 <outlet property="NameLabel" destination="5dP-Im-gAY" id="qnX-zn-84w"/>
                 <outlet property="avaratBackImageView" destination="3y9-9q-T6E" id="ceu-E3-I7Y"/>
                 <outlet property="avatarImageView" destination="hfE-49-EbU" id="joQ-LB-dtO"/>
+                <outlet property="cameraButton" destination="O1O-Nr-Erp" id="E7H-g5-W5X"/>
                 <outlet property="titleLabel" destination="4Hg-Bk-Mdr" id="eYS-0R-im4"/>
             </connections>
             <point key="canvasLocation" x="227" y="296"/>

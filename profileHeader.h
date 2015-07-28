@@ -24,4 +24,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *avaratBackImageView;
 
+@property (weak, nonatomic) IBOutlet UIButton *cameraButton;
+
+
 @end

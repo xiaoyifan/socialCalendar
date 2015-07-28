@@ -20,8 +20,12 @@
     
     if (layoutAttributes.progressiveness <= 0.58) {
         self.titleLabel.alpha = 1;
+        self.cameraButton.alpha = 0;
+        self.cameraButton.enabled = NO;
     } else {
         self.titleLabel.alpha = 0;
+        self.cameraButton.alpha = 1;
+        self.cameraButton.enabled = YES;
     }
 
     [UIView commitAnimations];
