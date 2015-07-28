@@ -73,7 +73,6 @@
 		DDC5715C1B65CAA00043AC40 /* TOCropScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC5714E1B65CAA00043AC40 /* TOCropScrollView.m */; };
 		DDC5715D1B65CAA00043AC40 /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC571501B65CAA00043AC40 /* TOCropToolbar.m */; };
 		DDC5715E1B65CAA00043AC40 /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC571521B65CAA00043AC40 /* TOCropView.m */; };
-		DDC571611B65CAC30043AC40 /* photoCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC571601B65CAC30043AC40 /* photoCropViewController.m */; };
 		DDC571691B65E6280043AC40 /* profileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC571681B65E6280043AC40 /* profileViewController.m */; };
 		DDC5716F1B65E7C10043AC40 /* CSSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC5716D1B65E7C10043AC40 /* CSSectionHeader.m */; };
 		DDC571731B65E8BA0043AC40 /* profileHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC571711B65E8BA0043AC40 /* profileHeader.m */; };
@@ -245,8 +244,6 @@
 		DDC571521B65CAA00043AC40 /* TOCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCropView.m; sourceTree = "<group>"; };
 		DDC571531B65CAA00043AC40 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		DDC571541B65CAA00043AC40 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
-		DDC5715F1B65CAC30043AC40 /* photoCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = photoCropViewController.h; path = ../photoCropViewController.h; sourceTree = "<group>"; };
-		DDC571601B65CAC30043AC40 /* photoCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = photoCropViewController.m; path = ../photoCropViewController.m; sourceTree = "<group>"; };
 		DDC571671B65E6280043AC40 /* profileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileViewController.h; sourceTree = "<group>"; };
 		DDC571681B65E6280043AC40 /* profileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewController.m; sourceTree = "<group>"; };
 		DDC5716C1B65E7C10043AC40 /* CSSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSectionHeader.h; sourceTree = "<group>"; };
@@ -637,8 +634,6 @@
 		DDBFA0341B6716BE00B62C5B /* photoCropScene */ = {
 			isa = PBXGroup;
 			children = (
-				DDC5715F1B65CAC30043AC40 /* photoCropViewController.h */,
-				DDC571601B65CAC30043AC40 /* photoCropViewController.m */,
 				DDC571301B65CAA00043AC40 /* TOCropLib */,
 			);
 			name = photoCropScene;
@@ -1115,7 +1110,6 @@
 				CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */,
 				FFDB42881B47B49900785D6A /* popingViewController.m in Sources */,
 				FF353DA31B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m in Sources */,
-				DDC571611B65CAC30043AC40 /* photoCropViewController.m in Sources */,
 				DDC571571B65CAA00043AC40 /* TOCroppedImageAttributes.m in Sources */,
 				CCF0A44F1B0BEEB8002F619B /* main.m in Sources */,
 				CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */,

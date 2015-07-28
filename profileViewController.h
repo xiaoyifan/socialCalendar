@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SCTextSwitchCollectionViewCell.h"
+#import "profileHeader.h"
 
 typedef NS_ENUM(NSInteger, SCUserDetailModuleType)
 {
@@ -29,6 +30,6 @@ typedef NS_ENUM(NSInteger, SCUserAccountType)
     SCUserAccountTypeCount
 };
 
-@interface CSStickyParallaxHeaderViewController : UICollectionViewController<SCTextSwitchCollectionViewCellDelegate>
+@interface CSStickyParallaxHeaderViewController : UICollectionViewController<SCTextSwitchCollectionViewCellDelegate, cameraHeaderDelegate>
 
 @end

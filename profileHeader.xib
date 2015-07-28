@@ -44,12 +44,6 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xiaoyifan@uchicago.edu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zp-qf-qfV">
-                                        <rect key="frame" x="49" y="276" width="223" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="hfE-49-EbU">
                                         <rect key="frame" x="90" y="56" width="140" height="140"/>
                                     </imageView>
@@ -76,6 +70,9 @@
                         </constraints>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <state key="normal" image="camera"/>
+                        <connections>
+                            <action selector="cameraButtonTapped:" destination="MVH-Hh-49Q" eventType="touchUpInside" id="V5F-E6-a3J"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhM-hK-CzL">
                         <rect key="frame" x="40" y="383" width="240" height="44"/>
@@ -119,6 +116,9 @@
             </constraints>
             <size key="customSize" width="320" height="426"/>
             <connections>
+                <outlet property="NameLabel" destination="5dP-Im-gAY" id="qnX-zn-84w"/>
+                <outlet property="avaratBackImageView" destination="3y9-9q-T6E" id="ceu-E3-I7Y"/>
+                <outlet property="avatarImageView" destination="hfE-49-EbU" id="joQ-LB-dtO"/>
                 <outlet property="titleLabel" destination="4Hg-Bk-Mdr" id="eYS-0R-im4"/>
             </connections>
             <point key="canvasLocation" x="227" y="296"/>

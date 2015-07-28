@@ -11,11 +11,15 @@
 #import "CSSectionHeader.h"
 #import "CSStickyHeaderFlowLayout.h"
 #import "ZFModalTransitionAnimator.h"
+#import "profileHeader.h"
+#import "TOCropViewController.h"
 
-@interface CSStickyParallaxHeaderViewController ()
+@interface CSStickyParallaxHeaderViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate, TOCropViewControllerDelegate>
 
 @property (nonatomic, strong) UINib *headerNib;
 @property (nonatomic, strong) ZFModalTransitionAnimator *animator;
+@property (nonatomic, strong) profileHeader *profileHeader;
+
 
 @property (weak, nonatomic) SCTextSwitchCollectionViewCell *notificationSwitchCell;
 
@@ -164,10 +168,13 @@
         return cell;
 
     } else if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
-        UICollectionReusableView *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+        profileHeader *cell = (profileHeader *)[collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                                             withReuseIdentifier:@"header"
                                                                                    forIndexPath:indexPath];
 
+        cell.delegate = self;
+        self.profileHeader = cell;
+        
         return cell;
     }
     return nil;
@@ -321,5 +328,46 @@
 }
 
 
+- (void)tapToShowPhotoGallery{
+    NSLog(@"camera tapped");
+    UIImagePickerController *photoPickerController = [[UIImagePickerController alloc] init];
+    photoPickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    photoPickerController.allowsEditing = NO;
+    photoPickerController.delegate = self;
+    [self presentViewController:photoPickerController animated:YES completion:nil];
+}
+
+
+#pragma mark - Cropper Delegate -
+- (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image withRect:(CGRect)cropRect angle:(NSInteger)angle
+{
+    self.profileHeader.avatarImageView.image = image;
+    self.profileHeader.avaratBackImageView.image = image;
+
+    
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+    
+    CGRect viewFrame = [self.view convertRect:self.profileHeader.avatarImageView.frame toView:self.navigationController.view];
+    self.profileHeader.avatarImageView.hidden = YES;
+    [cropViewController dismissAnimatedFromParentViewController:self withCroppedImage:image toFrame:viewFrame completion:^{
+        self.profileHeader.avatarImageView.hidden = NO;
+    }];
+}
+
+#pragma mark - Image Picker Delegate -
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        //self.image = image;
+        TOCropViewController *cropController = [[TOCropViewController alloc] initWithImage:image];
+        cropController.delegate = self;
+        [self presentViewController:cropController animated:YES completion:nil];
+    }];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

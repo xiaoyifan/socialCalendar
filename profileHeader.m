@@ -15,6 +15,9 @@
 
     [UIView beginAnimations:@"" context:nil];
 
+    self.titleLabel.text = [PFUser currentUser].username;
+    self.NameLabel.text = [PFUser currentUser].username;
+    
     if (layoutAttributes.progressiveness <= 0.58) {
         self.titleLabel.alpha = 1;
     } else {
@@ -23,5 +26,12 @@
 
     [UIView commitAnimations];
 }
+
+- (IBAction)cameraButtonTapped:(id)sender {
+
+    [self.delegate tapToShowPhotoGallery];
+
+}
+
 
 @end
