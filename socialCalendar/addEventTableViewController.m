@@ -56,6 +56,15 @@
         NSLog(@"Successfully selected date: %@", ((UIDatePicker *)controller.contentView).date);
         self.eventDate = ((UIDatePicker *)controller.contentView).date;
         
+        if ([self.eventDate compare:[NSDate date]] == NSOrderedAscending) {
+            
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Time invalid" message:@"Can not create event earlier than current time" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+            
+            self.eventDate = [NSDate date];
+        
+        }
+    
             NSDateFormatter *dateFormater = [NSDateFormatter new];
             dateFormater.dateFormat = kDateFormatInselection;
             self.timeLabel.text = [dateFormater stringFromDate:self.eventDate];

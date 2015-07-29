@@ -330,7 +330,13 @@
     addEventTableViewController *source = [segue sourceViewController];
     eventObject *item = source.object;
     if (item != nil) {
-        [self.events addObject:item];
+        for (int i = 0; i< self.events.count;i++) {
+            eventObject *obj = [self.events objectAtIndex:i];
+            if ([obj.time compare:item.time] == NSOrderedAscending) {
+                [self.events insertObject:item atIndex:i];
+                break;
+            }
+        }
 
         NSLog(@"%@", item.title);
 

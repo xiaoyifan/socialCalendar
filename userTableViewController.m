@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.searchBar setTintColor:[UIColor grayColor]];
     
     [[ParsingHandle sharedParsing] getMyPendingSentRequestToCompletion:^(NSArray *array){
        

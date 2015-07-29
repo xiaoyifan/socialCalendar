@@ -49,7 +49,7 @@
                 self.contentLabel.text = user[@"whatsUp"];
             }
             else{
-                self.contentLabel.text = @"Only the strong survive";
+                self.contentLabel.text = @"not provided";
             }
             break;
             
