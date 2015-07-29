@@ -8,6 +8,7 @@
 
 #import "userTableViewController.h"
 #import "listTableViewCell.h"
+#import "CSStickyHeaderFlowLayout.h"
 
 @interface userTableViewController ()<UISearchBarDelegate, UISearchDisplayDelegate>
 
@@ -123,6 +124,20 @@
     //if the user is in the friend request already, if so, change the button color and title text.
     
     return cell;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    PFUser *user;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        user = [self.filteredArray objectAtIndex:indexPath.row];
+    } else {
+        user = [self.userArray objectAtIndex:indexPath.row];
+    }
+    
+    
+    
 }
 
 -(BOOL)requestSentTo:(PFUser *)user{

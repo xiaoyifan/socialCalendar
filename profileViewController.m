@@ -14,7 +14,7 @@
 #import "profileHeader.h"
 #import "TOCropViewController.h"
 
-@interface CSStickyParallaxHeaderViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate, TOCropViewControllerDelegate>
+@interface profileViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate, TOCropViewControllerDelegate>
 
 @property (nonatomic, strong) UINib *headerNib;
 @property (nonatomic, strong) ZFModalTransitionAnimator *animator;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation CSStickyParallaxHeaderViewController
+@implementation profileViewController
 
 
 - (id)initWithCoder:(NSCoder *)aDecoder {

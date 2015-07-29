@@ -708,6 +708,7 @@
                         <outlet property="calendarContentViewHeight" destination="5eh-Uc-i5X" id="ref-gz-qAX"/>
                         <outlet property="calendarMenuView" destination="gIL-im-Lk1" id="9Fp-VD-haj"/>
                         <outlet property="eventTableView" destination="biM-ZU-4at" id="6Fk-iQ-oXf"/>
+                        <outlet property="switchToggle" destination="aqD-c9-sic" id="Myw-GH-xcR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOr-V1-X3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -835,9 +836,9 @@
         <!--Grow-->
         <scene sceneID="j9g-tx-ivy">
             <objects>
-                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="jfd-QA-yUx" customClass="CSStickyParallaxHeaderViewController" sceneMemberID="viewController">
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="jfd-QA-yUx" customClass="profileViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="0.0" maximumZoomScale="0.0" keyboardDismissMode="onDrag" dataMode="prototypes" id="vEu-Ks-xrj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zhr-XL-ZgF" customClass="CSStickyHeaderFlowLayout">

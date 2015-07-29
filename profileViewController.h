@@ -30,6 +30,6 @@ typedef NS_ENUM(NSInteger, SCUserAccountType)
     SCUserAccountTypeCount
 };
 
-@interface CSStickyParallaxHeaderViewController : UICollectionViewController<SCTextSwitchCollectionViewCellDelegate, cameraHeaderDelegate>
+@interface profileViewController : UICollectionViewController<SCTextSwitchCollectionViewCellDelegate, cameraHeaderDelegate>
 
 @end

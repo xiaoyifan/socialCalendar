@@ -23,6 +23,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *eventTableView;
 
+@property (weak, nonatomic) IBOutlet UISwitch *switchToggle;
 
 @property NSMutableArray *eventsToday;
 
@@ -97,6 +98,13 @@
     NSLog(@"table view double tapped");
 
     self.calendar.calendarAppearance.isWeekMode = !self.calendar.calendarAppearance.isWeekMode;
+    
+    if (self.switchToggle.isOn) {
+        [self.switchToggle setOn:NO animated:YES];
+    }
+    else{
+        [self.switchToggle setOn:YES animated:YES];
+    }
 
     [self transitionExample];
 }
