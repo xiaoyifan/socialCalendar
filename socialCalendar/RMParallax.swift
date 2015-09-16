@@ -95,7 +95,7 @@ import UIKit
         self.view.addSubview(self.scrollView)
         self.view.insertSubview(self.dismissButton, aboveSubview: self.scrollView)
         
-        for (index, item) in enumerate(self.items) {
+        for (index, item) in self.items.enumerate() {
             let diff: CGFloat = 0.0
             let frame = CGRectMake((self.view.frame.size.width * CGFloat(index)), 0.0, self.viewWidth, self.view.frame.size.height)
             let subview = UIView(frame: frame)

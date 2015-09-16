@@ -23,7 +23,7 @@ import UIKit
                 rmParallaxViewController.view.alpha = 0.0
                 self.dismissViewControllerAnimated(true, completion: nil)
 
-                println("view dismissed")
+                print("view dismissed")
             })
         }
         

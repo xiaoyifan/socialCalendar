@@ -24,7 +24,7 @@
 
 import UIKit
 
-@objc class RMParallaxItem {
+class RMParallaxItem {
     
     var image: UIImage!
     var text: String!
