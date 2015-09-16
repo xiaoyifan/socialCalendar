@@ -7,14 +7,11 @@
 //
 
 #import "SCProfileInfoCell.h"
-#import "UIFont+OpenForum.h"
 
 @implementation SCProfileInfoCell
 
 -(void)setupWithUser:(PFUser *)user withRowType:(SCUserDetailModuleType)rowtype{
-    
-    [self.contentLabel setFont:[UIFont bentonSansExtraLightWithSize:20]];
-    
+        
     switch (rowtype) {
         case SCUserDetailModuleTypeNickName:
             self.titleLabel.text = @"NAME";
