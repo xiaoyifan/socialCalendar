@@ -27,9 +27,6 @@
 		CCB5A0161B25E90C0050352D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0151B25E90C0050352D /* MessageUI.framework */; };
 		CCB5A0221B25F9240050352D /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0211B25F9240050352D /* libc++.dylib */; };
 		CCB5A0261B2626C80050352D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A0251B2626C80050352D /* libWeChatSDK.a */; };
-		CCB5A02D1B2643BC0050352D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5A02A1B2643BC0050352D /* ViewController.swift */; };
-		CCB5A02E1B2643BC0050352D /* RMParallaxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5A02B1B2643BC0050352D /* RMParallaxItem.swift */; };
-		CCB5A02F1B2643BC0050352D /* RMParallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5A02C1B2643BC0050352D /* RMParallax.swift */; };
 		CCC680D21B129A620007DD85 /* calendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC680D11B129A620007DD85 /* calendarController.m */; };
 		CCC680DF1B129E320007DD85 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680D91B129E320007DD85 /* Bolts.framework */; };
 		CCC680E01B129E320007DD85 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC680DA1B129E320007DD85 /* Parse.framework */; };
@@ -60,6 +57,14 @@
 		CCF0A4961B0BF217002F619B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A4951B0BF217002F619B /* libz.dylib */; };
 		CCF0A4981B0BF21F002F619B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A4971B0BF21F002F619B /* libsqlite3.dylib */; };
 		D65661636D9610AC9C3A8E9C /* libPods-socialCalendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EDD79DA0424417BCB1D051 /* libPods-socialCalendar.a */; };
+		DD4673FD1BAA7C4600BEC759 /* popingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4673FC1BAA7C4600BEC759 /* popingViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DD4674081BAA7C9000BEC759 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674001BAA7C9000BEC759 /* ProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
+		DD4674091BAA7C9000BEC759 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674031BAA7C9000BEC759 /* SVIndefiniteAnimatedView.m */; settings = {ASSET_TAGS = (); }; };
+		DD46740A1BAA7C9000BEC759 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD4674051BAA7C9000BEC759 /* SVProgressHUD.bundle */; settings = {ASSET_TAGS = (); }; };
+		DD46740B1BAA7C9000BEC759 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674071BAA7C9000BEC759 /* SVProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
+		DD4674101BAA7CE600BEC759 /* RMParallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46740D1BAA7CE600BEC759 /* RMParallax.swift */; settings = {ASSET_TAGS = (); }; };
+		DD4674111BAA7CE600BEC759 /* RMParallaxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46740E1BAA7CE600BEC759 /* RMParallaxItem.swift */; settings = {ASSET_TAGS = (); }; };
+		DD4674121BAA7CE600BEC759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46740F1BAA7CE600BEC759 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DD8AA6261BA96D5900A48299 /* SCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA6231BA96D5900A48299 /* SCLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DD8AA6271BA96D5900A48299 /* SCSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA6251BA96D5900A48299 /* SCSignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DD8AA62B1BA96D8900A48299 /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA62A1BA96D8900A48299 /* LPNetworkingManager.m */; settings = {ASSET_TAGS = (); }; };
@@ -87,16 +92,12 @@
 		DDC5716F1B65E7C10043AC40 /* CSSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC5716D1B65E7C10043AC40 /* CSSectionHeader.m */; };
 		DDC571731B65E8BA0043AC40 /* profileHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC571711B65E8BA0043AC40 /* profileHeader.m */; };
 		DDC571741B65E8BA0043AC40 /* profileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC571721B65E8BA0043AC40 /* profileHeader.xib */; };
-		FF1BE66E1B35FC7600AF8886 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */; };
 		FF286BC91B51A7C600F7D166 /* eventDetailDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BC81B51A7C600F7D166 /* eventDetailDataController.m */; };
 		FF286BD01B51B51C00F7D166 /* SCEventNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BCB1B51B51C00F7D166 /* SCEventNameTableViewCell.m */; };
 		FF286BD11B51B51C00F7D166 /* SCEventNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF286BCC1B51B51C00F7D166 /* SCEventNameTableViewCell.xib */; };
 		FF286BD21B51B51C00F7D166 /* SCEventAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BCE1B51B51C00F7D166 /* SCEventAddressTableViewCell.m */; };
 		FF286BD31B51B51C00F7D166 /* SCEventAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF286BCF1B51B51C00F7D166 /* SCEventAddressTableViewCell.xib */; };
 		FF286BE31B522A1A00F7D166 /* SCEventMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF286BE21B522A1A00F7D166 /* SCEventMapController.m */; };
-		FF353DA31B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353D9E1B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m */; };
-		FF353DA41B5A1B7800DBA4A2 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FF353DA01B5A1B7800DBA4A2 /* SVProgressHUD.bundle */; };
-		FF353DA51B5A1B7800DBA4A2 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DA21B5A1B7800DBA4A2 /* SVProgressHUD.m */; };
 		FF353DAA1B5A296600DBA4A2 /* SCProfileInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DA81B5A296600DBA4A2 /* SCProfileInfoCell.m */; };
 		FF353DAB1B5A296600DBA4A2 /* SCProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF353DA91B5A296600DBA4A2 /* SCProfileInfoCell.xib */; };
 		FF353DC81B5C30FB00DBA4A2 /* SCAlertViewDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF353DC71B5C30FB00DBA4A2 /* SCAlertViewDataController.m */; };
@@ -105,7 +106,6 @@
 		FFC5B1C71B65562900A72286 /* SCTextSwitchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC5B1C41B65562900A72286 /* SCTextSwitchCollectionViewCell.xib */; };
 		FFC5B1C81B65562900A72286 /* SCTextSwitchCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1C61B65562900A72286 /* SCTextSwitchCollectionViewCell.m */; };
 		FFC5B1CB1B6562FF00A72286 /* SCHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */; };
-		FFDB42881B47B49900785D6A /* popingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB42871B47B49900785D6A /* popingViewController.m */; };
 		FFF2B9B31B4B1CEE0039F9BB /* eventDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF2B9B21B4B1CEE0039F9BB /* eventDetail.storyboard */; };
 		FFF2B9B61B4B2CB10039F9BB /* SCEventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF2B9B51B4B2CB10039F9BB /* SCEventInfoViewController.m */; };
 		FFFB6E411B55FB1E00409BCE /* SCEventHourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFB6E3C1B55FB1E00409BCE /* SCEventHourCell.m */; };
@@ -160,10 +160,7 @@
 		CCB5A0211B25F9240050352D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		CCB5A0231B2625E10050352D /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "usr/lib/libc++.1.dylib"; sourceTree = SDKROOT; };
 		CCB5A0251B2626C80050352D /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		CCB5A0291B2643BA0050352D /* socialCalendar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "socialCalendar-Bridging-Header.h"; sourceTree = "<group>"; };
-		CCB5A02A1B2643BC0050352D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CCB5A02B1B2643BC0050352D /* RMParallaxItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMParallaxItem.swift; sourceTree = "<group>"; };
-		CCB5A02C1B2643BC0050352D /* RMParallax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMParallax.swift; sourceTree = "<group>"; };
+		CCB5A0291B2643BA0050352D /* socialCalendar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "socialCalendar-Bridging-Header.h"; path = "socialCalendar/socialCalendar-Bridging-Header.h"; sourceTree = "<group>"; };
 		CCC680D01B129A620007DD85 /* calendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarController.h; sourceTree = "<group>"; };
 		CCC680D11B129A620007DD85 /* calendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarController.m; sourceTree = "<group>"; };
 		CCC680D91B129E320007DD85 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -205,6 +202,19 @@
 		CCF0A4951B0BF217002F619B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CCF0A4971B0BF21F002F619B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CCF0A4991B0BF3F8002F619B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DD4673FB1BAA7C4600BEC759 /* popingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popingViewController.h; sourceTree = "<group>"; };
+		DD4673FC1BAA7C4600BEC759 /* popingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popingViewController.m; sourceTree = "<group>"; };
+		DD4673FF1BAA7C9000BEC759 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		DD4674001BAA7C9000BEC759 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		DD4674021BAA7C9000BEC759 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		DD4674031BAA7C9000BEC759 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		DD4674041BAA7C9000BEC759 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		DD4674051BAA7C9000BEC759 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		DD4674061BAA7C9000BEC759 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		DD4674071BAA7C9000BEC759 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		DD46740D1BAA7CE600BEC759 /* RMParallax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMParallax.swift; sourceTree = "<group>"; };
+		DD46740E1BAA7CE600BEC759 /* RMParallaxItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMParallaxItem.swift; sourceTree = "<group>"; };
+		DD46740F1BAA7CE600BEC759 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD8AA6221BA96D5900A48299 /* SCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLoginViewController.h; sourceTree = "<group>"; };
 		DD8AA6231BA96D5900A48299 /* SCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLoginViewController.m; sourceTree = "<group>"; };
 		DD8AA6241BA96D5900A48299 /* SCSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSignUpViewController.h; sourceTree = "<group>"; };
@@ -271,8 +281,6 @@
 		DDC571721B65E8BA0043AC40 /* profileHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = profileHeader.xib; sourceTree = "<group>"; };
 		E0EDD79DA0424417BCB1D051 /* libPods-socialCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socialCalendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = socialCalendar.entitlements; path = socialCalendar/socialCalendar.entitlements; sourceTree = "<group>"; };
-		FF1BE66C1B35FC7600AF8886 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
-		FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		FF286BC71B51A7C600F7D166 /* eventDetailDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventDetailDataController.h; sourceTree = "<group>"; };
 		FF286BC81B51A7C600F7D166 /* eventDetailDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventDetailDataController.m; sourceTree = "<group>"; };
 		FF286BCA1B51B51C00F7D166 /* SCEventNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventNameTableViewCell.h; sourceTree = "<group>"; };
@@ -284,12 +292,6 @@
 		FF286BD41B51BB2E00F7D166 /* SCConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCConstants.h; sourceTree = "<group>"; };
 		FF286BE11B522A1A00F7D166 /* SCEventMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventMapController.h; sourceTree = "<group>"; };
 		FF286BE21B522A1A00F7D166 /* SCEventMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventMapController.m; sourceTree = "<group>"; };
-		FF353D9D1B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
-		FF353D9E1B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
-		FF353D9F1B5A1B7800DBA4A2 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
-		FF353DA01B5A1B7800DBA4A2 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
-		FF353DA11B5A1B7800DBA4A2 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
-		FF353DA21B5A1B7800DBA4A2 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		FF353DA71B5A296600DBA4A2 /* SCProfileInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoCell.h; sourceTree = "<group>"; };
 		FF353DA81B5A296600DBA4A2 /* SCProfileInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCProfileInfoCell.m; sourceTree = "<group>"; };
 		FF353DA91B5A296600DBA4A2 /* SCProfileInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCProfileInfoCell.xib; sourceTree = "<group>"; };
@@ -308,8 +310,6 @@
 		FFC5B1C61B65562900A72286 /* SCTextSwitchCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTextSwitchCollectionViewCell.m; sourceTree = "<group>"; };
 		FFC5B1C91B6562FF00A72286 /* SCHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCHelperMethods.h; path = socialCalendar/SCHelperMethods.h; sourceTree = "<group>"; };
 		FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCHelperMethods.m; path = socialCalendar/SCHelperMethods.m; sourceTree = "<group>"; };
-		FFDB42861B47B49900785D6A /* popingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popingViewController.h; sourceTree = "<group>"; };
-		FFDB42871B47B49900785D6A /* popingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popingViewController.m; sourceTree = "<group>"; };
 		FFF2B9B21B4B1CEE0039F9BB /* eventDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = eventDetail.storyboard; sourceTree = "<group>"; };
 		FFF2B9B41B4B2CB10039F9BB /* SCEventInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEventInfoViewController.h; sourceTree = "<group>"; };
 		FFF2B9B51B4B2CB10039F9BB /* SCEventInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEventInfoViewController.m; sourceTree = "<group>"; };
@@ -435,17 +435,6 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		CCB5A0281B2643720050352D /* splashScreen */ = {
-			isa = PBXGroup;
-			children = (
-				CCB5A02A1B2643BC0050352D /* ViewController.swift */,
-				CCB5A02B1B2643BC0050352D /* RMParallaxItem.swift */,
-				CCB5A02C1B2643BC0050352D /* RMParallax.swift */,
-				CCB5A0291B2643BA0050352D /* socialCalendar-Bridging-Header.h */,
-			);
-			name = splashScreen;
-			sourceTree = "<group>";
-		};
 		CCDB3B5F1B12FBD200A68DCB /* myEventsScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +488,7 @@
 				FFC5B1C91B6562FF00A72286 /* SCHelperMethods.h */,
 				FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */,
 				FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */,
+				CCB5A0291B2643BA0050352D /* socialCalendar-Bridging-Header.h */,
 				DD8AA6211BA96D5900A48299 /* Login & Signup */,
 				CCF0A4721B0BF14F002F619B /* Framework */,
 				CCF0A44B1B0BEEB8002F619B /* socialCalendar */,
@@ -526,10 +516,10 @@
 				DD8AA6381BA96E3300A48299 /* Expire Mark */,
 				DD8AA63C1BA96EA000A48299 /* Animator */,
 				DD8AA64F1BA96F9C00A48299 /* Location Manager */,
+				DD46740C1BAA7CE600BEC759 /* Splash Screen */,
 				DD8AA6451BA96F1200A48299 /* Categories */,
-				FFDB42851B47B48200785D6A /* popingVC */,
-				FF1BE66B1B35FC5600AF8886 /* loadingIndicator */,
-				CCB5A0281B2643720050352D /* splashScreen */,
+				DD4673FA1BAA7C4600BEC759 /* Poping View Controller */,
+				DD4673FE1BAA7C9000BEC759 /* Loading Indicator */,
 				CCDBB61A1B192490007C2E81 /* parseHandling */,
 				CC81CD161B1541B80039EA60 /* model */,
 				CCDB3B5F1B12FBD200A68DCB /* myEventsScene */,
@@ -626,6 +616,48 @@
 				E0EDD79DA0424417BCB1D051 /* libPods-socialCalendar.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD4673FA1BAA7C4600BEC759 /* Poping View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD4673FB1BAA7C4600BEC759 /* popingViewController.h */,
+				DD4673FC1BAA7C4600BEC759 /* popingViewController.m */,
+			);
+			path = "Poping View Controller";
+			sourceTree = "<group>";
+		};
+		DD4673FE1BAA7C9000BEC759 /* Loading Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				DD4673FF1BAA7C9000BEC759 /* ProgressHUD.h */,
+				DD4674001BAA7C9000BEC759 /* ProgressHUD.m */,
+				DD4674011BAA7C9000BEC759 /* SVProgressHUD */,
+			);
+			path = "Loading Indicator";
+			sourceTree = "<group>";
+		};
+		DD4674011BAA7C9000BEC759 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				DD4674021BAA7C9000BEC759 /* SVIndefiniteAnimatedView.h */,
+				DD4674031BAA7C9000BEC759 /* SVIndefiniteAnimatedView.m */,
+				DD4674041BAA7C9000BEC759 /* SVProgressHUD-Prefix.pch */,
+				DD4674051BAA7C9000BEC759 /* SVProgressHUD.bundle */,
+				DD4674061BAA7C9000BEC759 /* SVProgressHUD.h */,
+				DD4674071BAA7C9000BEC759 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		DD46740C1BAA7CE600BEC759 /* Splash Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DD46740D1BAA7CE600BEC759 /* RMParallax.swift */,
+				DD46740E1BAA7CE600BEC759 /* RMParallaxItem.swift */,
+				DD46740F1BAA7CE600BEC759 /* ViewController.swift */,
+			);
+			path = "Splash Screen";
 			sourceTree = "<group>";
 		};
 		DD8AA6211BA96D5900A48299 /* Login & Signup */ = {
@@ -786,29 +818,6 @@
 			name = regionSelection;
 			sourceTree = "<group>";
 		};
-		FF1BE66B1B35FC5600AF8886 /* loadingIndicator */ = {
-			isa = PBXGroup;
-			children = (
-				FF353D9C1B5A1B7800DBA4A2 /* SVProgressHUD */,
-				FF1BE66C1B35FC7600AF8886 /* ProgressHUD.h */,
-				FF1BE66D1B35FC7600AF8886 /* ProgressHUD.m */,
-			);
-			name = loadingIndicator;
-			sourceTree = "<group>";
-		};
-		FF353D9C1B5A1B7800DBA4A2 /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				FF353D9D1B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.h */,
-				FF353D9E1B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m */,
-				FF353D9F1B5A1B7800DBA4A2 /* SVProgressHUD-Prefix.pch */,
-				FF353DA01B5A1B7800DBA4A2 /* SVProgressHUD.bundle */,
-				FF353DA11B5A1B7800DBA4A2 /* SVProgressHUD.h */,
-				FF353DA21B5A1B7800DBA4A2 /* SVProgressHUD.m */,
-			);
-			path = SVProgressHUD;
-			sourceTree = "<group>";
-		};
 		FF353DA61B5A290200DBA4A2 /* profileCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -839,15 +848,6 @@
 			);
 			name = myProfile;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		FFDB42851B47B48200785D6A /* popingVC */ = {
-			isa = PBXGroup;
-			children = (
-				FFDB42861B47B49900785D6A /* popingViewController.h */,
-				FFDB42871B47B49900785D6A /* popingViewController.m */,
-			);
-			name = popingVC;
 			sourceTree = "<group>";
 		};
 		FFF2B9B71B4B30550039F9BB /* eventDetailCell */ = {
@@ -983,6 +983,7 @@
 			files = (
 				FFFB6E441B55FB1E00409BCE /* SCEventHoursTableViewCell.xib in Resources */,
 				FF353DAB1B5A296600DBA4A2 /* SCProfileInfoCell.xib in Resources */,
+				DD46740A1BAA7C9000BEC759 /* SVProgressHUD.bundle in Resources */,
 				FF286BD31B51B51C00F7D166 /* SCEventAddressTableViewCell.xib in Resources */,
 				CCF0A4581B0BEEB8002F619B /* Main.storyboard in Resources */,
 				CCF0A45D1B0BEEB8002F619B /* LaunchScreen.xib in Resources */,
@@ -997,7 +998,6 @@
 				DDC571281B6586F10043AC40 /* logo.png in Resources */,
 				CCF0A45A1B0BEEB8002F619B /* Images.xcassets in Resources */,
 				FFF2B9B31B4B1CEE0039F9BB /* eventDetail.storyboard in Resources */,
-				FF353DA41B5A1B7800DBA4A2 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1052,7 +1052,6 @@
 				FF353DC81B5C30FB00DBA4A2 /* SCAlertViewDataController.m in Sources */,
 				DD8AA64C1BA96F1200A48299 /* UIColor+CustomColors.m in Sources */,
 				FF353DAA1B5A296600DBA4A2 /* SCProfileInfoCell.m in Sources */,
-				CCB5A02E1B2643BC0050352D /* RMParallaxItem.swift in Sources */,
 				DDC571581B65CAA00043AC40 /* TOCropViewControllerTransitioning.m in Sources */,
 				FF286BC91B51A7C600F7D166 /* eventDetailDataController.m in Sources */,
 				DD8AA6261BA96D5900A48299 /* SCLoginViewController.m in Sources */,
@@ -1060,10 +1059,13 @@
 				CCDB3B621B12FC3200A68DCB /* eventViewCell.m in Sources */,
 				DD8AA6431BA96EA000A48299 /* DismissingAnimator.m in Sources */,
 				DD8AA62B1BA96D8900A48299 /* LPNetworkingManager.m in Sources */,
+				DD4674101BAA7CE600BEC759 /* RMParallax.swift in Sources */,
 				CCC680D21B129A620007DD85 /* calendarController.m in Sources */,
 				CCB59FEF1B2031E40050352D /* FacebookStyleBar.m in Sources */,
 				DDC5715E1B65CAA00043AC40 /* TOCropView.m in Sources */,
 				DDC571691B65E6280043AC40 /* profileViewController.m in Sources */,
+				DD4674091BAA7C9000BEC759 /* SVIndefiniteAnimatedView.m in Sources */,
+				DD46740B1BAA7C9000BEC759 /* SVProgressHUD.m in Sources */,
 				FF353DD01B5C608900DBA4A2 /* regionSelectionTableViewController.m in Sources */,
 				FFC5B1C81B65562900A72286 /* SCTextSwitchCollectionViewCell.m in Sources */,
 				DDC5716F1B65E7C10043AC40 /* CSSectionHeader.m in Sources */,
@@ -1071,27 +1073,26 @@
 				DDC5715C1B65CAA00043AC40 /* TOCropScrollView.m in Sources */,
 				FFF2B9B61B4B2CB10039F9BB /* SCEventInfoViewController.m in Sources */,
 				DDC5715B1B65CAA00043AC40 /* TOCropOverlayView.m in Sources */,
-				CCB5A02F1B2643BC0050352D /* RMParallax.swift in Sources */,
 				CCB59FEE1B2031E40050352D /* FacebookStyleViewController.m in Sources */,
+				DD4673FD1BAA7C4600BEC759 /* popingViewController.m in Sources */,
 				CCB59FFF1B212CE20050352D /* listTableViewCell.m in Sources */,
 				DD8AA6271BA96D5900A48299 /* SCSignUpViewController.m in Sources */,
 				DDC5715A1B65CAA00043AC40 /* TOCropViewController.m in Sources */,
+				DD4674121BAA7CE600BEC759 /* ViewController.swift in Sources */,
 				FF286BD21B51B51C00F7D166 /* SCEventAddressTableViewCell.m in Sources */,
 				CCE344191B1BB02B001FB58F /* calendarTableViewCell.m in Sources */,
 				FF286BD01B51B51C00F7D166 /* SCEventNameTableViewCell.m in Sources */,
 				FF286BE31B522A1A00F7D166 /* SCEventMapController.m in Sources */,
-				FF1BE66E1B35FC7600AF8886 /* ProgressHUD.m in Sources */,
 				CCB59FFC1B2119010050352D /* userTableViewController.m in Sources */,
 				CCDBB61D1B1924D4007C2E81 /* ParsingHandle.m in Sources */,
 				DD8AA63B1BA96E3300A48299 /* expireMarkingView.m in Sources */,
-				FF353DA51B5A1B7800DBA4A2 /* SVProgressHUD.m in Sources */,
 				DD8AA6521BA96F9C00A48299 /* SCLocationManager.m in Sources */,
 				DD8AA64D1BA96F1200A48299 /* UITabBarController+TabBarVisibility.m in Sources */,
 				CCDB3B6E1B13FFCC00A68DCB /* addEventTableViewController.m in Sources */,
 				DDC571591B65CAA00043AC40 /* UIImage+CropRotate.m in Sources */,
 				DDC5715D1B65CAA00043AC40 /* TOCropToolbar.m in Sources */,
 				DD8AA6581BA9729900A48299 /* LPBannerView.m in Sources */,
-				CCB5A02D1B2643BC0050352D /* ViewController.swift in Sources */,
+				DD4674111BAA7CE600BEC759 /* RMParallaxItem.swift in Sources */,
 				CC81CD151B1535330039EA60 /* KLCPopup.m in Sources */,
 				DDC571731B65E8BA0043AC40 /* profileHeader.m in Sources */,
 				CCB5A0061B2558E80050352D /* friendsPickingTableViewController.m in Sources */,
@@ -1099,10 +1100,9 @@
 				FFFB6E431B55FB1E00409BCE /* SCEventHoursTableViewCell.m in Sources */,
 				FFC5B1CB1B6562FF00A72286 /* SCHelperMethods.m in Sources */,
 				CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */,
+				DD4674081BAA7C9000BEC759 /* ProgressHUD.m in Sources */,
 				CC81CD191B1541E00039EA60 /* eventObject.m in Sources */,
 				CC81CD0D1B1448A00039EA60 /* mapViewController.m in Sources */,
-				FFDB42881B47B49900785D6A /* popingViewController.m in Sources */,
-				FF353DA31B5A1B7800DBA4A2 /* SVIndefiniteAnimatedView.m in Sources */,
 				DDC571571B65CAA00043AC40 /* TOCroppedImageAttributes.m in Sources */,
 				CCF0A44F1B0BEEB8002F619B /* main.m in Sources */,
 				CC81CD101B1448FD0039EA60 /* MyLocation.m in Sources */,
