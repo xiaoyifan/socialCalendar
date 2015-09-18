@@ -42,7 +42,7 @@
         _cropFrame = cropFrame;
         _angle = angle;
     }
-    
+
     return self;
 }
 
@@ -61,11 +61,11 @@
 - (id)item
 {
     //If the user didn't touch the image, just forward along the original
-    if (self.angle == 0 && CGRectEqualToRect(self.cropFrame, (CGRect){CGPointZero, self.image.size})) {
+    if ( self.angle == 0 && CGRectEqualToRect(self.cropFrame, (CGRect) {CGPointZero, self.image.size }) ) {
         self.croppedImage = self.image;
         return self.croppedImage;
     }
-    
+
     UIImage *image = [self.image croppedImageWithFrame:self.cropFrame angle:self.angle];
     self.croppedImage = image;
     return self.croppedImage;

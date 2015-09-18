@@ -78,19 +78,18 @@
 + (void)openMapsWithStore:(eventObject *)event
 {
     if (event.location) {
+        CLLocationCoordinate2D coordinate;
+        coordinate.latitude = event.location.coordinate.latitude;
+        coordinate.longitude = event.location.coordinate.longitude;
 
-    CLLocationCoordinate2D coordinate;
-    coordinate.latitude = event.location.coordinate.latitude;
-    coordinate.longitude = event.location.coordinate.longitude;
-
-    MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil];
-    MKMapItem *destination = [[MKMapItem alloc] initWithPlacemark:placemark];
-    destination.name = event.title;
-    NSArray *items = @[destination];
-    NSDictionary *launchOptions = @{
-        MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking
-    };
-    [MKMapItem openMapsWithItems:items launchOptions:launchOptions];
+        MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil];
+        MKMapItem *destination = [[MKMapItem alloc] initWithPlacemark:placemark];
+        destination.name = event.title;
+        NSArray *items = @[destination];
+        NSDictionary *launchOptions = @{
+            MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking
+        };
+        [MKMapItem openMapsWithItems:items launchOptions:launchOptions];
     }
 }
 

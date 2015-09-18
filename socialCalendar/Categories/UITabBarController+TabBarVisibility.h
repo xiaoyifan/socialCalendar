@@ -10,7 +10,18 @@
 
 @interface UITabBarController (TabBarVisibility)
 
+/**
+ *  Method to hide the TabBar with or without animation.
+ *
+ *  @param animated YES for animation, No for without animation.
+ */
 - (void)hideTabbarAnimated:(BOOL)animated;
+
+/**
+ *  Show the TabBar with or without animation.
+ *
+ *  @param animated YES for animation, No for without animation.
+ */
 - (void)showTabbarAnimated:(BOOL)animated;
 
 @end

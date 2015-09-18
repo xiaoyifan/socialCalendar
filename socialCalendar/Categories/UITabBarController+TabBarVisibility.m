@@ -10,12 +10,13 @@
 
 @implementation UITabBarController (TabBarVisibility)
 
-- (void)hideTabBarAnimated:(BOOL)animated {
+- (void)hideTabbarAnimated:(BOOL)animated
+{
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    
+
     float fHeight = screenRect.size.height;
-    
-    void(^block)(void) = ^(){
+
+    void (^block)(void) = ^() {
         for (UIView *view in self.view.subviews) {
             if (view == self.tabBar) {
                 [view setFrame:CGRectMake(view.frame.origin.x, fHeight, view.frame.size.width, view.frame.size.height)];
@@ -25,7 +26,7 @@
             }
         }
     };
-    
+
     if (animated) {
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:0.3];
@@ -36,11 +37,12 @@
     }
 }
 
-- (void)showTabBarAnimated:(BOOL)animated {
+- (void)showTabbarAnimated:(BOOL)animated
+{
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     float fHeight = screenRect.size.height - 49.0;
-    
-    void(^block)(void) = ^(){
+
+    void (^block)(void) = ^() {
         for (UIView *view in self.view.subviews) {
             if (view == self.tabBar) {
                 [view setFrame:CGRectMake(view.frame.origin.x, fHeight, view.frame.size.width, view.frame.size.height)];
@@ -49,7 +51,7 @@
             }
         }
     };
-    
+
     if (animated) {
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:0.3];

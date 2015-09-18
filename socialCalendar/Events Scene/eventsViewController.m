@@ -6,22 +6,24 @@
 //  Copyright (c) 2015 Yifan Xiao. All rights reserved.
 //
 
+#import "socialCalendar-Swift.h"
+
+#import "WXApi.h"
+#import "WXApiObject.h"
+
 #import "eventsViewController.h"
 #import "eventViewCell.h"
 #import "addEventTableViewController.h"
 #import "AAShareBubbles.h"
-#import "WXApi.h"
-#import "WXApiObject.h"
-#import "socialCalendar-Swift.h"
 #import "popingViewController.h"
 #import "PresentingAnimator.h"
 #import "DismissingAnimator.h"
 #import "expireMarkingView.h"
 #import "SCEventInfoViewController.h"
-#import "UIColor+CustomColors.h"
-
 #import "SCLoginViewController.h"
 #import "SCSignUpViewController.h"
+
+#import "UIColor+CustomColors.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -113,12 +115,12 @@
                 [self.fetchedEvents addObject:newObj];
             }
             NSArray *sortedArray;
-            sortedArray = [self.fetchedEvents sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
-                NSDate *first = ((eventObject *)a).time;
-                NSDate *second = ((eventObject *)b).time;
+            sortedArray = [self.fetchedEvents sortedArrayUsingComparator: ^NSComparisonResult (id a, id b) {
+                NSDate *first = ( (eventObject *)a ).time;
+                NSDate *second = ( (eventObject *)b ).time;
                 return [second compare:first];
             }];
-            
+
             self.events = [NSMutableArray arrayWithArray:sortedArray];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
@@ -158,7 +160,7 @@
     cell.backgroundCardView.layer.shadowOpacity = 0.2f;
     cell.backgroundCardView.layer.shadowPath = shadowPath.CGPath;
 
-    cell.topBar.backgroundColor = [self randomColor];
+    cell.topBar.backgroundColor = [UIColor randomColor];
 
     eventObject *singleEvent = [self.events objectAtIndex:indexPath.row];
 
@@ -175,8 +177,7 @@
 
     if ([singleEvent.locationDescription isEqual:[NSNull null]] || [singleEvent.locationDescription isEqualToString:@"(null)"]) {
         cell.addressLabel.text = @"the location description is not available";
-    }
-    else{
+    } else {
         cell.addressLabel.text = singleEvent.locationDescription;
     }
 
@@ -188,7 +189,6 @@
     [cell.deleteButton addTarget:self action:@selector(deleteButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
 
     if (indexPath.row == 5) {
-        
     }
     if ([eventDate compare:[NSDate date]] == NSOrderedAscending) {
         cell.topBar.backgroundColor = [UIColor darkGrayColor];
@@ -196,8 +196,7 @@
         cell.expiredLabel.textColor = [UIColor customRedColor];
         cell.expiredLabel.layer.borderWidth = 3.0f;
         cell.expiredLabel.hidden = NO;
-    }
-    else{
+    } else {
         cell.expiredLabel.hidden = YES;
     }
 
@@ -330,7 +329,7 @@
     addEventTableViewController *source = [segue sourceViewController];
     eventObject *item = source.object;
     if (item != nil) {
-        for (int i = 0; i< self.events.count;i++) {
+        for (int i = 0; i < self.events.count; i++) {
             eventObject *obj = [self.events objectAtIndex:i];
             if ([obj.time compare:item.time] == NSOrderedAscending) {
                 [self.events insertObject:item atIndex:i];
@@ -560,31 +559,6 @@
     [PFUser logOut];
 
     [self handleLogginAndSignUp];
-}
-
-#pragma mark -- color choosing
-
-- (UIColor *)randomColor
-{
-    NSArray *sliceColors = [NSArray arrayWithObjects:
-
-                            [UIColor colorWithRed:121 / 255.0 green:134 / 255.0 blue:203 / 255.0 alpha:1], //5. indigo
-                            [UIColor colorWithRed:174 / 255.0 green:213 / 255.0 blue:129 / 255.0 alpha:1], //14. light green
-                            [UIColor colorWithRed:100 / 255.0 green:181 / 255.0 blue:246 / 255.0 alpha:1], //2. blue
-                            [UIColor colorWithRed:220 / 255.0 green:231 / 255.0 blue:117 / 255.0 alpha:1], //8. lime
-                            [UIColor colorWithRed:79 / 255.0 green:195 / 255.0 blue:247 / 255.0 alpha:1], //7. light blue
-                            [UIColor colorWithRed:77 / 255.0 green:182 / 255.0 blue:172 / 255.0 alpha:1], //13. teal
-                            [UIColor colorWithRed:129 / 255.0 green:199 / 255.0 blue:132 / 255.0 alpha:1], //9. green
-                            [UIColor colorWithRed:255 / 255.0 green:241 / 255.0 blue:118 / 255.0 alpha:1], //16. yellow
-                            [UIColor colorWithRed:255 / 255.0 green:183 / 255.0 blue:77 / 255.0 alpha:1], //4. orange
-                            [UIColor colorWithRed:255 / 255.0 green:138 / 255.0 blue:101 / 255.0 alpha:1], //10. deep orange
-                            [UIColor colorWithRed:229 / 255.0 green:155 / 255.0 blue:155 / 255.0 alpha:1], //6. red
-                            [UIColor colorWithRed:240 / 255.0 green:98 / 255.0 blue:146 / 255.0 alpha:1], //1. pink
-                            [UIColor colorWithRed:186 / 255.0 green:104 / 255.0 blue:200 / 255.0 alpha:1], //11. purple
-                            nil];
-
-    int rad = arc4random() % 13;
-    return sliceColors[rad];
 }
 
 #pragma mark -- event deleting

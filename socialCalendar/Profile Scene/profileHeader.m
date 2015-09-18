@@ -11,13 +11,13 @@
 
 @implementation profileHeader
 
-- (void)applyLayoutAttributes:(CSStickyHeaderFlowLayoutAttributes *)layoutAttributes {
-
+- (void)applyLayoutAttributes:(CSStickyHeaderFlowLayoutAttributes *)layoutAttributes
+{
     [UIView beginAnimations:@"" context:nil];
 
     self.titleLabel.text = [PFUser currentUser].username;
     self.NameLabel.text = [PFUser currentUser].username;
-    
+
     if (layoutAttributes.progressiveness <= 0.58) {
         self.titleLabel.alpha = 1;
         self.cameraButton.alpha = 0;
@@ -31,11 +31,9 @@
     [UIView commitAnimations];
 }
 
-- (IBAction)cameraButtonTapped:(id)sender {
-
+- (IBAction)cameraButtonTapped:(id)sender
+{
     [self.delegate tapToShowPhotoGallery];
-
 }
-
 
 @end

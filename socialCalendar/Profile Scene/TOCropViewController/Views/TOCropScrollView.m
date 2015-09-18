@@ -26,25 +26,28 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (self.touchesBegan)
+    if (self.touchesBegan) {
         self.touchesBegan();
-        
+    }
+
     [super touchesBegan:touches withEvent:event];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (self.touchesEnded)
+    if (self.touchesEnded) {
         self.touchesEnded();
-    
+    }
+
     [super touchesEnded:touches withEvent:event];
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (self.touchesCancelled)
+    if (self.touchesCancelled) {
         self.touchesCancelled();
-    
+    }
+
     [super touchesCancelled:touches withEvent:event];
 }
 

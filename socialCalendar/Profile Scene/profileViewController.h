@@ -10,6 +10,7 @@
 #import "SCTextSwitchCollectionViewCell.h"
 #import "profileHeader.h"
 
+// Enum for the table view rows.
 typedef NS_ENUM(NSInteger, SCUserDetailModuleType)
 {
     SCUserDetailModuleTypeNickName = 0,

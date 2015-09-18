@@ -10,21 +10,19 @@
 #import "calendarTableViewCell.h"
 #import "SCEventInfoViewController.h"
 
+#import "UIColor+CustomColors.h"
+
 @interface calendarController () <UITableViewDataSource, UITableViewDelegate>
 
 
 @property (weak, nonatomic) IBOutlet JTCalendarMenuView *calendarMenuView;
 @property (weak, nonatomic) IBOutlet JTCalendarContentView *calendarContentView;
+@property (strong, nonatomic) JTCalendar *calendar;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *calendarContentViewHeight;
 
-@property (strong, nonatomic) JTCalendar *calendar;
-
-
 @property (weak, nonatomic) IBOutlet UITableView *eventTableView;
-
 @property (weak, nonatomic) IBOutlet UISwitch *switchToggle;
-
 @property NSMutableArray *eventsToday;
 
 @end
@@ -98,11 +96,10 @@
     NSLog(@"table view double tapped");
 
     self.calendar.calendarAppearance.isWeekMode = !self.calendar.calendarAppearance.isWeekMode;
-    
+
     if (self.switchToggle.isOn) {
         [self.switchToggle setOn:NO animated:YES];
-    }
-    else{
+    } else {
         [self.switchToggle setOn:YES animated:YES];
     }
 
@@ -194,7 +191,7 @@
 {
     calendarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"calendarCell" forIndexPath:indexPath];
 
-    cell.separator.backgroundColor = [self randomColor];
+    cell.separator.backgroundColor = [UIColor randomColor];
 
     eventObject *singleEvent = [self.eventsToday objectAtIndex:indexPath.row];
 
@@ -221,50 +218,5 @@
     [eventDetailVC setupWithEvent:eventObj];
     [self.navigationController pushViewController:eventDetailVC animated:YES];
 }
-
-- (UIColor *)randomColor
-{
-    NSArray *sliceColors = [NSArray arrayWithObjects:
-
-                            [UIColor colorWithRed:121 / 255.0 green:134 / 255.0 blue:203 / 255.0 alpha:1], //5. indigo
-                            [UIColor colorWithRed:174 / 255.0 green:213 / 255.0 blue:129 / 255.0 alpha:1], //14. light green
-                            [UIColor colorWithRed:100 / 255.0 green:181 / 255.0 blue:246 / 255.0 alpha:1], //2. blue
-                            [UIColor colorWithRed:220 / 255.0 green:231 / 255.0 blue:117 / 255.0 alpha:1], //8. lime
-                            [UIColor colorWithRed:79 / 255.0 green:195 / 255.0 blue:247 / 255.0 alpha:1], //7. light blue
-                            [UIColor colorWithRed:77 / 255.0 green:208 / 255.0 blue:225 / 255.0 alpha:1], //3. cyan
-                            [UIColor colorWithRed:77 / 255.0 green:182 / 255.0 blue:172 / 255.0 alpha:1], //13. teal
-                            [UIColor colorWithRed:129 / 255.0 green:199 / 255.0 blue:132 / 255.0 alpha:1], //9. green
-                            [UIColor colorWithRed:255 / 255.0 green:241 / 255.0 blue:118 / 255.0 alpha:1], //16. yellow
-                            [UIColor colorWithRed:255 / 255.0 green:213 / 255.0 blue:79 / 255.0 alpha:1], //12. amber
-                            [UIColor colorWithRed:255 / 255.0 green:183 / 255.0 blue:77 / 255.0 alpha:1], //4. orange
-                            [UIColor colorWithRed:255 / 255.0 green:138 / 255.0 blue:101 / 255.0 alpha:1], //10. deep orange
-                            [UIColor colorWithRed:144 / 255.0 green:164 / 255.0 blue:174 / 255.0 alpha:1], //15. blue grey
-                            [UIColor colorWithRed:229 / 255.0 green:155 / 255.0 blue:155 / 255.0 alpha:1], //6. red
-                            [UIColor colorWithRed:240 / 255.0 green:98 / 255.0 blue:146 / 255.0 alpha:1], //1. pink
-                            [UIColor colorWithRed:186 / 255.0 green:104 / 255.0 blue:200 / 255.0 alpha:1], //11. purple
-                            nil];
-
-    int rad = arc4random() % 16;
-    return sliceColors[rad];
-}
-
-//#pragma mark - Navigation
-//
-//// In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([segue.identifier isEqual:@"detailSegue"]) {
-//        detailViewController *controller = (detailViewController *)[segue destinationViewController];
-//
-//        NSIndexPath *indexPath = [self.eventTableView indexPathForSelectedRow];
-//
-//        calendarTableViewCell *cell = (calendarTableViewCell *)[self.eventTableView cellForRowAtIndexPath:indexPath];
-//
-//        eventObject *selectedObject = [self.eventsToday objectAtIndex:indexPath.row];
-//        //get the item tapped in the tableView
-//        controller.detailObject = selectedObject;
-//        controller.cardBackgroundColor = cell.separator.backgroundColor;
-//    }
-//}
 
 @end

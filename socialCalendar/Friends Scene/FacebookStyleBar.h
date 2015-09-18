@@ -11,8 +11,14 @@
 
 @protocol flexibleHeightBarDelegate
 
+/**
+ *  The method to be triggered when the friend button is pressed.
+ */
 - (void)friendButtonPressed;
 
+/**
+ *  The method to be triggered when the requesr button is pressed. 
+ */
 - (void)requestButtonPressed;
 
 @end

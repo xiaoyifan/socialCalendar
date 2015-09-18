@@ -25,7 +25,7 @@
         self.descriptionLabel.text = event.eventNote;
     } else if (rowType == SCEventDetailModuleTypeAddress) {
         self.titleLabel.text = @"ADDRESS";
-        if ([event.locationDescription isEqual:[NSNull null]] ||[event.locationDescription isEqualToString:@"(null)"]) {
+        if ([event.locationDescription isEqual:[NSNull null]] || [event.locationDescription isEqualToString:@"(null)"]) {
             self.descriptionLabel.text = kEventNoAddressText;
         } else {
             self.descriptionLabel.text = event.locationDescription;

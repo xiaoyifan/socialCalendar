@@ -8,6 +8,9 @@
 
 @protocol cameraHeaderDelegate <NSObject>
 
+/**
+ *  The method to be triggered when the camera button is pressed. 
+ */
 - (void)tapToShowPhotoGallery;
 
 @end

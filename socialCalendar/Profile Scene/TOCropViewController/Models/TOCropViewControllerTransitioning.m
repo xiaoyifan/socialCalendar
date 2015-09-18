@@ -33,43 +33,43 @@
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
     UIView *containerView = [transitionContext containerView];
-    
+
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    
+
     UIViewController *cropViewController = (self.isDismissing == NO) ? toViewController : fromViewController;
     UIViewController *previousController = (self.isDismissing == NO) ? fromViewController : toViewController;
-    
+
     UIImageView *imageView = nil;
-    if ((self.isDismissing && !CGRectIsEmpty(self.toFrame)) || (!self.isDismissing && !CGRectIsEmpty(self.fromFrame))) {
+    if ( ( self.isDismissing && !CGRectIsEmpty(self.toFrame) ) || ( !self.isDismissing && !CGRectIsEmpty(self.fromFrame) ) ) {
         imageView = [[UIImageView alloc] initWithImage:self.image];
         imageView.frame = self.fromFrame;
         [containerView addSubview:imageView];
     }
-    
+
     if (self.isDismissing == NO) {
         [containerView addSubview:cropViewController.view];
         [containerView bringSubviewToFront:imageView];
-    }
-    else {
+    } else {
         [containerView insertSubview:previousController.view belowSubview:cropViewController.view];
     }
-    
-    if (self.prepareForTransitionHandler)
+
+    if (self.prepareForTransitionHandler) {
         self.prepareForTransitionHandler();
-    
+    }
+
     cropViewController.view.alpha = (self.isDismissing ? 1.0f : 0.0f);
     if (imageView) {
-        [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0f usingSpringWithDamping:1.0f initialSpringVelocity:0.7f options:0 animations:^{
+        [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0f usingSpringWithDamping:1.0f initialSpringVelocity:0.7f options:0 animations: ^{
             imageView.frame = self.toFrame;
-        } completion:^(BOOL complete) {
+        } completion: ^(BOOL complete) {
             [imageView removeFromSuperview];
         }];
     }
-    
-    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations: ^{
         cropViewController.view.alpha = (self.isDismissing ? 0.0f : 1.0f);
-    } completion:^(BOOL complete) {
+    } completion: ^(BOOL complete) {
         [self reset];
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];

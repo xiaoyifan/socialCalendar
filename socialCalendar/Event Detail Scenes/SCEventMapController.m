@@ -46,7 +46,7 @@ static CGFloat const kMapAltitude = 1000.0f;
 
     eventObject *obj = [self.events objectAtIndex:0];
 
-    if (obj.location && (obj.location.coordinate.latitude != 0 || obj.location.coordinate.longitude != 0)) {
+    if ( obj.location && (obj.location.coordinate.latitude != 0 || obj.location.coordinate.longitude != 0) ) {
         [self addStoreAnnotations];
         [self zoomMapToFitAnnotations];
     } else {

@@ -28,36 +28,34 @@
 {
     UIImage *croppedImage = nil;
     CGPoint drawPoint = CGPointZero;
-    
+
     UIGraphicsBeginImageContextWithOptions(frame.size, NO, 0.0f);
     {
         CGContextRef context = UIGraphicsGetCurrentContext();
-        
+
         //To conserve memory in not needing to completely re-render the image re-rotated,
         //map the image to a view and then use Core Animation to manipulated its rotation
         if (angle != 0) {
             UIImageView *imageView = [[UIImageView alloc] initWithImage:self];
             imageView.layer.minificationFilter = @"nearest";
             imageView.layer.magnificationFilter = @"neareset";
-            imageView.transform = CGAffineTransformRotate(CGAffineTransformIdentity, angle * (M_PI/180.0f));
+            imageView.transform = CGAffineTransformRotate( CGAffineTransformIdentity, angle * (M_PI / 180.0f) );
             CGRect rotatedRect = CGRectApplyAffineTransform(imageView.bounds, imageView.transform);
-            UIView *containerView = [[UIView alloc] initWithFrame:(CGRect){CGPointZero, rotatedRect.size}];
+            UIView *containerView = [[UIView alloc] initWithFrame:(CGRect) {CGPointZero, rotatedRect.size }];
             [containerView addSubview:imageView];
             imageView.center = containerView.center;
             CGContextTranslateCTM(context, -frame.origin.x, -frame.origin.y);
             [containerView.layer renderInContext:context];
-        }
-        else {
+        } else {
             CGContextTranslateCTM(context, -frame.origin.x, -frame.origin.y);
             [self drawAtPoint:drawPoint];
         }
-        
+
         croppedImage = UIGraphicsGetImageFromCurrentImageContext();
     }
     UIGraphicsEndImageContext();
-    
+
     return croppedImage;
 }
-
 
 @end

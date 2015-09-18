@@ -11,6 +11,4 @@
 
 @interface eventsViewController : UITableViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
-
-
 @end

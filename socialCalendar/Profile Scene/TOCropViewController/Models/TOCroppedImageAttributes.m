@@ -39,7 +39,7 @@
         _croppedFrame = croppedFrame;
         _originalImageSize = originalSize;
     }
-    
+
     return self;
 }
 
