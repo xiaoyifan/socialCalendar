@@ -37,6 +37,15 @@ static NSString *const kEventNoAddressText = @"event address is not available";
 static NSString *const kDatePresentingFormat = @"dd-MMM-YYYY HH:mm";
 static NSString *const kDateFormatInselection = @"yyyy-MMMM-dd HH:mm";
 
+static NSString *const kEventTitleKey = @"title";
+static NSString *const kEventTimeKey = @"time";
+static NSString *const kEventRemindTimeKey = @"reminderDate";
+static NSString *const kEventLocationKey = @"location";
+static NSString *const kEventLocationDescriptionKey = @"locationDescription";
+static NSString *const kEventNoteKey = @"eventNote";
+static NSString *const kEventGroupKey = @"group";
+static NSString *const kEventObjectIDKey = @"objectId";
+static NSString *const kEventInternalKey = @"isInternal";
 
 #pragma mark -- AlertView default string
 

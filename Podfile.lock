@@ -25,7 +25,6 @@ PODS:
   - CSStickyHeaderFlowLayout (0.2.8)
   - DACircularProgress (2.3.1)
   - DCModalSegue (0.0.2)
-  - FoldingTabBar (1.0.0)
   - HexColors (2.2.1)
   - HSDatePickerViewController (1.0.1)
   - IDMPhotoBrowser (1.6.2):
@@ -37,13 +36,11 @@ PODS:
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
   - JTCalendar (1.2.3)
-  - JVFloatLabeledTextField (1.1.0)
   - MBProgressHUD (0.9.1)
   - pop (1.0.7)
   - RMActionController (1.0.4)
   - RMDateSelectionViewController (2.0.1):
     - RMActionController (~> 1.0.0)
-  - RNGridMenu (0.1.3)
   - SCLAlertView-Objective-C (0.7.3)
   - ZFDragableModalTransition (0.5.1)
 
@@ -53,7 +50,6 @@ DEPENDENCIES:
   - BLKFlexibleHeightBar
   - CSStickyHeaderFlowLayout
   - DCModalSegue
-  - FoldingTabBar (~> 1.0.0)
   - HexColors
   - HSDatePickerViewController
   - IDMPhotoBrowser
@@ -61,11 +57,9 @@ DEPENDENCIES:
   - JSQMessagesViewController
   - JSQSystemSoundPlayer
   - JTCalendar (~> 1.2.3)
-  - JVFloatLabeledTextField
   - MBProgressHUD
   - pop
   - RMDateSelectionViewController (~> 2.0.1)
-  - RNGridMenu
   - SCLAlertView-Objective-C
   - ZFDragableModalTransition
 
@@ -76,7 +70,6 @@ SPEC CHECKSUMS:
   CSStickyHeaderFlowLayout: e919dd425fa12bba1155f66d87edfe540eb8f89a
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DCModalSegue: 68c79b992a87c72ca6ded9ae61722b073f5fcdd3
-  FoldingTabBar: 463d247453a2ba826ae79f5be1e6b8b93b6aa0ce
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   HSDatePickerViewController: b292f2a53b2644a68aa5e1343053d2f3554de64c
   IDMPhotoBrowser: ebbfa6690456b72dd92d93b7bc11d71519f4d06d
@@ -84,12 +77,10 @@ SPEC CHECKSUMS:
   JSQMessagesViewController: bb6649691182b1899dc52b42266ad69efc473510
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   JTCalendar: 246ea3e338fb97624846ec77cdcde448242c4d5c
-  JVFloatLabeledTextField: ea4a3d8387ddd43724c472bb2b8ab39b79af05d4
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
   RMActionController: 19423654600d40ca15132a4e548d005042d68f09
   RMDateSelectionViewController: 027bdeeaacb78b2b528808ed21efd697490d2b4e
-  RNGridMenu: c58db81f87b5473936bb1b675dc3e947c409b51d
   SCLAlertView-Objective-C: 4bf9a07c8a8d1840e5174e643e16bc032239914d
   ZFDragableModalTransition: 048189eda437f91944ce6d5151618b8bf770196d
 

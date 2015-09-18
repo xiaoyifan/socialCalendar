@@ -13,30 +13,30 @@
 //Implement the encoding method
 - (void)encodeWithCoder:(NSCoder *)encoder
 {
-    [encoder encodeObject:self.title forKey:@"title"];
-    [encoder encodeObject:self.time forKey:@"time"];
-    [encoder encodeObject:self.reminderDate forKey:@"reminderDate"];
-    [encoder encodeObject:self.location forKey:@"location"];
-    [encoder encodeObject:self.locationDescription forKey:@"locationDescription"];
-    [encoder encodeObject:self.eventNote forKey:@"eventNote"];
-    [encoder encodeObject:self.group forKey:@"group"];
-    [encoder encodeObject:self.objectId forKey:@"objectId"];
-    [encoder encodeBool:self.isInternalEvent forKey:@"isInternal"];
+    [encoder encodeObject:self.title forKey:kEventTitleKey];
+    [encoder encodeObject:self.time forKey:kEventTimeKey];
+    [encoder encodeObject:self.reminderDate forKey:kEventRemindTimeKey];
+    [encoder encodeObject:self.location forKey:kEventLocationKey];
+    [encoder encodeObject:self.locationDescription forKey:kEventLocationDescriptionKey];
+    [encoder encodeObject:self.eventNote forKey:kEventNoteKey];
+    [encoder encodeObject:self.group forKey:kEventGroupKey];
+    [encoder encodeObject:self.objectId forKey:kEventObjectIDKey];
+    [encoder encodeBool:self.isInternalEvent forKey:kEventInternalKey];
 }
 
 //implement the decoding method
 - (id)initWithCoder:(NSCoder *)decoder
 {
     self = [super init];
-    self.title = [decoder decodeObjectForKey:@"title"];
-    self.time = [decoder decodeObjectForKey:@"time"];
-    self.reminderDate = [decoder decodeObjectForKey:@"reminderDate"];
-    self.location = [decoder decodeObjectForKey:@"location"];
-    self.locationDescription = [decoder decodeObjectForKey:@"locationDescription"];
-    self.eventNote = [decoder decodeObjectForKey:@"eventNote"];
-    self.group = [decoder decodeObjectForKey:@"group"];
-    self.objectId = [decoder decodeObjectForKey:@"objectId"];
-    self.isInternalEvent = [decoder decodeObjectForKey:@"isInternal"];
+    self.title = [decoder decodeObjectForKey:kEventTitleKey];
+    self.time = [decoder decodeObjectForKey:kEventTimeKey];
+    self.reminderDate = [decoder decodeObjectForKey:kEventRemindTimeKey];
+    self.location = [decoder decodeObjectForKey:kEventLocationKey];
+    self.locationDescription = [decoder decodeObjectForKey:kEventLocationDescriptionKey];
+    self.eventNote = [decoder decodeObjectForKey:kEventNoteKey];
+    self.group = [decoder decodeObjectForKey:kEventGroupKey];
+    self.objectId = [decoder decodeObjectForKey:kEventObjectIDKey];
+    self.isInternalEvent = [decoder decodeObjectForKey:kEventInternalKey];
 
     return self;
 }

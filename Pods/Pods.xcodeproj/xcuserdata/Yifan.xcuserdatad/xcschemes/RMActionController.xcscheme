@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EE89619C364CA0F726F10CF8"
+               BlueprintIdentifier = "35B7E27F1CDF6291ABCD9821"
                BuildableName = "libRMActionController.a"
                BlueprintName = "RMActionController"
                ReferencedContainer = "container:Pods.xcodeproj">
