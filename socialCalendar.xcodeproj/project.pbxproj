@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A3224C31CEE343F00EE1A30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A3224C21CEE343F00EE1A30 /* GoogleService-Info.plist */; };
+		3A3224C41CEE343F00EE1A30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A3224C21CEE343F00EE1A30 /* GoogleService-Info.plist */; };
 		CC81CD121B14F43B0039EA60 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC81CD111B14F43B0039EA60 /* MapKit.framework */; };
 		CCB59FF51B20360A0050352D /* Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB59FF41B20360A0050352D /* Plus.png */; };
 		CCB5A00C1B25DE460050352D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB5A00B1B25DE460050352D /* AddressBook.framework */; };
@@ -41,75 +43,75 @@
 		CCF0A4961B0BF217002F619B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A4951B0BF217002F619B /* libz.dylib */; };
 		CCF0A4981B0BF21F002F619B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0A4971B0BF21F002F619B /* libsqlite3.dylib */; };
 		D65661636D9610AC9C3A8E9C /* libPods-socialCalendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EDD79DA0424417BCB1D051 /* libPods-socialCalendar.a */; };
-		DD4673FD1BAA7C4600BEC759 /* popingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4673FC1BAA7C4600BEC759 /* popingViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674081BAA7C9000BEC759 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674001BAA7C9000BEC759 /* ProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674091BAA7C9000BEC759 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674031BAA7C9000BEC759 /* SVIndefiniteAnimatedView.m */; settings = {ASSET_TAGS = (); }; };
-		DD46740A1BAA7C9000BEC759 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD4674051BAA7C9000BEC759 /* SVProgressHUD.bundle */; settings = {ASSET_TAGS = (); }; };
-		DD46740B1BAA7C9000BEC759 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674071BAA7C9000BEC759 /* SVProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674101BAA7CE600BEC759 /* RMParallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46740D1BAA7CE600BEC759 /* RMParallax.swift */; settings = {ASSET_TAGS = (); }; };
-		DD4674111BAA7CE600BEC759 /* RMParallaxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46740E1BAA7CE600BEC759 /* RMParallaxItem.swift */; settings = {ASSET_TAGS = (); }; };
-		DD4674121BAA7CE600BEC759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46740F1BAA7CE600BEC759 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DD4674161BAA889600BEC759 /* ParsingHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674151BAA889600BEC759 /* ParsingHandle.m */; settings = {ASSET_TAGS = (); }; };
-		DD46741A1BAA88B200BEC759 /* eventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674191BAA88B200BEC759 /* eventObject.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674201BAA88D400BEC759 /* eventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46741D1BAA88D400BEC759 /* eventsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674211BAA88D400BEC759 /* eventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46741F1BAA88D400BEC759 /* eventViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		DD46742D1BAA896500BEC759 /* addEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674241BAA896500BEC759 /* addEventTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DD46742E1BAA896500BEC759 /* mapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674271BAA896500BEC759 /* mapViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DD46742F1BAA896500BEC759 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674291BAA896500BEC759 /* MyLocation.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674301BAA896500BEC759 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46742C1BAA896500BEC759 /* KLCPopup.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674461BAA8A4800BEC759 /* SCEventAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674341BAA8A4800BEC759 /* SCEventAddressTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674471BAA8A4800BEC759 /* SCEventAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4674351BAA8A4800BEC759 /* SCEventAddressTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DD4674481BAA8A4800BEC759 /* SCEventHourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674371BAA8A4800BEC759 /* SCEventHourCell.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674491BAA8A4800BEC759 /* SCEventHourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4674381BAA8A4800BEC759 /* SCEventHourCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DD46744A1BAA8A4800BEC759 /* SCEventHoursTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46743A1BAA8A4800BEC759 /* SCEventHoursTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		DD46744B1BAA8A4800BEC759 /* SCEventHoursTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD46743B1BAA8A4800BEC759 /* SCEventHoursTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DD46744C1BAA8A4800BEC759 /* SCEventNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46743D1BAA8A4800BEC759 /* SCEventNameTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		DD46744D1BAA8A4800BEC759 /* SCEventNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD46743E1BAA8A4800BEC759 /* SCEventNameTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DD46744E1BAA8A4800BEC759 /* eventDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD46743F1BAA8A4800BEC759 /* eventDetail.storyboard */; settings = {ASSET_TAGS = (); }; };
-		DD46744F1BAA8A4800BEC759 /* eventDetailDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674411BAA8A4800BEC759 /* eventDetailDataController.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674501BAA8A4800BEC759 /* SCEventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674431BAA8A4800BEC759 /* SCEventInfoViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674511BAA8A4800BEC759 /* SCEventMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674451BAA8A4800BEC759 /* SCEventMapController.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674571BAA8A9100BEC759 /* calendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674541BAA8A9100BEC759 /* calendarController.m */; settings = {ASSET_TAGS = (); }; };
-		DD4674581BAA8A9100BEC759 /* calendarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674561BAA8A9100BEC759 /* calendarTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		DD8AA62B1BA96D8900A48299 /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA62A1BA96D8900A48299 /* LPNetworkingManager.m */; settings = {ASSET_TAGS = (); }; };
-		DD8AA63B1BA96E3300A48299 /* expireMarkingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA63A1BA96E3300A48299 /* expireMarkingView.m */; settings = {ASSET_TAGS = (); }; };
-		DD8AA6431BA96EA000A48299 /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA63F1BA96EA000A48299 /* DismissingAnimator.m */; settings = {ASSET_TAGS = (); }; };
-		DD8AA6441BA96EA000A48299 /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA6421BA96EA000A48299 /* PresentingAnimator.m */; settings = {ASSET_TAGS = (); }; };
-		DD8AA64C1BA96F1200A48299 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA6471BA96F1200A48299 /* UIColor+CustomColors.m */; settings = {ASSET_TAGS = (); }; };
-		DD8AA64D1BA96F1200A48299 /* UITabBarController+TabBarVisibility.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA6491BA96F1200A48299 /* UITabBarController+TabBarVisibility.m */; settings = {ASSET_TAGS = (); }; };
-		DD8AA64E1BA96F1200A48299 /* UIView+LoadNib.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA64B1BA96F1200A48299 /* UIView+LoadNib.m */; settings = {ASSET_TAGS = (); }; };
-		DD8AA6521BA96F9C00A48299 /* SCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA6511BA96F9C00A48299 /* SCLocationManager.m */; settings = {ASSET_TAGS = (); }; };
-		DD8AA6581BA9729900A48299 /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA6561BA9729900A48299 /* LPBannerView.m */; settings = {ASSET_TAGS = (); }; };
-		DD8AA6591BA9729900A48299 /* LPBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8AA6571BA9729900A48299 /* LPBannerView.xib */; settings = {ASSET_TAGS = (); }; };
-		DDAFC6F61BABBC50007E357A /* listTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC6F31BABBC50007E357A /* listTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC6F71BABBC50007E357A /* userTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC6F51BABBC50007E357A /* userTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC6FF1BABBCBD007E357A /* FacebookStyleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC6FA1BABBCBD007E357A /* FacebookStyleBar.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7001BABBCBD007E357A /* FacebookStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC6FC1BABBCBD007E357A /* FacebookStyleViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7011BABBCBD007E357A /* userTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC6FE1BABBCBD007E357A /* userTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7051BABBCF8007E357A /* friendsPickingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7041BABBCF8007E357A /* friendsPickingTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7411BABBF7C007E357A /* SCProfileInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7091BABBF7C007E357A /* SCProfileInfoCell.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7421BABBF7C007E357A /* SCProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC70A1BABBF7C007E357A /* SCProfileInfoCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7431BABBF7C007E357A /* SCTextSwitchCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC70C1BABBF7C007E357A /* SCTextSwitchCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7441BABBF7C007E357A /* SCTextSwitchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC70D1BABBF7C007E357A /* SCTextSwitchCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7451BABBF7C007E357A /* profileHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC70F1BABBF7C007E357A /* profileHeader.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7461BABBF7C007E357A /* profileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC7101BABBF7C007E357A /* profileHeader.xib */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7471BABBF7C007E357A /* profileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7121BABBF7C007E357A /* profileViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7481BABBF7C007E357A /* Region.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC7141BABBF7C007E357A /* Region.storyboard */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7491BABBF7C007E357A /* regionSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7161BABBF7C007E357A /* regionSelectionTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC74A1BABBF7C007E357A /* SCAlertViewDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7181BABBF7C007E357A /* SCAlertViewDataController.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC74B1BABBF7C007E357A /* CSSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC71B1BABBF7C007E357A /* CSSectionHeader.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC74C1BABBF7C007E357A /* TOCropViewControllerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC71D1BABBF7C007E357A /* TOCropViewControllerLocalizable.strings */; settings = {ASSET_TAGS = (); }; };
-		DDAFC74D1BABBF7C007E357A /* TOActivityCroppedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7291BABBF7C007E357A /* TOActivityCroppedImageProvider.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC74E1BABBF7C007E357A /* TOCroppedImageAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC72B1BABBF7C007E357A /* TOCroppedImageAttributes.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC74F1BABBF7C007E357A /* TOCropViewControllerTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC72D1BABBF7C007E357A /* TOCropViewControllerTransitioning.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7501BABBF7C007E357A /* UIImage+CropRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC72F1BABBF7C007E357A /* UIImage+CropRotate.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7511BABBF7C007E357A /* TOCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7351BABBF7C007E357A /* TOCropViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7521BABBF7C007E357A /* TOCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7381BABBF7C007E357A /* TOCropOverlayView.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7531BABBF7C007E357A /* TOCropScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73A1BABBF7C007E357A /* TOCropScrollView.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7541BABBF7C007E357A /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73C1BABBF7C007E357A /* TOCropToolbar.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC7551BABBF7C007E357A /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73E1BABBF7C007E357A /* TOCropView.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC75B1BABC102007E357A /* SCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7581BABC102007E357A /* SCLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DDAFC75C1BABC102007E357A /* SCSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC75A1BABC102007E357A /* SCSignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DD4673FD1BAA7C4600BEC759 /* popingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4673FC1BAA7C4600BEC759 /* popingViewController.m */; };
+		DD4674081BAA7C9000BEC759 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674001BAA7C9000BEC759 /* ProgressHUD.m */; };
+		DD4674091BAA7C9000BEC759 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674031BAA7C9000BEC759 /* SVIndefiniteAnimatedView.m */; };
+		DD46740A1BAA7C9000BEC759 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD4674051BAA7C9000BEC759 /* SVProgressHUD.bundle */; };
+		DD46740B1BAA7C9000BEC759 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674071BAA7C9000BEC759 /* SVProgressHUD.m */; };
+		DD4674101BAA7CE600BEC759 /* RMParallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46740D1BAA7CE600BEC759 /* RMParallax.swift */; };
+		DD4674111BAA7CE600BEC759 /* RMParallaxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46740E1BAA7CE600BEC759 /* RMParallaxItem.swift */; };
+		DD4674121BAA7CE600BEC759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46740F1BAA7CE600BEC759 /* ViewController.swift */; };
+		DD4674161BAA889600BEC759 /* ParsingHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674151BAA889600BEC759 /* ParsingHandle.m */; };
+		DD46741A1BAA88B200BEC759 /* eventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674191BAA88B200BEC759 /* eventObject.m */; };
+		DD4674201BAA88D400BEC759 /* eventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46741D1BAA88D400BEC759 /* eventsViewController.m */; };
+		DD4674211BAA88D400BEC759 /* eventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46741F1BAA88D400BEC759 /* eventViewCell.m */; };
+		DD46742D1BAA896500BEC759 /* addEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674241BAA896500BEC759 /* addEventTableViewController.m */; };
+		DD46742E1BAA896500BEC759 /* mapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674271BAA896500BEC759 /* mapViewController.m */; };
+		DD46742F1BAA896500BEC759 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674291BAA896500BEC759 /* MyLocation.m */; };
+		DD4674301BAA896500BEC759 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46742C1BAA896500BEC759 /* KLCPopup.m */; };
+		DD4674461BAA8A4800BEC759 /* SCEventAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674341BAA8A4800BEC759 /* SCEventAddressTableViewCell.m */; };
+		DD4674471BAA8A4800BEC759 /* SCEventAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4674351BAA8A4800BEC759 /* SCEventAddressTableViewCell.xib */; };
+		DD4674481BAA8A4800BEC759 /* SCEventHourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674371BAA8A4800BEC759 /* SCEventHourCell.m */; };
+		DD4674491BAA8A4800BEC759 /* SCEventHourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4674381BAA8A4800BEC759 /* SCEventHourCell.xib */; };
+		DD46744A1BAA8A4800BEC759 /* SCEventHoursTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46743A1BAA8A4800BEC759 /* SCEventHoursTableViewCell.m */; };
+		DD46744B1BAA8A4800BEC759 /* SCEventHoursTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD46743B1BAA8A4800BEC759 /* SCEventHoursTableViewCell.xib */; };
+		DD46744C1BAA8A4800BEC759 /* SCEventNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46743D1BAA8A4800BEC759 /* SCEventNameTableViewCell.m */; };
+		DD46744D1BAA8A4800BEC759 /* SCEventNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD46743E1BAA8A4800BEC759 /* SCEventNameTableViewCell.xib */; };
+		DD46744E1BAA8A4800BEC759 /* eventDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD46743F1BAA8A4800BEC759 /* eventDetail.storyboard */; };
+		DD46744F1BAA8A4800BEC759 /* eventDetailDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674411BAA8A4800BEC759 /* eventDetailDataController.m */; };
+		DD4674501BAA8A4800BEC759 /* SCEventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674431BAA8A4800BEC759 /* SCEventInfoViewController.m */; };
+		DD4674511BAA8A4800BEC759 /* SCEventMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674451BAA8A4800BEC759 /* SCEventMapController.m */; };
+		DD4674571BAA8A9100BEC759 /* calendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674541BAA8A9100BEC759 /* calendarController.m */; };
+		DD4674581BAA8A9100BEC759 /* calendarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674561BAA8A9100BEC759 /* calendarTableViewCell.m */; };
+		DD8AA62B1BA96D8900A48299 /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA62A1BA96D8900A48299 /* LPNetworkingManager.m */; };
+		DD8AA63B1BA96E3300A48299 /* expireMarkingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA63A1BA96E3300A48299 /* expireMarkingView.m */; };
+		DD8AA6431BA96EA000A48299 /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA63F1BA96EA000A48299 /* DismissingAnimator.m */; };
+		DD8AA6441BA96EA000A48299 /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA6421BA96EA000A48299 /* PresentingAnimator.m */; };
+		DD8AA64C1BA96F1200A48299 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA6471BA96F1200A48299 /* UIColor+CustomColors.m */; };
+		DD8AA64D1BA96F1200A48299 /* UITabBarController+TabBarVisibility.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA6491BA96F1200A48299 /* UITabBarController+TabBarVisibility.m */; };
+		DD8AA64E1BA96F1200A48299 /* UIView+LoadNib.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA64B1BA96F1200A48299 /* UIView+LoadNib.m */; };
+		DD8AA6521BA96F9C00A48299 /* SCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA6511BA96F9C00A48299 /* SCLocationManager.m */; };
+		DD8AA6581BA9729900A48299 /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA6561BA9729900A48299 /* LPBannerView.m */; };
+		DD8AA6591BA9729900A48299 /* LPBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8AA6571BA9729900A48299 /* LPBannerView.xib */; };
+		DDAFC6F61BABBC50007E357A /* listTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC6F31BABBC50007E357A /* listTableViewCell.m */; };
+		DDAFC6F71BABBC50007E357A /* userTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC6F51BABBC50007E357A /* userTableViewController.m */; };
+		DDAFC6FF1BABBCBD007E357A /* FacebookStyleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC6FA1BABBCBD007E357A /* FacebookStyleBar.m */; };
+		DDAFC7001BABBCBD007E357A /* FacebookStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC6FC1BABBCBD007E357A /* FacebookStyleViewController.m */; };
+		DDAFC7011BABBCBD007E357A /* userTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC6FE1BABBCBD007E357A /* userTableViewCell.m */; };
+		DDAFC7051BABBCF8007E357A /* friendsPickingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7041BABBCF8007E357A /* friendsPickingTableViewController.m */; };
+		DDAFC7411BABBF7C007E357A /* SCProfileInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7091BABBF7C007E357A /* SCProfileInfoCell.m */; };
+		DDAFC7421BABBF7C007E357A /* SCProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC70A1BABBF7C007E357A /* SCProfileInfoCell.xib */; };
+		DDAFC7431BABBF7C007E357A /* SCTextSwitchCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC70C1BABBF7C007E357A /* SCTextSwitchCollectionViewCell.m */; };
+		DDAFC7441BABBF7C007E357A /* SCTextSwitchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC70D1BABBF7C007E357A /* SCTextSwitchCollectionViewCell.xib */; };
+		DDAFC7451BABBF7C007E357A /* profileHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC70F1BABBF7C007E357A /* profileHeader.m */; };
+		DDAFC7461BABBF7C007E357A /* profileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC7101BABBF7C007E357A /* profileHeader.xib */; };
+		DDAFC7471BABBF7C007E357A /* profileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7121BABBF7C007E357A /* profileViewController.m */; };
+		DDAFC7481BABBF7C007E357A /* Region.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC7141BABBF7C007E357A /* Region.storyboard */; };
+		DDAFC7491BABBF7C007E357A /* regionSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7161BABBF7C007E357A /* regionSelectionTableViewController.m */; };
+		DDAFC74A1BABBF7C007E357A /* SCAlertViewDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7181BABBF7C007E357A /* SCAlertViewDataController.m */; };
+		DDAFC74B1BABBF7C007E357A /* CSSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC71B1BABBF7C007E357A /* CSSectionHeader.m */; };
+		DDAFC74C1BABBF7C007E357A /* TOCropViewControllerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDAFC71D1BABBF7C007E357A /* TOCropViewControllerLocalizable.strings */; };
+		DDAFC74D1BABBF7C007E357A /* TOActivityCroppedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7291BABBF7C007E357A /* TOActivityCroppedImageProvider.m */; };
+		DDAFC74E1BABBF7C007E357A /* TOCroppedImageAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC72B1BABBF7C007E357A /* TOCroppedImageAttributes.m */; };
+		DDAFC74F1BABBF7C007E357A /* TOCropViewControllerTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC72D1BABBF7C007E357A /* TOCropViewControllerTransitioning.m */; };
+		DDAFC7501BABBF7C007E357A /* UIImage+CropRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC72F1BABBF7C007E357A /* UIImage+CropRotate.m */; };
+		DDAFC7511BABBF7C007E357A /* TOCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7351BABBF7C007E357A /* TOCropViewController.m */; };
+		DDAFC7521BABBF7C007E357A /* TOCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7381BABBF7C007E357A /* TOCropOverlayView.m */; };
+		DDAFC7531BABBF7C007E357A /* TOCropScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73A1BABBF7C007E357A /* TOCropScrollView.m */; };
+		DDAFC7541BABBF7C007E357A /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73C1BABBF7C007E357A /* TOCropToolbar.m */; };
+		DDAFC7551BABBF7C007E357A /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73E1BABBF7C007E357A /* TOCropView.m */; };
+		DDAFC75B1BABC102007E357A /* SCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7581BABC102007E357A /* SCLoginViewController.m */; };
+		DDAFC75C1BABC102007E357A /* SCSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC75A1BABC102007E357A /* SCSignUpViewController.m */; };
 		DDC571281B6586F10043AC40 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DDC571271B6586F10043AC40 /* logo.png */; };
 		FFC5B1CB1B6562FF00A72286 /* SCHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */; };
 /* End PBXBuildFile section */
@@ -127,6 +129,7 @@
 /* Begin PBXFileReference section */
 		008107CB8CF00338DC111110 /* Pods-socialCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-socialCalendar/Pods-socialCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		30F1B6E1F8520A242EE2DB5A /* Pods-socialCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-socialCalendar/Pods-socialCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		3A3224C21CEE343F00EE1A30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC81CD111B14F43B0039EA60 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CCB59FF41B20360A0050352D /* Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus.png; sourceTree = "<group>"; };
 		CCB5A00B1B25DE460050352D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -378,6 +381,7 @@
 		CCF0A4401B0BEEB8002F619B = {
 			isa = PBXGroup;
 			children = (
+				3A3224C21CEE343F00EE1A30 /* GoogleService-Info.plist */,
 				FF286BD41B51BB2E00F7D166 /* SCConstants.h */,
 				FFC5B1C91B6562FF00A72286 /* SCHelperMethods.h */,
 				FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */,
@@ -884,6 +888,7 @@
 				CCF0A4461B0BEEB8002F619B /* Frameworks */,
 				CCF0A4471B0BEEB8002F619B /* Resources */,
 				8B672C6CE7CFA21080C908DD /* Copy Pods Resources */,
+				7D8E1BAAD80C99DA96A04CA7 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -995,6 +1000,7 @@
 				DD46744D1BAA8A4800BEC759 /* SCEventNameTableViewCell.xib in Resources */,
 				DD4674491BAA8A4800BEC759 /* SCEventHourCell.xib in Resources */,
 				DD46744E1BAA8A4800BEC759 /* eventDetail.storyboard in Resources */,
+				3A3224C31CEE343F00EE1A30 /* GoogleService-Info.plist in Resources */,
 				DDAFC74C1BABBF7C007E357A /* TOCropViewControllerLocalizable.strings in Resources */,
 				CCB59FF51B20360A0050352D /* Plus.png in Resources */,
 				DDAFC7481BABBF7C007E357A /* Region.storyboard in Resources */,
@@ -1008,6 +1014,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A3224C41CEE343F00EE1A30 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,6 +1034,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7D8E1BAAD80C99DA96A04CA7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-socialCalendar/Pods-socialCalendar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8B672C6CE7CFA21080C908DD /* Copy Pods Resources */ = {
