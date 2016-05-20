@@ -20,7 +20,13 @@ pod 'SCLAlertView-Objective-C'
 pod 'ZFDragableModalTransition'
 pod 'RMDateSelectionViewController', '~> 2.0.1'
 pod 'CSStickyHeaderFlowLayout'
-pod 'Firebase'
+pod 'Firebase/Storage'
+pod 'Firebase/AdMob'
+pod 'Firebase/Auth'
+pod 'Firebase/Crash'
+pod 'Firebase/Database'
+pod 'Firebase/RemoteConfig'
+
 
 end
 

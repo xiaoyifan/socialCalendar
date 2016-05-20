@@ -73,6 +73,9 @@
 		DD4674511BAA8A4800BEC759 /* SCEventMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674451BAA8A4800BEC759 /* SCEventMapController.m */; };
 		DD4674571BAA8A9100BEC759 /* calendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674541BAA8A9100BEC759 /* calendarController.m */; };
 		DD4674581BAA8A9100BEC759 /* calendarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674561BAA8A9100BEC759 /* calendarTableViewCell.m */; };
+		DD4C8F961CEEF0E1006F2FC6 /* SignInSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C8F951CEEF0E1006F2FC6 /* SignInSignUpViewController.m */; };
+		DD4C8F9B1CEEF12C006F2FC6 /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C8F981CEEF12C006F2FC6 /* AppState.m */; };
+		DD4C8F9C1CEEF12C006F2FC6 /* MeasurementHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C8F9A1CEEF12C006F2FC6 /* MeasurementHelper.m */; };
 		DD8AA62B1BA96D8900A48299 /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA62A1BA96D8900A48299 /* LPNetworkingManager.m */; };
 		DD8AA63B1BA96E3300A48299 /* expireMarkingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA63A1BA96E3300A48299 /* expireMarkingView.m */; };
 		DD8AA6431BA96EA000A48299 /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA63F1BA96EA000A48299 /* DismissingAnimator.m */; };
@@ -225,6 +228,12 @@
 		DD4674541BAA8A9100BEC759 /* calendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarController.m; sourceTree = "<group>"; };
 		DD4674551BAA8A9100BEC759 /* calendarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarTableViewCell.h; sourceTree = "<group>"; };
 		DD4674561BAA8A9100BEC759 /* calendarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarTableViewCell.m; sourceTree = "<group>"; };
+		DD4C8F941CEEF0E1006F2FC6 /* SignInSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInSignUpViewController.h; sourceTree = "<group>"; };
+		DD4C8F951CEEF0E1006F2FC6 /* SignInSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInSignUpViewController.m; sourceTree = "<group>"; };
+		DD4C8F971CEEF12C006F2FC6 /* AppState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppState.h; sourceTree = "<group>"; };
+		DD4C8F981CEEF12C006F2FC6 /* AppState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppState.m; sourceTree = "<group>"; };
+		DD4C8F991CEEF12C006F2FC6 /* MeasurementHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementHelper.h; sourceTree = "<group>"; };
+		DD4C8F9A1CEEF12C006F2FC6 /* MeasurementHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementHelper.m; sourceTree = "<group>"; };
 		DD8AA6291BA96D8900A48299 /* LPNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNetworkingManager.h; sourceTree = "<group>"; };
 		DD8AA62A1BA96D8900A48299 /* LPNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNetworkingManager.m; sourceTree = "<group>"; };
 		DD8AA6391BA96E3300A48299 /* expireMarkingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expireMarkingView.h; sourceTree = "<group>"; };
@@ -872,6 +881,12 @@
 				DDAFC7581BABC102007E357A /* SCLoginViewController.m */,
 				DDAFC7591BABC102007E357A /* SCSignUpViewController.h */,
 				DDAFC75A1BABC102007E357A /* SCSignUpViewController.m */,
+				DD4C8F941CEEF0E1006F2FC6 /* SignInSignUpViewController.h */,
+				DD4C8F951CEEF0E1006F2FC6 /* SignInSignUpViewController.m */,
+				DD4C8F971CEEF12C006F2FC6 /* AppState.h */,
+				DD4C8F981CEEF12C006F2FC6 /* AppState.m */,
+				DD4C8F991CEEF12C006F2FC6 /* MeasurementHelper.h */,
+				DD4C8F9A1CEEF12C006F2FC6 /* MeasurementHelper.m */,
 			);
 			path = "Login & Signup";
 			sourceTree = "<group>";
@@ -1080,6 +1095,7 @@
 				DDAFC7451BABBF7C007E357A /* profileHeader.m in Sources */,
 				DDAFC7521BABBF7C007E357A /* TOCropOverlayView.m in Sources */,
 				DD4674571BAA8A9100BEC759 /* calendarController.m in Sources */,
+				DD4C8F961CEEF0E1006F2FC6 /* SignInSignUpViewController.m in Sources */,
 				DD8AA64C1BA96F1200A48299 /* UIColor+CustomColors.m in Sources */,
 				DD46741A1BAA88B200BEC759 /* eventObject.m in Sources */,
 				DD8AA64E1BA96F1200A48299 /* UIView+LoadNib.m in Sources */,
@@ -1109,6 +1125,7 @@
 				DDAFC6F61BABBC50007E357A /* listTableViewCell.m in Sources */,
 				DD4674461BAA8A4800BEC759 /* SCEventAddressTableViewCell.m in Sources */,
 				DD4673FD1BAA7C4600BEC759 /* popingViewController.m in Sources */,
+				DD4C8F9C1CEEF12C006F2FC6 /* MeasurementHelper.m in Sources */,
 				DD4674201BAA88D400BEC759 /* eventsViewController.m in Sources */,
 				DD4674121BAA7CE600BEC759 /* ViewController.swift in Sources */,
 				DD8AA63B1BA96E3300A48299 /* expireMarkingView.m in Sources */,
@@ -1127,6 +1144,7 @@
 				DDAFC7541BABBF7C007E357A /* TOCropToolbar.m in Sources */,
 				CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */,
 				DD4674081BAA7C9000BEC759 /* ProgressHUD.m in Sources */,
+				DD4C8F9B1CEEF12C006F2FC6 /* AppState.m in Sources */,
 				DD4674211BAA88D400BEC759 /* eventViewCell.m in Sources */,
 				DD46744C1BAA8A4800BEC759 /* SCEventNameTableViewCell.m in Sources */,
 				DD46744F1BAA8A4800BEC759 /* eventDetailDataController.m in Sources */,

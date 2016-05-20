@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
-#import <Firebase.h>
+
+@import Firebase;
 
 @interface AppDelegate ()
 
