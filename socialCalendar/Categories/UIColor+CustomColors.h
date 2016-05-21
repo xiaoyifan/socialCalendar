@@ -52,4 +52,7 @@
  */
 + (UIColor *)randomColor;
 
+
++ (UIColor *)disabledTextColor;
+
 @end

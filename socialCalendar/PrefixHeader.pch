@@ -32,4 +32,6 @@
 #import "SCHelperMethods.h"
 #import "UITabBarController+TabBarVisibility.h"
 
+#import "UIColor+CustomColors.h"
+
 #endif

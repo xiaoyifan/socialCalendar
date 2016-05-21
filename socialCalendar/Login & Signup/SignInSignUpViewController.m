@@ -27,6 +27,11 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *emailField;
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *passwordField;
 
+@property (weak, nonatomic) IBOutlet UILabel *loginLabel;
+@property (weak, nonatomic) IBOutlet UILabel *signupLabel;
+
+@property (weak, nonatomic) IBOutlet UISwitch *operationSwitch;
+
 @end
 
 @implementation SignInSignUpViewController
@@ -35,6 +40,10 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self configureTextFields];
+    
+    [self switchDataChanged];
+    
+    [_operationSwitch addTarget:self action:@selector(switchDataChanged) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)configureTextFields{
@@ -61,6 +70,32 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     _passwordField.keepBaseline = YES;
 
 }
+
+- (void)switchDataChanged{
+    
+    if (self.operationSwitch.isOn) {
+        self.loginLabel.textColor = [UIColor blackColor];
+        self.signupLabel.textColor = [UIColor disabledTextColor];
+    }
+    else {
+        self.loginLabel.textColor = [UIColor disabledTextColor];
+        self.signupLabel.textColor = [UIColor blackColor];
+    }
+    
+}
+
+- (IBAction)confirmButtonTapped:(id)sender {
+    
+    
+    if (self.operationSwitch.isOn) {
+        [self didTapSignIn:sender];
+    }
+    else{
+        [self didTapSignUp:sender];
+    }
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -35,6 +35,11 @@
     return [self colorWithRed:52 green:152 blue:219];
 }
 
++ (UIColor *)disabledTextColor
+{
+    return [self colorWithRed:208 green:213 blue:214];
+}
+
 #pragma mark - Private class methods
 
 + (UIColor *)colorWithRed:(NSUInteger)red
