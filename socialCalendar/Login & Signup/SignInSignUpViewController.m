@@ -10,8 +10,18 @@
 #import "MeasurementHelper.h"
 #import "SignInSignUpViewController.h"
 #import <JVFloatLabeledTextField/JVFloatLabeledTextField.h>
+#import <JVFloatLabeledTextField.h>
+#import <JVFloatLabeledTextView.h>
 
 @import Firebase;
+
+
+const static CGFloat kJVFieldHeight = 44.0f;
+const static CGFloat kJVFieldHMargin = 10.0f;
+
+const static CGFloat kJVFieldFontSize = 16.0f;
+
+const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 
 @interface SignInSignUpViewController ()
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *emailField;
@@ -24,6 +34,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self configureTextFields];
+}
+
+- (void)configureTextFields{
+    
+    UIColor *floatingLabelColor = [UIColor brownColor];
+    
+    _emailField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
+    _emailField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"E-mail", @"")
+                                    attributes:@{NSForegroundColorAttributeName: [UIColor darkGrayColor]}];
+    _emailField.floatingLabelFont = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
+    _emailField.floatingLabelTextColor = floatingLabelColor;
+    _emailField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    _emailField.translatesAutoresizingMaskIntoConstraints = NO;
+    _emailField.keepBaseline = YES;
+    
+    
+    _passwordField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
+    _passwordField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"password", @"")
+                                                                        attributes:@{NSForegroundColorAttributeName: [UIColor darkGrayColor]}];
+    _passwordField.floatingLabelFont = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
+    _passwordField.floatingLabelTextColor = floatingLabelColor;
+    _passwordField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    _passwordField.translatesAutoresizingMaskIntoConstraints = NO;
+    _passwordField.keepBaseline = YES;
+
 }
 
 - (void)didReceiveMemoryWarning {
