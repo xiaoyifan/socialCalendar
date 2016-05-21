@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A91A35CB03B015D0952B9AC7'
+               BlueprintIdentifier = '6AEDF096D37937FB55C38CBE'
                BlueprintName = 'DCModalSegue'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libDCModalSegue.a'>

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9C6008C37075A17A56B7690B'
+               BlueprintIdentifier = 'BE8FC5EADDFC249453CB28F2'
                BlueprintName = 'AAShareBubbles'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libAAShareBubbles.a'>

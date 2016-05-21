@@ -69,6 +69,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JVFloatLabeledTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -122,12 +127,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>16CD6F2C51BC41B1C1A152A6AC7DFF4D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2602F3D0DAC534568B6AD7EEA0DD1959</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>31A486DC40C251F20D1ADE5D33F65284</key>
+		<key>266E27D897FD7FD68078059CF4D7455F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -162,12 +172,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE12181BB8D423F767F1FB1D472551F6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C2A25DF3526B0C470A5EE23B9A93105C</key>
+		<key>B749E418E528D81BF1F7732C931F827A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -177,12 +182,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D246C290EF4067757D95A1A0BBE98F9C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DC7F3532AD259B3023EDE7D728B6DBA2</key>
+		<key>DA102827003E9517F1E02574E532797E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -198,6 +198,16 @@
 			<true/>
 		</dict>
 		<key>EA66E0DDB78DFFB02FEDE9B536042CB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F229F9E13E4979916CB57A9F6BFD9D5C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9C5EE66C0E2DBCCE476AF65BD226FEA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

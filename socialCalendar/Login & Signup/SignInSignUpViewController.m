@@ -9,6 +9,7 @@
 #import "AppState.h"
 #import "MeasurementHelper.h"
 #import "SignInSignUpViewController.h"
+#import <JVFloatLabeledText/JVFloatLabeledText.h>
 
 @import Firebase;
 
