@@ -106,11 +106,15 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     // Sign In with credentials.
     NSString *email = _emailField.text;
     NSString *password = _passwordField.text;
+    [SVProgressHUD show];
     [[FIRAuth auth] signInWithEmail:email
                            password:password
                          completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+                             [SVProgressHUD dismiss];
                              if (error) {
                                  NSLog(@"%@", error.localizedDescription);
+                                 SCLAlertView *alert = [[SCLAlertView alloc] init];
+                                 [alert showError:self title:@"Sign in failed" subTitle:@"please type in the right method" closeButtonTitle:@"OK" duration:1.0f];
                                  return;
                              }
                              [self signedIn:user];
@@ -120,14 +124,20 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 - (IBAction)didTapSignUp:(id)sender {
     NSString *email = _emailField.text;
     NSString *password = _passwordField.text;
+    [SVProgressHUD show];
     [[FIRAuth auth] createUserWithEmail:email
                                password:password
                              completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+                                 [SVProgressHUD dismiss];
                                  if (error) {
                                      NSLog(@"%@", error.localizedDescription);
+                                     SCLAlertView *alert = [[SCLAlertView alloc] init];
+                                     [alert showError:@"Sign Up failed" subTitle:@"The action can't be completed now. Sorry." closeButtonTitle:@"OK" duration:1.0f];
                                      return;
                                  }
                                  [self setDisplayName:user];
+                                 SCLAlertView *alert = [SCLAlertView new];
+                                 [alert showSuccess:@"Sign Up accepted" subTitle:@"Now type in your e-mail and password again to signin" closeButtonTitle:@"OK" duration:1.0f];
                              }];
 }
 
@@ -183,6 +193,14 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     [AppState sharedInstance].displayName = user.displayName.length > 0 ? user.displayName : user.email;
     [AppState sharedInstance].photoUrl = user.photoURL;
     [AppState sharedInstance].signedIn = YES;
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                             bundle: nil];
+    
+    UITabBarController *controller = (UITabBarController*)[mainStoryboard
+                                                       instantiateViewControllerWithIdentifier: @"baseTabbarController"];
+    
+    [self presentViewController:controller animated:YES completion:nil];
 
 }
 

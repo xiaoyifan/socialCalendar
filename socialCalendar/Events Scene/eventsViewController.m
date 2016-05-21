@@ -20,8 +20,6 @@
 #import "DismissingAnimator.h"
 #import "expireMarkingView.h"
 #import "SCEventInfoViewController.h"
-#import "SCLoginViewController.h"
-#import "SCSignUpViewController.h"
 
 #import "UIColor+CustomColors.h"
 
@@ -46,9 +44,9 @@
 {
     [super viewDidLoad];
 
-    self.vc = [[ViewController alloc] init];
-    [self presentViewController:self.vc animated:NO completion:nil];
-    [self.view addSubview:self.vc.view];
+//    self.vc = [[ViewController alloc] init];
+//    [self presentViewController:self.vc animated:NO completion:nil];
+//    [self.view addSubview:self.vc.view];
 
     [self loadDataEvents];
 
@@ -65,36 +63,6 @@
 {
     NSLog(@"%@", [PFUser currentUser]);
 
-    [self handleLogginAndSignUp];
-}
-
-/**
- *  handle the login and signup basic configuration with parse.
- */
-- (void)handleLogginAndSignUp
-{
-    PFUser *user = [PFUser currentUser];
-
-    if ( (![PFUser currentUser]) || (user[@"emailVerified"] == false) ) {
-        // No user logged in
-        // Create the log in view controller
-        SCLoginViewController *logInViewController = [[SCLoginViewController alloc] init];
-        [logInViewController setDelegate:self]; // Set ourselves as the delegate
-        logInViewController.fields = (PFLogInFieldsUsernameAndPassword
-                                      | PFLogInFieldsLogInButton
-                                      | PFLogInFieldsSignUpButton
-                                      | PFLogInFieldsPasswordForgotten
-                                      | PFLogInFieldsDismissButton);
-        // Create the sign up view controller
-        SCSignUpViewController *signUpViewController = [[SCSignUpViewController alloc] init];
-        [signUpViewController setDelegate:self]; // Set ourselves as the delegate
-
-        // Assign our sign up controller to be displayed from the login controller
-        [logInViewController setSignUpController:signUpViewController];
-
-        // Present the log in view controller
-        [self presentViewController:logInViewController animated:YES completion:NULL];
-    }
 }
 
 /**
@@ -558,7 +526,7 @@
 {
     [PFUser logOut];
 
-    [self handleLogginAndSignUp];
+    //[self handleLogginAndSignUp];
 }
 
 #pragma mark -- event deleting

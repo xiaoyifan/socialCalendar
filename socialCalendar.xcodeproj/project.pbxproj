@@ -113,8 +113,6 @@
 		DDAFC7531BABBF7C007E357A /* TOCropScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73A1BABBF7C007E357A /* TOCropScrollView.m */; };
 		DDAFC7541BABBF7C007E357A /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73C1BABBF7C007E357A /* TOCropToolbar.m */; };
 		DDAFC7551BABBF7C007E357A /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73E1BABBF7C007E357A /* TOCropView.m */; };
-		DDAFC75B1BABC102007E357A /* SCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC7581BABC102007E357A /* SCLoginViewController.m */; };
-		DDAFC75C1BABC102007E357A /* SCSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC75A1BABC102007E357A /* SCSignUpViewController.m */; };
 		DDC571281B6586F10043AC40 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DDC571271B6586F10043AC40 /* logo.png */; };
 		FFC5B1CB1B6562FF00A72286 /* SCHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */; };
 /* End PBXBuildFile section */
@@ -316,10 +314,6 @@
 		DDAFC73E1BABBF7C007E357A /* TOCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOCropView.m; sourceTree = "<group>"; };
 		DDAFC73F1BABBF7C007E357A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		DDAFC7401BABBF7C007E357A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
-		DDAFC7571BABC102007E357A /* SCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLoginViewController.h; sourceTree = "<group>"; };
-		DDAFC7581BABC102007E357A /* SCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLoginViewController.m; sourceTree = "<group>"; };
-		DDAFC7591BABC102007E357A /* SCSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSignUpViewController.h; sourceTree = "<group>"; };
-		DDAFC75A1BABC102007E357A /* SCSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSignUpViewController.m; sourceTree = "<group>"; };
 		DDC571271B6586F10043AC40 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		E0EDD79DA0424417BCB1D051 /* libPods-socialCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socialCalendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = socialCalendar.entitlements; path = socialCalendar/socialCalendar.entitlements; sourceTree = "<group>"; };
@@ -877,10 +871,6 @@
 		DDAFC7561BABC102007E357A /* Login & Signup */ = {
 			isa = PBXGroup;
 			children = (
-				DDAFC7571BABC102007E357A /* SCLoginViewController.h */,
-				DDAFC7581BABC102007E357A /* SCLoginViewController.m */,
-				DDAFC7591BABC102007E357A /* SCSignUpViewController.h */,
-				DDAFC75A1BABC102007E357A /* SCSignUpViewController.m */,
 				DD4C8F941CEEF0E1006F2FC6 /* SignInSignUpViewController.h */,
 				DD4C8F951CEEF0E1006F2FC6 /* SignInSignUpViewController.m */,
 				DD4C8F971CEEF12C006F2FC6 /* AppState.h */,
@@ -1115,7 +1105,6 @@
 				DD4674511BAA8A4800BEC759 /* SCEventMapController.m in Sources */,
 				DD4674091BAA7C9000BEC759 /* SVIndefiniteAnimatedView.m in Sources */,
 				DDAFC7411BABBF7C007E357A /* SCProfileInfoCell.m in Sources */,
-				DDAFC75B1BABC102007E357A /* SCLoginViewController.m in Sources */,
 				DDAFC7531BABBF7C007E357A /* TOCropScrollView.m in Sources */,
 				DD46742D1BAA896500BEC759 /* addEventTableViewController.m in Sources */,
 				DD46740B1BAA7C9000BEC759 /* SVProgressHUD.m in Sources */,
@@ -1140,7 +1129,6 @@
 				DD8AA6441BA96EA000A48299 /* PresentingAnimator.m in Sources */,
 				DD4674301BAA896500BEC759 /* KLCPopup.m in Sources */,
 				FFC5B1CB1B6562FF00A72286 /* SCHelperMethods.m in Sources */,
-				DDAFC75C1BABC102007E357A /* SCSignUpViewController.m in Sources */,
 				DDAFC7541BABBF7C007E357A /* TOCropToolbar.m in Sources */,
 				CCF0A4521B0BEEB8002F619B /* AppDelegate.m in Sources */,
 				DD4674081BAA7C9000BEC759 /* ProgressHUD.m in Sources */,
