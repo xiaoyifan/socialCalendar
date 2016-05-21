@@ -1012,7 +1012,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Euj-t3-rb5" customClass="JVFloatLabeledTextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Euj-t3-rb5" customClass="JVFloatLabeledTextField">
                                 <rect key="frame" x="70" y="266" width="460" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1022,7 +1022,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cv4-HP-TsJ" customClass="JVFloatLabeledTextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cv4-HP-TsJ" customClass="JVFloatLabeledTextField">
                                 <rect key="frame" x="70" y="342" width="460" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1038,6 +1038,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqY-kO-pqb">
+                                <rect key="frame" x="70" y="296" width="460" height="2"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="iM7-vu-BlD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erD-Yn-kaB">
+                                <rect key="frame" x="70" y="372" width="460" height="2"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="PUu-7c-iNc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1045,13 +1059,22 @@
                             <constraint firstItem="cv4-HP-TsJ" firstAttribute="centerX" secondItem="ljw-Rx-lW6" secondAttribute="centerX" id="6YW-Vj-AXd"/>
                             <constraint firstItem="0dr-c0-KeY" firstAttribute="top" secondItem="sVG-qH-UiR" secondAttribute="bottom" constant="74" id="7pn-4q-xCq"/>
                             <constraint firstAttribute="trailing" secondItem="cv4-HP-TsJ" secondAttribute="trailing" constant="50" id="8dF-j7-yM8"/>
+                            <constraint firstItem="erD-Yn-kaB" firstAttribute="top" secondItem="cv4-HP-TsJ" secondAttribute="bottom" id="Bqm-fe-p0e"/>
+                            <constraint firstItem="erD-Yn-kaB" firstAttribute="trailing" secondItem="cv4-HP-TsJ" secondAttribute="trailing" id="HU8-61-dO0"/>
                             <constraint firstItem="cv4-HP-TsJ" firstAttribute="leading" secondItem="Euj-t3-rb5" secondAttribute="leading" id="L7t-eD-Hhq"/>
+                            <constraint firstItem="tqY-kO-pqb" firstAttribute="trailing" secondItem="Euj-t3-rb5" secondAttribute="trailing" id="Orh-9x-Wwv"/>
+                            <constraint firstItem="tqY-kO-pqb" firstAttribute="top" secondItem="Euj-t3-rb5" secondAttribute="bottom" id="UHP-nH-49O"/>
                             <constraint firstItem="0dr-c0-KeY" firstAttribute="centerX" secondItem="ljw-Rx-lW6" secondAttribute="centerX" id="Wib-Xi-hE4"/>
                             <constraint firstItem="cv4-HP-TsJ" firstAttribute="trailing" secondItem="Euj-t3-rb5" secondAttribute="trailing" id="XKy-87-ywH"/>
+                            <constraint firstItem="erD-Yn-kaB" firstAttribute="trailing" secondItem="cv4-HP-TsJ" secondAttribute="trailing" id="axJ-Bg-DBE"/>
                             <constraint firstItem="Euj-t3-rb5" firstAttribute="leading" secondItem="ljw-Rx-lW6" secondAttribute="leadingMargin" constant="50" id="eTF-6v-R1U"/>
                             <constraint firstItem="Euj-t3-rb5" firstAttribute="top" secondItem="0dr-c0-KeY" secondAttribute="bottom" constant="124" id="fuo-ln-ldx"/>
+                            <constraint firstItem="UGE-kB-ncM" firstAttribute="top" secondItem="erD-Yn-kaB" secondAttribute="bottom" constant="58" id="g3X-O4-GLw"/>
+                            <constraint firstItem="erD-Yn-kaB" firstAttribute="leading" secondItem="cv4-HP-TsJ" secondAttribute="leading" id="gIz-XE-IKt"/>
                             <constraint firstItem="cv4-HP-TsJ" firstAttribute="top" secondItem="Euj-t3-rb5" secondAttribute="bottom" constant="46" id="ljP-J4-smk"/>
+                            <constraint firstItem="erD-Yn-kaB" firstAttribute="leading" secondItem="cv4-HP-TsJ" secondAttribute="leading" id="ngb-c0-wnr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0dr-c0-KeY" secondAttribute="trailing" constant="30" id="omD-I6-crG"/>
+                            <constraint firstItem="tqY-kO-pqb" firstAttribute="leading" secondItem="Euj-t3-rb5" secondAttribute="leading" id="pK7-it-GDE"/>
                             <constraint firstItem="0dr-c0-KeY" firstAttribute="leading" secondItem="ljw-Rx-lW6" secondAttribute="leadingMargin" constant="30" id="rK0-QL-Lu7"/>
                             <constraint firstItem="Euj-t3-rb5" firstAttribute="centerX" secondItem="ljw-Rx-lW6" secondAttribute="centerX" id="uZ3-pK-Hzd"/>
                             <constraint firstItem="cv4-HP-TsJ" firstAttribute="leading" secondItem="ljw-Rx-lW6" secondAttribute="leading" constant="50" id="vgh-Bm-i82"/>
@@ -1066,6 +1089,9 @@
                                 <exclude reference="8dF-j7-yM8"/>
                                 <exclude reference="vgh-Bm-i82"/>
                                 <exclude reference="ybf-BV-cyj"/>
+                                <exclude reference="axJ-Bg-DBE"/>
+                                <exclude reference="ngb-c0-wnr"/>
+                                <exclude reference="g3X-O4-GLw"/>
                             </mask>
                         </variation>
                     </view>
