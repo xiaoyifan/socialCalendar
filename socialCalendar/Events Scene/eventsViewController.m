@@ -52,7 +52,7 @@
 
     [self loadDataEvents];
 
-    self.tableView.backgroundColor = [UIColor colorWithHexString:@"#EDEDED"];
+    self.tableView.backgroundColor = [UIColor hx_colorWithHexString:@"#EDEDED"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -149,7 +149,7 @@
 {
     eventViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"eventCell" forIndexPath:indexPath];
 
-    cell.contentView.backgroundColor = [UIColor colorWithHexString:@"#EDEDED"];
+    cell.contentView.backgroundColor = [UIColor hx_colorWithHexString:@"#EDEDED"];
 
     cell.backgroundCardView.layer.cornerRadius = 10.0;
 
@@ -355,11 +355,11 @@
     shareBubbles.showMailBubble = YES;
 
     [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"wechat"]
-                          backgroundColor:[UIColor colorWithHexString:@"#00CC00"]
+                          backgroundColor:[UIColor hx_colorWithHexString:@"#00CC00"]
                               andButtonId:101];
 
     [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"weibo"]
-                          backgroundColor:[UIColor colorWithHexString:@"#FFCC11"]
+                          backgroundColor:[UIColor hx_colorWithHexString:@"#FFCC11"]
                               andButtonId:120];
 
     self.eventToShare = [self.events objectAtIndex:sender.tag];

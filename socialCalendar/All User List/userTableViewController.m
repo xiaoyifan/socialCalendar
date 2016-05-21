@@ -112,7 +112,7 @@
         [cell.addButton setBackgroundColor:[UIColor darkGrayColor]];
         [cell.addButton setTitle:@"sent" forState:UIControlStateNormal];
     } else {
-        [cell.addButton setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
+        [cell.addButton setBackgroundColor:[UIColor hx_colorWithHexString:@"#3b5998"]];
         [cell.addButton setTitle:@"add" forState:UIControlStateNormal];
     }
 
@@ -164,7 +164,7 @@
         //add new request
     } else {
         [senderButton setTitle:@"add" forState:UIControlStateNormal];
-        [senderButton setBackgroundColor:[UIColor colorWithHexString:@"#3b5998"]];
+        [senderButton setBackgroundColor:[UIColor hx_colorWithHexString:@"#3b5998"]];
 
         //delete existed request
     }

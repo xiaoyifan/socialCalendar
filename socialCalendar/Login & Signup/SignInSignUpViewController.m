@@ -9,13 +9,13 @@
 #import "AppState.h"
 #import "MeasurementHelper.h"
 #import "SignInSignUpViewController.h"
-#import <JVFloatLabeledText/JVFloatLabeledText.h>
+#import <JVFloatLabeledTextField/JVFloatLabeledTextField.h>
 
 @import Firebase;
 
 @interface SignInSignUpViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *emailField;
-@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *emailField;
+@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *passwordField;
 
 @end
 

@@ -1,5 +1,5 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '6.0'
+# platform :ios, ‘9.3’
 
 target 'socialCalendar' do
     
@@ -12,8 +12,6 @@ pod 'BLKFlexibleHeightBar'
 pod 'MBProgressHUD'
 pod 'pop'
 pod 'AFNetworking'
-pod 'JSQMessagesViewController'
-pod 'JSQSystemSoundPlayer'
 pod 'IDMPhotoBrowser'
 pod 'IQKeyboardManager'
 pod 'SCLAlertView-Objective-C'

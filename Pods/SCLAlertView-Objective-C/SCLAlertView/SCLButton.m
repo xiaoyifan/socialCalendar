@@ -3,10 +3,15 @@
 //  SCLAlertView
 //
 //  Created by Diogo Autilio on 9/26/14.
-//  Copyright (c) 2014 AnyKey Entertainment. All rights reserved.
+//  Copyright (c) 2014-2016 AnyKey Entertainment. All rights reserved.
 //
 
 #import "SCLButton.h"
+#import "SCLTimerDisplay.h"
+
+#define MARGIN_BUTTON 12.0f
+#define DEFAULT_WINDOW_WIDTH 240
+#define MIN_HEIGHT 35.0f
 
 @implementation SCLButton
 
@@ -15,7 +20,17 @@
     self = [super init];
     if (self)
     {
-        [self setup];
+        [self setupWithWindowWidth:DEFAULT_WINDOW_WIDTH];
+    }
+    return self;
+}
+
+- (instancetype)initWithWindowWidth:(CGFloat)windowWidth
+{
+    self = [super init];
+    if (self)
+    {
+        [self setupWithWindowWidth:windowWidth];
     }
     return self;
 }
@@ -25,7 +40,7 @@
     self = [super initWithCoder:aDecoder];
     if(self)
     {
-        [self setup];
+        [self setupWithWindowWidth:DEFAULT_WINDOW_WIDTH];
     }
     return self;
 }
@@ -35,14 +50,43 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        [self setup];
+        [self setupWithWindowWidth:DEFAULT_WINDOW_WIDTH];
     }
     return self;
 }
 
-- (void)setup
+- (void)setupWithWindowWidth:(CGFloat)windowWidth
 {
-    self.frame = CGRectMake(0.0f, 0.0f, 216.0f, 35.0f);
+    self.frame = CGRectMake(0.0f, 0.0f, windowWidth - (MARGIN_BUTTON * 2), MIN_HEIGHT);
+    self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.layer.cornerRadius = 3.0f;
+}
+
+- (void)adjustWidthWithWindowWidth:(CGFloat)windowWidht numberOfButtons:(NSUInteger)numberOfButtons
+{
+    CGFloat allButtonsWidth = windowWidht - (MARGIN_BUTTON * 2);
+    CGFloat buttonWidth = (allButtonsWidth - ((numberOfButtons - 1) * 10)) / numberOfButtons;
+    
+    self.frame = CGRectMake(0.0f, 0.0f, buttonWidth, MIN_HEIGHT);
+}
+
+- (void)setTitle:(NSString *)title forState:(UIControlState)state
+{
+    [super setTitle:title forState:state];
+    self.titleLabel.numberOfLines = 0;
+    
+    // Update title frame.
+    [self.titleLabel sizeToFit];
+    
+    // Update button frame
+    [self layoutIfNeeded];
+    
+    // Get height needed to display title label completely
+    CGFloat buttonHeight = MAX(self.titleLabel.frame.size.height, MIN_HEIGHT);
+    
+    // Update button frame
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, buttonHeight);
 }
 
 - (void)setHighlighted:(BOOL)highlighted
@@ -56,6 +100,14 @@
     self.backgroundColor = _defaultBackgroundColor = defaultBackgroundColor;
 }
 
+- (void)setTimer:(SCLTimerDisplay *)timer
+{
+    _timer = timer;
+    [self addSubview:timer];
+    [timer updateFrame:self.frame.size];
+    timer.color = self.titleLabel.textColor;
+}
+
 #pragma mark - Button Apperance
 
 - (void)parseConfig:(NSDictionary *)buttonConfig
@@ -67,6 +119,10 @@
     if (buttonConfig[@"textColor"])
     {
         [self setTitleColor:buttonConfig[@"textColor"] forState:UIControlStateNormal];
+    }
+    if (buttonConfig[@"cornerRadius"])
+    {
+        self.layer.cornerRadius = [buttonConfig[@"cornerRadius"] floatValue];
     }
     if ((buttonConfig[@"borderColor"]) && (buttonConfig[@"borderWidth"]))
     {

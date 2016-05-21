@@ -1,7 +1,7 @@
 //
 //  IQUIViewController+Additions.h
 // https://github.com/hackiftekhar/IQKeyboardManager
-// Copyright (c) 2013-15 Iftekhar Qurashi.
+// Copyright (c) 2013-16 Iftekhar Qurashi.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -28,6 +28,6 @@
 /**
  Top/Bottom Layout constraint which help library to manage keyboardTextField distance
  */
-@property(nonatomic, strong) IBOutlet NSLayoutConstraint *IQLayoutGuideConstraint;
+@property(nullable, nonatomic, strong) IBOutlet NSLayoutConstraint *IQLayoutGuideConstraint;
 
 @end

@@ -1,4 +1,4 @@
-RMDateSelectionViewController
+RMDateSelectionViewController ![Build Status](https://travis-ci.org/CooperRS/RMDateSelectionViewController.svg?branch=master)
 =============================
 
 This is an iOS control for selecting a date using UIDatePicker in a UIActionSheet like fashion
@@ -19,7 +19,7 @@ If you want to run the demo project you first need to run `pod install` to insta
 ## Installation (CocoaPods)
 ```ruby
 platform :ios, '8.0'
-pod "RMDateSelectionViewController", "~> 2.0.1"
+pod "RMDateSelectionViewController", "~> 2.0.3"
 ```
 
 ## Usage
@@ -118,8 +118,8 @@ There is an additional documentation available provided by the CocoaPods team. T
 
 | Compile Time  | Runtime       |
 | :------------ | :------------ |
-| Xcode 6       | iOS 8         |
-| iOS 8 SDK     |               |
+| Xcode 7       | iOS 8         |
+| iOS 9 SDK     |               |
 | ARC           |               |
 
 Note: ARC can be turned on and off on a per file basis.

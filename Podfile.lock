@@ -1,28 +1,22 @@
 PODS:
-  - AAShareBubbles (1.1.0)
-  - AFNetworking (2.5.4):
-    - AFNetworking/NSURLConnection (= 2.5.4)
-    - AFNetworking/NSURLSession (= 2.5.4)
-    - AFNetworking/Reachability (= 2.5.4)
-    - AFNetworking/Security (= 2.5.4)
-    - AFNetworking/Serialization (= 2.5.4)
-    - AFNetworking/UIKit (= 2.5.4)
-  - AFNetworking/NSURLConnection (2.5.4):
+  - AAShareBubbles (1.2.4)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.5.4):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.5.4)
-  - AFNetworking/Security (2.5.4)
-  - AFNetworking/Serialization (2.5.4)
-  - AFNetworking/UIKit (2.5.4):
-    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - BLKFlexibleHeightBar (1.0.2)
-  - CSStickyHeaderFlowLayout (0.2.8)
+  - CSStickyHeaderFlowLayout (0.2.10)
   - DACircularProgress (2.3.1)
   - DCModalSegue (0.0.2)
   - Firebase/AdMob (3.2.0):
@@ -84,25 +78,25 @@ PODS:
   - GoogleSymbolUtilities (1.1.1)
   - GoogleUtilities (1.3.1):
     - GoogleSymbolUtilities (~> 1.0)
-  - HexColors (2.2.1)
-  - HSDatePickerViewController (1.0.1)
-  - IDMPhotoBrowser (1.6.2):
-    - AFNetworking
+  - HexColors (4.0.0)
+  - HSDatePickerViewController (1.0.4)
+  - IDMPhotoBrowser (1.8.4):
     - DACircularProgress
     - pop
-  - IQKeyboardManager (3.2.4)
-  - JSQMessagesViewController (7.0.2):
-    - JSQSystemSoundPlayer (~> 2.0.1)
-  - JSQSystemSoundPlayer (2.0.1)
+    - SDWebImage
+  - IQKeyboardManager (4.0.3)
   - JTCalendar (1.2.3)
   - JVFloatLabeledTextField (1.1.0)
-  - MBProgressHUD (0.9.1)
-  - pop (1.0.7)
-  - RMActionController (1.0.4)
-  - RMDateSelectionViewController (2.0.1):
-    - RMActionController (~> 1.0.0)
-  - SCLAlertView-Objective-C (0.7.3)
-  - ZFDragableModalTransition (0.5.1)
+  - MBProgressHUD (0.9.2)
+  - pop (1.0.9)
+  - RMActionController (1.0.5)
+  - RMDateSelectionViewController (2.0.3):
+    - RMActionController (~> 1.0.5)
+  - SCLAlertView-Objective-C (1.0.3)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - ZFDragableModalTransition (0.6)
 
 DEPENDENCIES:
   - AAShareBubbles
@@ -120,8 +114,6 @@ DEPENDENCIES:
   - HSDatePickerViewController
   - IDMPhotoBrowser
   - IQKeyboardManager
-  - JSQMessagesViewController
-  - JSQSystemSoundPlayer
   - JTCalendar (~> 1.2.3)
   - JVFloatLabeledTextField
   - MBProgressHUD
@@ -131,10 +123,10 @@ DEPENDENCIES:
   - ZFDragableModalTransition
 
 SPEC CHECKSUMS:
-  AAShareBubbles: 960610d6a3c4da57d7cd295f4bec68790307bce8
-  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  AAShareBubbles: 53fd5064602fa041a2249dda6b26f7fdccca3093
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BLKFlexibleHeightBar: b27572a69633d8e33f1f2bbc486b04d8e86f742d
-  CSStickyHeaderFlowLayout: e919dd425fa12bba1155f66d87edfe540eb8f89a
+  CSStickyHeaderFlowLayout: 5366582779d8b7c9ba9b9cc729c218cc23888776
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DCModalSegue: 68c79b992a87c72ca6ded9ae61722b073f5fcdd3
   Firebase: 6d4012da1598732a2b43f16d8355eca90f94ed59
@@ -151,19 +143,18 @@ SPEC CHECKSUMS:
   GoogleNetworkingUtilities: 3e83269048cfb498dc7ec83ab36813360965c74f
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
-  HexColors: abfd172e329dab59888614ccba6f216cec59289d
-  HSDatePickerViewController: b292f2a53b2644a68aa5e1343053d2f3554de64c
-  IDMPhotoBrowser: ebbfa6690456b72dd92d93b7bc11d71519f4d06d
-  IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
-  JSQMessagesViewController: bb6649691182b1899dc52b42266ad69efc473510
-  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  HexColors: 5f95843ef89aff6a72e1fd3a8ebabf205cc43379
+  HSDatePickerViewController: 5a72b71f8c3b10e76f2c28a898f8572b551432a6
+  IDMPhotoBrowser: b574fe3229754e701f32df271afbc4ac7e4e1997
+  IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
   JTCalendar: 246ea3e338fb97624846ec77cdcde448242c4d5c
   JVFloatLabeledTextField: ea4a3d8387ddd43724c472bb2b8ab39b79af05d4
-  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
-  RMActionController: 19423654600d40ca15132a4e548d005042d68f09
-  RMDateSelectionViewController: 027bdeeaacb78b2b528808ed21efd697490d2b4e
-  SCLAlertView-Objective-C: 4bf9a07c8a8d1840e5174e643e16bc032239914d
-  ZFDragableModalTransition: 048189eda437f91944ce6d5151618b8bf770196d
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  RMActionController: b83653e7452ed51492094d65dc82151c36443c03
+  RMDateSelectionViewController: 354a0f1fe40bac01054528b7a8735f2973bbd813
+  SCLAlertView-Objective-C: e83376218b431109dc5403adc63f8e9787db7b74
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
 
 COCOAPODS: 0.39.0

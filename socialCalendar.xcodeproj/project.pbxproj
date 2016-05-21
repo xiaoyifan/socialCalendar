@@ -1355,6 +1355,7 @@
 		};
 		CCF0A4701B0BEEB8002F619B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30F1B6E1F8520A242EE2DB5A /* Pods-socialCalendar.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";

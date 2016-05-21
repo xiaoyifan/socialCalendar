@@ -97,7 +97,7 @@
 
 // Get and display image
 - (void)displayImage {
-	if (_photo && _photoImageView.image == nil) {
+	if (_photo) {
 		// Reset
 		self.maximumZoomScale = 1;
 		self.minimumZoomScale = 1;
@@ -164,7 +164,10 @@
 	if (_photoImageView.image == nil) return;
     
 	// Sizes
-    CGSize boundsSize = self.bounds.size;
+	CGSize boundsSize = self.bounds.size;
+	boundsSize.width -= 0.1;
+	boundsSize.height -= 0.1;
+	
     CGSize imageSize = _photoImageView.frame.size;
     
     // Calculate Min

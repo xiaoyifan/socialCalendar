@@ -21,7 +21,7 @@
 #import "ParsingHandle.h"
 #import "EventKit/EventKit.h"
 #import "EventKitUI/EventKitUI.h"
-#import "HexColor.h"
+#import "HexColors.h"
 #import "LPNetworkingManager.h"
 #import "SVProgressHUD.h"
 #import "ProgressHUD.h"

@@ -40,7 +40,7 @@
     return self;
 }
 
--(void)dealloc
+- (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
@@ -50,20 +50,33 @@
 {
     _dragable = dragable;
     if (_dragable) {
+        [self removeGestureRecognizerFromModalController];
         self.gesture = [[ZFDetectScrollViewEndGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
         self.gesture.delegate = self;
         [self.modalController.view addGestureRecognizer:self.gesture];
     } else {
-        if (self.gesture) {
-            [self.modalController.view removeGestureRecognizer:self.gesture];
-            self.gesture = nil;
-        }
+        [self removeGestureRecognizerFromModalController];
     }
 }
 
 - (void)setContentScrollView:(UIScrollView *)scrollView
 {
+    // always enable drag if scrollview is set
+    if (!self.dragable) {
+        self.dragable = YES;
+    }
+    // and scrollview will work only for bottom mode
+    self.direction = ZFModalTransitonDirectionBottom;
     self.gesture.scrollview = scrollView;
+}
+
+- (void)setDirection:(ZFModalTransitonDirection)direction
+{
+    _direction = direction;
+    // scrollview will work only for bottom mode
+    if (_direction != ZFModalTransitonDirectionBottom) {
+        self.gesture.scrollview = nil;
+    }
 }
 
 - (void)animationEnded:(BOOL)transitionCompleted
@@ -117,7 +130,9 @@
         CGPoint transformedPoint = CGPointApplyAffineTransform(startRect.origin, toViewController.view.transform);
         toViewController.view.frame = CGRectMake(transformedPoint.x, transformedPoint.y, startRect.size.width, startRect.size.height);
 
-        [fromViewController beginAppearanceTransition:NO animated:YES];
+        if (toViewController.modalPresentationStyle == UIModalPresentationCustom) {
+            [fromViewController beginAppearanceTransition:NO animated:YES];
+        }
 
         [UIView animateWithDuration:[self transitionDuration:transitionContext]
                               delay:0
@@ -132,11 +147,17 @@
                                                                       CGRectGetWidth(toViewController.view.frame),
                                                                       CGRectGetHeight(toViewController.view.frame));
                          } completion:^(BOOL finished) {
-                             [fromViewController endAppearanceTransition];
+                             if (toViewController.modalPresentationStyle == UIModalPresentationCustom) {
+                                 [fromViewController endAppearanceTransition];
+                             }
                              [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
                          }];
     } else {
 
+        if (fromViewController.modalPresentationStyle == UIModalPresentationFullScreen) {
+            [containerView addSubview:toViewController.view];
+        }
+        
         [containerView bringSubviewToFront:fromViewController.view];
 
         if (![self isPriorToIOS8]) {
@@ -167,7 +188,9 @@
         CGPoint transformedPoint = CGPointApplyAffineTransform(endRect.origin, fromViewController.view.transform);
         endRect = CGRectMake(transformedPoint.x, transformedPoint.y, endRect.size.width, endRect.size.height);
 
-        [toViewController beginAppearanceTransition:YES animated:YES];
+        if (fromViewController.modalPresentationStyle == UIModalPresentationCustom) {
+            [toViewController beginAppearanceTransition:YES animated:YES];
+        }
 
         [UIView animateWithDuration:[self transitionDuration:transitionContext]
                               delay:0
@@ -180,9 +203,20 @@
                              toViewController.view.alpha = 1.0f;
                              fromViewController.view.frame = endRect;
                          } completion:^(BOOL finished) {
-                             [toViewController endAppearanceTransition];
+                             toViewController.view.layer.transform = CATransform3DIdentity;
+                             if (fromViewController.modalPresentationStyle == UIModalPresentationCustom) {
+                                 [toViewController endAppearanceTransition];
+                             }
                              [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
                          }];
+    }
+}
+
+- (void)removeGestureRecognizerFromModalController
+{
+    if (self.gesture && [self.modalController.view.gestureRecognizers containsObject:self.gesture]) {
+        [self.modalController.view removeGestureRecognizer:self.gesture];
+        self.gesture = nil;
     }
 }
 
@@ -251,8 +285,6 @@
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
 
-	[toViewController beginAppearanceTransition:YES animated:YES];
-
     if (![self isPriorToIOS8]) {
         toViewController.view.layer.transform = CATransform3DScale(toViewController.view.layer.transform, self.behindViewScale, self.behindViewScale, 1);
     }
@@ -260,6 +292,10 @@
     self.tempTransform = toViewController.view.layer.transform;
 
     toViewController.view.alpha = self.behindViewAlpha;
+    
+    if (fromViewController.modalPresentationStyle == UIModalPresentationFullScreen) {
+        [[transitionContext containerView] addSubview:toViewController.view];
+    }
     [[transitionContext containerView] bringSubviewToFront:fromViewController.view];
 }
 
@@ -341,6 +377,10 @@
     CGPoint transformedPoint = CGPointApplyAffineTransform(endRect.origin, fromViewController.view.transform);
     endRect = CGRectMake(transformedPoint.x, transformedPoint.y, endRect.size.width, endRect.size.height);
 
+    if (fromViewController.modalPresentationStyle == UIModalPresentationCustom) {
+        [toViewController beginAppearanceTransition:YES animated:YES];
+    }
+    
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0
          usingSpringWithDamping:0.8
@@ -352,7 +392,9 @@
                          toViewController.view.alpha = 1.0f;
                          fromViewController.view.frame = endRect;
                      } completion:^(BOOL finished) {
-						 [toViewController endAppearanceTransition];
+                         if (fromViewController.modalPresentationStyle == UIModalPresentationCustom) {
+                             [toViewController endAppearanceTransition];
+                         }
                          [transitionContext completeTransition:YES];
                      }];
 }
@@ -363,8 +405,6 @@
 
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-
-	[toViewController beginAppearanceTransition:NO animated:YES];
 
     [UIView animateWithDuration:0.4
                           delay:0
@@ -379,8 +419,10 @@
                                                                     CGRectGetWidth(fromViewController.view.frame),
                                                                     CGRectGetHeight(fromViewController.view.frame));
                      } completion:^(BOOL finished) {
-						 [toViewController endAppearanceTransition];
                          [transitionContext completeTransition:NO];
+                         if (fromViewController.modalPresentationStyle == UIModalPresentationFullScreen) {
+                             [toViewController.view removeFromSuperview];
+                         }
                      }];
 }
 
@@ -432,6 +474,14 @@
     return NO;
 }
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    if (self.gestureRecognizerToFailPan && otherGestureRecognizer && self.gestureRecognizerToFailPan == otherGestureRecognizer) {
+        return YES;
+    }
+    
+    return NO;
+}
+
 #pragma mark - Utils
 
 - (BOOL)isPriorToIOS8
@@ -449,10 +499,9 @@
 - (void)orientationChanged:(NSNotification *)notification
 {
     UIViewController *backViewController = self.modalController.presentingViewController;
-    backViewController.view.bounds = backViewController.view.window.bounds;
-    if (![self isPriorToIOS8]) {
-        backViewController.view.layer.transform = CATransform3DScale(backViewController.view.layer.transform, self.behindViewScale, self.behindViewScale, 1);
-    }
+    backViewController.view.transform = CGAffineTransformIdentity;
+    backViewController.view.frame = self.modalController.view.bounds;
+    backViewController.view.transform = CGAffineTransformScale(backViewController.view.transform, self.behindViewScale, self.behindViewScale);
 }
 
 @end
@@ -479,6 +528,7 @@
     }
 
     if (self.state == UIGestureRecognizerStateFailed) return;
+    CGPoint velocity = [self velocityInView:self.view];
     CGPoint nowPoint = [touches.anyObject locationInView:self.view];
     CGPoint prevPoint = [touches.anyObject previousLocationInView:self.view];
 
@@ -491,7 +541,7 @@
 
     CGFloat topVerticalOffset = -self.scrollview.contentInset.top;
 
-    if (nowPoint.y > prevPoint.y && self.scrollview.contentOffset.y <= topVerticalOffset) {
+    if ((fabs(velocity.x) < fabs(velocity.y)) && (nowPoint.y > prevPoint.y) && (self.scrollview.contentOffset.y <= topVerticalOffset)) {
         self.isFail = @NO;
     } else if (self.scrollview.contentOffset.y >= topVerticalOffset) {
         self.state = UIGestureRecognizerStateFailed;
