@@ -76,6 +76,7 @@
 		DD4C8F961CEEF0E1006F2FC6 /* SignInSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C8F951CEEF0E1006F2FC6 /* SignInSignUpViewController.m */; };
 		DD4C8F9B1CEEF12C006F2FC6 /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C8F981CEEF12C006F2FC6 /* AppState.m */; };
 		DD4C8F9C1CEEF12C006F2FC6 /* MeasurementHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C8F9A1CEEF12C006F2FC6 /* MeasurementHelper.m */; };
+		DD69B8B11CF2C78B00ADBB46 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD69B8B01CF2C78B00ADBB46 /* LocalAuthentication.framework */; };
 		DD8AA62B1BA96D8900A48299 /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA62A1BA96D8900A48299 /* LPNetworkingManager.m */; };
 		DD8AA63B1BA96E3300A48299 /* expireMarkingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA63A1BA96E3300A48299 /* expireMarkingView.m */; };
 		DD8AA6431BA96EA000A48299 /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA63F1BA96EA000A48299 /* DismissingAnimator.m */; };
@@ -232,6 +233,7 @@
 		DD4C8F981CEEF12C006F2FC6 /* AppState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppState.m; sourceTree = "<group>"; };
 		DD4C8F991CEEF12C006F2FC6 /* MeasurementHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementHelper.h; sourceTree = "<group>"; };
 		DD4C8F9A1CEEF12C006F2FC6 /* MeasurementHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementHelper.m; sourceTree = "<group>"; };
+		DD69B8B01CF2C78B00ADBB46 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		DD8AA6291BA96D8900A48299 /* LPNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNetworkingManager.h; sourceTree = "<group>"; };
 		DD8AA62A1BA96D8900A48299 /* LPNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNetworkingManager.m; sourceTree = "<group>"; };
 		DD8AA6391BA96E3300A48299 /* expireMarkingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expireMarkingView.h; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD69B8B11CF2C78B00ADBB46 /* LocalAuthentication.framework in Frameworks */,
 				CCB5A0221B25F9240050352D /* libc++.dylib in Frameworks */,
 				CCB5A0161B25E90C0050352D /* MessageUI.framework in Frameworks */,
 				CCB5A0141B25DE7A0050352D /* MediaPlayer.framework in Frameworks */,
@@ -501,6 +504,7 @@
 		D039DA7C97DEC38A4668DA3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD69B8B01CF2C78B00ADBB46 /* LocalAuthentication.framework */,
 				FF5DC0E71B49D342006369C9 /* StoreKit.framework */,
 				CCB5A0231B2625E10050352D /* libc++.1.dylib */,
 				CCB5A0211B25F9240050352D /* libc++.dylib */,
@@ -934,7 +938,7 @@
 				TargetAttributes = {
 					CCF0A4481B0BEEB8002F619B = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 6LKH48G248;
+						DevelopmentTeam = 4NPA9YHQ69;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;

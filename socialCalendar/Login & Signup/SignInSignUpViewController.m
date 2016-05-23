@@ -9,6 +9,8 @@
 #import "AppState.h"
 #import "MeasurementHelper.h"
 #import "SignInSignUpViewController.h"
+#import <LocalAuthentication/LocalAuthentication.h>
+
 #import <JVFloatLabeledTextField/JVFloatLabeledTextField.h>
 #import <JVFloatLabeledTextField.h>
 #import <JVFloatLabeledTextView.h>
@@ -44,6 +46,25 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     [self switchDataChanged];
     
     [_operationSwitch addTarget:self action:@selector(switchDataChanged) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    
+    LAContext * localContext = [LAContext new];
+    
+    BOOL hasTouchId = [localContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:nil];
+    
+    if (hasTouchId) {
+        [localContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"Touch to Login" reply:^(BOOL success, NSError * _Nullable error) {
+           
+            if (success) {
+                
+                [self signedIn:[FIRAuth auth].currentUser];
+            }
+            
+        }];
+    }
+    
 }
 
 - (void)configureTextFields{
