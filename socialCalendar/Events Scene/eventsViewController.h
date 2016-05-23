@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface eventsViewController : UITableViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface eventsViewController : UITableViewController
 
 @end
