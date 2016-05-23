@@ -77,6 +77,8 @@
 		DD4C8F9B1CEEF12C006F2FC6 /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C8F981CEEF12C006F2FC6 /* AppState.m */; };
 		DD4C8F9C1CEEF12C006F2FC6 /* MeasurementHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C8F9A1CEEF12C006F2FC6 /* MeasurementHelper.m */; };
 		DD69B8B11CF2C78B00ADBB46 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD69B8B01CF2C78B00ADBB46 /* LocalAuthentication.framework */; };
+		DD69B8B61CF2EB4900ADBB46 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = DD69B8B51CF2EB4900ADBB46 /* Event.m */; };
+		DD69B8B91CF2ED3500ADBB46 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DD69B8B81CF2ED3500ADBB46 /* User.m */; };
 		DD8AA62B1BA96D8900A48299 /* LPNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA62A1BA96D8900A48299 /* LPNetworkingManager.m */; };
 		DD8AA63B1BA96E3300A48299 /* expireMarkingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA63A1BA96E3300A48299 /* expireMarkingView.m */; };
 		DD8AA6431BA96EA000A48299 /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA63F1BA96EA000A48299 /* DismissingAnimator.m */; };
@@ -234,6 +236,10 @@
 		DD4C8F991CEEF12C006F2FC6 /* MeasurementHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementHelper.h; sourceTree = "<group>"; };
 		DD4C8F9A1CEEF12C006F2FC6 /* MeasurementHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementHelper.m; sourceTree = "<group>"; };
 		DD69B8B01CF2C78B00ADBB46 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		DD69B8B41CF2EB4900ADBB46 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		DD69B8B51CF2EB4900ADBB46 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		DD69B8B71CF2ED3500ADBB46 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		DD69B8B81CF2ED3500ADBB46 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		DD8AA6291BA96D8900A48299 /* LPNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNetworkingManager.h; sourceTree = "<group>"; };
 		DD8AA62A1BA96D8900A48299 /* LPNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNetworkingManager.m; sourceTree = "<group>"; };
 		DD8AA6391BA96E3300A48299 /* expireMarkingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expireMarkingView.h; sourceTree = "<group>"; };
@@ -576,6 +582,10 @@
 		DD4674171BAA88B200BEC759 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DD69B8B71CF2ED3500ADBB46 /* User.h */,
+				DD69B8B81CF2ED3500ADBB46 /* User.m */,
+				DD69B8B41CF2EB4900ADBB46 /* Event.h */,
+				DD69B8B51CF2EB4900ADBB46 /* Event.m */,
 				DD4674181BAA88B200BEC759 /* eventObject.h */,
 				DD4674191BAA88B200BEC759 /* eventObject.m */,
 			);
@@ -1094,6 +1104,7 @@
 				DD46741A1BAA88B200BEC759 /* eventObject.m in Sources */,
 				DD8AA64E1BA96F1200A48299 /* UIView+LoadNib.m in Sources */,
 				DDAFC7501BABBF7C007E357A /* UIImage+CropRotate.m in Sources */,
+				DD69B8B61CF2EB4900ADBB46 /* Event.m in Sources */,
 				DDAFC74E1BABBF7C007E357A /* TOCroppedImageAttributes.m in Sources */,
 				DD4674481BAA8A4800BEC759 /* SCEventHourCell.m in Sources */,
 				DD4674581BAA8A9100BEC759 /* calendarTableViewCell.m in Sources */,
@@ -1110,6 +1121,7 @@
 				DD4674091BAA7C9000BEC759 /* SVIndefiniteAnimatedView.m in Sources */,
 				DDAFC7411BABBF7C007E357A /* SCProfileInfoCell.m in Sources */,
 				DDAFC7531BABBF7C007E357A /* TOCropScrollView.m in Sources */,
+				DD69B8B91CF2ED3500ADBB46 /* User.m in Sources */,
 				DD46742D1BAA896500BEC759 /* addEventTableViewController.m in Sources */,
 				DD46740B1BAA7C9000BEC759 /* SVProgressHUD.m in Sources */,
 				DD46742E1BAA896500BEC759 /* mapViewController.m in Sources */,

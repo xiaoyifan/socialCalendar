@@ -26,8 +26,6 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-@import Firebase;
-
 @interface eventsViewController () <AAShareBubblesDelegate, MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
 
 @property NSMutableArray *events;

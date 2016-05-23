@@ -15,8 +15,6 @@
 #import <JVFloatLabeledTextField.h>
 #import <JVFloatLabeledTextView.h>
 
-@import Firebase;
-
 
 const static CGFloat kJVFieldHeight = 44.0f;
 const static CGFloat kJVFieldHMargin = 10.0f;

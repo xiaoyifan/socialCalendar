@@ -1,0 +1,11 @@
+Event{
+	NSString *title
+	NSDate *time
+	NSDate *reminderTime
+	CLLocation *location
+	NSString *locationDescription
+	NSString *note
+	NSArray<User *> *group
+	NSString *objectId
+	BOOL isInternalEvent
+}

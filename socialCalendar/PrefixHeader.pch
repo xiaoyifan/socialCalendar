@@ -34,4 +34,11 @@
 
 #import "UIColor+CustomColors.h"
 
+@import FirebaseAuth;
+@import FirebaseCrash;
+@import FirebaseDatabase;
+@import FirebaseRemoteConfig;
+@import FirebaseStorage;
+@import GoogleMobileAds;
+
 #endif
