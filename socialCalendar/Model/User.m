@@ -11,13 +11,10 @@
 
 @implementation User
 
-- (instancetype)initWithObjectId:(NSString *)objectId whatsup:(NSString *)whatsup password:(NSString *)password email:(NSString *)email createAt:(NSDate *)createAt signIn:(NSDate *)signIn gender:(NSString *)gender location:(CLLocation *)location locationDescription:(NSString *)locationDescription
+- (instancetype)initWithWhatsup:(NSString *)whatsup createAt:(NSDate *)createAt signIn:(NSDate *)signIn gender:(NSString *)gender location:(CLLocation *)location locationDescription:(NSString *)locationDescription
 {
   if ((self = [super init])) {
-    _objectId = [objectId copy];
     _whatsup = [whatsup copy];
-    _password = [password copy];
-    _email = [email copy];
     _createAt = [createAt copy];
     _signIn = [signIn copy];
     _gender = [gender copy];
@@ -35,14 +32,14 @@
 
 - (NSString *)description
 {
-  return [NSString stringWithFormat:@"%@ - \n\t objectId: %@; \n\t whatsup: %@; \n\t password: %@; \n\t email: %@; \n\t createAt: %@; \n\t signIn: %@; \n\t gender: %@; \n\t location: %@; \n\t locationDescription: %@; \n", [super description], _objectId, _whatsup, _password, _email, _createAt, _signIn, _gender, _location, _locationDescription];
+  return [NSString stringWithFormat:@"%@ - \n\t whatsup: %@; \n\t createAt: %@; \n\t signIn: %@; \n\t gender: %@; \n\t location: %@; \n\t locationDescription: %@; \n", [super description], _whatsup, _createAt, _signIn, _gender, _location, _locationDescription];
 }
 
 - (NSUInteger)hash
 {
-  NSUInteger subhashes[] = {[_objectId hash], [_whatsup hash], [_password hash], [_email hash], [_createAt hash], [_signIn hash], [_gender hash], [_location hash], [_locationDescription hash]};
+  NSUInteger subhashes[] = {[_whatsup hash], [_createAt hash], [_signIn hash], [_gender hash], [_location hash], [_locationDescription hash]};
   NSUInteger result = subhashes[0];
-  for (int ii = 1; ii < 9; ++ii) {
+  for (int ii = 1; ii < 6; ++ii) {
     unsigned long long base = (((unsigned long long)result) << 32 | subhashes[ii]);
     base = (~base) + (base << 18);
     base ^= (base >> 31);
@@ -63,10 +60,7 @@
     return NO;
   }
   return
-    (_objectId == object->_objectId ? YES : [_objectId isEqual:object->_objectId]) &&
     (_whatsup == object->_whatsup ? YES : [_whatsup isEqual:object->_whatsup]) &&
-    (_password == object->_password ? YES : [_password isEqual:object->_password]) &&
-    (_email == object->_email ? YES : [_email isEqual:object->_email]) &&
     (_createAt == object->_createAt ? YES : [_createAt isEqual:object->_createAt]) &&
     (_signIn == object->_signIn ? YES : [_signIn isEqual:object->_signIn]) &&
     (_gender == object->_gender ? YES : [_gender isEqual:object->_gender]) &&

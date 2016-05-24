@@ -1,8 +1,5 @@
 User{
-	NSString *objectId
 	NSString *whatsup
-	NSString *password
-	NSString *email
 	NSDate *createAt
 	NSDate *signIn
 	NSString *gender
