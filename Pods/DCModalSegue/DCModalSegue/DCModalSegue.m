@@ -128,7 +128,7 @@
 
 - (void)perform {
     DCModalViewController* modalVC = [[DCModalViewController alloc] init];
-//    modalVC.wantsFullScreenLayout = YES;
+    modalVC.wantsFullScreenLayout = YES;
     
     modalVC.screenshot = [self screenshot];
     modalVC.destinationController = self.destinationViewController;

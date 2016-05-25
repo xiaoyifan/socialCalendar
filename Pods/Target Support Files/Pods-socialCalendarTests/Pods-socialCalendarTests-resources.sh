@@ -79,20 +79,6 @@ EOM
       ;;
   esac
 }
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle"
-  install_resource "HSDatePickerViewController/HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.xib"
-  install_resource "IDMPhotoBrowser/Classes/IDMPhotoBrowser.bundle"
-  install_resource "IDMPhotoBrowser/Classes/IDMPBLocalizations.bundle"
-  install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle"
-  install_resource "HSDatePickerViewController/HSDatePickerViewControllerDemo/HSDatePickerViewController/HSDatePickerViewController.xib"
-  install_resource "IDMPhotoBrowser/Classes/IDMPhotoBrowser.bundle"
-  install_resource "IDMPhotoBrowser/Classes/IDMPBLocalizations.bundle"
-  install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
-fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
