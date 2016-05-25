@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FBF6E1F475B1BCB517AE0079'
+               BlueprintIdentifier = 'D1E50E3231082C007600AF28782DAF8E'
                BlueprintName = 'BLKFlexibleHeightBar'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libBLKFlexibleHeightBar.a'>
