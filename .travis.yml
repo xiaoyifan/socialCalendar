@@ -5,4 +5,11 @@ language: objective-c  #1
 osx_image: xcode7.2 #2
 xcode_workspace: socialCalendar.xcworkspace #3
 xcode_scheme: socialCalendar #4
-xcode_sdk: iphonesimulator9.2 #
+xcode_sdk: iphonesimulator9.2 
+
+# Build for reporting test coverage
+ xcodebuild test -project socialCalendar.xcworkspace -scheme socialCalendar -sdk iphonesimulator;
+
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
