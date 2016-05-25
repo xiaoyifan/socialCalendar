@@ -3,6 +3,8 @@ final Project for advanced iOS
 
 ###Master branch build status: 
 ![](https://travis-ci.org/xiaoyifan/socialCalendar.svg?branch=master)
+[![codecov](https://codecov.io/gh/xiaoyifan/socialCalendar/branch/master/graph/badge.svg)](https://codecov.io/gh/xiaoyifan/socialCalendar)
+
 
 basically, it is an app which provides event scheduling for people. It brings users a better experience 
 and easier way to arrange meetings, public events and event casual hanging out. 
