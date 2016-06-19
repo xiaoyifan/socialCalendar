@@ -1,0 +1,14 @@
+framework module FirebaseFacebookAuthUI {
+  umbrella header "FirebaseFacebookAuthUI.h"
+
+  export *
+  module * {export * }
+
+  header "FIRFacebookAuthUI.h"
+
+  use FBSDKLoginKit
+
+  use FirebaseAuth
+
+  use FirebaseAuthUI
+}

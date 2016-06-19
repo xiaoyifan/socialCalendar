@@ -1,0 +1,15 @@
+framework module FirebaseAuthUI {
+  umbrella header "FirebaseAuthUI.h"
+
+  export *
+  module * {export * }
+
+  header "FIRAuthPickerViewController.h"
+  header "FIRAuthProviderUI.h"
+  header "FIRAuthUI.h"
+  header "FIRAuthUIBaseViewController.h"
+
+  use FirebaseAnalytics
+
+  use FirebaseAuth
+}
