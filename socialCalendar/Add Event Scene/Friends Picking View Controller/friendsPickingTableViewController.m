@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
     [SVProgressHUD show];
-    [[ParsingHandle sharedParsing] getMyFriendsToCompletion: ^(NSArray *array) {
+    [[FirebaseManager sharedInstance] getMyFriendsToCompletion: ^(NSArray *array) {
         self.friendsArray = [array mutableCopy];
         [self.tableView reloadData];
 

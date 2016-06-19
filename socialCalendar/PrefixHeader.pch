@@ -18,7 +18,7 @@
 #import <MessageUI/MessageUI.h>
 #import "eventObject.h"
 #import "MyLocation.h"
-#import "ParsingHandle.h"
+#import "FirebaseManager.h"
 #import "EventKit/EventKit.h"
 #import "EventKitUI/EventKitUI.h"
 #import "HexColors.h"

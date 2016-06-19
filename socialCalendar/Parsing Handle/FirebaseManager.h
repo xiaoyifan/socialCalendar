@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ParsingHandle : NSObject
+@interface FirebaseManager : NSObject
 
-+(id)sharedParsing;
++(id)sharedInstance;
 
 
 -(void)findObjectsOfCurrentUserToCompletion:(void(^)(NSArray *array))completion;

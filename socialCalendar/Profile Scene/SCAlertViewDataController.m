@@ -114,7 +114,7 @@
     switch (rowType) {
         case SCUserDetailModuleTypeNickName:
         {
-            [[ParsingHandle sharedParsing] updateUser:[PFUser currentUser] Username:text ToCompletion: ^(BOOL finished) {
+            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Username:text ToCompletion: ^(BOOL finished) {
                 completion(finished);
             }];
         }
@@ -122,7 +122,7 @@
 
         case SCUserDetailModuleTypeEmail:
         {
-            [[ParsingHandle sharedParsing] updateUser:[PFUser currentUser] Email:text ToCompletion: ^(BOOL finished) {
+            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Email:text ToCompletion: ^(BOOL finished) {
                 completion(finished);
             }];
         }
@@ -130,7 +130,7 @@
 
         case SCUserDetailModuleTypeEducation:
         {
-            [[ParsingHandle sharedParsing] updateUser:[PFUser currentUser] Education:text ToCompletion: ^(BOOL finished) {
+            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Education:text ToCompletion: ^(BOOL finished) {
                 completion(finished);
             }];
         }
@@ -138,7 +138,7 @@
 
         case SCUserDetailModuleTypeWork:
         {
-            [[ParsingHandle sharedParsing] updateUser:[PFUser currentUser] Work:text ToCompletion: ^(BOOL finished) {
+            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Work:text ToCompletion: ^(BOOL finished) {
                 completion(finished);
             }];
         }
@@ -146,7 +146,7 @@
 
         case SCUserDetailModuleTypeWebsite:
         {
-            [[ParsingHandle sharedParsing] updateUser:[PFUser currentUser] Website:text ToCompletion: ^(BOOL finished) {
+            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Website:text ToCompletion: ^(BOOL finished) {
                 completion(finished);
             }];
         }
@@ -154,7 +154,7 @@
 
         case SCUserDetailModuleTypeWhatsUp:
         {
-            [[ParsingHandle sharedParsing] updateUser:[PFUser currentUser] Whatsup:text ToCompletion: ^(BOOL finished) {
+            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Whatsup:text ToCompletion: ^(BOOL finished) {
                 completion(finished);
             }];
         }
@@ -162,7 +162,7 @@
 
         case SCUserDetailModuleTypeGender:
         {
-            [[ParsingHandle sharedParsing] updateUser:[PFUser currentUser] Gender:text ToCompletion: ^(BOOL finished) {
+            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Gender:text ToCompletion: ^(BOOL finished) {
                 completion(finished);
             }];
         }

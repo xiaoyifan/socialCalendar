@@ -56,15 +56,15 @@
     [self.eventTableView addGestureRecognizer:recognizer];
 
 
-    [[ParsingHandle sharedParsing] findObjectsofDate:[NSDate date] ToCompletion: ^(NSArray *array) {
+    [[FirebaseManager sharedInstance] findObjectsofDate:[NSDate date] ToCompletion: ^(NSArray *array) {
         self.eventsToday = [[NSMutableArray alloc] init];
         NSLog(@"today contains %lu events", (unsigned long)array.count);
 
         for (PFObject *obj in array) {
-            eventObject *newObj = [[ParsingHandle sharedParsing] parseObjectToEventObject:obj];
+            eventObject *newObj = [[FirebaseManager sharedInstance] parseObjectToEventObject:obj];
             [self.eventsToday addObject:newObj];
         }
-        [self.eventsToday addObjectsFromArray:[[ParsingHandle sharedParsing] findObjectsFromNativeCalendarOnDate:[NSDate date]]];
+        [self.eventsToday addObjectsFromArray:[[FirebaseManager sharedInstance] findObjectsFromNativeCalendarOnDate:[NSDate date]]];
 
 
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -154,16 +154,16 @@
 {
     NSLog(@"%@", date);
     [SVProgressHUD show];
-    [[ParsingHandle sharedParsing] findObjectsofDate:date ToCompletion: ^(NSArray *array) {
+    [[FirebaseManager sharedInstance] findObjectsofDate:date ToCompletion: ^(NSArray *array) {
         self.eventsToday = [[NSMutableArray alloc] init];
         NSLog(@"today contains %lu events", (unsigned long)array.count);
 
         for (PFObject *obj in array) {
-            eventObject *newObj = [[ParsingHandle sharedParsing] parseObjectToEventObject:obj];
+            eventObject *newObj = [[FirebaseManager sharedInstance] parseObjectToEventObject:obj];
             [self.eventsToday addObject:newObj];
         }
 
-        [self.eventsToday addObjectsFromArray:[[ParsingHandle sharedParsing] findObjectsFromNativeCalendarOnDate:date]];
+        [self.eventsToday addObjectsFromArray:[[FirebaseManager sharedInstance] findObjectsFromNativeCalendarOnDate:date]];
 
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.eventTableView reloadData];

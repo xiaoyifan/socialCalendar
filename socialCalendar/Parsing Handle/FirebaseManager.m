@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Yifan Xiao. All rights reserved.
 //
 
-#import "ParsingHandle.h"
+#import "FirebaseManager.h"
 
-@implementation ParsingHandle
+@implementation FirebaseManager
 
-+ (id)sharedParsing
++ (id)sharedInstance
 {
     static dispatch_once_t pred;
-    static ParsingHandle *shared = nil;
+    static FirebaseManager *shared = nil;
 
     dispatch_once(&pred, ^{
         shared = [[self alloc]init];

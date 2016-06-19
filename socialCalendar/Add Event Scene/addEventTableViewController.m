@@ -314,7 +314,7 @@
             [push sendPushInBackground];
         }
 
-        [[ParsingHandle sharedParsing] insertNewObjectToDatabase:self.object ToCompletion: ^{
+        [[FirebaseManager sharedInstance] insertNewObjectToDatabase:self.object ToCompletion: ^{
             [SVProgressHUD dismiss];
             [SVProgressHUD showSuccessWithStatus:@"New Events Added!"];
         }];

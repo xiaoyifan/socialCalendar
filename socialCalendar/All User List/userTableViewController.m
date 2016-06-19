@@ -24,19 +24,19 @@
     [super viewDidLoad];
     [self.searchBar setTintColor:[UIColor grayColor]];
 
-    [[ParsingHandle sharedParsing] getMyPendingSentRequestToCompletion: ^(NSArray *array) {
+    [[FirebaseManager sharedInstance] getMyPendingSentRequestToCompletion: ^(NSArray *array) {
         self.sentRequestUserArray = [array mutableCopy];
         //get all the users that I've sent request
     }];
 
-    [[ParsingHandle sharedParsing] removeDeniedFriendRequestFrom:[PFUser currentUser]];
+    [[FirebaseManager sharedInstance] removeDeniedFriendRequestFrom:[PFUser currentUser]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.userArray = [[NSMutableArray alloc] init];
 
-    [[ParsingHandle sharedParsing] getAllUsersToCompletion: ^(NSArray *array) {
+    [[FirebaseManager sharedInstance] getAllUsersToCompletion: ^(NSArray *array) {
         NSMutableArray *strangerArray = [array mutableCopy];
 
         for (PFUser *singleUser in strangerArray) {
@@ -160,7 +160,7 @@
         [senderButton setTitle:@"sent" forState:UIControlStateNormal];
         [senderButton setBackgroundColor:[UIColor darkGrayColor]];
 
-        [[ParsingHandle sharedParsing] sendUserFriendRequest:addedUser];
+        [[FirebaseManager sharedInstance] sendUserFriendRequest:addedUser];
         //add new request
     } else {
         [senderButton setTitle:@"add" forState:UIControlStateNormal];

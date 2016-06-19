@@ -51,7 +51,7 @@
 		DD4674101BAA7CE600BEC759 /* RMParallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46740D1BAA7CE600BEC759 /* RMParallax.swift */; };
 		DD4674111BAA7CE600BEC759 /* RMParallaxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46740E1BAA7CE600BEC759 /* RMParallaxItem.swift */; };
 		DD4674121BAA7CE600BEC759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46740F1BAA7CE600BEC759 /* ViewController.swift */; };
-		DD4674161BAA889600BEC759 /* ParsingHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674151BAA889600BEC759 /* ParsingHandle.m */; };
+		DD4674161BAA889600BEC759 /* FirebaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674151BAA889600BEC759 /* FirebaseManager.m */; };
 		DD46741A1BAA88B200BEC759 /* eventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4674191BAA88B200BEC759 /* eventObject.m */; };
 		DD4674201BAA88D400BEC759 /* eventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46741D1BAA88D400BEC759 /* eventsViewController.m */; };
 		DD4674211BAA88D400BEC759 /* eventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46741F1BAA88D400BEC759 /* eventViewCell.m */; };
@@ -117,6 +117,7 @@
 		DDAFC7541BABBF7C007E357A /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73C1BABBF7C007E357A /* TOCropToolbar.m */; };
 		DDAFC7551BABBF7C007E357A /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73E1BABBF7C007E357A /* TOCropView.m */; };
 		DDC571281B6586F10043AC40 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DDC571271B6586F10043AC40 /* logo.png */; };
+		DDE38F331D1684720074E7D5 /* EventsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE38F321D1684720074E7D5 /* EventsDataSource.m */; };
 		FFC5B1CB1B6562FF00A72286 /* SCHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */; };
 /* End PBXBuildFile section */
 
@@ -193,8 +194,8 @@
 		DD46740D1BAA7CE600BEC759 /* RMParallax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMParallax.swift; sourceTree = "<group>"; };
 		DD46740E1BAA7CE600BEC759 /* RMParallaxItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMParallaxItem.swift; sourceTree = "<group>"; };
 		DD46740F1BAA7CE600BEC759 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DD4674141BAA889600BEC759 /* ParsingHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsingHandle.h; sourceTree = "<group>"; };
-		DD4674151BAA889600BEC759 /* ParsingHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsingHandle.m; sourceTree = "<group>"; };
+		DD4674141BAA889600BEC759 /* FirebaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseManager.h; sourceTree = "<group>"; };
+		DD4674151BAA889600BEC759 /* FirebaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseManager.m; sourceTree = "<group>"; };
 		DD4674181BAA88B200BEC759 /* eventObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventObject.h; sourceTree = "<group>"; };
 		DD4674191BAA88B200BEC759 /* eventObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventObject.m; sourceTree = "<group>"; };
 		DD46741C1BAA88D400BEC759 /* eventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventsViewController.h; sourceTree = "<group>"; };
@@ -326,6 +327,8 @@
 		DDAFC73F1BABBF7C007E357A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		DDAFC7401BABBF7C007E357A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		DDC571271B6586F10043AC40 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		DDE38F311D1684720074E7D5 /* EventsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDataSource.h; sourceTree = "<group>"; };
+		DDE38F321D1684720074E7D5 /* EventsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDataSource.m; sourceTree = "<group>"; };
 		FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = socialCalendar.entitlements; path = socialCalendar/socialCalendar.entitlements; sourceTree = "<group>"; };
 		FF286BD41B51BB2E00F7D166 /* SCConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCConstants.h; sourceTree = "<group>"; };
 		FF353DAC1B5A488300DBA4A2 /* BentonSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans-Light.otf"; sourceTree = "<group>"; };
@@ -577,8 +580,8 @@
 		DD4674131BAA889600BEC759 /* Parsing Handle */ = {
 			isa = PBXGroup;
 			children = (
-				DD4674141BAA889600BEC759 /* ParsingHandle.h */,
-				DD4674151BAA889600BEC759 /* ParsingHandle.m */,
+				DD4674141BAA889600BEC759 /* FirebaseManager.h */,
+				DD4674151BAA889600BEC759 /* FirebaseManager.m */,
 			);
 			path = "Parsing Handle";
 			sourceTree = "<group>";
@@ -603,6 +606,8 @@
 				DD46741D1BAA88D400BEC759 /* eventsViewController.m */,
 				DD46741E1BAA88D400BEC759 /* eventViewCell.h */,
 				DD46741F1BAA88D400BEC759 /* eventViewCell.m */,
+				DDE38F311D1684720074E7D5 /* EventsDataSource.h */,
+				DDE38F321D1684720074E7D5 /* EventsDataSource.m */,
 			);
 			path = "Events Scene";
 			sourceTree = "<group>";
@@ -1157,6 +1162,7 @@
 				DD8AA64E1BA96F1200A48299 /* UIView+LoadNib.m in Sources */,
 				DDAFC7501BABBF7C007E357A /* UIImage+CropRotate.m in Sources */,
 				DD69B8B61CF2EB4900ADBB46 /* Event.m in Sources */,
+				DDE38F331D1684720074E7D5 /* EventsDataSource.m in Sources */,
 				DDAFC74E1BABBF7C007E357A /* TOCroppedImageAttributes.m in Sources */,
 				DD4674481BAA8A4800BEC759 /* SCEventHourCell.m in Sources */,
 				DD4674581BAA8A9100BEC759 /* calendarTableViewCell.m in Sources */,
@@ -1167,7 +1173,7 @@
 				DD4674101BAA7CE600BEC759 /* RMParallax.swift in Sources */,
 				DDAFC74A1BABBF7C007E357A /* SCAlertViewDataController.m in Sources */,
 				DDAFC7551BABBF7C007E357A /* TOCropView.m in Sources */,
-				DD4674161BAA889600BEC759 /* ParsingHandle.m in Sources */,
+				DD4674161BAA889600BEC759 /* FirebaseManager.m in Sources */,
 				DD4674501BAA8A4800BEC759 /* SCEventInfoViewController.m in Sources */,
 				DD4674511BAA8A4800BEC759 /* SCEventMapController.m in Sources */,
 				DD4674091BAA7C9000BEC759 /* SVIndefiniteAnimatedView.m in Sources */,

@@ -76,11 +76,11 @@
         installation[@"user"] = [PFUser currentUser];
         [installation saveInBackground];
 
-        [[ParsingHandle sharedParsing] findObjectsOfCurrentUserToCompletion: ^(NSArray *array) {
+        [[FirebaseManager sharedInstance] findObjectsOfCurrentUserToCompletion: ^(NSArray *array) {
             self.fetchedEvents = [[NSMutableArray alloc] init];
 
             for (PFObject *obj in array) {
-                eventObject *newObj = [[ParsingHandle sharedParsing] parseObjectToEventObject:obj];
+                eventObject *newObj = [[FirebaseManager sharedInstance] parseObjectToEventObject:obj];
                 [self.fetchedEvents addObject:newObj];
             }
             NSArray *sortedArray;
@@ -451,7 +451,7 @@
 
     [self.events removeObjectAtIndex:self.cellIndexToDelete];
 
-    [[ParsingHandle sharedParsing] deleteEventFromCloudByID:object.objectId ToCompletion: ^() {
+    [[FirebaseManager sharedInstance] deleteEventFromCloudByID:object.objectId ToCompletion: ^() {
     }];
 
     // Tell the table what has changed.

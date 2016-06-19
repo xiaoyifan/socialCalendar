@@ -96,11 +96,11 @@
     self.showFriend = true;
 
     [SVProgressHUD show];
-    [[ParsingHandle sharedParsing] getMyFriendsToCompletion: ^(NSArray *array) {
+    [[FirebaseManager sharedInstance] getMyFriendsToCompletion: ^(NSArray *array) {
         self.friendsArray = [array mutableCopy];
         self.dataArray = self.friendsArray;
 
-        [[ParsingHandle sharedParsing] getApprovedUsersToCompletion: ^(NSArray *array) {
+        [[FirebaseManager sharedInstance] getApprovedUsersToCompletion: ^(NSArray *array) {
             [self.dataArray addObjectsFromArray:array];
         }];
 
@@ -128,7 +128,7 @@
     [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor whiteColor]];
 
     [SVProgressHUD show];
-    [[ParsingHandle sharedParsing] getMyFriendsToCompletion: ^(NSArray *array) {
+    [[FirebaseManager sharedInstance] getMyFriendsToCompletion: ^(NSArray *array) {
         self.friendsArray = [array mutableCopy];
 
         self.dataArray = self.friendsArray;
@@ -151,7 +151,7 @@
     [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#3b5998"]];
 
     [SVProgressHUD show];
-    [[ParsingHandle sharedParsing] getMyPendingReceivedRequestToCompletion: ^(NSArray *array) {
+    [[FirebaseManager sharedInstance] getMyPendingReceivedRequestToCompletion: ^(NSArray *array) {
         self.requestObjectArray = [array mutableCopy];
         //use this array to store the request, not the request users
 
@@ -197,7 +197,7 @@
         [approvedQuery setObject:@"approved" forKey:@"status"];
         [approvedQuery saveInBackgroundWithBlock:nil];
 
-        [[ParsingHandle sharedParsing] approvedFriendRequestFrom:user];
+        [[FirebaseManager sharedInstance] approvedFriendRequestFrom:user];
         //add two users to the relation
 
         PFQuery *pushQuery = [PFInstallation query];
