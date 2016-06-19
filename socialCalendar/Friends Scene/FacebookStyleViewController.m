@@ -216,8 +216,6 @@
 {
     UIButton *senderButton = (UIButton *)sender;
     NSLog(@"%ld", (long)senderButton.tag);
-    PFUser *user = [self.dataArray objectAtIndex:senderButton.tag];
-    //get the user from
 
     [senderButton setTitle:@"denied" forState:UIControlStateNormal];
     [senderButton setBackgroundColor:[UIColor darkGrayColor]];
