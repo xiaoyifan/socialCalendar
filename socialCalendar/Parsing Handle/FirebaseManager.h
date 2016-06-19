@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@import FirebaseDatabase;
+@import Firebase;
+
 @interface FirebaseManager : NSObject
 
 +(id)sharedInstance;
 
+- (FIRDatabaseQuery *) getEventQueryFromCurrentUser;
+
+- (FIRDatabaseQuery *) getEventQueryFromUser: (FIRUser *)user;
 
 -(void)findObjectsOfCurrentUserToCompletion:(void(^)(NSArray *array))completion;
 

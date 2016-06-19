@@ -8,6 +8,12 @@
 
 #import "FirebaseManager.h"
 
+@interface FirebaseManager ()
+
+@property (strong, nonatomic) FIRDatabaseReference *ref;
+
+@end
+
 @implementation FirebaseManager
 
 + (id)sharedInstance
@@ -19,6 +25,23 @@
         shared = [[self alloc]init];
     });
     return shared;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _ref = [[FIRDatabase database] reference];
+    }
+    return self;
+}
+
+- (FIRDatabaseQuery *) getEventQueryFromCurrentUser {
+    return [self getEventQueryFromUser:[FIRAuth auth].currentUser];
+}
+
+- (FIRDatabaseQuery *) getEventQueryFromUser: (FIRUser *)user {
+    return [[self.ref child:@"user-posts"] child:user.uid];
 }
 
 - (void)findObjectsOfCurrentUserToCompletion:( void (^)(NSArray *) )completion
