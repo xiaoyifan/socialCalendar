@@ -51,7 +51,7 @@
 
     [self loadDataEvents];
 
-    self.tableView.backgroundColor = [UIColor hx_colorWithHexString:@"#EDEDED"];
+    self.tableView.backgroundColor = [UIColor hx_colorWithHexRGBAString:@"#EDEDED"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -118,7 +118,7 @@
 {
     eventViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"eventCell" forIndexPath:indexPath];
 
-    cell.contentView.backgroundColor = [UIColor hx_colorWithHexString:@"#EDEDED"];
+    cell.contentView.backgroundColor = [UIColor hx_colorWithHexRGBAString:@"#EDEDED"];
 
     cell.backgroundCardView.layer.cornerRadius = 10.0;
 
@@ -217,11 +217,11 @@
     shareBubbles.showMailBubble = YES;
 
     [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"wechat"]
-                          backgroundColor:[UIColor hx_colorWithHexString:@"#00CC00"]
+                          backgroundColor:[UIColor hx_colorWithHexRGBAString:@"#00CC00"]
                               andButtonId:101];
 
     [shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"weibo"]
-                          backgroundColor:[UIColor hx_colorWithHexString:@"#FFCC11"]
+                          backgroundColor:[UIColor hx_colorWithHexRGBAString:@"#FFCC11"]
                               andButtonId:120];
 
     self.eventToShare = [self.events objectAtIndex:sender.tag];
@@ -229,7 +229,7 @@
     [shareBubbles show];
 }
 
-- (void)aaShareBubbles:(AAShareBubbles *)shareBubbles tappedBubbleWithType:(int)bubbleType
+- (void)aaShareBubbles:(AAShareBubbles *)shareBubbles tappedBubbleWithType:(AAShareBubbleType)bubbleType
 {
     switch (bubbleType) {
         case AAShareBubbleTypeFacebook:
@@ -246,7 +246,6 @@
             NSLog(@"mail");
             [self shareOnMail];
             break;
-
         case 101:
             NSLog(@"wechat");
             [self shareOnWechat];

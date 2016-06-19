@@ -108,7 +108,7 @@
         [SVProgressHUD dismiss];
     }];
 
-    [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor hx_colorWithHexString:@"#3b5998"]];
+    [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#3b5998"]];
     [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor whiteColor]];
     [self.myCustomBar.friendButton setBackgroundColor:[UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1]];
     [self.myCustomBar.requestButton setBackgroundColor:[UIColor whiteColor]];
@@ -123,7 +123,7 @@
     [self.myCustomBar.friendButton setBackgroundColor:[UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1]];
     [self.myCustomBar.requestButton setBackgroundColor:[UIColor whiteColor]];
 
-    [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor hx_colorWithHexString:@"#3b5998"]];
+    [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#3b5998"]];
 
     [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor whiteColor]];
 
@@ -148,7 +148,7 @@
     [self.myCustomBar.requestButton setBackgroundColor:[UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1]];
 
     [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor whiteColor]];
-    [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor hx_colorWithHexString:@"#3b5998"]];
+    [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#3b5998"]];
 
     [SVProgressHUD show];
     [[ParsingHandle sharedParsing] getMyPendingReceivedRequestToCompletion: ^(NSArray *array) {
@@ -275,14 +275,14 @@
 
     if (self.showFriend) {
         [cell.actionButton setTitle:@"unfriend" forState:UIControlStateNormal];
-        [cell.actionButton setBackgroundColor:[UIColor hx_colorWithHexString:@"#3b5998"]];
+        [cell.actionButton setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#3b5998"]];
 
         cell.secondButtonWidth.constant = 0.0f;
     } else {
         //request table
 
         [cell.actionButton setTitle:@"add" forState:UIControlStateNormal];
-        [cell.actionButton setBackgroundColor:[UIColor hx_colorWithHexString:@"#3b5998"]];
+        [cell.actionButton setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#3b5998"]];
 
         cell.secondButtonWidth.constant = 70.0f;
 
