@@ -72,16 +72,25 @@
     [components setSecond:59];
     NSDate *tonightEnd = [calendarCurrent dateFromComponents:components];
 
-    PFQuery *query = [PFQuery queryWithClassName:@"Events"];
-    [query whereKey:@"createdBy" equalTo:[PFUser currentUser]];
-    [query whereKey:@"time" greaterThan:morningStart];
-    [query whereKey:@"time" lessThan:tonightEnd];
-    [query findObjectsInBackgroundWithBlock: ^(NSArray *objects, NSError *error) {
-        if (!error) {
-            //Etc...
-            //completion(objects);
-        }
-    }];
+//    PFQuery *query = [PFQuery queryWithClassName:@"Events"];
+//    [query whereKey:@"createdBy" equalTo:[PFUser currentUser]];
+//    [query whereKey:@"time" greaterThan:morningStart];
+//    [query whereKey:@"time" lessThan:tonightEnd];
+//    [query findObjectsInBackgroundWithBlock: ^(NSArray *objects, NSError *error) {
+//        if (!error) {
+//            //Etc...
+//            //completion(objects);
+//        }
+//    }];
+    
+    
+    [[[[self.ref child:@"user-event"]  child:[FIRAuth auth].currentUser.uid] queryOrderedByChild:@"time"]
+     observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+         
+         completion([self parseObjectToEventObject:snapshot.value]);
+
+     }];
+    
 }
 
 //query the local events from event kit
@@ -206,6 +215,16 @@
 
     return newObj;
 }
+
+
+
+
+
+
+
+
+
+
 
 - (void)getAllUsersToCompletion:( void (^)(NSArray *array) )completion
 {

@@ -55,23 +55,18 @@
     recognizer.delaysTouchesBegan = YES;
     [self.eventTableView addGestureRecognizer:recognizer];
 
-
+    self.eventsToday = [[NSMutableArray alloc] init];
+    
+    [self.eventsToday addObjectsFromArray:[[FirebaseManager sharedInstance] findObjectsFromNativeCalendarOnDate:[NSDate date]]];
+    [self.eventTableView reloadData];
+    
     [[FirebaseManager sharedInstance] findObjectsofDate:[NSDate date] ToCompletion: ^(eventObject *obj) {
-//        self.eventsToday = [[NSMutableArray alloc] init];
-//        NSLog(@"today contains %lu events", (unsigned long)array.count);
-//
-//        for (PFObject *obj in array) {
-//            eventObject *newObj = [[FirebaseManager sharedInstance] parseObjectToEventObject:obj];
-//            [self.eventsToday addObject:newObj];
-//        }
-//        [self.eventsToday addObjectsFromArray:[[FirebaseManager sharedInstance] findObjectsFromNativeCalendarOnDate:[NSDate date]]];
-//
-//
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self.eventTableView reloadData];
-//
-//            [[NSNotificationCenter defaultCenter] postNotificationName:@"TodaytableViewdidLoad" object:self];
-//        });
+
+        [self.eventsToday addObject:obj];
+        [self.eventTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.eventsToday count] - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+        
+        [SVProgressHUD dismiss];
+
     }];
 }
 
@@ -154,22 +149,16 @@
 {
     NSLog(@"%@", date);
     [SVProgressHUD show];
+    self.eventsToday = [[NSMutableArray alloc] init];
+    [self.eventsToday addObjectsFromArray:[[FirebaseManager sharedInstance] findObjectsFromNativeCalendarOnDate:date]];
+    [self.eventTableView reloadData];
+    
     [[FirebaseManager sharedInstance] findObjectsofDate:date ToCompletion: ^(eventObject * obj) {
-//        self.eventsToday = [[NSMutableArray alloc] init];
-//        NSLog(@"today contains %lu events", (unsigned long)array.count);
-//
-//        for (PFObject *obj in array) {
-//            eventObject *newObj = [[FirebaseManager sharedInstance] parseObjectToEventObject:obj];
-//            [self.eventsToday addObject:newObj];
-//        }
-//
-//        [self.eventsToday addObjectsFromArray:[[FirebaseManager sharedInstance] findObjectsFromNativeCalendarOnDate:date]];
-//
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self.eventTableView reloadData];
-//            [SVProgressHUD dismiss];
-//            [[NSNotificationCenter defaultCenter] postNotificationName:@"TodaytableViewdidLoad" object:self];
-//        });
+
+        [self.eventsToday addObject:obj];
+        [self.eventTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.eventsToday count] - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+        [SVProgressHUD dismiss];
+       
     }];
 }
 
