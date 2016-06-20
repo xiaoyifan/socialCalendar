@@ -39,10 +39,17 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     
     [self switchDataChanged];
     
+    NSLog(@"%@", [FIRAuth auth].currentUser);
+    
     [_operationSwitch addTarget:self action:@selector(switchDataChanged) forControlEvents:UIControlEventValueChanged];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
+    
+    if ([FIRAuth auth].currentUser) {
+        [self signedIn:[FIRAuth auth].currentUser];
+    }
     
     LAContext * localContext = [LAContext new];
     
