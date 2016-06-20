@@ -15,21 +15,18 @@
 
 +(id)sharedInstance;
 
-- (FIRDatabaseQuery *) getEventQueryFromCurrentUser;
-
-- (FIRDatabaseQuery *) getEventQueryFromUser: (FIRUser *)user;
 
 -(void)findObjectsOfCurrentUserToCompletion:(void(^)(NSArray *array))completion;
 
--(void)findObjectsOfUser:(PFUser *)user ToCompletion:(void(^)(NSArray *array))completion;
+-(void)findObjectsOfUser:(FIRUser *)user ToCompletion:(void(^)(NSArray *array))completion;
 
 -(void)findObjectsofDate:(NSDate *)date ToCompletion:(void (^)(NSArray *array))completion;
 
 -(NSArray *)findObjectsFromNativeCalendarOnDate:(NSDate *)date;
 
--(void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user ToCompletion:(void (^)())completion;
+-(void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(FIRUser *)user ToCompletion:(void (^)(NSError *error))completion;
 
--(void)insertNewObjectToDatabase:(eventObject *)newObj ToCompletion:(void (^)())completion;
+-(void)insertNewObjectToDatabase:(eventObject *)newObj ToCompletion:(void (^)(NSError *error))completion;
 
 
 -(eventObject *)parseObjectToEventObject:(PFObject *)object;

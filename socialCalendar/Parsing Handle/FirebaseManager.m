@@ -36,20 +36,13 @@
     return self;
 }
 
-- (FIRDatabaseQuery *) getEventQueryFromCurrentUser {
-    return [self getEventQueryFromUser:[FIRAuth auth].currentUser];
-}
-
-- (FIRDatabaseQuery *) getEventQueryFromUser: (FIRUser *)user {
-    return [[self.ref child:@"user-posts"] child:user.uid];
-}
 
 - (void)findObjectsOfCurrentUserToCompletion:( void (^)(NSArray *) )completion
 {
-    [self findObjectsOfUser:[PFUser currentUser] ToCompletion:completion];
+    [self findObjectsOfUser:[FIRAuth auth].currentUser ToCompletion:completion];
 }
 
-- (void)findObjectsOfUser:(PFUser *)user ToCompletion:( void (^)(NSArray *array) )completion
+- (void)findObjectsOfUser:(FIRUser *)user ToCompletion:( void (^)(NSArray *array) )completion
 {
     PFQuery *eventQuery = [PFQuery queryWithClassName:@"Events"];
     [eventQuery whereKey:@"group" equalTo:user];
@@ -66,8 +59,16 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
+    
+    
+    [[[[self.ref child:@"events"] queryOrderedByChild:@"created_by"] queryEqualToValue:user.uid]
+        observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            
+            
+        }];
 }
 
+//get the events online
 - (void)findObjectsofDate:(NSDate *)date ToCompletion:( void (^)(NSArray *array) )completion
 {
     NSLog(@"date to find: %@", date);
@@ -95,6 +96,7 @@
     }];
 }
 
+//query the local events from event kit
 - (NSArray *)findObjectsFromNativeCalendarOnDate:(NSDate *)date
 {
     EKEventStore *eventStore = [[EKEventStore alloc] init];
@@ -134,47 +136,45 @@
     return [array copy];
 }
 
-- (void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user ToCompletion:( void (^)() )completion
+
+- (void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(FIRUser *)user ToCompletion:( void (^)(NSError *error) )completion
 {
-    PFObject *event = [PFObject objectWithClassName:@"Events"];
-
-    event[@"title"] = newObj.title;
-    event[@"time"] = newObj.time;
-    event[@"reminderDate"]  = newObj.reminderDate;
-
     PFGeoPoint *point = [PFGeoPoint geoPointWithLocation:newObj.location];
+    
+    NSDictionary *locationDict = @{
+                                   @"lati": [NSNumber numberWithDouble:point.latitude],
+                                   @"long": [NSNumber numberWithDouble:point.longitude]
+                                   };
 
-    event[@"location"] = point;
-    if (newObj.locationDescription.length == 0) {
-        event[@"locationDescription"] = [NSNull null];
-    } else {
-        event[@"locationDescription"] = newObj.locationDescription;
-    }
-    event[@"eventNote"] = newObj.eventNote;
-
-    [event setObject:user forKey:@"createdBy"];
-
-
-    PFRelation *groupRelation = [event relationForKey:@"group"];
-
-    for (PFUser *user in newObj.group) {
-        [groupRelation addObject:user];
-    }
-    [groupRelation addObject:[PFUser currentUser]];
-
-    [event saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
-        if (!succeeded) {
-            // The object has been saved.
-            NSLog(@"%@", error);
-        } else {
-            completion();
-        }
+    
+    FIRDatabaseReference *messageRef = [self.ref child:@"events"];
+    NSString *newKey = [messageRef childByAutoId].key;
+    
+    NSDictionary *eventDict = @{
+                                @"title": newObj.title,
+                                @"time": [NSNumber numberWithInt:[newObj.time timeIntervalSince1970]],
+                                @"reminderDate": [NSNumber numberWithInt:[newObj.reminderDate timeIntervalSince1970]],
+                                @"location": locationDict,
+                                @"locationDescription": newObj.locationDescription,
+                                @"eventNote": newObj.eventNote,
+                                @"created_by": user.uid
+                                
+                                };
+    
+    NSDictionary *insertNewEvent = @{
+                                     [@"/events/" stringByAppendingString:newKey]: eventDict,
+                                     [NSString stringWithFormat:@"/user-event/%@/%@/", user.uid, newKey]: eventDict
+                                     };
+    
+    [self.ref updateChildValues:insertNewEvent withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        
+        completion(error);
     }];
 }
 
-- (void)insertNewObjectToDatabase:(eventObject *)newObj ToCompletion:( void (^)() )completion
+- (void)insertNewObjectToDatabase:(eventObject *)newObj ToCompletion:( void (^)(NSError *error) )completion
 {
-    [self insertNewObjectToDatabase:newObj createdBy:[PFUser currentUser] ToCompletion:completion];
+    [self insertNewObjectToDatabase:newObj createdBy:[FIRAuth auth].currentUser ToCompletion:completion];
 }
 
 - (eventObject *)parseObjectToEventObject:(PFObject *)object

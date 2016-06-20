@@ -117,7 +117,6 @@
 		DDAFC7541BABBF7C007E357A /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73C1BABBF7C007E357A /* TOCropToolbar.m */; };
 		DDAFC7551BABBF7C007E357A /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAFC73E1BABBF7C007E357A /* TOCropView.m */; };
 		DDC571281B6586F10043AC40 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DDC571271B6586F10043AC40 /* logo.png */; };
-		DDE38F331D1684720074E7D5 /* EventsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE38F321D1684720074E7D5 /* EventsDataSource.m */; };
 		FFC5B1CB1B6562FF00A72286 /* SCHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC5B1CA1B6562FF00A72286 /* SCHelperMethods.m */; };
 /* End PBXBuildFile section */
 
@@ -327,8 +326,6 @@
 		DDAFC73F1BABBF7C007E357A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		DDAFC7401BABBF7C007E357A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		DDC571271B6586F10043AC40 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		DDE38F311D1684720074E7D5 /* EventsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDataSource.h; sourceTree = "<group>"; };
-		DDE38F321D1684720074E7D5 /* EventsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDataSource.m; sourceTree = "<group>"; };
 		FF0D8AF11B369AF100E1BE2D /* socialCalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = socialCalendar.entitlements; path = socialCalendar/socialCalendar.entitlements; sourceTree = "<group>"; };
 		FF286BD41B51BB2E00F7D166 /* SCConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCConstants.h; sourceTree = "<group>"; };
 		FF353DAC1B5A488300DBA4A2 /* BentonSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans-Light.otf"; sourceTree = "<group>"; };
@@ -606,8 +603,6 @@
 				DD46741D1BAA88D400BEC759 /* eventsViewController.m */,
 				DD46741E1BAA88D400BEC759 /* eventViewCell.h */,
 				DD46741F1BAA88D400BEC759 /* eventViewCell.m */,
-				DDE38F311D1684720074E7D5 /* EventsDataSource.h */,
-				DDE38F321D1684720074E7D5 /* EventsDataSource.m */,
 			);
 			path = "Events Scene";
 			sourceTree = "<group>";
@@ -1162,7 +1157,6 @@
 				DD8AA64E1BA96F1200A48299 /* UIView+LoadNib.m in Sources */,
 				DDAFC7501BABBF7C007E357A /* UIImage+CropRotate.m in Sources */,
 				DD69B8B61CF2EB4900ADBB46 /* Event.m in Sources */,
-				DDE38F331D1684720074E7D5 /* EventsDataSource.m in Sources */,
 				DDAFC74E1BABBF7C007E357A /* TOCroppedImageAttributes.m in Sources */,
 				DD4674481BAA8A4800BEC759 /* SCEventHourCell.m in Sources */,
 				DD4674581BAA8A9100BEC759 /* calendarTableViewCell.m in Sources */,

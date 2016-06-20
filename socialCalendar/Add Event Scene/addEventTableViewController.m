@@ -314,9 +314,13 @@
             [push sendPushInBackground];
         }
 
-        [[FirebaseManager sharedInstance] insertNewObjectToDatabase:self.object ToCompletion: ^{
-            [SVProgressHUD dismiss];
-            [SVProgressHUD showSuccessWithStatus:@"New Events Added!"];
+        [[FirebaseManager sharedInstance] insertNewObjectToDatabase:self.object ToCompletion: ^(NSError *error){
+            
+            if (error == NULL) {
+                [SVProgressHUD dismiss];
+                [SVProgressHUD showSuccessWithStatus:@"New Events Added!"];
+            }
+            
         }];
 
         [self registerLocalNotificationForEvent:self.object];

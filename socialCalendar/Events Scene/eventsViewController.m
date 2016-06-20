@@ -49,7 +49,7 @@
 //    [self presentViewController:self.vc animated:NO completion:nil];
 //    [self.view addSubview:self.vc.view];
 
-    [self loadDataEvents];
+    //[self loadDataEvents];
 
     self.tableView.backgroundColor = [UIColor hx_colorWithHexRGBAString:@"#EDEDED"];
 }
