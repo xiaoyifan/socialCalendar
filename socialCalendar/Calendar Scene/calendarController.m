@@ -64,8 +64,6 @@
 
         [self.eventsToday addObject:obj];
         [self.eventTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.eventsToday count] - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
-        
-        [SVProgressHUD dismiss];
 
     }];
 }
@@ -147,8 +145,7 @@
 
 - (void)calendarDidDateSelected:(JTCalendar *)calendar date:(NSDate *)date
 {
-    NSLog(@"%@", date);
-    [SVProgressHUD show];
+
     self.eventsToday = [[NSMutableArray alloc] init];
     [self.eventsToday addObjectsFromArray:[[FirebaseManager sharedInstance] findObjectsFromNativeCalendarOnDate:date]];
     [self.eventTableView reloadData];
@@ -157,7 +154,6 @@
 
         [self.eventsToday addObject:obj];
         [self.eventTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.eventsToday count] - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
-        [SVProgressHUD dismiss];
        
     }];
 }

@@ -72,24 +72,16 @@
     [components setSecond:59];
     NSDate *tonightEnd = [calendarCurrent dateFromComponents:components];
 
-//    PFQuery *query = [PFQuery queryWithClassName:@"Events"];
-//    [query whereKey:@"createdBy" equalTo:[PFUser currentUser]];
-//    [query whereKey:@"time" greaterThan:morningStart];
-//    [query whereKey:@"time" lessThan:tonightEnd];
-//    [query findObjectsInBackgroundWithBlock: ^(NSArray *objects, NSError *error) {
-//        if (!error) {
-//            //Etc...
-//            //completion(objects);
-//        }
-//    }];
     
+    FIRDatabaseQuery * userEventQuery = [[[self.ref child:@"user-event"]  child:[FIRAuth auth].currentUser.uid] queryOrderedByChild:@"time"];
     
-    [[[[self.ref child:@"user-event"]  child:[FIRAuth auth].currentUser.uid] queryOrderedByChild:@"time"]
-     observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-         
-         completion([self parseObjectToEventObject:snapshot.value]);
-
-     }];
+    FIRDatabaseQuery * todayQuery =[[userEventQuery queryStartingAtValue:[NSNumber numberWithInt:[morningStart timeIntervalSince1970]] childKey:@"time"] queryEndingAtValue:[NSNumber numberWithInt:[tonightEnd timeIntervalSince1970]] childKey:@"time"];
+    
+    [todayQuery observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        
+        completion([self parseObjectToEventObject:snapshot.value]);
+        
+    }];
     
 }
 
