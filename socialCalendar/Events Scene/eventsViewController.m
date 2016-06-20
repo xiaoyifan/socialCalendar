@@ -171,21 +171,21 @@
 
 - (IBAction)unwindToMainTable:(UIStoryboardSegue *)segue
 {
-    addEventTableViewController *source = [segue sourceViewController];
-    eventObject *item = source.object;
-    if (item != nil) {
-        for (int i = 0; i < self.events.count; i++) {
-            eventObject *obj = [self.events objectAtIndex:i];
-            if ([obj.time compare:item.time] == NSOrderedAscending) {
-                [self.events insertObject:item atIndex:i];
-                break;
-            }
-        }
-
-        NSLog(@"%@", item.title);
-
-        [self.tableView reloadData];
-    }
+//    addEventTableViewController *source = [segue sourceViewController];
+//    eventObject *item = source.object;
+//    if (item != nil) {
+//        for (int i = 0; i < self.events.count; i++) {
+//            eventObject *obj = [self.events objectAtIndex:i];
+//            if ([obj.time compare:item.time] == NSOrderedAscending) {
+//                [self.events insertObject:item atIndex:i];
+//                break;
+//            }
+//        }
+//
+//        NSLog(@"%@", item.title);
+//
+//        [self.tableView reloadData];
+//    }
 }
 
 #pragma mark - share button pressed delegate
