@@ -16,11 +16,11 @@
 +(id)sharedInstance;
 
 
--(void)findObjectsOfCurrentUserToCompletion:(void(^)(NSArray *array))completion;
+-(void)findObjectsOfCurrentUserToCompletion:(void(^)(eventObject * obj))completion;
 
--(void)findObjectsOfUser:(FIRUser *)user ToCompletion:(void(^)(NSArray *array))completion;
+-(void)findObjectsOfUser:(FIRUser *)user ToCompletion:(void(^)(eventObject * obj))completion;
 
--(void)findObjectsofDate:(NSDate *)date ToCompletion:(void (^)(NSArray *array))completion;
+-(void)findObjectsofDate:(NSDate *)date ToCompletion:(void (^)(eventObject * obj))completion;
 
 -(NSArray *)findObjectsFromNativeCalendarOnDate:(NSDate *)date;
 

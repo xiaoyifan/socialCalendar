@@ -37,39 +37,27 @@
 }
 
 
-- (void)findObjectsOfCurrentUserToCompletion:( void (^)(NSArray *) )completion
+- (void)findObjectsOfCurrentUserToCompletion:( void (^)(eventObject * obj) )completion
 {
     [self findObjectsOfUser:[FIRAuth auth].currentUser ToCompletion:completion];
 }
 
-- (void)findObjectsOfUser:(FIRUser *)user ToCompletion:( void (^)(NSArray *array) )completion
+- (void)findObjectsOfUser:(FIRUser *)user ToCompletion:( void (^)(eventObject *) )completion
 {
-    PFQuery *eventQuery = [PFQuery queryWithClassName:@"Events"];
-    [eventQuery whereKey:@"group" equalTo:user];
-
-
-    [eventQuery findObjectsInBackgroundWithBlock: ^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %lu events.", (unsigned long)objects.count);
-
-            completion(objects);
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-    
-    
-    [[[[self.ref child:@"events"] queryOrderedByChild:@"created_by"] queryEqualToValue:user.uid]
+    [[[[self.ref child:@"user-event"]  child:user.uid] queryOrderedByChild:@"time"]
         observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
             
+            completion([self parseObjectToEventObject:snapshot.value]);
             
+            NSLog(@"%@", snapshot.value);
         }];
+    
+    
+    
 }
 
 //get the events online
-- (void)findObjectsofDate:(NSDate *)date ToCompletion:( void (^)(NSArray *array) )completion
+- (void)findObjectsofDate:(NSDate *)date ToCompletion:( void (^)(eventObject * obj) )completion
 {
     NSLog(@"date to find: %@", date);
     NSCalendar *calendarCurrent = [NSCalendar currentCalendar];
@@ -91,7 +79,7 @@
     [query findObjectsInBackgroundWithBlock: ^(NSArray *objects, NSError *error) {
         if (!error) {
             //Etc...
-            completion(objects);
+            //completion(objects);
         }
     }];
 }
@@ -177,22 +165,20 @@
     [self insertNewObjectToDatabase:newObj createdBy:[FIRAuth auth].currentUser ToCompletion:completion];
 }
 
-- (eventObject *)parseObjectToEventObject:(PFObject *)object
+- (eventObject *)parseObjectToEventObject:(NSDictionary *)object
 {
-    eventObject *retrivedObj = [[eventObject alloc] init];
-    retrivedObj.title = [object objectForKey:@"title"];
-    retrivedObj.time = [object objectForKey:@"time"];
-    retrivedObj.reminderDate = [object objectForKey:@"reminderDate"];
-
-    PFGeoPoint *point = [object objectForKey:@"location"];
-    retrivedObj.location = [[CLLocation alloc] initWithLatitude:point.latitude longitude:point.longitude];
-    retrivedObj.locationDescription = [object objectForKey:@"locationDescription"];
-    retrivedObj.eventNote = [object objectForKey:@"eventNote"];
-
-    retrivedObj.objectId = object.objectId;
-
-    retrivedObj.isInternalEvent = FALSE;
-
+    eventObject *retrivedObj = [eventObject new];
+    
+    retrivedObj.title = object[@"title"];
+    retrivedObj.locationDescription = object[@"locationDescription"];
+    retrivedObj.time = [NSDate dateWithTimeIntervalSince1970: [object[@"time"] intValue]];
+    retrivedObj.reminderDate = [NSDate dateWithTimeIntervalSince1970: [object[@"reminderDate"] intValue]];
+    retrivedObj.eventNote = object[@"eventNote"];
+    
+    NSDictionary *locationDict = object[@"location"];
+    
+    retrivedObj.location = [[CLLocation alloc] initWithLatitude:[locationDict[@"lati"] doubleValue] longitude:[locationDict[@"long"] doubleValue]];
+    
     return retrivedObj;
 }
 

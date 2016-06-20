@@ -114,56 +114,31 @@
     switch (rowType) {
         case SCUserDetailModuleTypeNickName:
         {
-            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Username:text ToCompletion: ^(BOOL finished) {
-                completion(finished);
+            [[FirebaseManager sharedInstance] updateUser:[FIRAuth auth].currentUser Username:text ToCompletion: ^(NSError *error) {
+                completion(error);
             }];
         }
         break;
 
         case SCUserDetailModuleTypeEmail:
         {
-            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Email:text ToCompletion: ^(BOOL finished) {
-                completion(finished);
+            [[FirebaseManager sharedInstance] updateUser:[FIRAuth auth].currentUser Email:text ToCompletion: ^(NSError *error) {
+                completion(error);
             }];
         }
         break;
-
-        case SCUserDetailModuleTypeEducation:
-        {
-            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Education:text ToCompletion: ^(BOOL finished) {
-                completion(finished);
-            }];
-        }
-        break;
-
-        case SCUserDetailModuleTypeWork:
-        {
-            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Work:text ToCompletion: ^(BOOL finished) {
-                completion(finished);
-            }];
-        }
-        break;
-
-        case SCUserDetailModuleTypeWebsite:
-        {
-            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Website:text ToCompletion: ^(BOOL finished) {
-                completion(finished);
-            }];
-        }
-        break;
-
         case SCUserDetailModuleTypeWhatsUp:
         {
-            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Whatsup:text ToCompletion: ^(BOOL finished) {
-                completion(finished);
+            [[FirebaseManager sharedInstance] updateUser:[FIRAuth auth].currentUser Whatsup:text ToCompletion: ^(NSError *error) {
+                completion(error);
             }];
         }
         break;
 
         case SCUserDetailModuleTypeGender:
         {
-            [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Gender:text ToCompletion: ^(BOOL finished) {
-                completion(finished);
+            [[FirebaseManager sharedInstance] updateUser:[FIRAuth auth].currentUser Gender:text ToCompletion: ^(NSError *error) {
+                completion(error);
             }];
         }
         break;

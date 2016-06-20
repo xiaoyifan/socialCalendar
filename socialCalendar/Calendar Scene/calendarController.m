@@ -56,22 +56,22 @@
     [self.eventTableView addGestureRecognizer:recognizer];
 
 
-    [[FirebaseManager sharedInstance] findObjectsofDate:[NSDate date] ToCompletion: ^(NSArray *array) {
-        self.eventsToday = [[NSMutableArray alloc] init];
-        NSLog(@"today contains %lu events", (unsigned long)array.count);
-
-        for (PFObject *obj in array) {
-            eventObject *newObj = [[FirebaseManager sharedInstance] parseObjectToEventObject:obj];
-            [self.eventsToday addObject:newObj];
-        }
-        [self.eventsToday addObjectsFromArray:[[FirebaseManager sharedInstance] findObjectsFromNativeCalendarOnDate:[NSDate date]]];
-
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.eventTableView reloadData];
-
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"TodaytableViewdidLoad" object:self];
-        });
+    [[FirebaseManager sharedInstance] findObjectsofDate:[NSDate date] ToCompletion: ^(eventObject *obj) {
+//        self.eventsToday = [[NSMutableArray alloc] init];
+//        NSLog(@"today contains %lu events", (unsigned long)array.count);
+//
+//        for (PFObject *obj in array) {
+//            eventObject *newObj = [[FirebaseManager sharedInstance] parseObjectToEventObject:obj];
+//            [self.eventsToday addObject:newObj];
+//        }
+//        [self.eventsToday addObjectsFromArray:[[FirebaseManager sharedInstance] findObjectsFromNativeCalendarOnDate:[NSDate date]]];
+//
+//
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self.eventTableView reloadData];
+//
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"TodaytableViewdidLoad" object:self];
+//        });
     }];
 }
 
@@ -154,22 +154,22 @@
 {
     NSLog(@"%@", date);
     [SVProgressHUD show];
-    [[FirebaseManager sharedInstance] findObjectsofDate:date ToCompletion: ^(NSArray *array) {
-        self.eventsToday = [[NSMutableArray alloc] init];
-        NSLog(@"today contains %lu events", (unsigned long)array.count);
-
-        for (PFObject *obj in array) {
-            eventObject *newObj = [[FirebaseManager sharedInstance] parseObjectToEventObject:obj];
-            [self.eventsToday addObject:newObj];
-        }
-
-        [self.eventsToday addObjectsFromArray:[[FirebaseManager sharedInstance] findObjectsFromNativeCalendarOnDate:date]];
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.eventTableView reloadData];
-            [SVProgressHUD dismiss];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"TodaytableViewdidLoad" object:self];
-        });
+    [[FirebaseManager sharedInstance] findObjectsofDate:date ToCompletion: ^(eventObject * obj) {
+//        self.eventsToday = [[NSMutableArray alloc] init];
+//        NSLog(@"today contains %lu events", (unsigned long)array.count);
+//
+//        for (PFObject *obj in array) {
+//            eventObject *newObj = [[FirebaseManager sharedInstance] parseObjectToEventObject:obj];
+//            [self.eventsToday addObject:newObj];
+//        }
+//
+//        [self.eventsToday addObjectsFromArray:[[FirebaseManager sharedInstance] findObjectsFromNativeCalendarOnDate:date]];
+//
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self.eventTableView reloadData];
+//            [SVProgressHUD dismiss];
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"TodaytableViewdidLoad" object:self];
+//        });
     }];
 }
 

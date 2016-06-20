@@ -68,8 +68,8 @@
 
 - (IBAction)saveCurrentLocation:(id)sender
 {
-    [[FirebaseManager sharedInstance] updateUser:[PFUser currentUser] Location:self.regionLabel.text ToCompletion: ^(BOOL finished) {
-        if (finished) {
+    [[FirebaseManager sharedInstance] updateUser:[FIRAuth auth].currentUser Location:self.regionLabel.text ToCompletion: ^(NSError *error) {
+        if (error == NULL) {
             [SVProgressHUD showSuccessWithStatus:@"saved"];
             [self dismissViewControllerAnimated:YES completion:nil];
         } else {

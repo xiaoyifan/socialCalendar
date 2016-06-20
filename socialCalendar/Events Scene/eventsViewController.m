@@ -49,7 +49,7 @@
 //    [self presentViewController:self.vc animated:NO completion:nil];
 //    [self.view addSubview:self.vc.view];
 
-    //[self loadDataEvents];
+    [self loadDataEvents];
 
     self.tableView.backgroundColor = [UIColor hx_colorWithHexRGBAString:@"#EDEDED"];
 }
@@ -71,31 +71,14 @@
  */
 - (void)loadDataEvents
 {
-    if ([PFUser currentUser]) {
-        PFInstallation *installation = [PFInstallation currentInstallation];
-        installation[@"user"] = [PFUser currentUser];
-        [installation saveInBackground];
+    if ([FIRAuth auth].currentUser) {
 
-        [[FirebaseManager sharedInstance] findObjectsOfCurrentUserToCompletion: ^(NSArray *array) {
-            self.fetchedEvents = [[NSMutableArray alloc] init];
-
-            for (PFObject *obj in array) {
-                eventObject *newObj = [[FirebaseManager sharedInstance] parseObjectToEventObject:obj];
-                [self.fetchedEvents addObject:newObj];
-            }
-            NSArray *sortedArray;
-            sortedArray = [self.fetchedEvents sortedArrayUsingComparator: ^NSComparisonResult (id a, id b) {
-                NSDate *first = ( (eventObject *)a ).time;
-                NSDate *second = ( (eventObject *)b ).time;
-                return [second compare:first];
-            }];
-
-            self.events = [NSMutableArray arrayWithArray:sortedArray];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableView reloadData];
-
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"tableViewdidLoad" object:self];
-            });
+        self.events = [[NSMutableArray alloc] init];
+        
+        [[FirebaseManager sharedInstance] findObjectsOfCurrentUserToCompletion: ^(eventObject * obj) {
+        
+            [self.events addObject:obj];
+            [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.events count] - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
         }];
     }
 }
