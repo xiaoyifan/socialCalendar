@@ -49,13 +49,10 @@
 
 -(void)deleteEventFromCloudByID:(NSString *)objectId ToCompletion:(void (^)())completion;
 
--(void)updateUser:(PFUser*)user Email:(NSString*)email ToCompletion:( void (^)(BOOL finished) )completion;
--(void)updateUser:(PFUser*)user Username:(NSString*)username ToCompletion:( void (^)(BOOL finished) )completion;
--(void)updateUser:(PFUser*)user Education:(NSString*)education ToCompletion:( void (^)(BOOL finished) )completion;
--(void)updateUser:(PFUser*)user Work:(NSString*)work ToCompletion:( void (^)(BOOL finished) )completion;
--(void)updateUser:(PFUser*)user Website:(NSString*)website ToCompletion:( void (^)(BOOL finished) )completion;
--(void)updateUser:(PFUser*)user Gender:(NSString*)gender ToCompletion:( void (^)(BOOL finished) )completion;
--(void)updateUser:(PFUser*)user Location:(NSString*)location ToCompletion:( void (^)(BOOL finished) )completion;
-- (void)updateUser:(PFUser *)user Whatsup:(NSString *)whatsup ToCompletion:( void (^)(BOOL finished) )completion;
+- (void)updateUser:(FIRUser *)user Email:(NSString*)email ToCompletion:( void (^)(NSError *error) )completion;
+- (void)updateUser:(FIRUser *)user Username:(NSString*)username ToCompletion:( void (^)(NSError *error) )completion;
+- (void)updateUser:(FIRUser *)user Gender:(NSString*)gender ToCompletion:( void (^)(NSError *error) )completion;
+- (void)updateUser:(FIRUser *)user Location:(NSString*)location ToCompletion:( void (^)(NSError *error) )completion;
+- (void)updateUser:(FIRUser *)user Whatsup:(NSString *)whatsup ToCompletion:( void (^)(NSError *error) )completion;
 
 @end

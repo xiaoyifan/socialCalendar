@@ -377,67 +377,45 @@
     }];
 }
 
-- (void)updateUser:(PFUser *)user Username:(NSString *)username ToCompletion:( void (^)(BOOL finished) )completion
+
+
+
+- (void)updateUser:(FIRUser *)user Username:(NSString *)username ToCompletion:( void (^)(NSError *error) )completion
 {
-    [user setUsername:username];
-    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
-        completion(succeeded);
+    [[[[_ref child:@"users"] child:user.uid] child:@"username"] setValue:username withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        completion(error);
     }];
 }
 
-- (void)updateUser:(PFUser *)user Email:(NSString *)email ToCompletion:( void (^)(BOOL finished) )completion
+- (void)updateUser:(FIRUser *)user Email:(NSString *)email ToCompletion:( void (^)(NSError *error) )completion
 {
-    [user setEmail:email];
-    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
-        completion(succeeded);
+    [[[[_ref child:@"users"] child:user.uid] child:@"email"] setValue:email withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        
+        completion(error);
     }];
 }
 
-- (void)updateUser:(PFUser *)user Whatsup:(NSString *)whatsup ToCompletion:( void (^)(BOOL finished) )completion
+- (void)updateUser:(FIRUser *)user Whatsup:(NSString *)whatsup ToCompletion:( void (^)(NSError *error) )completion
 {
-    [user setObject:whatsup forKey:@"whatsUp"];
-    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
-        completion(succeeded);
+    [[[[_ref child:@"users"] child:user.uid] child:@"whatsup"] setValue:whatsup withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        
+        completion(error);
     }];
 }
 
-- (void)updateUser:(PFUser *)user Gender:(NSString *)gender ToCompletion:( void (^)(BOOL finished) )completion
+- (void)updateUser:(FIRUser *)user Gender:(NSString *)gender ToCompletion:( void (^)(NSError *error) )completion
 {
-    [user setObject:gender forKey:@"gender"];
-    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
-        completion(succeeded);
+    [[[[_ref child:@"users"] child:user.uid] child:@"gender"] setValue:gender withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        
+        completion(error);
     }];
 }
 
-- (void)updateUser:(PFUser *)user Location:(NSString *)location ToCompletion:( void (^)(BOOL finished) )completion
+- (void)updateUser:(FIRUser *)user Location:(NSString *)location ToCompletion:( void (^)(NSError *error) )completion
 {
-    [user setObject:location forKey:@"location"];
-    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
-        completion(succeeded);
-    }];
-}
-
-- (void)updateUser:(PFUser *)user Education:(NSString *)education ToCompletion:( void (^)(BOOL finished) )completion
-{
-    [user setObject:education forKey:@"education"];
-    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
-        completion(succeeded);
-    }];
-}
-
-- (void)updateUser:(PFUser *)user Work:(NSString *)work ToCompletion:( void (^)(BOOL finished) )completion
-{
-    [user setObject:work forKey:@"work"];
-    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
-        completion(succeeded);
-    }];
-}
-
-- (void)updateUser:(PFUser *)user Website:(NSString *)website ToCompletion:( void (^)(BOOL finished) )completion
-{
-    [user setObject:website forKey:@"website"];
-    [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
-        completion(succeeded);
+    [[[[_ref child:@"users"] child:user.uid] child:@"location"] setValue:location withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        
+        completion(error);
     }];
 }
 
