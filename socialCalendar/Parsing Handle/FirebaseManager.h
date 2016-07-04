@@ -50,6 +50,8 @@
 
 -(void)deleteEventFromCloudByID:(NSString *)objectId ToCompletion:(void (^)())completion;
 
+- (void)getCurrentUserInfoToCompletion:( void (^)(User * obj) )completion;
+
 - (void)updateUser:(FIRUser *)user Email:(NSString*)email ToCompletion:( void (^)(NSError *error) )completion;
 - (void)updateUser:(FIRUser *)user Username:(NSString*)username ToCompletion:( void (^)(NSError *error) )completion;
 - (void)updateUser:(FIRUser *)user Gender:(NSString*)gender ToCompletion:( void (^)(NSError *error) )completion;

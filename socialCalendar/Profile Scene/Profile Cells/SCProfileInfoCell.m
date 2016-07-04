@@ -10,8 +10,9 @@
 
 @implementation SCProfileInfoCell
 
-- (void)setupWithUser:(PFUser *)user withRowType:(SCUserDetailModuleType)rowtype
+- (void)setupWithUser:(User *)user withRowType:(SCUserDetailModuleType)rowtype
 {
+    
     switch (rowtype) {
         case SCUserDetailModuleTypeNickName:
         {
@@ -30,8 +31,8 @@
         case SCUserDetailModuleTypeRegion:
         {
             self.titleLabel.text = @"REGION";
-            if (user[@"location"]) {
-                self.contentLabel.text = user[@"location"];
+            if (user.locationDescription) {
+                self.contentLabel.text = user.locationDescription;
             } else {
                 self.contentLabel.text = @"not available";
             }
@@ -41,8 +42,8 @@
         case SCUserDetailModuleTypeGender:
         {
             self.titleLabel.text = @"GENDER";
-            if (user[@"gender"]) {
-                self.contentLabel.text = user[@"gender"];
+            if (user.gender) {
+                self.contentLabel.text = user.gender;
             } else {
                 self.contentLabel.text = @"not provided";
             }
@@ -52,8 +53,8 @@
         case SCUserDetailModuleTypeWhatsUp:
         {
             self.titleLabel.text = @"WHAT'S UP";
-            if (user[@"whatsUp"]) {
-                self.contentLabel.text = user[@"whatsUp"];
+            if (user.whatsup) {
+                self.contentLabel.text = user.whatsup;
             } else {
                 self.contentLabel.text = @"not provided";
             }
@@ -63,33 +64,33 @@
         case SCUserDetailModuleTypeEducation:
         {
             self.titleLabel.text = @"EDUCATION";
-            if (user[@"education"]) {
-                self.contentLabel.text = user[@"education"];
-            } else {
-                self.contentLabel.text = @"not provided";
-            }
+//            if (user[@"education"]) {
+//                self.contentLabel.text = user[@"education"];
+//            } else {
+//                self.contentLabel.text = @"not provided";
+//            }
             break;
         }
 
         case SCUserDetailModuleTypeWork:
         {
             self.titleLabel.text = @"WORK";
-            if (user[@"work"]) {
-                self.contentLabel.text = user[@"work"];
-            } else {
-                self.contentLabel.text = @"not provided";
-            }
+//            if (user[@"work"]) {
+//                self.contentLabel.text = user[@"work"];
+//            } else {
+//                self.contentLabel.text = @"not provided";
+//            }
             break;
         }
 
         case SCUserDetailModuleTypeWebsite:
         {
             self.titleLabel.text = @"WEBSITE";
-            if (user[@"website"]) {
-                self.contentLabel.text = user[@"website"];
-            } else {
-                self.contentLabel.text = @"type in your link";
-            }
+//            if (user[@"website"]) {
+//                self.contentLabel.text = user[@"website"];
+//            } else {
+//                self.contentLabel.text = @"type in your link";
+//            }
             break;
         }
 

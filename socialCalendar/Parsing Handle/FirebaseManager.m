@@ -388,6 +388,41 @@
 }
 
 
+- (void)getCurrentUserInfoToCompletion:( void (^)(User * obj) )completion{
+    
+    [self getUserInfo:[FIRAuth auth].currentUser toCompletion:^(User *obj) {
+        
+        completion(obj);
+    }];
+}
+
+- (void)getUserInfo: (FIRUser*)user toCompletion:( void (^)(User * obj) )completion{
+
+
+    FIRDatabaseQuery *usersQuery = [[[self.ref child:@"users"] queryOrderedByChild:@"email"] queryEqualToValue:user.email];
+    //FIRDatabaseQuery *userQuery = [usersQuery queryEqualToValue:user.email childKey:@"email"];
+    
+    [usersQuery observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        
+                NSMutableDictionary *userDict = snapshot.value;
+                User *newUser = [User new];
+                newUser.whatsup = [NSString stringWithFormat:@"%@", [userDict objectForKey:@"whatsup"]];
+                newUser.locationDescription = [NSString stringWithFormat:@"%@", [userDict objectForKey:@"locationDescription"]];
+                newUser.email = user.email;
+                newUser.username = user.displayName;
+                newUser.gender = [NSString stringWithFormat:@"%@", [userDict objectForKey:@"gender"]];
+        
+                NSDictionary *locationDict = [userDict objectForKey:@"location"];
+        
+                if (locationDict) {
+                        newUser.location = [[CLLocation alloc] initWithLatitude:[locationDict[@"lati"] doubleValue] longitude:[locationDict[@"long"] doubleValue]];
+                }
+                
+                completion(newUser);
+    }];
+    
+
+}
 
 
 - (void)updateUser:(FIRUser *)user Username:(NSString *)username ToCompletion:( void (^)(NSError *error) )completion

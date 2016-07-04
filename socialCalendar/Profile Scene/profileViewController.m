@@ -13,6 +13,7 @@
 #import "ZFModalTransitionAnimator.h"
 #import "profileHeader.h"
 #import "TOCropViewController.h"
+#import "FirebaseManager.h"
 
 @interface profileViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, TOCropViewControllerDelegate>
 
@@ -22,6 +23,8 @@
 
 
 @property (weak, nonatomic) SCTextSwitchCollectionViewCell *notificationSwitchCell;
+
+@property (nonatomic, strong) User *user;
 
 @end
 
@@ -51,6 +54,17 @@
     [self.collectionView registerNib:self.headerNib
           forSupplementaryViewOfKind:CSStickyHeaderParallaxHeader
                  withReuseIdentifier:@"header"];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [[FirebaseManager sharedInstance] getCurrentUserInfoToCompletion:^(User *obj) {
+        
+        self.user = obj;
+        [self.collectionView reloadData];
+        
+    }];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -105,7 +119,7 @@
 
     if (indexPath.section == SCUserAccountTypeDetail) {
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:kProfileInfoCellIdentifier forIndexPath:indexPath];
-        [(SCProfileInfoCell *)cell setupWithUser:[PFUser currentUser] withRowType:indexPath.row];
+        [(SCProfileInfoCell *)cell setupWithUser:self.user withRowType:indexPath.row];
     } else if (indexPath.section == SCUserAccountTypeNotifications)   {
         cell = (SCTextSwitchCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kTextSwitchCellIdentifier forIndexPath:indexPath];
         self.notificationSwitchCell = (SCTextSwitchCollectionViewCell *)cell;
@@ -240,8 +254,8 @@
 
     [alert addButton:@"Done" actionBlock: ^(void) {
         NSLog(@"Text value: %@", textField.text);
-        [alertData updateUserInfoInRow:rowType withText:textField.text ToCompletion: ^(BOOL finished) {
-            if (finished) {
+        [alertData updateUserInfoInRow:rowType withText:textField.text ToCompletion: ^(BOOL error) {
+            if (!error) {
                 [SVProgressHUD showSuccessWithStatus:@"succeeded"];
                 [self.collectionView reloadData];
             } else {
