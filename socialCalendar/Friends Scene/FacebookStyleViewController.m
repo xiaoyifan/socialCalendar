@@ -96,17 +96,17 @@
     self.showFriend = true;
 
     [SVProgressHUD show];
-    [[FirebaseManager sharedInstance] getMyFriendsToCompletion: ^(NSArray *array) {
-        self.friendsArray = [array mutableCopy];
-        self.dataArray = self.friendsArray;
-
-        [[FirebaseManager sharedInstance] getApprovedUsersToCompletion: ^(NSArray *array) {
-            [self.dataArray addObjectsFromArray:array];
-        }];
-
-        [self.tableView reloadData];
-        [SVProgressHUD dismiss];
-    }];
+//    [[FirebaseManager sharedInstance] getMyFriendsToCompletion: ^(NSArray *array) {
+//        self.friendsArray = [array mutableCopy];
+//        self.dataArray = self.friendsArray;
+//
+//        [[FirebaseManager sharedInstance] getApprovedUsersToCompletion: ^(NSArray *array) {
+//            [self.dataArray addObjectsFromArray:array];
+//        }];
+//
+//        [self.tableView reloadData];
+//        [SVProgressHUD dismiss];
+//    }];
 
     [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#3b5998"]];
     [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor whiteColor]];
@@ -128,14 +128,14 @@
     [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor whiteColor]];
 
     [SVProgressHUD show];
-    [[FirebaseManager sharedInstance] getMyFriendsToCompletion: ^(NSArray *array) {
-        self.friendsArray = [array mutableCopy];
-
-        self.dataArray = self.friendsArray;
-
-        [self.tableView reloadData];
-        [SVProgressHUD dismiss];
-    }];
+//    [[FirebaseManager sharedInstance] getMyFriendsToCompletion: ^(NSArray *array) {
+//        self.friendsArray = [array mutableCopy];
+//
+//        self.dataArray = self.friendsArray;
+//
+//        [self.tableView reloadData];
+//        [SVProgressHUD dismiss];
+//    }];
 }
 
 - (void)requestButtonPressed

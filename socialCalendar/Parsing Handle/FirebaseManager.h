@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "User.h"
 
 @import FirebaseDatabase;
 @import Firebase;
@@ -31,9 +32,9 @@
 
 -(eventObject *)parseObjectToEventObject:(PFObject *)object;
 
--(void)getAllUsersToCompletion:(void (^)(NSArray *array))completion;
+-(void)getAllUsersToCompletion:(void (^)(User * user))completion;
 
--(void)getMyFriendsToCompletion:(void (^)(NSArray *array))completion;
+-(void)getMyFriendsToCompletion:(void (^)(User * user))completion;
 
 -(void)getMyPendingReceivedRequestToCompletion:(void (^)(NSArray *array))completion;
 

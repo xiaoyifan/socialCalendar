@@ -18,17 +18,17 @@
 {
     [super viewDidLoad];
     [SVProgressHUD show];
-    [[FirebaseManager sharedInstance] getMyFriendsToCompletion: ^(NSArray *array) {
-        self.friendsArray = [array mutableCopy];
-        [self.tableView reloadData];
-
-        self.selectMarkArray = [[NSMutableArray alloc] initWithCapacity:self.friendsArray.count];
-
-        for (int i = 0; i < self.friendsArray.count; i++) {
-            [self.selectMarkArray addObject:@0];
-        }
-        [SVProgressHUD dismiss];
-    }];
+//    [[FirebaseManager sharedInstance] getMyFriendsToCompletion: ^(NSArray *array) {
+//        self.friendsArray = [array mutableCopy];
+//        [self.tableView reloadData];
+//
+//        self.selectMarkArray = [[NSMutableArray alloc] initWithCapacity:self.friendsArray.count];
+//
+//        for (int i = 0; i < self.friendsArray.count; i++) {
+//            [self.selectMarkArray addObject:@0];
+//        }
+//        [SVProgressHUD dismiss];
+//    }];
 }
 
 - (void)didReceiveMemoryWarning

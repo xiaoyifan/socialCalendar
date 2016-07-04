@@ -36,21 +36,21 @@
 {
     self.userArray = [[NSMutableArray alloc] init];
 
-    [[FirebaseManager sharedInstance] getAllUsersToCompletion: ^(NSArray *array) {
-        NSMutableArray *strangerArray = [array mutableCopy];
-
-        for (PFUser *singleUser in strangerArray) {
-            if (![self isFriendOrHost:singleUser]) {
-                [self.userArray addObject:singleUser];
-            }
-        }
-        //delete the users who are my friends alreay, or myself
-
-        NSLog(@"how many strangers I have: %lu", (unsigned long)self.userArray.count);
-        self.filteredArray = [NSMutableArray arrayWithCapacity:[self.userArray count]];
-
-        [self.tableView reloadData];
-    }];
+//    [[FirebaseManager sharedInstance] getAllUsersToCompletion: ^(NSArray *array) {
+//        NSMutableArray *strangerArray = [array mutableCopy];
+//
+//        for (PFUser *singleUser in strangerArray) {
+//            if (![self isFriendOrHost:singleUser]) {
+//                [self.userArray addObject:singleUser];
+//            }
+//        }
+//        //delete the users who are my friends alreay, or myself
+//
+//        NSLog(@"how many strangers I have: %lu", (unsigned long)self.userArray.count);
+//        self.filteredArray = [NSMutableArray arrayWithCapacity:[self.userArray count]];
+//
+//        [self.tableView reloadData];
+//    }];
 }
 
 - (BOOL)isFriendOrHost:(PFUser *)user

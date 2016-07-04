@@ -49,7 +49,6 @@
             
             completion([self parseObjectToEventObject:snapshot.value]);
             
-            NSLog(@"%@", snapshot.value);
         }];
     
     
@@ -183,6 +182,7 @@
     return retrivedObj;
 }
 
+
 - (eventObject *)parseNativeEventToEventObject:(EKEvent *)object
 {
     eventObject *newObj = [[eventObject alloc] init];
@@ -218,40 +218,53 @@
 
 
 
-- (void)getAllUsersToCompletion:( void (^)(NSArray *array) )completion
+- (void)getAllUsersToCompletion:( void (^)(User * user) )completion
 {
-    PFQuery *query = [PFUser query];
-
-    [query orderByAscending:@"username"];
-
-    [query findObjectsInBackgroundWithBlock: ^(NSArray *array, NSError *error) {
-        if (error) {
-            NSLog(@"the error is %@", error);
-        } else {
-            completion(array);
-        }
-    }];
+    
+    [[self.ref child:@"users"]
+     observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+         
+         completion([self parseUserDicToUserObject:snapshot.value]);
+         
+     }];
 }
 
-- (void)getMyFriendsToCompletion:( void (^)(NSArray *array) )completion
+- (void)getMyFriendsToCompletion:( void (^)(User * user) )completion
 {
-    if (![PFUser currentUser]) {
+    
+    if ([FIRAuth auth].currentUser) {
         return;
     }
-
-    PFRelation *friendsRelation = [[PFUser currentUser] objectForKey:@"friendRelation"];
-    PFQuery *query = [friendsRelation query];
-    [query orderByAscending:@"username"];
-
-    [query findObjectsInBackgroundWithBlock: ^(NSArray *objects, NSError *error) {
-        if (!error) {
-            //Etc...
-            completion(objects);
-        } else {
-            NSLog(@"the error is %@", error);
-        }
+    
+    
+    [[[[self.ref child:@"friends"] child:[FIRAuth auth].currentUser.uid] queryOrderedByChild:@"email"] observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        
+        completion([self parseUserDicToUserObject:snapshot.value]);
+        
     }];
 }
+
+
+- (User *)parseUserDicToUserObject: (NSDictionary *)userDict{
+    
+    User *user = [User new];
+    
+    user.gender = userDict[@"gender"];
+    user.whatsup = userDict[@"whatsup"];
+    user.locationDescription = userDict[@"region"];
+    user.email = userDict[@"email"];
+    user.username = userDict[@"username"];
+    
+    NSDictionary *locationDict = userDict[@"location"];
+    
+    user.location = [[CLLocation alloc] initWithLatitude:[locationDict[@"lati"] doubleValue] longitude:[locationDict[@"long"] doubleValue]];
+    
+    return user;
+    
+}
+
+
+//methods for handling friend requests
 
 - (void)getMyPendingReceivedRequestToCompletion:( void (^)(NSArray *array) )completion
 {

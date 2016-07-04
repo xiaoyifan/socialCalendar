@@ -173,6 +173,11 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
             NSLog(@"%@", error.localizedDescription);
             return;
         }
+        
+        // [START basic_write]
+        [[[[[FIRDatabase database] reference] child:@"users"] child:user.uid]
+         setValue:@{@"username": user.displayName}];
+        // [END basic_write]
         [self signedIn:[FIRAuth auth].currentUser];
     }];
 }

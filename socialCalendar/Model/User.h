@@ -1,21 +1,28 @@
-/**
- * This file is generated using the remodel generation script.
- * The name of the input file is User.value
- */
+//
+//  User.h
+//  socialCalendar
+//
+//  Created by Yifan Xiao on 7/3/16.
+//  Copyright © 2016 Yifan Xiao. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
-#import <MapKit/MapKit.h>
 
-@interface User : NSObject <NSCopying>
+@interface User : NSObject
 
-@property (nonatomic, readonly, copy) NSString *whatsup;
-@property (nonatomic, readonly, copy) NSDate *createAt;
-@property (nonatomic, readonly, copy) NSDate *signIn;
-@property (nonatomic, readonly, copy) NSString *gender;
-@property (nonatomic, readonly, copy) CLLocation *location;
-@property (nonatomic, readonly, copy) NSString *locationDescription;
+/**
+ *  Event title.
+ */
+@property (strong, nonatomic) NSString *username;
 
-- (instancetype)initWithWhatsup:(NSString *)whatsup createAt:(NSDate *)createAt signIn:(NSDate *)signIn gender:(NSString *)gender location:(CLLocation *)location locationDescription:(NSString *)locationDescription;
+@property (strong, nonatomic) NSString *email;
+
+@property (strong, nonatomic) NSString *whatsup;
+
+@property (strong, nonatomic) NSString *gender;
+
+@property (strong, nonatomic) CLLocation *location;
+
+@property (strong, nonatomic) NSString *locationDescription;
 
 @end
-
