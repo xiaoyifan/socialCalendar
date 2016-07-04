@@ -21,18 +21,6 @@
             return kSCAlertTitleNewEmail;
             break;
 
-        case SCUserDetailModuleTypeEducation:
-            return kSCAlertTitleNewEducation;
-            break;
-
-        case SCUserDetailModuleTypeWork:
-            return kSCAlertTitleNewWork;
-            break;
-
-        case SCUserDetailModuleTypeWebsite:
-            return kSCAlertTitleNewWebsite;
-            break;
-
         case SCUserDetailModuleTypeWhatsUp:
             return kSCAlertTitleNewWhatsUp;
             break;
@@ -54,17 +42,6 @@
             return kSCAlertSubtitleNewEmail;
             break;
 
-        case SCUserDetailModuleTypeEducation:
-            return kSCAlertSubtitleNewEducation;
-            break;
-
-        case SCUserDetailModuleTypeWork:
-            return kSCAlertSubtitleNewWork;
-            break;
-
-        case SCUserDetailModuleTypeWebsite:
-            return kSCAlertSubtitleNewWebsite;
-            break;
 
         case SCUserDetailModuleTypeWhatsUp:
             return kSCAlertSubtitleNewWhatsUp;
@@ -85,18 +62,6 @@
 
         case SCUserDetailModuleTypeEmail:
             return kSCAlertPlaceholderNewEmail;
-            break;
-
-        case SCUserDetailModuleTypeEducation:
-            return kSCAlertPlaceholderNewEducation;
-            break;
-
-        case SCUserDetailModuleTypeWork:
-            return kSCAlertPlaceholderNewWork;
-            break;
-
-        case SCUserDetailModuleTypeWebsite:
-            return kSCAlertPlaceholderNewWebsite;
             break;
 
         case SCUserDetailModuleTypeWhatsUp:

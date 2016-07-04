@@ -18,9 +18,6 @@ typedef NS_ENUM(NSInteger, SCUserDetailModuleType)
     SCUserDetailModuleTypeWhatsUp,
     SCUserDetailModuleTypeGender,
     SCUserDetailModuleTypeRegion,
-    SCUserDetailModuleTypeEducation,
-    SCUserDetailModuleTypeWork,
-    SCUserDetailModuleTypeWebsite,
     SCUserDetailModuleTypeCount
 };
 

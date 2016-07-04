@@ -21,8 +21,6 @@
 
 @property (strong, nonatomic) NSString *gender;
 
-@property (strong, nonatomic) CLLocation *location;
-
-@property (strong, nonatomic) NSString *locationDescription;
+@property (strong, nonatomic) NSString *location;
 
 @end

@@ -251,14 +251,10 @@
     
     user.gender = userDict[@"gender"];
     user.whatsup = userDict[@"whatsup"];
-    user.locationDescription = userDict[@"region"];
+    user.location = userDict[@"region"];
     user.email = userDict[@"email"];
     user.username = userDict[@"username"];
-    
-    NSDictionary *locationDict = userDict[@"location"];
-    
-    user.location = [[CLLocation alloc] initWithLatitude:[locationDict[@"lati"] doubleValue] longitude:[locationDict[@"long"] doubleValue]];
-    
+        
     return user;
     
 }
@@ -406,17 +402,11 @@
         
                 NSMutableDictionary *userDict = snapshot.value;
                 User *newUser = [User new];
-                newUser.whatsup = [NSString stringWithFormat:@"%@", [userDict objectForKey:@"whatsup"]];
-                newUser.locationDescription = [NSString stringWithFormat:@"%@", [userDict objectForKey:@"locationDescription"]];
+                newUser.whatsup = [userDict objectForKey:@"whatsup"];
+                newUser.location = [userDict objectForKey:@"location"];
                 newUser.email = user.email;
                 newUser.username = user.displayName;
-                newUser.gender = [NSString stringWithFormat:@"%@", [userDict objectForKey:@"gender"]];
-        
-                NSDictionary *locationDict = [userDict objectForKey:@"location"];
-        
-                if (locationDict) {
-                        newUser.location = [[CLLocation alloc] initWithLatitude:[locationDict[@"lati"] doubleValue] longitude:[locationDict[@"long"] doubleValue]];
-                }
+                newUser.gender = [userDict objectForKey:@"gender"];
                 
                 completion(newUser);
     }];

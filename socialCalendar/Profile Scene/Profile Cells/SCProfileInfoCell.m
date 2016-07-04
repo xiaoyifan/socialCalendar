@@ -31,8 +31,8 @@
         case SCUserDetailModuleTypeRegion:
         {
             self.titleLabel.text = @"REGION";
-            if (user.locationDescription) {
-                self.contentLabel.text = user.locationDescription;
+            if (user.location) {
+                self.contentLabel.text = user.location;
             } else {
                 self.contentLabel.text = @"not available";
             }
@@ -58,39 +58,6 @@
             } else {
                 self.contentLabel.text = @"not provided";
             }
-            break;
-        }
-
-        case SCUserDetailModuleTypeEducation:
-        {
-            self.titleLabel.text = @"EDUCATION";
-//            if (user[@"education"]) {
-//                self.contentLabel.text = user[@"education"];
-//            } else {
-//                self.contentLabel.text = @"not provided";
-//            }
-            break;
-        }
-
-        case SCUserDetailModuleTypeWork:
-        {
-            self.titleLabel.text = @"WORK";
-//            if (user[@"work"]) {
-//                self.contentLabel.text = user[@"work"];
-//            } else {
-//                self.contentLabel.text = @"not provided";
-//            }
-            break;
-        }
-
-        case SCUserDetailModuleTypeWebsite:
-        {
-            self.titleLabel.text = @"WEBSITE";
-//            if (user[@"website"]) {
-//                self.contentLabel.text = user[@"website"];
-//            } else {
-//                self.contentLabel.text = @"type in your link";
-//            }
             break;
         }
 

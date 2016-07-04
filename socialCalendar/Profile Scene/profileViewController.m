@@ -135,9 +135,6 @@
         switch (indexPath.row) {
             case SCUserDetailModuleTypeNickName:
             case SCUserDetailModuleTypeEmail:
-            case SCUserDetailModuleTypeEducation:
-            case SCUserDetailModuleTypeWork:
-            case SCUserDetailModuleTypeWebsite:
             case SCUserDetailModuleTypeWhatsUp:
                 //show the pop up to set the value
                 [self showPopupWithTextInRowtype:indexPath.row];
