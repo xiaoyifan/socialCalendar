@@ -96,6 +96,16 @@
     self.showFriend = true;
 
     [SVProgressHUD show];
+    
+    
+    [[FirebaseManager sharedInstance] getMyFriendsToCompletion:^(User *user) {
+        
+        [self.friendsArray addObject:user];
+        self.dataArray = self.friendsArray;
+        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.dataArray count] - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+
+    }];
+    
 //    [[FirebaseManager sharedInstance] getMyFriendsToCompletion: ^(NSArray *array) {
 //        self.friendsArray = [array mutableCopy];
 //        self.dataArray = self.friendsArray;
@@ -127,15 +137,13 @@
 
     [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor whiteColor]];
 
-    [SVProgressHUD show];
-//    [[FirebaseManager sharedInstance] getMyFriendsToCompletion: ^(NSArray *array) {
-//        self.friendsArray = [array mutableCopy];
-//
-//        self.dataArray = self.friendsArray;
-//
-//        [self.tableView reloadData];
-//        [SVProgressHUD dismiss];
-//    }];
+    [[FirebaseManager sharedInstance] getMyFriendsToCompletion:^(User *user) {
+        
+        [self.friendsArray addObject:user];
+        self.dataArray = self.friendsArray;
+        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.dataArray count] - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+        
+    }];
 }
 
 - (void)requestButtonPressed
@@ -291,7 +299,7 @@
     cell.actionButton.layer.cornerRadius = 5.0;
     cell.cancelActionButton.layer.cornerRadius = 5.0;
 
-    PFUser *user = [self.dataArray objectAtIndex:indexPath.row];
+    User *user = [self.dataArray objectAtIndex:indexPath.row];
     cell.username.text = user.username;
     cell.mailaddress.text = user.email;
 

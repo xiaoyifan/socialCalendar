@@ -249,12 +249,12 @@
     
     User *user = [User new];
     
-    user.gender = userDict[@"gender"];
-    user.whatsup = userDict[@"whatsup"];
-    user.location = userDict[@"region"];
-    user.email = userDict[@"email"];
-    user.username = userDict[@"username"];
-        
+    user.gender = [userDict objectForKey:@"gender"];
+    user.whatsup = [userDict objectForKey:@"whatsup"];
+    user.location = [userDict objectForKey:@"region"];
+    user.email = [userDict objectForKey:@"email"];
+    user.username = [userDict objectForKey:@"username"];
+    
     return user;
     
 }
@@ -396,7 +396,6 @@
 
 
     FIRDatabaseQuery *usersQuery = [[[self.ref child:@"users"] queryOrderedByChild:@"email"] queryEqualToValue:user.email];
-    //FIRDatabaseQuery *userQuery = [usersQuery queryEqualToValue:user.email childKey:@"email"];
     
     [usersQuery observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         
