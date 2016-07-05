@@ -35,6 +35,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.userArray = [[NSMutableArray alloc] init];
+    
+    
+    [[FirebaseManager sharedInstance] getAllUsersToCompletion:^(User *user) {
+        
+        [self.userArray addObject:user];
+        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.userArray count] - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+        
+    }];
 
 //    [[FirebaseManager sharedInstance] getAllUsersToCompletion: ^(NSArray *array) {
 //        NSMutableArray *strangerArray = [array mutableCopy];
@@ -96,7 +104,7 @@
 {
     listTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"listCell"];
 
-    PFUser *user;
+    User *user;
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         user = [self.filteredArray objectAtIndex:indexPath.row];
     } else {

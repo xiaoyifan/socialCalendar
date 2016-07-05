@@ -94,9 +94,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.showFriend = true;
-
-    [SVProgressHUD show];
-    
     
     [[FirebaseManager sharedInstance] getMyFriendsToCompletion:^(User *user) {
         
@@ -158,7 +155,6 @@
     [self.myCustomBar.friendIndicatorView setBackgroundColor:[UIColor whiteColor]];
     [self.myCustomBar.requestIndicatorView setBackgroundColor:[UIColor hx_colorWithHexRGBAString:@"#3b5998"]];
 
-    [SVProgressHUD show];
     [[FirebaseManager sharedInstance] getMyPendingReceivedRequestToCompletion: ^(NSArray *array) {
         self.requestObjectArray = [array mutableCopy];
         //use this array to store the request, not the request users
@@ -176,7 +172,6 @@
         self.dataArray = self.requestArray;
 
         [self.tableView reloadData];
-        [SVProgressHUD dismiss];
     }];
 }
 
